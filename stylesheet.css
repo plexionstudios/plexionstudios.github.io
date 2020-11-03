@@ -143,7 +143,7 @@ header {
     font-size: 20px;
     padding-left: 30px;
     line-height: 30px;
-    background: url("2020Banner.png");
+    background: url("TransitionBanner.png");
 	background-repeat: no-repeat, repeat;
 	background-size: 100%;
     background-position: center;
@@ -151,7 +151,7 @@ header {
 }
 header a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 .scrolled {
     background: white;
@@ -192,8 +192,10 @@ header a {
 }
 #logo {
     padding-right: 20px;
-    font-weight: bold;
+    font-family: 'Poppins SemiBold';
     font-size: 24px;
+    text-shadow: -2.5px 2.5px 0px #003BFF;
+    color: white;
 }
 .nav {
     padding-right: 10px;
@@ -253,18 +255,23 @@ iframe:hover {
 }
 footer {
     font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+footer hr {
+    margin: 20px 8% 20px 8%;
 }
 footer i {
     margin-right: 5px;
     -webkit-transition: -webkit-transform .4s ease-in-out;
           transition:         transform .4s ease-in-out;
 }
-footer:hover i {
+footer:hover .fa-sync-alt {
     -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
-hr {
-    margin: 3px 8% 3px 8%;
+footer span {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* MINECRAFT LIVE COUNTDOWN */
