@@ -1,5 +1,5 @@
 
-/* plexion.online 10.11.2020 */
+/* plexion.online 11.11.2020 */
 
 /* Import fonts */
 
@@ -493,12 +493,6 @@ footer span {
 	background-size: cover;
     background-position: center;
     color: #003BFF;
-}
-.plexion {
-    background: url("plexion.png");
-	background-repeat: no-repeat, repeat;
-	background-size: cover;
-    background-position: center;
 }
 #plexionDev {
     background: url("plexionDev.png");
