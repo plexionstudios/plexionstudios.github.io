@@ -1,5 +1,5 @@
 
-/* plexion.online 01.11.2020 */
+/* plexion.online 10.11.2020 */
 
 /* Import fonts */
 
@@ -7,6 +7,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face{ 
+	font-family: 'Scratch';
+	src: url('blackboysonmopeds-webfont.eot');
+	src: url('blackboysonmopeds-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('blackboysonmopeds-webfont.woff') format('woff'),
+	     url('blackboysonmopeds.ttf') format('truetype'),
+	     url('blackboysonmopeds-webfont.svg#webfont') format('svg');
+}
 
 /* Remove mobile-specific sections */
 
@@ -18,6 +26,36 @@
 }
 #category_view {
     display: none;
+}
+.links-mobile {
+    display: none;
+}
+.project br {
+    display: none;
+}
+
+/* Dark theme */
+
+.dark {
+    background: black;
+    color: white;
+}
+.dark a {
+    color: white;
+}
+.dark .button {
+    background:#080808;
+    border: 0px black;
+}
+.dark .button:hover {
+    background: black;
+}
+.dark .buttoni {
+    background:#080808;
+    border: 0px black;
+}
+.dark .buttoni:hover {
+    background: black;
 }
 
 /* Define key html variables */
@@ -33,6 +71,7 @@ body {
     margin: 0;
     transition: 0.3s ease-in-out;
     background: white;
+    overflow-x: hidden;
 }
 a {
     text-decoration: underline;
@@ -40,8 +79,14 @@ a {
     font-weight: normal;
     transition: 0.2s ease-in-out;
 }
+a i {
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+}
 a:hover {
     font-weight: 600;
+    /*text-shadow: -2.5px 2.5px 0px#003BFF;*/
 }
 
 /* Main custom classes */
@@ -58,9 +103,12 @@ a:hover {
 }
 .desc {
     font-size: 16px;
+    margin: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 .sectiondesc {
     font-size: 18px;
+    margin: 0;
 }
 .head {
     text-decoration: none;
@@ -68,6 +116,7 @@ a:hover {
     font-size: 26px;
     font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
     transition: 0.2s ease-in-out;
+    margin: 0;
 }
 .head:hover {
     text-decoration: underline;
@@ -88,6 +137,44 @@ a:hover {
     margin: 0;
 }
 
+#topic {
+    padding: 120px 200px 120px 30px;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    color: white;
+}
+#topic .button {
+    text-shadow: none;
+}
+#topic .big2 {
+    text-shadow: -2.5px 2.5px 0px #003BFF;
+}
+
+.watch {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 0;
+}
+.watch iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.watch2 {
+    position: relative;
+    padding-bottom: 56.25%;
+    margin-bottom: 5px;
+}
+.watch2 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Buttons */
 
 .button {
@@ -99,6 +186,7 @@ a:hover {
     font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin-bottom: 200px;
+    border: 0px white;
 }
 .button i {
     position: relative;
@@ -110,6 +198,8 @@ a:hover {
     padding: 12px 50px 12px 50px;
     background: white;
     border: 2px solid;
+    border-bottom-left-radius: 0;
+    box-shadow: -2.5px 2.5px 0px;
 }
 .buttoni {
     transition: 0.15s ease-in-out;
@@ -122,11 +212,14 @@ a:hover {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 200px;
+    border: 0px white;
 }
 .buttoni:hover {
     padding: 12px 30px 12px 30px;
     background: white;
+    border-bottom-left-radius: 0;
     border: 2px solid;
+    box-shadow: -2.5px 2.5px 0px;
 }
 .buttoni i {
     position: relative;
@@ -153,25 +246,6 @@ header a {
     text-decoration: none;
     color: black;
 }
-.scrolled {
-    background: white;
-    display: inherit;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding-bottom: 20px;
-}
-.scrolled a {
-    color: black;
-}
-.scrolled #start {
-    margin-top: 200px;
-}
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-  }
 .header-mobile {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -192,7 +266,8 @@ header a {
 }
 #logo {
     padding-right: 20px;
-    font-family: 'Poppins SemiBold';
+    font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 600;
     font-size: 24px;
     text-shadow: -2.5px 2.5px 0px #003BFF;
     color: white;
@@ -207,23 +282,25 @@ header a {
 }
 .nav:hover {
     font-weight: 600;
+    color: white;
+    text-shadow: -2.5px 2.5px 0px #003BFF;
     /* text-shadow: -2px 2px 0px rgba(0, 59, 255, 1); */
 }
 
 /* Extras */
 
-iframe {
+.moment iframe {
     border-radius: 5px;
     transition: 0.1s ease-in-out;
 }
-iframe:hover {
+.moment iframe:hover {
     border: 3px solid;
 }
 
 /* Hamburger menu */
 
 .hamburger {
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
     padding-left: 30px;
     font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -237,12 +314,14 @@ iframe:hover {
 }
 .hamburger a {
     text-decoration: none;
+    transition: 0.1s ease-in-out;
 }
 .hamburger a:hover {
     margin-left: 10px;
 }
 .hamburger li {
     padding: 10px;
+    transition: 0.1s ease-in-out;
 }
 #category_view {
     margin-bottom: 20px;
@@ -250,7 +329,7 @@ iframe:hover {
 
 /* Website footer */
 
-.socials {
+.links {
     padding-bottom: 20px;
 }
 footer {
@@ -301,9 +380,6 @@ footer span {
     filter: brightness(100%);
     justify-self: stretch;
 }
-.moment iframe {
-    width: 95%;
-}
 
 /* Website projects */
 
@@ -322,29 +398,60 @@ footer span {
     transition: 0.15s ease-in-out;
     filter: brightness(100%);
     border: 0px solid #000000;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    height: 230px;
+    transform: scale(1.0);
 }
 .project p {
-    padding: 0;
+    padding: 5px 0 0 0;
     margin: 5px 0 5px 0;
     color: white;
 }
 .project:hover {
     filter: brightness(110%);
     /*padding: 80px 30px 80px 30px;*/
-    padding: 70px 30px 70px 50px;
     /*-webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);*/
     border: 3px solid;
+    cursor: pointer;
+    transform: scale(1.025);
 }
 .project a {
     color: white;
+    line-height: 24px;
+    vertical-align: middle;
+}
+.project .pfp {
+    width: 40px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.unsupported {
+    position: relative;
+    top: 3px;
+    background:#291700;
+    font-size: 18px;
+    color: #FF9300;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
 }
 
 /* Website colours */
 
 .osu:hover {
     color: #F06EA8;
+}
+.osufont {
+    font-family: 'Exo 2.0';
+}
+.scratchfont {
+    font-family: 'Scratch';
+    font-size: 24px;
+    font-weight: 600;
 }
 .vortex:hover {
     color: #0C45D3;
@@ -356,6 +463,9 @@ footer span {
     color: #F4A73D;
 }
 .youtube:hover {
+    color: #FE0000;
+}
+.videos:hover {
     color: #FE0000;
 }
 .twitter:hover {
@@ -370,6 +480,9 @@ footer span {
 .extras:hover {
     color: #1E83FF;
 }
+.about:hover {
+    color: #1E83FF;
+}
 .minecraft:hover {
     color: #7CAD5C;
 }
@@ -381,12 +494,18 @@ footer span {
     background-position: center;
     color: #003BFF;
 }
+.plexion {
+    background: url("plexion.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+}
 #plexionDev {
     background: url("plexionDev.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #E79A02;
+    color: #D1A212;
 }
 #plexionVODS {
     background: url("plexionvods.png");
@@ -408,6 +527,13 @@ footer span {
 	background-size: cover;
     background-position: center;
     color: #FF9A00;
+}
+#plexionMUSIC {
+    background: url("plexionMUSIC.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: #FF4400;
 }
 #LetsTalk {
     background: url("letstalk.png");
@@ -502,6 +628,27 @@ footer span {
     background-position: center;
     color: #999999;
 }
+#corruption {
+    background: url("corruption.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: #7346EF;
+}
+#spyglass {
+    background: url("spyglass.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: #DE923A;
+}
+#mc4k {
+    background: url("mc4k.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: #54A016;
+}
 #a {
     background: url("error.png");
 	background-repeat: no-repeat, repeat;
@@ -509,26 +656,35 @@ footer span {
     background-position: center;
     color: #FE0000;
 }
+.a {
+    background: url("error.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: #FE0000;
+}
+.rewind {
+    background: url("rewind.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: white;
+}
+.rewind .button:hover {
+    color: #F74FE3;
+}
 
 /* Website compatability (lower resolutions) */
 
 @media (max-width: 640px) {
     .projects {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        grid-gap: 10px;
-        transition: 0.3s;
-        margin-left: 10px;
-        margin-right: 10px;
     }
     .timeline {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
     .moment iframe {
         width: 100%;
-    }
-    .button:hover {
-        padding: 12px 40px 12px 40px;
     }
     header {
         display: none;
@@ -545,8 +701,8 @@ footer span {
     .section {
         text-align: center;
     }
-    body {
-        overflow-x: hidden;
+    #topic {
+        padding: 120px 30px 120px 30px;
     }
     .countdown {
         font-size: 300%;
@@ -558,17 +714,15 @@ footer span {
     .projects {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 0px;
-        margin-left: 0;
-        margin-right: 0;
+        margin: 0;
     }
     .project {
         text-align: center;
         border-radius: 0;
     }
     .project:hover {
-        padding-left: 30px;
-        padding-bottom: 90px;
-        padding-top: 90px;
+        border: 0 solid;
+        transform: scale(1.10);
     }
     .timeline {
         grid-template-columns: repeat(auto-fit, 300px, 1fr);
@@ -581,12 +735,25 @@ footer span {
     }
     .button {
         border-radius: 5px;
-        padding: 12px 20px 12px 20px;
-        background: white;
-        text-decoration: none;
+        padding: 12px 30px 12px 30px;
     }
     .button:hover {
-        padding: 12px 20px 12px 20px;
+        padding: 12px 40px 12px 40px;
+    }
+    .buttoni:hover {
+        padding: 12px 18px 12px 18px;
+    }
+    .links {
+        display: none;
+    }
+    .links-mobile {
+        display: inherit;
+    }
+    .project br {
+        display: inherit;
+    }
+    .unsupported {
+        margin: 0 0 10px 0;
     }
 }
 @media (max-width: 410px) {
@@ -600,5 +767,33 @@ footer span {
         font-size: 250%;
         position: relative;
         top: 16px;
+    }
+    .timeline {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .moment {
+        padding: 70px 0 70px 0;
+        border-radius: 0;
+    }
+    .moment p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .watch2 {
+        position: relative;
+        padding-bottom: 56.25%;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    .watch2 iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .watch2 iframe:hover {
+        border: 0 solid;
     }
 }

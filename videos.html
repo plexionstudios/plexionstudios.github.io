@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>
+    <title>plexion</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/twemoji-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+</head>
+<body>
+    <header id="header">
+        <a href="/" id="logo" title="Go to the home page">plexion</a>
+        <a href="/" class="nav" title="Go to the home page"><i class="fas fa-home"></i> home</a>
+        <a href="videos" class="nav" title="Go to the videos page"><i class="fas fa-video"></i> videos</a>
+        <a href="about" class="nav" title="Go to the about page"><i class="fas fa-info-circle"></i> about</a>
+        <!--<a href="https://scratch.mit.edu/users/PushToTheLimit/" target="_blank" class="nav scratch" title="Go to my Scratch profile">scratch <i class="fas fa-external-link-alt"></i></a>
+        <a href="https://osu.ppy.sh/users/15364179" target="_blank" class="nav osu" title="Go to my osu! profile">osu! <i class="fas fa-external-link-alt"></i></a>-->
+    </header>
+    <div class="header-mobile dark">
+        <center>
+        <a href="https://youtube.com/plexion" id="logo" title="Open the hamburger menu">plexion</a><a href="javascript:void(0);" onclick="hamburger()"><i class="fas fa-angle-down" title="Open hamburger.."></i></a>
+    </div>
+    <div class="hamburger dark" id="hamburger">
+        <ul>
+            <li><a href="/" id="nav" class="home">home</a></li>
+            <li><a href="videos" id="nav" class="videos">videos</a></li>
+            <li><a href="about" id="nav" class="about">about</a></li>
+            <!--<li><a href="https://scratch.mit.edu/users/PushToTheLimit/" target="_blank" id="nav" class="scratch">scratch <i class="fas fa-external-link-alt"></i></a></li>
+            <li><a href="https://osu.ppy.sh/users/15364179" target="_blank" id="nav" class="osu">osu! <i class="fas fa-external-link-alt"></i></a></li>
+            <li><a href="https://youtube.com/plexion" target="_blank" id="nav" class="youtube">youtube <i class="fas fa-external-link-alt"></i></a></li>-->
+        </ul>
+    </div>
+    <div class="links dark">
+        <center>
+        <br/>
+        <br/>
+        <a class="buttoni youtube" href="https://youtube.com/plexion?sub_confirmation=1" title="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
+        <a class="buttoni twitter" href="https://twitter.com/plexionlive" title="Follow on Twitter"><i class="fab fa-twitter"></i></a>
+        <a class="buttoni twitch" href="https://twitch.tv/plexionlive" title="Follow on Twitch"><i class="fab fa-twitch"></i></a>
+        <a class="buttoni osu osufont" href="https://osu.ppy.sh/users/15364179" title="Follow on osu!">osu!</a>
+        <a class="buttoni scratch scratchfont" href="https://scratch.mit.edu/users/PushToTheLimit/" title="Follow on Scratch">S</a>
+        <br/>
+        <br/>
+    </div>
+    <div class="hamburger links-mobile dark">
+        <ul>
+            <li><a class="youtube" href="https://youtube.com/plexion?sub_confirmation=1" title="Subscribe on YouTube"><i class="fab fa-youtube"></i> YouTube</a></li>
+            <li><a class="twitter" href="https://twitter.com/plexionlive" title="Follow on Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a class="twitch" href="https://twitch.tv/plexionlive" title="Follow on Twitch"><i class="fab fa-twitch"></i> Twitch</a></li>
+            <li><a class="osu osufont" href="https://osu.ppy.sh/users/15364179" title="Follow on osu!">osu!</a></li>
+            <li><a class="scratch scratchfont" href="https://scratch.mit.edu/users/PushToTheLimit/" title="Follow on Scratch">Scratch</a></li>
+        </ul>
+    </div>
+    <div class="section dark" id="latest">
+        <p class="big2">GET CAUGHT UP</p>
+        <p class="sectiondesc">Watch my latest YouTube video on <a target="_blank" href="https://www.youtube.com/playlist?list=PLbaASKiZWzbr-JjJc_yrE3YNpe5xJOKRG">YouTube <i class="fas fa-external-link-alt"></i></a></p>
+    </div>
+    <div class="watch dark">
+        <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLbaASKiZWzbr-JjJc_yrE3YNpe5xJOKRG" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="section dark" id="channels">
+        <p class="big2">DON'T FORGET</p>
+        <p class="sectiondesc">There's more content to watch that you probably haven't seen!</p>
+    </div>
+    <div class="projects dark">
+        <button class="project" id="plexion" onclick="location.href='https://youtube.com/plexion';">
+            <img class="pfp" src="pfp/plexion.png"></img>
+            <a class="head plexion" href="https://youtube.com/plexion">plexion</a>
+            <p class="desc">My main channel, where my most high quality content is posted.</p>
+        </button>
+        <button class="project" id="plexionDev" onclick="location.href='https://tinyurl.com/vortexosyoutube';">
+            <img class="pfp" src="pfp/plexionDev.png"></img>
+            <a class="head plexionDev" href="https://tinyurl.com/vortexosyoutube">plexionDev</a>
+            <p class="desc">My devlog channel for a variety of my scratch projects, quite fun.</p>
+        </button>
+        <button class="project" id="osuplexion" onclick="location.href='https://tinyurl.com/osuplexion';">
+            <img class="pfp" src="pfp/osu!plexion.png"></img>
+            <a class="head osuscratch" href="https://tinyurl.com/osuplexion">osu!plexion</a>
+            <p class="desc">One of my alternate channels that has the occasional osu! upload.</p>
+        </button>
+        <button class="project" id="plexionVODS" onclick="location.href='https://tinyurl.com/plexvods';">
+            <img class="pfp" src="pfp/plexionVODS.png"></img>
+            <a class="head plexionVODS" href="https://tinyurl.com/plexvods">plexionVODS</a>
+            <p class="desc">The one place with a full archive of all my streams on my twitch.</p>
+        </button>
+        <button class="project" id="plextra" onclick="location.href='https://tinyurl.com/plexion2';">
+            <img class="pfp" src="pfp/plextra.png"></img>
+            <a class="head plextra" href="https://tinyurl.com/plexion2">plextra</a>
+            <p class="desc">Don't expect anything mindblowing here, it's my second channel.</p>
+        </button>
+        <button class="project" id="LetsTalk" onclick="location.href='https://tinyurl.com/letstalkpodcast';">
+            <img class="pfp" src="pfp/LetsTalk.png"></img>
+            <a class="head LetsTalk" href="https://tinyurl.com/letstalkpodcast">Let's Talk</a>
+            <p class="desc">I talk on this channel, it's really cool.</p>
+        </button>
+        <button class="project" id="plexionMUSIC" onclick="location.href='https://tinyurl.com/plexionmusic';">
+            <img class="pfp" src="pfp/plexionMUSIC.png"></img>
+            <a class="head plexionMUSIC" href="https://tinyurl.com/plexionmusic">plexionMUSIC</a>
+            <p class="desc">More of a joke than anything.</p>
+        </button>
+    </div>
+    <footer dark>
+        <center>
+        <hr />    
+        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">10.11.2020</a></span>
+        <span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+    </footer>
+    <!-- jquery --> <!--<script>
+        $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 50) {
+            $("#header").addClass("scrolled");
+        }
+        else {
+            $("#header").removeClass("scrolled");
+        }
+    });
+    </script>-->
+    <!-- jquery --> <script>
+        var data = {rss: "https://medium.com/feed/plexion"}
+        $.get("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fplexion", data, function(response){
+        //Checking Response Status
+        if (response.status == 'ok') {
+        //Defining a variable where I create my response data
+        var output = '';
+        //Response...
+        $.each(response.items, function (k, item) {
+            //Iteration
+            return k < 10;
+        });
+        }
+        });
+    </script>
+    <!--<script>
+        $('header').mousemove(function(e){
+            var amountMovedX = (e.pageX * -1 / 6);
+            var amountMovedY = (e.pageY * -1 / 6);
+            $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
+        });
+    </script>-->
+    <!--<script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {stickyfunction()};
+
+        // Get the header
+        var header = document.getElementById("header");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function stickyfunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+        } 
+    </script>-->
+    <script>
+        function hamburger() {
+            var x = document.getElementById("hamburger");
+            if (x.style.display === "inherit") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "inherit";
+            }
+        }
+    </script>
+    <script>
+        function category() {
+            var x = document.getElementById("category_view");
+            if (x.style.display === "grid") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "grid";
+            }
+        }
+    </script>
+</body>
