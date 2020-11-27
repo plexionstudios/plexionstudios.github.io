@@ -13,65 +13,78 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
 </head>
 <body>
-    <header id="header">
-        <a href="/" id="logo" title="Go to the home page">plexion</a>
-        <a href="/" class="nav" title="Go to the home page"><i class="fas fa-home"></i> home</a>
-        <a href="videos" class="nav" title="Go to the videos page"><i class="fas fa-video"></i> videos</a>
-        <a href="about" class="nav" title="Go to the about page"><i class="fas fa-info-circle"></i> about</a>
-        <!--<a href="https://scratch.mit.edu/users/PushToTheLimit/" target="_blank" class="nav scratch" title="Go to my Scratch profile">scratch <i class="fas fa-external-link-alt"></i></a>
-        <a href="https://osu.ppy.sh/users/15364179" target="_blank" class="nav osu" title="Go to my osu! profile">osu! <i class="fas fa-external-link-alt"></i></a>-->
-    </header>
-    <div class="header-mobile dark">
-        <center>
-        <a href="https://youtube.com/plexion" id="logo" title="Open the hamburger menu">plexion</a><a href="javascript:void(0);" onclick="hamburger()"><i class="fas fa-angle-down" title="Open hamburger.."></i></a>
+    <div class="header-popout">
+        <div class="inner-header">
+            <div class="logo">
+                <a href="/" title="Go Home">plexion.online</a>
+            </div>
+            <div class="navigation"">
+                <a href="/" class="navlink" title="Go Home">Home</a>
+                <a href="videos" class="navlink" title="Browse Videos">Videos</a>
+                <a href="about" class="navlink" title="About Me">About</a>
+            </div>
+            <div class="logo2"></div>
+        </div>
     </div>
-    <div class="hamburger dark" id="hamburger">
-        <ul>
-            <li><a href="/" id="nav" class="home">home</a></li>
-            <li><a href="videos" id="nav" class="videos">videos</a></li>
-            <li><a href="about" id="nav" class="about">about</a></li>
-            <!--<li><a href="https://scratch.mit.edu/users/PushToTheLimit/" target="_blank" id="nav" class="scratch">scratch <i class="fas fa-external-link-alt"></i></a></li>
-            <li><a href="https://osu.ppy.sh/users/15364179" target="_blank" id="nav" class="osu">osu! <i class="fas fa-external-link-alt"></i></a></li>
-            <li><a href="https://youtube.com/plexion" target="_blank" id="nav" class="youtube">youtube <i class="fas fa-external-link-alt"></i></a></li>-->
-        </ul>
+    <header></header>
+    <div class="videofeed">
+        <span class="video">
+            <div class="watch2"><iframe id="video0" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video1" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video2" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video3" frameborder="0" allowfullscreen></iframe></div>
+        </span>
     </div>
-    <div class="links dark">
-        <center>
-        <br/>
-        <br/>
-        <a class="buttoni youtube" href="https://youtube.com/plexion?sub_confirmation=1" title="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
-        <a class="buttoni twitter" href="https://twitter.com/plexionlive" title="Follow on Twitter"><i class="fab fa-twitter"></i></a>
-        <a class="buttoni twitch" href="https://twitch.tv/plexionlive" title="Follow on Twitch"><i class="fab fa-twitch"></i></a>
-        <a class="buttoni osu osufont" href="https://osu.ppy.sh/users/15364179" title="Follow on osu!">osu!</a>
-        <a class="buttoni scratch scratchfont" href="https://scratch.mit.edu/users/PushToTheLimit/" title="Follow on Scratch">S</a>
-        <br/>
-        <br/>
+    <div class="section" id="latest">
+        <p class="big2">Latest from <img src="pfp/plexion.png" class="pfp"></img> <a href="https://youtube.com/plexion">plexion</a></p>
     </div>
-    <div class="hamburger links-mobile dark">
-        <ul>
-            <li><a class="youtube" href="https://youtube.com/plexion?sub_confirmation=1" title="Subscribe on YouTube"><i class="fab fa-youtube"></i> YouTube</a></li>
-            <li><a class="twitter" href="https://twitter.com/plexionlive" title="Follow on Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a class="twitch" href="https://twitch.tv/plexionlive" title="Follow on Twitch"><i class="fab fa-twitch"></i> Twitch</a></li>
-            <li><a class="osu osufont" href="https://osu.ppy.sh/users/15364179" title="Follow on osu!">osu!</a></li>
-            <li><a class="scratch scratchfont" href="https://scratch.mit.edu/users/PushToTheLimit/" title="Follow on Scratch">Scratch</a></li>
-        </ul>
+    <div class="watchdiv">
+        <div class="watch">
+            <span class="video">
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLbaASKiZWzbr-JjJc_yrE3YNpe5xJOKRG" frameborder="0" allowfullscreen></iframe></div>
+            </span>
+        </div>
     </div>
-    <div class="section dark" id="latest">
-        <p class="big2">GET CAUGHT UP</p>
-        <p class="sectiondesc">Watch my latest YouTube video on <a target="_blank" href="https://www.youtube.com/playlist?list=PLbaASKiZWzbr-JjJc_yrE3YNpe5xJOKRG">YouTube <i class="fas fa-external-link-alt"></i></a></p>
+    <div class="section" id="latest">
+        <p class="big2">Latest from <img src="pfp/plexionGOLD.png" class="pfp"></img> <a href="https://tinyurl.com/plexiongold">plexionGOLD</a></p>
     </div>
-    <div class="watch dark">
-        <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLbaASKiZWzbr-JjJc_yrE3YNpe5xJOKRG" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="watchdiv">
+        <div class="watch">
+            <span class="video">
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLkV_7Pr2JFZgFx081F3myOQeQPlBaBNF7" frameborder="0" allowfullscreen></iframe></div>
+            </span>
+        </div>
     </div>
-    <div class="section dark" id="channels">
+    <div class="section" id="channels">
         <p class="big2">DON'T FORGET</p>
         <p class="sectiondesc">There's more content to watch that you probably haven't seen!</p>
     </div>
-    <div class="projects dark">
+    <div class="projects">
         <button class="project" id="plexion" onclick="location.href='https://youtube.com/plexion';">
             <img class="pfp" src="pfp/plexion.png"></img>
             <a class="head" href="https://youtube.com/plexion">plexion</a>
             <p class="desc">My main channel, where my most high quality content is posted.</p>
+        </button>
+        <button class="project" id="plexionGOLD" onclick="location.href='https://tinyurl.com/plexiongold';">
+            <img class="pfp" src="pfp/plexionGOLD.png"></img>
+            <a class="head" href="https://tinyurl.com/plexiongold">plexionGOLD</a>
+            <p class="desc">The higher quality second channel for clips & cut scenes.</p>
+        </button>
+        <button class="project" id="plexionVODS" onclick="location.href='https://tinyurl.com/plexvods';">
+            <img class="pfp" src="pfp/plexionVODS.png"></img>
+            <a class="head" href="https://tinyurl.com/plexvods">plexionVODS</a>
+            <p class="desc">A full archive of <i>almost</i> all my streams, no matter what platform.</p>
+        </button>
+        <button class="project" id="plexionMUSIC" onclick="location.href='https://tinyurl.com/plexionmusic';">
+            <img class="pfp" src="pfp/plexionMUSIC.png"></img>
+            <a class="head" href="https://tinyurl.com/plexionmusic">plexionMUSIC</a>
+            <p class="desc">More of a joke than anything.</p>
         </button>
         <button class="project" id="plexionDev" onclick="location.href='https://tinyurl.com/vortexosyoutube';">
             <img class="pfp" src="pfp/plexionDev.png"></img>
@@ -83,11 +96,6 @@
             <a class="head" href="https://tinyurl.com/osuplexion">osu!plexion</a>
             <p class="desc">One of my alternate channels that has the occasional osu! upload.</p>
         </button>
-        <button class="project" id="plexionVODS" onclick="location.href='https://tinyurl.com/plexvods';">
-            <img class="pfp" src="pfp/plexionVODS.png"></img>
-            <a class="head" href="https://tinyurl.com/plexvods">plexionVODS</a>
-            <p class="desc">The one place with a full archive of all my streams on my twitch.</p>
-        </button>
         <button class="project" id="plextra" onclick="location.href='https://tinyurl.com/plexion2';">
             <img class="pfp" src="pfp/plextra.png"></img>
             <a class="head" href="https://tinyurl.com/plexion2">plextra</a>
@@ -98,17 +106,12 @@
             <a class="head" href="https://tinyurl.com/letstalkpodcast">Let's Talk</a>
             <p class="desc">I talk on this channel, it's really cool.</p>
         </button>
-        <button class="project" id="plexionMUSIC" onclick="location.href='https://tinyurl.com/plexionmusic';">
-            <img class="pfp" src="pfp/plexionMUSIC.png"></img>
-            <a class="head" href="https://tinyurl.com/plexionmusic">plexionMUSIC</a>
-            <p class="desc">More of a joke than anything.</p>
-        </button>
     </div>
-    <footer dark>
+    <footer>
         <center>
         <hr />    
-        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">11.11.2020</a></span>
-        <span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">26.11.2020</a></span>
+        <span class="btnsep"></span><span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
     <!-- jquery --> <!--<script>
         $(window).on("scroll", function () {
@@ -121,46 +124,24 @@
     });
     </script>-->
     <!-- jquery --> <script>
-        var data = {rss: "https://medium.com/feed/plexion"}
-        $.get("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fplexion", data, function(response){
-        //Checking Response Status
-        if (response.status == 'ok') {
-        //Defining a variable where I create my response data
-        var output = '';
-        //Response...
-        $.each(response.items, function (k, item) {
-            //Iteration
-            return k < 10;
-        });
-        }
+        var channelID = "UCwQXJpqlQXT07YBLpKF6RSQ";
+        var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
+        $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
+        var link = data.items[0].link;
+        var id = link.substr(link.indexOf("=")+1);
+        $("#video0").attr("src","https://youtube.com/embed/"+ id + "?controls=0&showinfo=0&rel=0");
+            var link = data.items[1].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video1").attr("src","https://youtube.com/embed/"+ id + "?controls=0&showinfo=0&rel=0");
+            var link = data.items[2].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video2").attr("src","https://youtube.com/embed/"+ id + "?controls=0&showinfo=0&rel=0");
+        var link = data.items[3].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video3").attr("src","https://youtube.com/embed/"+ id + "?controls=0&showinfo=0&rel=0");
+        
         });
     </script>
-    <!--<script>
-        $('header').mousemove(function(e){
-            var amountMovedX = (e.pageX * -1 / 6);
-            var amountMovedY = (e.pageY * -1 / 6);
-            $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
-        });
-    </script>-->
-    <!--<script>
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function() {stickyfunction()};
-
-        // Get the header
-        var header = document.getElementById("header");
-
-        // Get the offset position of the navbar
-        var sticky = header.offsetTop;
-
-        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function stickyfunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-        } 
-    </script>-->
     <script>
         function hamburger() {
             var x = document.getElementById("hamburger");
@@ -168,16 +149,6 @@
             x.style.display = "none";
             } else {
             x.style.display = "inherit";
-            }
-        }
-    </script>
-    <script>
-        function category() {
-            var x = document.getElementById("category_view");
-            if (x.style.display === "grid") {
-            x.style.display = "none";
-            } else {
-            x.style.display = "grid";
             }
         }
     </script>

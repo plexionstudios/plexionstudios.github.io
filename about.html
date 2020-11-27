@@ -11,23 +11,50 @@
     <link rel="stylesheet" href="/twemoji-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
-    <script src="https://unpkg.com/feather-icons"></script> <!-- feather -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
 </head>
 <body>
-    <div class="header-popout">
-        <div class="inner-header">
-            <div class="logo">
-                <a href="/" title="Go Home">plexion.online</a>
-            </div>
-            <div class="navigation">
-                <a href="/" class="navlink" title="Go Home">Home</a>
-                <a href="videos" class="navlink" title="Browse Videos">Videos</a>
-                <a href="about" class="navlink" title="About Me">About</a>
-            </div>
-            <div class="logo2"></div>
-        </div>
+    <header id="header">
+        <a href="/" id="logo" title="Go to the home page">plexion</a>
+        <a href="/" class="nav home2" title="Go to the home page"><i class="fas fa-home"></i> home</a>
+        <a href="videos" class="nav videos2" title="Go to the videos page"><i class="fas fa-video"></i> videos</a>
+        <a href="about" class="nav about2" title="Go to the about page"><i class="fas fa-info-circle"></i> about</a>
+        <!--<a href="https://scratch.mit.edu/users/PushToTheLimit/" target="_blank" class="nav scratch" title="Go to my Scratch profile">scratch <i class="fas fa-external-link-alt"></i></a>
+        <a href="https://osu.ppy.sh/users/15364179" target="_blank" class="nav osu" title="Go to my osu! profile">osu! <i class="fas fa-external-link-alt"></i></a>-->
+    </header>
+    <div class=header-mobile>
+        <center>
+        <a href="/" id="logo" title="Open the hamburger menu">plexion</a><a href="javascript:void(0);" onclick="hamburger()"><i class="fas fa-angle-down" title="Open hamburger.."></i></a>
+    </div>
+    <div class="hamburger" id="hamburger">
+        <ul>
+            <li><a href="/" id="nav" class="home">home</a></li>
+            <li><a href="videos" id="nav" class="videos">videos</a></li>
+            <li><a href="about" id="nav" class="about">about</a></li>
+            <!--<li><a href="https://scratch.mit.edu/users/PushToTheLimit/" target="_blank" id="nav" class="scratch">scratch <i class="fas fa-external-link-alt"></i></a></li>
+            <li><a href="https://osu.ppy.sh/users/15364179" target="_blank" id="nav" class="osu">osu! <i class="fas fa-external-link-alt"></i></a></li>
+            <li><a href="https://youtube.com/plexion" target="_blank" id="nav" class="youtube">youtube <i class="fas fa-external-link-alt"></i></a></li>-->
+        </ul>
+    </div>
+    <div class="links">
+        <center>
+        <br/>
+        <br/>
+        <a class="buttoni youtube" href="https://youtube.com/plexion?sub_confirmation=1" title="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
+        <a class="buttoni twitter" href="https://twitter.com/plexionlive" title="Follow on Twitter"><i class="fab fa-twitter"></i></a>
+        <a class="buttoni twitch" href="https://twitch.tv/plexionlive" title="Follow on Twitch"><i class="fab fa-twitch"></i></a>
+        <a class="buttoni osu osufont" href="https://osu.ppy.sh/users/15364179" title="Follow on osu!">osu!</a>
+        <a class="buttoni scratch scratchfont" href="https://scratch.mit.edu/users/PushToTheLimit/" title="Follow on Scratch">S</a>
+        <br/>
+        <br/>
+    </div>
+    <div class="hamburger links-mobile">
+        <ul>
+            <li><a class="youtube" href="https://youtube.com/plexion?sub_confirmation=1" title="Subscribe on YouTube"><i class="fab fa-youtube"></i> YouTube</a></li>
+            <li><a class="twitter" href="https://twitter.com/plexionlive" title="Follow on Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a class="twitch" href="https://twitch.tv/plexionlive" title="Follow on Twitch"><i class="fab fa-twitch"></i> Twitch</a></li>
+            <li><a class="osu osufont" href="https://osu.ppy.sh/users/15364179" title="Follow on osu!">osu!</a></li>
+            <li><a class="scratch scratchfont" href="https://scratch.mit.edu/users/PushToTheLimit/" title="Follow on Scratch">Scratch</a></li>
+        </ul>
     </div>
     <!--<div class="section a dark" id="topic">
         <p class="big2">No topics available.</p>
@@ -38,65 +65,31 @@
         <br/>
     </div>-->
     <div class="section" id="start">
-        <p class="big2">WELCOME</p>
-        <p class="sectiondesc">You can find some projects i've worked on in the past below.</p>
+        <p class="big2">Hey!</p>
+        <p class="sectiondesc">I'm Cobain (aka. plexion). My channel is heavily focused around a game called Minecraft. I try and put as much effort into my videos as possible so it's greatly appreciated if you could subscribe! ❤ If you're looking for music played in one of my videos try checking in this playlist - <a href="https://tinyurl.com/plexioncontentmusic">https://tinyurl.com/plexioncontentmusic</a> (there's also quite a high chance it's from an anime).</p>
         <br/>
-        <a class="button important" href="javascript:void(0);" onclick="category()" title="View page categories">Browse categories</a>
-        <span class="btnsep"></span><span class="btnsep"></span><a class="button" href="accounts" title="View my accounts">View accounts</a>
-        <!-- <a id="button" class="home" href="javascript:void(0);" onclick="search()">Search <i class="fas fa-search"></i></a> -->
+        <p class="sectiondesc">Don't take what I say in videos as 100% serious, it's all for jokes. Sorry if anyone is offended by things I say in my videos.</p>
+        <br/>
+        <a class="button youtube" href="https://youtube.com/plexion?sub_confirmation=1" title="Subscribe on YouTube">Subscribe <i class="fab fa-youtube"></i></a>
+        <a class="button about" href="https://youtube.com/plexion/about" title="Subscribe on YouTube">Read more <i class="fas fa-info-circle"></i></a>
         <br/>
         <br/>
     </div>
-    <div class="hamburger" id="category_view">
-        <ul>
-            <li><a href="#minecraft" class="minecraft" title="Browse Minecraft">Minecraft</a></li>
-            <li><a href="#scratch" class="scratch" title="Browse Scratch">Scratch</a></li>
-            <li><a href="#channels" class="youtube" title="Browse Channels">Channels</a></li>
-            <li><a href="#extras" class="extras" title="Browse the Extras">Extras</a></li>
-            <li><a href="#timeline" class="timeline2" title="Browse the Timeline">Timeline</a></li>
-        </ul>
-    </div>
-    <div class="section" id="minecraft">
-        <p class="big2">MINECRAFT</p>
-        <p class="sectiondesc">Projects i've created that are related to Minecraft in some way.</p>
-    </div>
-    <div class="projects">
-        <button class="project" id="spyglass" onclick="location.href='https://www.planetminecraft.com/texture-pack/spyglass-hud-remover/';">
-            <a class="head" href="https://www.planetminecraft.com/texture-pack/spyglass-hud-remover/">Spyglass HUD Remover</a>
-            <p class="desc">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
-        </button>
-        <button class="project" id="hideandseek" onclick="location.href='https://www.planetminecraft.com/project/hide-amp-seek-4213912/';">
-            <a class="head" href="https://www.planetminecraft.com/project/hide-amp-seek-4213912/">Haunting Hunters</a>
-            <p class="desc">A classic game of hide and seek, featuring cool powerups.</p>
-        </button>
-        <button class="project" id="corruption" onclick="location.href='https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/';">
-            <a class="head" href="https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/">Corruption in Minecraft</a>
-            <p class="desc">Changes the colour scheme of the Warped Forest to match the Corruption from Terraria.</p>
-        </button>
-        <button class="project" id="darktheme" onclick="location.href='https://www.planetminecraft.com/texture-pack/metro-dark-theme/';">
-            <a class="head" href="https://www.planetminecraft.com/texture-pack/metro-dark-theme/">Metro Dark Theme</a>
-            <p class="desc">A GUI re-skin that helps your eyes late at night.</p>
-        </button>
-        <button class="project" id="mc4k" onclick="location.href='https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/';">
-            <a class="head" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/">Minecraft 4k</a>
-            <p class="desc">A compilation of the textures in Minecraft 4k added into the latest version.</p>
-        </button>
-        <button class="project" id="gsot" onclick="location.href='http://plexion.online/gsot';">
-            <a class="head" href="http://plexion.online/gsot">Grand Scheme of Things</a>
-            <p class="desc">A Minecraft developer group i'm a part of, check the games out!</p>
-        </button>
-        <button class="project" id="a" onclick="location.href='#';">
-            <a class="head" href="#">Coming soon!</a>
-            <p class="desc">Working on some stuff right now.</p>
-        </button>
-        <!--<button class="project" id="skyplex">
-            <a class="head skyplex" href="..\skyplex\"><p>Skyplex</p></a>
-            <p class="desc">Skyplex is a multiplayer Minecraft game with unlimited possibilities.</p>
-        </button>-->
+    <div class="section" id="start">
+        <p class="big2">Hey!</p>
+        <p class="sectiondesc">I'm Cobain (aka. plexion). My channel is heavily focused around a game called Minecraft. I try and put as much effort into my videos as possible so it's greatly appreciated if you could subscribe! ❤ If you're looking for music played in one of my videos try checking in this playlist - <a href="https://tinyurl.com/plexioncontentmusic">https://tinyurl.com/plexioncontentmusic</a> (there's also quite a high chance it's from an anime).</p>
+        <br/>
+        <a class="button youtube" href="https://youtube.com/plexion?sub_confirmation=1" title="Subscribe on YouTube">Subscribe <i class="fab fa-youtube"></i></a>
+        <br/>
+        <br/>
     </div>
     <div class="section" id="scratch">
         <p class="big2">SCRATCH</p>
         <p class="sectiondesc">I've made quite a few projects in Scratch. Below are some of my favourites (none are completed)</p>
+        <br/>
+        <a class="button scratch" href="https://scratch.mit.edu/users/PushToTheLimit" title="Go to my Scratch profile">View Profile <i class="fas fa-user-circle"></i></a>
+        <br/>
+        <br/>
     </div>
     <div class="projects">
         <button class="project" id="vortexos" onclick="location.href='https://scratch.mit.edu/projects/405720977/';">
@@ -120,6 +113,48 @@
             <p class="desc">A heavy work-in-progress game that features the character in a blue cave-like enviroment.</p>
         </button>
     </div>
+    <div class="section" id="minecraft">
+        <p class="big2">MINECRAFT</p>
+        <p class="sectiondesc">Projects i've created that are related to Minecraft in some way.</p>
+        <br/>
+        <a class="button minecraft" href="https://www.planetminecraft.com/member/plexionlive/" title="Go to my Planet Minecraft profile">View Profile <i class="fas fa-user-circle"></i></a>
+        <br/>
+        <br/>
+    </div>
+    <div class="projects">
+        <button class="project" id="gsot" onclick="location.href='http://plexion.online/gsot';">
+            <a class="head" href="http://plexion.online/gsot">Grand Scheme of Things</a>
+            <p class="desc">A Minecraft developer group i'm a part of, check the games out!</p>
+        </button>
+        <button class="project" id="hideandseek" onclick="location.href='https://www.planetminecraft.com/project/hide-amp-seek-4213912/';">
+            <a class="head" href="https://www.planetminecraft.com/project/hide-amp-seek-4213912/">Haunting Hunters</a>
+            <p class="desc">A classic game of hide and seek, featuring cool powerups.</p>
+        </button>
+        <button class="project" id="darktheme" onclick="location.href='https://www.planetminecraft.com/texture-pack/metro-dark-theme/';">
+            <a class="head" href="https://www.planetminecraft.com/texture-pack/metro-dark-theme/">Metro Dark Theme</a>
+            <p class="desc">A GUI re-skin that helps your eyes late at night.</p>
+        </button>
+        <button class="project" id="corruption" onclick="location.href='https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/';">
+            <a class="head" href="https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/">Corruption in Minecraft</a>
+            <p class="desc">Changes the colour scheme of the Warped Forest to match the Corruption from Terraria.</p>
+        </button>
+        <button class="project" id="spyglass" onclick="location.href='https://www.planetminecraft.com/texture-pack/spyglass-hud-remover/';">
+            <a class="head" href="https://www.planetminecraft.com/texture-pack/spyglass-hud-remover/">Spyglass HUD Remover</a>
+            <p class="desc">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
+        </button>
+        <button class="project" id="mc4k" onclick="location.href='https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/';">
+            <a class="head" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/">Minecraft 4k</a>
+            <p class="desc">A compilation of the textures in Minecraft 4k added into the latest version.</p>
+        </button>
+        <button class="project" id="a" onclick="location.href='#';">
+            <a class="head" href="#">Coming soon!</a>
+            <p class="desc">Working on some stuff right now.</p>
+        </button>
+        <!--<button class="project" id="skyplex">
+            <a class="head skyplex" href="..\skyplex\"><p>Skyplex</p></a>
+            <p class="desc">Skyplex is a multiplayer Minecraft game with unlimited possibilities.</p>
+        </button>-->
+    </div>
     <div class="section" id="channels">
         <p class="big2">CHECK OUT MORE</p>
         <p class="sectiondesc">I've got a lot of channels ok.</p>
@@ -129,21 +164,6 @@
             <img class="pfp" src="pfp/plexion.png"></img>
             <a class="head" href="https://youtube.com/plexion">plexion</a>
             <p class="desc">My main channel, where my most high quality content is posted.</p>
-        </button>
-        <button class="project" id="plexionGOLD" onclick="location.href='https://tinyurl.com/plexiongold';">
-            <img class="pfp" src="pfp/plexionGOLD.png"></img>
-            <a class="head" href="https://tinyurl.com/plexiongold">plexionGOLD</a>
-            <p class="desc">The higher quality second channel for clips & cut scenes.</p>
-        </button>
-        <button class="project" id="plexionVODS" onclick="location.href='https://tinyurl.com/plexvods';">
-            <img class="pfp" src="pfp/plexionVODS.png"></img>
-            <a class="head" href="https://tinyurl.com/plexvods">plexionVODS</a>
-            <p class="desc">A full archive of <i>almost</i> all my streams, no matter what platform.</p>
-        </button>
-        <button class="project" id="plexionMUSIC" onclick="location.href='https://tinyurl.com/plexionmusic';">
-            <img class="pfp" src="pfp/plexionMUSIC.png"></img>
-            <a class="head" href="https://tinyurl.com/plexionmusic">plexionMUSIC</a>
-            <p class="desc">More of a joke than anything.</p>
         </button>
         <button class="project" id="plexionDev" onclick="location.href='https://tinyurl.com/vortexosyoutube';">
             <img class="pfp" src="pfp/plexionDev.png"></img>
@@ -155,6 +175,11 @@
             <a class="head" href="https://tinyurl.com/osuplexion">osu!plexion</a>
             <p class="desc">One of my alternate channels that has the occasional osu! upload.</p>
         </button>
+        <button class="project" id="plexionVODS" onclick="location.href='https://tinyurl.com/plexvods';">
+            <img class="pfp" src="pfp/plexionVODS.png"></img>
+            <a class="head" href="https://tinyurl.com/plexvods">plexionVODS</a>
+            <p class="desc">The one place with a full archive of all my streams on my twitch.</p>
+        </button>
         <button class="project" id="plextra" onclick="location.href='https://tinyurl.com/plexion2';">
             <img class="pfp" src="pfp/plextra.png"></img>
             <a class="head" href="https://tinyurl.com/plexion2">plextra</a>
@@ -164,6 +189,11 @@
             <img class="pfp" src="pfp/LetsTalk.png"></img>
             <a class="head" href="https://tinyurl.com/letstalkpodcast">Let's Talk</a>
             <p class="desc">I talk on this channel, it's really cool.</p>
+        </button>
+        <button class="project" id="plexionMUSIC" onclick="location.href='https://tinyurl.com/plexionmusic';">
+            <img class="pfp" src="pfp/plexionMUSIC.png"></img>
+            <a class="head" href="https://tinyurl.com/plexionmusic">plexionMUSIC</a>
+            <p class="desc">More of a joke than anything.</p>
         </button>
     </div>
     <div class="section">
@@ -194,17 +224,17 @@
     </div>
     <div class="projects">
         <button class="project" id="mclive" onclick="location.href='minecraft_live';">
-            <i class="fas fa-exclamation-triangle unsupported" title="See plexionstudios.github.io/unsupported"></i><br/>
+            <i class="fas fa-exclamation-triangle unsupported"></i><br/>
             <a class="head" href="minecraft_live">Minecraft LIVE Countdown</a>
             <p class="desc">A live countdown to the official 2020 MINECRAFT LIVE!</p>
         </button>
         <button class="project" id="terraria" onclick="location.href='http://plexion.online/versions/2020light/terraria';">
-            <i class="fas fa-exclamation-triangle unsupported" title="See plexionstudios.github.io/unsupported"></i><br/>
+            <i class="fas fa-exclamation-triangle unsupported"></i><br/>
             <a class="head" href="http://plexion.online/versions/2020light/terraria">Terraria 1.4 Countdown</a>
             <p class="desc">An old countdown to the release of Terraria 1.4: Journey's End.</p>
         </button>
         <button class="project" id="vortexos" onclick="location.href='http://vortex.plexion.online/store';">
-            <i class="fas fa-exclamation-triangle unsupported" title="See plexionstudios.github.io/unsupported"></i><br/>
+            <i class="fas fa-exclamation-triangle unsupported"></i><br/>
             <a class="head" href="http://vortex.plexion.online/store">VortexOS Storefront</a>
             <p class="desc">An unsupported and non-functional storefront for VortexOS.</p>
         </button>
@@ -267,8 +297,8 @@
     <footer>
         <center>
         <hr />    
-        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">27.11.2020</a></span>
-        <span class="btnsep"></span><span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">10.11.2020</a></span>
+        <span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
     <!-- jquery --> <!--<script>
         $(window).on("scroll", function () {
@@ -296,16 +326,6 @@
         });
     </script>
     <!--<script>
-        $(document).scroll(function() {
-        var y = $(this).scrollTop();
-        if (y > 330) {
-            $('.header-popout').fadeIn(50);
-        } else {
-            $('.header-popout').fadeOut(50);
-        }
-        });
-    </script>-->
-    <!--<script>
         $('header').mousemove(function(e){
             var amountMovedX = (e.pageX * -1 / 6);
             var amountMovedY = (e.pageY * -1 / 6);
@@ -332,9 +352,6 @@
         } 
     </script>-->
     <script>
-        feather.replace()
-    </script>
-    <script>
         function hamburger() {
             var x = document.getElementById("hamburger");
             if (x.style.display === "inherit") {
@@ -342,21 +359,6 @@
             } else {
             x.style.display = "inherit";
             }
-        }
-    </script>
-    <script>
-        function hamburgertoggle() {
-            document.querySelector('hamburgertoggle').addEventListener('click', function() {
-            const icon = this.querySelector('i');
-
-            if (icon.classList.contains('fa-angle-down')) {
-                icon.classList.remove('fa-angle-down');
-                icon.classList.add('fa-angle-up');
-            } else {
-                icon.classList.remove('fa-angle-up');
-                icon.classList.add('fa-angle-down');
-            }
-            });
         }
     </script>
     <script>
