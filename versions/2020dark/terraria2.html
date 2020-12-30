@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>The Plexion Network</title>
+	<link rel="shortcut icon" type="ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="stylesheetclock.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="timeuntil">
+		<center>
+		<img src="logo.png"><br/><br/>
+		<script type = "text/javascript" class="timeuntil"> 
+			// One day Time in ms (milliseconds) 
+			var one_day = 1000 * 60 * 60 * 24 
+			  
+			// To set present_dates to two variables 
+			var present_date = new Date(); 
+			  
+			// 0-11 is Month in JavaScript 
+			var christmas_day = new Date(2020, 4, 16, 18) 
+			  
+			// To Calculate next year's Christmas if passed already. 
+			if (present_date.getMonth() == 11 && present_date.getdate() > 25) 
+				christmas_day.setFullYear(christmas_day.getFullYear() + 1) 
+			  
+			// To Calculate the result in milliseconds and then converting into days 
+			var Result = Math.round(christmas_day.getTime() - present_date.getTime()) / (one_day); 
+			  
+			// To remove the decimals from the (Result) resulting days value 
+			var Final_Result = Result.toFixed(0); 
+			
+				
+			//To display the final_result value 
+			document.write("There are " + Final_Result + " days until Terraria Journey's End is released!"); 
+			document.write("Number of days remaining till christmas <br>" 
+               + present_date + "<br> and <br>" 
+               + christmas_day + " is: <br> " 
+               + Final_Result); 
+		</script>
+		<br/><br/>
+		<iframe width="801" height="451" src="https://www.youtube-nocookie.com/embed/M01jQ2XRqfE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br/>
+		<a class="twitter-timeline" data-width="396" data-height="500" data-theme="dark" href="https://twitter.com/Terraria_Logic?ref_src=twsrc%5Etfw">Loading!</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<a class="twitter-timeline" data-width="396" data-height="500" data-theme="dark" href="https://twitter.com/Cennxx?ref_src=twsrc%5Etfw">Loading!</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<p>Never heard of 'Journey's End', that's fine! You can see it in action <a href="https://www.youtube.com/watch?v=H77Zfzy4LWw">here</a>.</p>
+	</div>
+</body>
+</html>

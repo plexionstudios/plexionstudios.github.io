@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Journey's End Countdown - Plexion Network</title>
+	<meta name="description" content="Displays a countdown until Terraria Journey's End is officialy released to the world!">
+	<meta name="keywords" content="plexion, plex, terraria, journey, journeys, end, count, down, countdown">
+	<meta name="author" content="Plexion Network">
+	<link rel="shortcut icon" type="ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="stylesheetclock.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="timeuntil">
+		<center>
+		<img src="logo.png"><br/><br/>
+		<!-- Display the countdown timer in an element -->
+		<p class="release">Journey's End will be released in:</p>
+		<p id="demo" class="countdown"></p>
+
+		<script>
+			// Set the date we're counting down to
+			var countDownDate = new Date("May 16, 2020 18:00:00").getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+				// Get today's date and time
+				var now = new Date().getTime();
+
+				// Find the distance between now and the count down date
+				var distance = countDownDate - now;
+
+				// Time calculations for days, hours, minutes and seconds
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				// Display the result in the element with id="demo"
+				document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+				+ minutes + "m " + seconds + "s ";
+
+				// If the count down is finished, write some text
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("demo").innerHTML = "EXPIRED";
+				}
+			}, 1000);
+		</script>
+		<br/><br/>
+		<iframe width="801" height="451" src="https://www.youtube-nocookie.com/embed/M01jQ2XRqfE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br/>
+		<a class="twitter-timeline" data-width="396" data-height="500" data-theme="dark" href="https://twitter.com/Terraria_Logic?ref_src=twsrc%5Etfw">Loading!</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<a class="twitter-timeline" data-width="396" data-height="500" data-theme="dark" href="https://twitter.com/Cennxx?ref_src=twsrc%5Etfw">Loading!</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<p>Never heard of 'Journey's End', that's fine! You can see it in action <a href="https://www.youtube.com/watch?v=H77Zfzy4LWw">here</a>.</p>
+	</div>
+</body>
+</html>

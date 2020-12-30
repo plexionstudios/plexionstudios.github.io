@@ -1,0 +1,288 @@
+html {
+  scroll-behavior: smooth;
+ }
+.header-up button {
+	float: right;
+}
+.appdescription {
+	background-image: url("bg.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	display: inline-flex;
+	background-position: top;
+	padding: 20px 0px 20px 100px;
+	height: 250px;
+	white-space: nowrap;
+}
+.appupdates {
+	background-image: url("bg.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	display: inline-flex;
+	background-position: top;
+	padding: 20px 0px 20px 100px;
+	white-space: nowrap;
+}
+.appreviews {
+	background-image: url("bg.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: top;
+	padding: 20px 0px 20px 100px;
+	height: 180px;
+	white-space: nowrap;
+}
+.apppublisher {
+	background-image: url("bg.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: top;
+	padding: 20px 0px 20px 100px;
+	height: 350px;
+	white-space: nowrap;
+}
+.appscreenshots {
+	background-image: url("bg.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: top;
+	padding: 20px 0px 20px 100px;
+	height: 520px;
+	white-space: nowrap;
+}
+.appscreenshots img {
+	border-radius: 3%;
+	margin-right: 5px;
+}
+.sayori {
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 20px 0px 20px 100px;
+	height: 140px;
+}
+.code {
+	background: #EAEAEA;
+	display: inline;
+	padding: 5px;
+	color: black;
+}
+.dark_mode .code {
+	background: #333333;
+	color: white;
+}
+.apps {
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	display: inline-flex;
+	padding: 20px 0px 20px 100px;
+	height: 140px;
+}
+.appicon img {
+	padding: 20px 20px 0px 0px;
+	width: 100px;
+	white-space: nowrap;
+}
+.apptext h2 {
+	padding: 5px 0px 0px 0px;
+	font-size: 24px;
+	white-space: nowrap;
+}
+.apptext h3 {
+	padding: 2px 0px 0px 0px;
+	margin: 0px;
+	font-size: 18px;
+	white-space: nowrap;
+}
+.natsuki {
+	background-image: url("bank.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 20px 0px 20px 0px;
+	height: 400px;
+}
+.monika {
+	background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(0,0,0,1) 100%);
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 0px 0px 20px 0px;
+	height: 300px;
+}
+.enemies {
+	background-image: url("mines.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 20px 0px 20px 0px;
+	height: 400px;
+}
+body {
+	background: rgb(255,255,255);
+	font-family: 'Roboto', sans-serif;
+	color: black;
+	margin: 0px;
+	padding: 0px;
+}
+button {
+	border-radius: 5px;
+	border: 3px solid #3A88BC;
+	color: #3A88BC;
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+	padding: 10px;
+	margin: 0px 12px 0px 0px;
+	width: 170px;
+	height: 50px;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	box-shadow: 2px 2px 4px #000000;
+	transition: 0.3s;
+}
+button:hover {
+	background-color: #3A88BC;
+	border: 3px solid #3A88BC;
+	cursor: pointer;
+	color: white;
+}
+button3 {
+	border-radius: 0px;
+	border: 3px solid rgb(253,193,221);
+	color: black;
+	background-color: rgb(254,230,224);
+	font-family: 'Roboto', sans-serif;
+	padding: 10px;
+	margin: 0px 12px 0px 0px;
+	width: 170px;
+	height: 50px;
+	cursor: pointer;
+}
+.embedr {
+  background-color: #1A1A1E;
+  padding: 12px;
+  border-style: solid;
+  border-width: 0px 0px 0px 5px;
+  border-left-color: #FF2222;
+  border-radius: 6px;
+}
+.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+.field {
+  color: #414141;
+  font-size: 18px;
+  font-weight: 450;
+}
+.fieldtext {
+  font-size: 15px;
+  color: #DDDDDD;
+}
+iframe {
+	border-radius: 15px;
+	padding: 5px 5px 3px 5px;
+}
+.header-up {
+	background: black;
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 16px 36px 16px 36px;
+	margin: 0px 0px 0px 0px;
+}
+.header {
+	background: rgb(229,229,229);
+	background: linear-gradient(180deg, rgba(229,229,229,1) 40%, rgba(255,255,255,1) 100%);
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: top;
+	padding: 24px 100px 0px 100px;
+	margin: 0px 0px 0px 0px;
+	height: 60px;
+}
+.header h3 {
+	display: inline;
+	padding: 16px;
+	margin: 0px 0px 0px 8px;
+	line-height: 30px;
+}
+.user {
+	float: right;
+}
+.nav {
+	float: center;
+}
+.header h2 {
+	display: inline;
+	padding: 16px;
+	margin: 0px 0px 0px 8px;
+	line-height: 30px;
+	font-size: 40px;
+}
+
+footer {
+	background: black;
+	padding: 10px;
+}
+
+h3 {
+	display: inline;
+	padding: 16px;
+	color: black;
+}
+.header-up h3 {
+	color: white;
+	display: inline;
+	padding: 2px;
+}
+h1 {
+	font-size: 50px;
+	padding: 60px 0px 0px 0px;
+}
+.welcome h1 {
+	font-size: 50px;
+	padding: 40px 0px 0px 0px;
+}
+h2 {
+	font-size: 32px;
+}
+img2 {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  padding: 0px 0px 0px 0px;
+}
+.header img {
+	vertical-align: middle;
+}
+a {
+	color: rgb(0,59,255);
+	text-decoration: none;
+}
+.welcome a {
+	color: rgb(0,59,255);
+	text-decoration: none;
+	color: black;
+}
+.more_info p {
+	padding: 0px 0px 16px 0px;
+	margin: 0px 0px 0px 0px;
+}
+.dark_mode {
+	color: white;
+	background-color: #191919;
+}
+.dark_mode h3{
+	color: white;
+}
+.dark_mode .header {
+	background: rgb(51,51,51);
+	background: linear-gradient(180deg, rgba(51,51,51,1) 40%, rgba(25,25,25,1) 100%);
+}
+.dark_mode .welcome {
+	background-image: url("bg-d.png");
+}

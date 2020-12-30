@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+    <title>Spyglass HUD Remover  •  plexion</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/twemoji-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+</head>
+<body>
+    <div class="header-popout">
+        <div class="navigation">
+            <a href="/" class="navlink" title="go home">home</a>
+            <a href="/videos" class="navlink" title="browse videos">videos</a>
+            <a href="/accounts" class="navlink" title="my accounts">accounts</a>
+        </div>
+    </div>
+    <header id="spyglass"><p class="big2">Spyglass HUD Remover</p></header>
+    <div class="options" id="options">
+        <a class="button view" target="_blank" href="https://www.planetminecraft.com/texture-pack/spyglass-hud-remover/">View on PMC<span class="isep"></span><i class="fas fa-external-link-alt"></i></a>
+        <a class="button download important" href="https://www.planetminecraft.com/texture-pack/spyglass-hud-remover/download/file/13595560/">Download<!--<span class="isep"></span><i class="fas fa-cloud-download-alt"></i>--></a>
+    </div>
+    <div class="parhead" id="description">
+        <a href="#description">Description</a><i class="tooltip">Copy link to share</i>
+        <hr>
+    </div>
+    <div class="paragraph">
+        <p>A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass. This makes it very similar to the OptiFine zoom.</p>
+    </div>
+    <div class="parhead" id="screenshots">
+        <a href="#screenshots">Screenshots</a><i class="tooltip">Copy link to share</i>
+        <hr>
+    </div>
+    <div class="images">
+        <span class="imgcontainer">
+            <img src="spyglass0.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="spyglass1.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="spyglass2.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="spyglass3.png"></img>
+        </span>
+    </div>
+    <div class="parhead" id="installation">
+        <a href="#installation">Installation</a><i class="tooltip">Copy link to share</i>
+        <hr>
+    </div>
+    <div class="paragraph">
+        <p>Resource packs are the simplest thing to install on Minecraft. Here are the simple steps.</p>
+        <ol>
+            <li>Click the download button above then save it in your Downloads.</li>
+            <li>Press <code>WIN</code> + <code>R</code> then type <code>%appdata%</code></li>
+            <li>Navigate to <code>.minecraft</code> then <code>resourcepacks</code> and drag the .zip file inside.</li>
+            <li>Open Minecraft, then go to <code class="mc-button">Options...</code> then <code class="mc-button">Resource Packs...</code> and find the pack in there.</li>
+            <li>Apply the pack with the <code class="mc-button">></code> button and press <code class="mc-button">Done</code></li>
+        </ol>
+    </div>
+    <footer>
+        <center>
+        <hr />    
+        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">24.12.2020</a></span>
+        <span class="btnsep"></span><span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+    </footer>
+    <!-- jquery --> <!--<script>
+        $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 50) {
+            $("#header").addClass("scrolled");
+        }
+        else {
+            $("#header").removeClass("scrolled");
+        }
+    });
+    </script>-->
+    <!-- jquery --> <script>
+        var data = {rss: "https://medium.com/feed/plexion"}
+        $.get("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fplexion", data, function(response){
+        //Checking Response Status
+        if (response.status == 'ok') {
+        //Defining a variable where I create my response data
+        var output = '';
+        //Response...
+        $.each(response.items, function (k, item) {
+            //Iteration
+            return k < 10;
+        });
+        }
+        });
+    </script>
+    <!--<script>
+        $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 330) {
+            $('.header-popout').fadeIn(50);
+        } else {
+            $('.header-popout').fadeOut(50);
+        }
+        });
+    </script>-->
+    <!--<script>
+        $('header').mousemove(function(e){
+            var amountMovedX = (e.pageX * -1 / 6);
+            var amountMovedY = (e.pageY * -1 / 6);
+            $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
+        });
+    </script>-->
+    <!--<script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {stickyfunction()};
+
+        // Get the header
+        var header = document.getElementById("header");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function stickyfunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+        } 
+    </script>-->
+    <script>
+        feather.replace()
+    </script>
+    <script>
+        function hamburger() {
+            var x = document.getElementById("hamburger");
+            if (x.style.display === "inherit") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "inherit";
+            }
+        }
+    </script>
+    <script>
+        function hamburgertoggle() {
+            document.querySelector('hamburgertoggle').addEventListener('click', function() {
+            const icon = this.querySelector('i');
+
+            if (icon.classList.contains('fa-angle-down')) {
+                icon.classList.remove('fa-angle-down');
+                icon.classList.add('fa-angle-up');
+            } else {
+                icon.classList.remove('fa-angle-up');
+                icon.classList.add('fa-angle-down');
+            }
+            });
+        }
+    </script>
+    <script>
+        function category() {
+            var x = document.getElementById("category_view");
+            if (x.style.display === "grid") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "grid";
+            }
+        }
+    </script>
+    <script>
+        scratchblocks.renderMatching('pre.blocks', {
+        style:     'scratch3',   // Optional, defaults to 'scratch2'.
+        });
+    </script>
+    <script>
+        scratchblocks.renderMatching("code.b", {
+        inline: true,
+        style: 'scratch3'
+        });
+    </script>
+</body>

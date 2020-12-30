@@ -17,19 +17,13 @@
 </head>
 <body>
     <div class="header-popout">
-        <div class="inner-header">
-            <div class="logo">
-                <a href="/" title="Go Home">plexion.online</a>
-            </div>
-            <div class="navigation">
-                <a href="/" class="navlink" title="Go Home">Home</a>
-                <a href="videos" class="navlink" title="Browse Videos">Videos</a>
-                <a href="about" class="navlink" title="About Me">About</a>
-            </div>
-            <div class="logo2"></div>
+        <div class="navigation">
+            <a href="/" class="navlink" title="go home">home</a>
+            <a href="/videos" class="navlink" title="browse videos">videos</a>
+            <a href="/accounts" class="navlink" title="my accounts">accounts</a>
         </div>
     </div>
-    <!--<div class="section a dark" id="topic">
+    <!--<div class="section a" id="topic">
         <p class="big2">No topics available.</p>
         <p class="sectiondesc">You can't just look through the HTML and find the future.</p>
         <br/>
@@ -41,33 +35,37 @@
         <p class="big2">WELCOME</p>
         <p class="sectiondesc">You can find some projects i've worked on in the past below.</p>
         <br/>
-        <a class="button important" href="javascript:void(0);" onclick="category()" title="View page categories">Browse categories</a>
-        <span class="btnsep"></span><span class="btnsep"></span><a class="button" href="accounts" title="View my accounts">View accounts</a>
+        <div class="dropdown">
+            <a class="button important" href="javascript:void(0);" onclick="category()" title="View page categories">Browse categories<i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#minecraft" title="Browse Minecraft">Minecraft</a></li>
+                    <li><a href="#scratch" title="Browse Scratch">Scratch</a></li>
+                    <li><a href="#channels" title="Browse Channels">Channels</a></li>
+                    <li><a href="#extras" title="Browse the Extras">Extras</a></li>
+                    <li><a href="#timeline" title="Browse the Timeline">Timeline</a></li>
+                </ul>
+            </div>
+        </div>
+        <a class="button" href="accounts" title="View my accounts">View accounts</a>
         <!-- <a id="button" class="home" href="javascript:void(0);" onclick="search()">Search <i class="fas fa-search"></i></a> -->
-        <br/>
-        <br/>
-    </div>
-    <div class="hamburger" id="category_view">
-        <ul>
-            <li><a href="#minecraft" class="minecraft" title="Browse Minecraft">Minecraft</a></li>
-            <li><a href="#scratch" class="scratch" title="Browse Scratch">Scratch</a></li>
-            <li><a href="#channels" class="youtube" title="Browse Channels">Channels</a></li>
-            <li><a href="#extras" class="extras" title="Browse the Extras">Extras</a></li>
-            <li><a href="#timeline" class="timeline2" title="Browse the Timeline">Timeline</a></li>
-        </ul>
     </div>
     <div class="section" id="minecraft">
         <p class="big2">MINECRAFT</p>
         <p class="sectiondesc">Projects i've created that are related to Minecraft in some way.</p>
     </div>
     <div class="projects">
-        <button class="project" id="spyglass" onclick="location.href='https://www.planetminecraft.com/texture-pack/spyglass-hud-remover/';">
-            <a class="head" href="https://www.planetminecraft.com/texture-pack/spyglass-hud-remover/">Spyglass HUD Remover</a>
+        <button class="project" id="voidrising" onclick="location.href='projects/voidrising';">
+            <a class="head" href="projects/voidrising">Void Rising Datapack</a>
+            <p class="desc">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
+        </button>
+        <button class="project" id="spyglass" onclick="location.href='projects/spyglass';">
+            <a class="head" href="projects/spyglass">Spyglass HUD Remover</a>
             <p class="desc">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
         </button>
         <button class="project" id="hideandseek" onclick="location.href='https://www.planetminecraft.com/project/hide-amp-seek-4213912/';">
             <a class="head" href="https://www.planetminecraft.com/project/hide-amp-seek-4213912/">Haunting Hunters</a>
-            <p class="desc">A classic game of hide and seek, featuring cool powerups.</p>
+            <p class="desc">A classic game of hide and seek set inside a haunted mansion with cool powerups purchasable.</p>
         </button>
         <button class="project" id="corruption" onclick="location.href='https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/';">
             <a class="head" href="https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/">Corruption in Minecraft</a>
@@ -85,10 +83,10 @@
             <a class="head" href="http://plexion.online/gsot">Grand Scheme of Things</a>
             <p class="desc">A Minecraft developer group i'm a part of, check the games out!</p>
         </button>
-        <button class="project" id="a" onclick="location.href='#';">
+        <!--<button class="project" id="a" onclick="location.href='#';">
             <a class="head" href="#">Coming soon!</a>
             <p class="desc">Working on some stuff right now.</p>
-        </button>
+        </button>-->
         <!--<button class="project" id="skyplex">
             <a class="head skyplex" href="..\skyplex\"><p>Skyplex</p></a>
             <p class="desc">Skyplex is a multiplayer Minecraft game with unlimited possibilities.</p>
@@ -99,6 +97,10 @@
         <p class="sectiondesc">I've made quite a few projects in Scratch. Below are some of my favourites (none are completed)</p>
     </div>
     <div class="projects">
+        <button class="project" id="plexfonts" onclick="location.href='https://scratch.mit.edu/projects/448813989/';">
+            <a class="head" href="https://scratch.mit.edu/projects/448813989/">PlexFonts</a>
+            <p class="desc">A font renderer for Scratch, built from the ground up.</p>
+        </button>
         <button class="project" id="vortexos" onclick="location.href='https://scratch.mit.edu/projects/405720977/';">
             <a class="head" href="https://scratch.mit.edu/projects/405720977/">VortexOS</a>
             <p class="desc">An 'operating system' created all in Scratch. Undergoing some heavy rework currently; so it's not recommended to visit.</p>
@@ -175,17 +177,13 @@
             <a class="head" href="https://youtube.com/playlist?list=PLbaASKiZWzbqsfS_bq9s0-3MaJwET_FjI">Plex News</a>
             <p class="desc">A news show that covers all things Minecraft!</p>
         </button>
-        <button class="project" id="a" onclick="location.href='https://youtube.com/playlist?list=PLbaASKiZWzbqlTCQZcSPt4hUCMsKdNFGK';">
-            <a class="head" href="https://youtube.com/playlist?list=PLbaASKiZWzbqlTCQZcSPt4hUCMsKdNFGK">Plexmas 2019</a>
+        <button class="project" id="plexmas-2019" onclick="location.href='watch/plexmas2019';">
+            <a class="head" href="watch/pxmas19">Plexmas 2019</a>
             <p class="desc">A series of videos that were uploaded throughout christmas. It was unfortunately cancelled though.</p>
         </button>
-        <button class="project" id="a" onclick="location.href='#';">
-            <a class="head" href="#">Coming soon!</a>
-            <p class="desc">Working on some stuff right now.</p>
-        </button>
-        <button class="project" id="a" onclick="location.href='#';">
-            <a class="head" href="#">Plexion Rewind</a>
-            <p class="desc">A yearly video showing all the achievements on my channel.</p>
+        <button class="project" id="rewind" onclick="location.href='watch/rewind';">
+            <a class="head" href="watch/rewind">#PLEXIONREWIND</a>
+            <p class="desc">A yearly video celebrating the milestones, the people who made it happen and the best moments of the year.</p>
         </button>
     </div>
     <div class="section" id="extras">
@@ -193,18 +191,18 @@
         <p class="sectiondesc">The rest of my projects that don't really fit into one category.</p>
     </div>
     <div class="projects">
-        <button class="project" id="mclive" onclick="location.href='minecraft_live';">
-            <i class="fas fa-exclamation-triangle unsupported" title="See plexionstudios.github.io/unsupported"></i><br/>
+        <button class="project unsupported-project" id="mclive" onclick="location.href='minecraft_live';">
+            <i class="fas fa-exclamation-triangle unsupported" title="This page is unsupported and will no longer receieve updates or fixes."></i><br/>
             <a class="head" href="minecraft_live">Minecraft LIVE Countdown</a>
             <p class="desc">A live countdown to the official 2020 MINECRAFT LIVE!</p>
         </button>
-        <button class="project" id="terraria" onclick="location.href='http://plexion.online/versions/2020light/terraria';">
-            <i class="fas fa-exclamation-triangle unsupported" title="See plexionstudios.github.io/unsupported"></i><br/>
+        <button class="project unsupported-project" id="terraria" onclick="location.href='http://plexion.online/versions/2020light/terraria';">
+            <i class="fas fa-exclamation-triangle unsupported" title="This page is unsupported and will no longer receieve updates or fixes."></i><br/>
             <a class="head" href="http://plexion.online/versions/2020light/terraria">Terraria 1.4 Countdown</a>
             <p class="desc">An old countdown to the release of Terraria 1.4: Journey's End.</p>
         </button>
-        <button class="project" id="vortexos" onclick="location.href='http://vortex.plexion.online/store';">
-            <i class="fas fa-exclamation-triangle unsupported" title="See plexionstudios.github.io/unsupported"></i><br/>
+        <button class="project unsupported-project" id="vortexos" onclick="location.href='http://vortex.plexion.online/store';">
+            <i class="fas fa-exclamation-triangle unsupported" title="This page is unsupported and will no longer receieve updates or fixes."></i><br/>
             <a class="head" href="http://vortex.plexion.online/store">VortexOS Storefront</a>
             <p class="desc">An unsupported and non-functional storefront for VortexOS.</p>
         </button>
@@ -258,6 +256,13 @@
         </span>
         <span class="moment">
             <center>
+            <div class="watch2"><i><p class=head>Video not ready yet..</p><p class="desc">It's getting merged with the 2020 Rewind - so stick around.</p></i></div>
+            <p class="head">AGAIN?!</p>
+            <p class="desc">After the already incredible milestone earlier this year, on the 19th of November I reached 200 SUBSCRIBERS. WHAT.</p>   
+            </center>
+        </span>
+        <span class="moment">
+            <center>
             <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLbaASKiZWzbr-JjJc_yrE3YNpe5xJOKRG" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             <p class="head">The Aftermath</p>
             <p class="desc">I'm quite happy with the content I'm pushing out to my channel these days. A lot more time and effort is put into each video so I would appreciate it if you could subscribe!</p>   
@@ -267,70 +272,9 @@
     <footer>
         <center>
         <hr />    
-        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">27.11.2020</a></span>
+        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">29.12.2020</a></span>
         <span class="btnsep"></span><span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
-    <!-- jquery --> <!--<script>
-        $(window).on("scroll", function () {
-        if ($(this).scrollTop() > 50) {
-            $("#header").addClass("scrolled");
-        }
-        else {
-            $("#header").removeClass("scrolled");
-        }
-    });
-    </script>-->
-    <!-- jquery --> <script>
-        var data = {rss: "https://medium.com/feed/plexion"}
-        $.get("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fplexion", data, function(response){
-        //Checking Response Status
-        if (response.status == 'ok') {
-        //Defining a variable where I create my response data
-        var output = '';
-        //Response...
-        $.each(response.items, function (k, item) {
-            //Iteration
-            return k < 10;
-        });
-        }
-        });
-    </script>
-    <!--<script>
-        $(document).scroll(function() {
-        var y = $(this).scrollTop();
-        if (y > 330) {
-            $('.header-popout').fadeIn(50);
-        } else {
-            $('.header-popout').fadeOut(50);
-        }
-        });
-    </script>-->
-    <!--<script>
-        $('header').mousemove(function(e){
-            var amountMovedX = (e.pageX * -1 / 6);
-            var amountMovedY = (e.pageY * -1 / 6);
-            $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
-        });
-    </script>-->
-    <!--<script>
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function() {stickyfunction()};
-
-        // Get the header
-        var header = document.getElementById("header");
-
-        // Get the offset position of the navbar
-        var sticky = header.offsetTop;
-
-        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function stickyfunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-        } 
-    </script>-->
     <script>
         feather.replace()
     </script>

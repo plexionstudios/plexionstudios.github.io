@@ -1,5 +1,5 @@
 
-/* plexion.online 27.11.2020 */
+/* plexion.online 24.12.2020 */
 
 /* Import fonts */
 
@@ -48,6 +48,9 @@
 .project br {
     display: none;
 }
+.btnsep {
+    display: none;
+}
 
 /* Dark theme */
 
@@ -77,6 +80,9 @@
 
 html {
     scroll-behavior: smooth;
+}
+html body {
+    margin: 0;
 }
 
 /* Main website fonts etc. */
@@ -116,6 +122,9 @@ a:hover {
     color: white;
     font-style: italic;
 }
+strong {
+    font-weight: 500;
+}
 
 /* Main custom classes */
 
@@ -123,6 +132,13 @@ a:hover {
     font-weight: 600;
     font-size: 32px;
     font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+}
+.big1 {
+    font-weight: 600;
+    font-size: 48px;
+    font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 .big2 {
     font-weight: 600;
@@ -166,6 +182,18 @@ a:hover {
     text-align: center;
     padding: 30px 30px 30px 30px;
 }
+
+.padded {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.shadow p {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.whitetext p {
+    color: white;
+}
+
 .section .big2,.sectiondesc {
     padding: 3px 0 0 0;
     margin: 0;
@@ -176,15 +204,12 @@ a:hover {
 }
 
 #topic {
-    padding: 120px 200px 120px 30px;
+    padding: 120px;
     text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
     color: white;
 }
 #topic .button {
     text-shadow: none;
-}
-#topic .big2 {
-    text-shadow: -2.5px 2.5px 0px #003BFF;
 }
 
 .watch {
@@ -215,15 +240,63 @@ a:hover {
     width: 100%;
     height: 100%;
     transition: 0.1s ease-in-out;
-    border-radius: 5px;
-    border: 0 solid;
-    transform: scale(1.0);
+    margin: 0;
 }
 .watch2 iframe:hover {
     filter: brightness(110%);
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
-    border: 3px solid;
-    transform: scale(1.015);
+}
+.video-tile {
+    width: 300px;
+    display: block;
+}
+.watch3 {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+.watch3 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 40%;
+    transition: 0.1s ease-in-out;
+    border: 0 solid;
+    transform: scale(1.0);
+    margin: 0;
+}
+
+.videofeedinline {
+    justify-items: center;
+}
+.video-thumbnail {
+    width: 300px;
+    margin: 0;
+}
+.video-info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.video-tile {
+    margin: 10px;
+}
+.video-tile p {
+    text-align: center;
+}
+.video-title {
+    font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px;
+    padding: 0;
+}
+.video-desc {
+    font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px;
+    padding: 0;
+    color: #333333;
 }
 
 /* Buttons */
@@ -241,17 +314,15 @@ a:hover {
     font-weight: 500;
     transform: scale(1.0);
     filter: brightness(100%);
-    height: 40px;
-    margin: 20px 10px 20px 10px;
+    margin: 0 10px 0 10px;
+    line-height: 60px;
 }
 .button a {
     margin-bottom: 100px;
 }
 .button i {
-    position: relative;
     margin-left: 20px;
-    top: 2px;
-    font-size: 20px;
+    font-size: 16px;
 }
 .button:hover {
     /*
@@ -260,15 +331,57 @@ a:hover {
     border: 2px solid;
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);*/
     transform: scale(1.025);
-    filter: brightness(105%);
+    filter: brightness(95%);
     color: #141414;
     font-weight: 500;
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .button {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+    line-height: 49px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+}
+.dropdown-content ul {
+    list-style: none;
+    margin: 0 10px 0 10px;
+    padding: 0;
+    background: #0035E5;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+}
+.dropdown-content a {
+    font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+}
+.dropdown-content a:hover {
+    background: #003BFF;
 }
 .important {
     background: #003BFF;
     color: #F7F7F7;
     border: 2px solid #003BFF;
+}
+.rewindbutton {
+    background: #AD296D;
+    border: 2px solid #AD296D;
 }
 .important:hover {
     color: #F7F7F7;
@@ -276,6 +389,8 @@ a:hover {
 .dropdown {
     position: relative;
     display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 .dropdown-content {
     display: none;
@@ -316,14 +431,12 @@ a:hover {
 /* Website header */
 
 header {
-    padding-top: 20px;
-    padding-bottom: 280px;
+    padding: 200px 30px 200px 30px;
     margin-bottom: 30px;
     font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 20px;
-    padding-left: 30px;
     line-height: 30px;
-    background: url("banners/TransitionBanner.png");
+    background: url("banners/WinterNightBanner.png");
 	background-repeat: no-repeat, repeat;
 	background-size: 100%;
     background-position: center;
@@ -331,15 +444,12 @@ header {
 }
 header a {
     text-decoration: none;
-    color: #141414;
+    color: white;
 }
 .header-popout {
-    padding: 14px;
-    line-height: 24px;
     background: white;
     color: #141414;
     font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 16px;
     transition: 0.2s ease-in-out;
     position: sticky;
     top: 0;
@@ -348,6 +458,7 @@ header a {
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
     /*display: none;*/
+    padding: 12px;
 }
 .inner-header {
     display: flex;
@@ -362,31 +473,22 @@ header a {
     text-decoration: none;
 }
 .navigation {
-    width: 50%;
+    width: 100%;
 }
 .navigation a {
     text-decoration: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    transition: padding .3s ease-in-out;
+    padding: 13px 14px 13px 14px;
+    margin: 0 10px 0 10px;
+    transition: 0.2s ease-in-out;
     height: 100%;
-    line-height: 2px;
-    padding-top: 12px;
-    padding-bottom: 12px;
     font-weight: 500;
     font-size: 18px;
 }
 .navigation a:hover {
-    border-bottom: 3px solid #003BFF;
+    background: #003BFF;
+    color: white;
     padding-left: 25px;
     padding-right: 25px;
-}
-.navigation span {
-    position: relative;
-    top: 5px;
-    margin-right: 10px;
 }
 .header-mobile {
     padding-top: 20px;
@@ -435,17 +537,31 @@ header a {
     padding: 10px 0 10px 0;
 }
 .video iframe {
-    border-radius: 5px;
     transition: 0.1s ease-in-out;
     filter: brightness(100%);
-    transform: scale(1.0);
-    border: 0 solid;
 }
 .video iframe:hover {
     filter: brightness(110%);
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
-    border: 3px solid;
     transform: scale(1.015);
+}
+.subscribe {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 15px 25px 15px 25px;
+    color: white;
+    background: #CC0000;
+    border-radius: 7px;
+    transition: 0.1s ease-in-out;
+    line-height: 64px;
+}
+.subscribe:hover {
+    font-weight: 500;
+}
+.subscribe:focus {
+    filter: brightness(80%);
 }
 
 /* Hamburger menu */
@@ -497,7 +613,8 @@ footer {
     margin-bottom: 20px;
 }
 footer hr {
-    margin: 20px 8% 20px 8%;
+    margin: 20px 10% 20px 10%;
+    border: 1px solid black;
 }
 footer i {
     margin-right: 5px;
@@ -548,6 +665,13 @@ footer span {
     transition: 0.3s;
     margin: 10px;
 }
+.videofeedinline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    transition: 0.3s;
+    margin: 10px;
+}
 .video {
     background: #F7F7F7;
     color: #141414;
@@ -556,6 +680,10 @@ footer span {
     transition: 0.3s;
     filter: brightness(100%);
     justify-self: stretch;
+}
+.preview-img {
+    margin: 20px;
+    border-radius: 5px;
 }
 
 /* Website projects */
@@ -584,6 +712,10 @@ footer span {
       -o-transition: all 0.15s ease-out;
          transition: all 0.15s ease-out;
 }
+.unsupported-project {
+    border: 3px solid #FF9300;
+    opacity: 0.8;
+}
 .project p {
     padding: 5px 0 0 0;
     margin: 5px 0 5px 0;
@@ -603,13 +735,20 @@ footer span {
     color: white;
     line-height: 24px;
     vertical-align: middle;
+    font-weight: 500;
+    transition: 0.1s ease-in-out;
+}
+.project a:hover {
+    text-decoration: none;
+    border-bottom: 3px solid white;
 }
 .project .pfp {
     width: 40px;
-    margin: 0 5px 0 0;
+    margin: 0 2px 0 0;
     padding: 0;
     vertical-align: middle;
     border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 .project .square {
     border-radius: 25%;
@@ -676,9 +815,15 @@ footer span {
     color: #1E83FF;
 }
 .minecraft:hover {
-    color: #7CAD5C;
+    color: #349619;
 }
 
+#rewind {
+    background: url("rewind.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+}
 #plexion {
     background: url("tiles/plexion.png");
 	background-repeat: no-repeat, repeat;
@@ -706,6 +851,13 @@ footer span {
 	background-size: cover;
     background-position: center;
     color: #F06EA8;
+}
+#plexmas-2019 {
+    background: url("tiles/plexmas-2019.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: #D83861 ;
 }
 #youtube {
     background: url("tiles/youtube.png");
@@ -741,6 +893,20 @@ footer span {
 	background-size: cover;
     background-position: center;
     color: #9FFF56;
+}
+#plexfonts {
+    background: url("tiles/plexfonts.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: #0046FF;
+}
+#voidrising {
+    background: url("tiles/voidrising.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+    color: #72050D;
 }
 #plextra {
     background: url("tiles/plextra.png");
@@ -898,6 +1064,13 @@ footer span {
     background-position: center;
     color: white;
 }
+.rewindtopic {
+    background: url("rewind.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: white;
+}
 .rewind .button:hover {
     color: #F74FE3;
 }
@@ -972,10 +1145,6 @@ footer span {
         font-size: 300%;
         position: relative;
         top: 10px;
-    }
-    .button {
-        padding: 12px 20px 12px 20px;
-        margin: 20px 0 20px 0;
     }
     .btnsep {
         display: block;
@@ -1074,7 +1243,8 @@ footer span {
         height: 100%;
         border-radius: 0;
     }
-    .watch2 iframe:hover {
-        border: 0 solid;
+    .navigation a:hover {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

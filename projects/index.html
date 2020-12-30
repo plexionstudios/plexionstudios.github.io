@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+    <title>plexion</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/twemoji-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <script src="https://unpkg.com/feather-icons"></script> <!-- feather -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="header-popout">
+        <div class="navigation">
+            <a href="/" class="navlink" title="Go Home">Home</a>
+            <a href="videos" class="navlink" title="Browse Videos">Videos</a>
+            <a href="about" class="navlink" title="About Me">About</a>
+        </div>
+    </div>
+    <header id="help"><p class="big2">plexion Help Desk</p></header>
+    <div class="section" id="welcome-to-help-desk">
+        <p class="big2">Welcome to the Help Desk.</p>
+        <p class="sectiondesc">Here you can find help for all of my services.</p>
+    </div>
+    <div class="projects">
+        <button class="project" id="plexfonts" onclick="location.href='plexfonts/';">
+            <img class="pfp square" src="pfp/plexfonts.png"></img>
+            <a class="head" href="plexfonts/">PlexFonts</a>
+            <p class="desc">A font renderer for Scratch, built from the ground up.</p>
+        </button>
+    </div>
+    <footer>
+        <center>
+        <hr />    
+        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">09.12.2020</a></span>
+        <span class="btnsep"></span><span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+    </footer>
+    <!-- jquery --> <!--<script>
+        $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 50) {
+            $("#header").addClass("scrolled");
+        }
+        else {
+            $("#header").removeClass("scrolled");
+        }
+    });
+    </script>-->
+    <!-- jquery --> <script>
+        var data = {rss: "https://medium.com/feed/plexion"}
+        $.get("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fplexion", data, function(response){
+        //Checking Response Status
+        if (response.status == 'ok') {
+        //Defining a variable where I create my response data
+        var output = '';
+        //Response...
+        $.each(response.items, function (k, item) {
+            //Iteration
+            return k < 10;
+        });
+        }
+        });
+    </script>
+    <!--<script>
+        $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 330) {
+            $('.header-popout').fadeIn(50);
+        } else {
+            $('.header-popout').fadeOut(50);
+        }
+        });
+    </script>-->
+    <!--<script>
+        $('header').mousemove(function(e){
+            var amountMovedX = (e.pageX * -1 / 6);
+            var amountMovedY = (e.pageY * -1 / 6);
+            $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
+        });
+    </script>-->
+    <!--<script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {stickyfunction()};
+
+        // Get the header
+        var header = document.getElementById("header");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function stickyfunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+        } 
+    </script>-->
+    <script>
+        feather.replace()
+    </script>
+    <script>
+        function hamburger() {
+            var x = document.getElementById("hamburger");
+            if (x.style.display === "inherit") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "inherit";
+            }
+        }
+    </script>
+    <script>
+        function hamburgertoggle() {
+            document.querySelector('hamburgertoggle').addEventListener('click', function() {
+            const icon = this.querySelector('i');
+
+            if (icon.classList.contains('fa-angle-down')) {
+                icon.classList.remove('fa-angle-down');
+                icon.classList.add('fa-angle-up');
+            } else {
+                icon.classList.remove('fa-angle-up');
+                icon.classList.add('fa-angle-down');
+            }
+            });
+        }
+    </script>
+    <script>
+        function category() {
+            var x = document.getElementById("category_view");
+            if (x.style.display === "grid") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "grid";
+            }
+        }
+    </script>
+</body>
