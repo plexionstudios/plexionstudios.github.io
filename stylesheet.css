@@ -1,5 +1,5 @@
 
-/* plexion.online 24.12.2020 */
+/* plexion.online 30.12.2020 */
 
 /* Import fonts */
 
@@ -819,10 +819,18 @@ footer span {
 }
 
 #rewind {
-    background: url("rewind.png");
+    background: url("tiles/plexion-rewind.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
+    color: #FF0000;
+}
+#rewind-2019 {
+    background: url("tiles/rewind-2019.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: #FF4400;
 }
 #plexion {
     background: url("tiles/plexion.png");
