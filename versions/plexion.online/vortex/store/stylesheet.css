@@ -1,0 +1,805 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+h2 {
+	font-size: 32px;
+}
+
+/* SMALLER DISPLAYS */
+
+.header-mobile {
+	display: none;
+}
+
+/* MAIN */
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: #F2F2F2;
+	font-family: 'Inter', 'Roboto', sans-serif;
+	color: #191919;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+a {
+	text-decoration: none;
+	color: #003BFF;
+}
+p {
+	color: #0A0A0A;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+ul {
+	list-style: none;
+}
+h3 {
+	display: inline;
+	padding: 16px;
+	color: black;
+}
+
+/* BUTTONS */
+
+.btn {
+	border-radius: 3px;
+	border: 2px solid #003BFF;
+	color: #003BFF;
+	background-color: white;
+	font-family: 'Inter', 'Roboto', sans-serif;
+	padding: 10px;
+	margin: 0px 12px 0px 0px;
+	padding-left: 32px;
+	padding-right: 32px;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	transition: 0.3s;
+}
+.btn:hover {
+	border: 2px solid #003BFF;
+	background-color: #003BFF;
+	color: white;
+	cursor: pointer;
+}
+.buttonh {
+	border-radius: 3px;
+	border: 2px solid #003BFF;
+	color: #003BFF;
+	background-color: white;
+	font-family: 'Inter', 'Roboto', sans-serif;
+	padding: 10px;
+	margin: 0px 12px 0px 0px;
+	padding-left: 32px;
+	padding-right: 32px;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	position: absolute;
+	right: 200px;
+	transition: 0.3s;
+}
+.buttonh:hover {
+	border: 2px solid #003BFF;
+	background-color: #003BFF;
+	color: white;
+	cursor: pointer;
+}
+input {
+	border-radius: 5px;
+	border: 3px solid #3A88BC;
+	color: #3A88BC;
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+	padding: 10px;
+	margin: 0px 12px 0px 0px;
+	width: 50px;
+	height: 25px;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+}
+input:hover {
+	background-color: #3A88BC;
+	border: 3px solid #3A88BC;
+	cursor: pointer;
+	color: white;
+}
+
+/* APP TILE */
+
+.apptile {
+	background: #F9F9F9;
+	width2: 340px;
+	border-radius: 5px;
+	transition: 0.3s;
+	padding-left: 10px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	padding-right: 120px;
+}
+.apptile:hover {
+	background: white;
+	cursor: pointer;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.50);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.50);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.50);
+}
+.apptile:hover img {
+	filter: brightness(110%);
+}
+.apptile h2 {
+	color: #191919;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	padding: 5px 0px 0px 0px;
+	font-size: 24px;
+	margin-right: 10px;
+}
+.apptile h3 {
+	padding: 2px 0px 0px 0px;
+	margin-right: 10px;
+	font-size: 18px;
+}
+.apptile img {
+	margin-top: 10px;
+	background: 0.1;
+	transition: 0.3s
+}
+
+/* CATEGORIES */
+
+.apps {
+	margin-right: 0px;
+	overflow-x: auto;
+    white-space: nowrap;
+	display: flex;
+	box-sizing: content-box;
+	padding: 20px 20px 0px 20px;
+}
+.welcome {
+	padding: 20px 0px 20px 100px;
+	margin-right: 900px;
+}
+.logo {
+	padding: 50px 0px 0px 0px;
+}
+.sayori {
+	padding: 20px 0px 20px 100px;
+	height: 140px;
+	margin-right: 900px;
+}
+.note-taking {
+	background-image: url("note-taking.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 60px 0px 60px 100px;
+	height: 140px;
+	padding-right: 900px;
+}
+.updated {
+	background-image: url("updated.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 60px 0px 60px 100px;
+	height: 140px;
+	padding-right: 900px;
+	color: white;
+}
+.classics {
+	background-image: url("classics.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 60px 0px 60px 100px;
+	height: 140px;
+	padding-right: 900px;
+	color: white;
+}
+.classics p {
+	color: white;
+}
+.newinvortex {
+	background-image: url("newinvortex.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 60px 0px 60px 100px;
+	height: 140px;
+	padding-right: 900px;
+}
+.jumpin {
+	background-image: url("jumpin.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 60px 0px 60px 100px;
+	height: 140px;
+	padding-right: 900px;
+	color: white;
+}
+.updated p {
+	color: white;
+}
+.jumpin p {
+	color: white;
+}
+.apptile img {
+	margin-right: 10px;
+	width: 100px;
+	white-space: nowrap;
+	border-radius: 20px;
+}
+.app h2 {
+	padding: 5px 0px 0px 0px;
+	font-size: 24px;
+	margin-right: 10px;
+	white-space: nowrap;
+}
+.app h3 {
+	padding: 2px 0px 0px 0px;
+	margin-right: 10px;
+	font-size: 18px;
+	white-space: nowrap;
+}
+.appicon img {
+	padding: 20px 20px 0px 0px;
+	width: 100px;
+	white-space: nowrap;
+}
+.apptext h2 {
+	padding: 5px 0px 0px 0px;
+	font-size: 24px;
+	margin-right: 10px;
+	white-space: nowrap;
+}
+.apptext h3 {
+	padding: 2px 0px 0px 0px;
+	margin-right: 10px;
+	font-size: 18px;
+	white-space: nowrap;
+}
+button3 {
+	border-radius: 0px;
+	border: 3px solid rgb(253,193,221);
+	color: black;
+	background-color: rgb(254,230,224);
+	font-family: 'Roboto', sans-serif;
+	padding: 10px;
+	margin: 0px 12px 0px 0px;
+	width: 170px;
+	height: 50px;
+	cursor: pointer;
+}
+.embedr {
+  background-color: #1A1A1E;
+  padding: 12px;
+  border-style: solid;
+  border-width: 0px 0px 0px 5px;
+  border-left-color: #FF2222;
+  border-radius: 6px;
+}
+.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+.field {
+  color: #414141;
+  font-size: 18px;
+  font-weight: 450;
+}
+.fieldtext {
+  font-size: 15px;
+  color: #DDDDDD;
+}
+iframe {
+	border-radius: 15px;
+	padding: 5px 5px 3px 5px;
+}
+.header-up {
+	background: black;
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 16px 36px 16px 36px;
+	margin: 0px 0px 0px 0px;
+}
+.header {
+	color: #191919;
+	padding: 30px 24px 30px 200px;
+	margin: 0px 0px 0px 0px;
+	transition: 0.3s
+}
+.header-mobile {
+	color: #191919;
+	padding: 30px 0px 30px 0px;
+	margin: 0px 0px 0px 0px;
+	transition: 0.3s
+}
+.header h3 {
+	color: #191919;
+	display: inline;
+	padding: 0px 24px 0px 0px;
+	line-height: 18px;
+}
+.header img {
+	display: inline;
+	padding: 0px 32px 0px 0px;
+	line-height: 18px;
+}
+.nav {
+	float: center;
+}
+.header h2 {
+	display: inline;
+	padding: 16px;
+	margin: 0px 0px 0px 8px;
+	line-height: 30px;
+	font-size: 40px;
+}
+
+footer {
+	background: black;
+	padding: 10px;
+}
+
+.header-up h3 {
+	color: white;
+	display: inline;
+	padding: 2px;
+}
+h1 {
+	font-size: 50px;
+	padding: 60px 0px 0px 0px;
+}
+.welcome h1 {
+	font-size: 50px;
+	padding: 40px 0px 0px 0px;
+}
+h2 {
+	font-size: 32px;
+}
+img2 {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  padding: 0px 0px 0px 0px;
+}
+.header img {
+	vertical-align: middle;
+}
+h2 {
+	margin-right: 10px;
+}
+h3 {
+	margin-right: 10px;
+}
+a {
+	color: rgb(0,59,255);
+	text-decoration: none;
+}
+.welcome a {
+	color: rgb(0,59,255);
+	text-decoration: none;
+	color: black;
+}
+.more_info p {
+	padding: 0px 0px 16px 0px;
+	margin: 0px 0px 0px 0px;
+}
+.dark_mode {
+	color: white;
+	background-color: #191919;
+}
+.dark_mode h3{
+	color: white;
+}
+.dark_mode h2{
+	color: white;
+}
+.dark_mode p{
+	color: white;
+}
+
+/* FOOTER */
+
+ufooter {
+	background: #191919;
+	padding: 10px;
+}
+
+.endingfooter {
+	background: black;
+	color: white;
+	padding-left: 200px;
+	padding-bottom: 40px;
+	padding-right: 200px;
+	padding-top: 40px;
+}
+
+.endingfooter h2 {
+	font-size: 24px;
+	padding: 0px 0px 0px 0px;
+}
+.endingfooter h3 {
+	font-size: 16px;
+	padding: 0px 0px 0px 0px;
+}
+.endingfooter a {
+	font-size: 16px;
+	padding: 0px 0px 0px 0px;
+	color: white;
+	text-decoration: underline;
+}
+
+@media (max-width: 1800px) {
+	.apps {
+		background-repeat: no-repeat, repeat;
+		background-size: cover;
+		background-position: center;
+		padding: 20px 20px 0px 20px;
+		height: 140px;
+	}
+	.appicon img {
+		padding: 20px 20px 0px 0px;
+		width: 80px;
+		white-space: nowrap;
+	}
+	.apptext h2 {
+		padding: 5px 0px 0px 0px;
+		font-size: 24px;
+		margin-right: 10px;
+		white-space: nowrap;
+	}
+	.sayori {
+		padding-right: 20px;
+	}
+}
+@media (max-width: 1600px) {
+	.apps {
+		background-repeat: no-repeat, repeat;
+		background-size: cover;
+		background-position: center;
+		padding: 20px 0px 0px 20px;
+		height: 140px;
+	}
+	.appicon img {
+		padding: 20px 20px 0px 0px;
+		width: 60px;
+		white-space: nowrap;
+	}
+	.apptext h2 {
+		padding: 5px 0px 0px 0px;
+		font-size: 24px;
+		margin-right: 10px;
+		white-space: nowrap;
+	}
+	.sayori {
+		padding-right: 20px;
+	}
+}
+@media (max-width: 1500px) {
+	.apps {
+		background-repeat: no-repeat, repeat;
+		background-size: cover;
+		background-position: center;
+		padding: 20px 0px 0px 20px;
+		height: 140px;
+	}
+	.appicon img {
+		padding: 20px 20px 0px 0px;
+		width: 100px;
+		white-space: nowrap;
+	}
+	.apptext h2 {
+		display: none;
+	}
+	.apptext h3 {
+		display: none;
+	}
+	.sayori {
+		padding-right: 20px;
+	}
+}
+@media (max-width: 1300px) {
+	.sayori {
+		padding: 20px 0px 20px 100px;
+		margin-right: 600px;
+	}
+	.note-taking {
+		padding: 60px 0px 60px 100px;
+		padding-right: 600px;
+	}
+	.updated {
+		padding: 60px 0px 60px 100px;
+		padding-right: 600px;
+	}
+	.newinvortex {
+		padding: 60px 0px 60px 100px;
+		padding-right: 600px;
+	}
+	.classics {
+		padding: 60px 0px 60px 100px;
+		padding-right: 600px;
+	}
+	.jumpin {
+		padding: 60px 0px 60px 100px;
+		padding-right: 600px;
+	}
+}
+@media (max-width: 1100px) {
+	.sayori {
+		padding: 20px 0px 20px 100px;
+		margin-right: 100px;
+	}
+	.note-taking {
+		padding: 60px 0px 60px 100px;
+		padding-right: 100px;
+	}
+	.updated {
+		padding: 60px 0px 60px 100px;
+		padding-right: 100px;
+	}
+	.newinvortex {
+		padding: 60px 0px 60px 100px;
+		padding-right: 50px;
+	}
+	.classics {
+		padding: 60px 0px 60px 100px;
+		padding-right: 50px;
+	}
+	.jumpin {
+		padding: 60px 0px 60px 100px;
+		padding-right: 50px;
+	}
+}
+@media (max-width: 900px) {
+	.apps {
+		background-repeat: no-repeat, repeat;
+		background-size: cover;
+		background-position: center;
+		padding: 20px 0px 0px 20px;
+		height: 140px;
+	}
+	.appicon img {
+		padding: 20px 10px 0px 0px;
+		width: 90px;
+		white-space: nowrap;
+	}
+	.apptext h2 {
+		display: none;
+	}
+	.apptext h3 {
+		display: none;
+	}
+	.sayori {
+		padding-right: 20px;
+	}
+	.user {
+		display: none;
+	}
+	.newinvortex {
+		padding: 60px 0px 60px 100px;
+		padding-right: 50px;
+	}
+	.classics {
+		padding: 60px 0px 60px 100px;
+		padding-right: 50px;
+	}
+	.jumpin {
+		padding: 60px 0px 60px 100px;
+		padding-right: 50px;
+	}
+	.header {
+		color: #191919;
+		padding: 30px 24px 30px 100px;
+		margin: 0px 0px 0px 0px;
+	}
+	.header-mobile {
+		color: #191919;
+		padding: 30px 0px 30px 0px;
+		margin: 0px 0px 0px 0px;
+	}
+	.header h3 {
+		color: #191919;
+		display: inline;
+		padding: 0px 24px 0px 0px;
+		line-height: 18px;
+	}
+	.header img {
+		display: inline;
+		padding: 0px 32px 0px 0px;
+		line-height: 18px;
+	}
+	.endingfooter {
+		background: black;
+		color: white;
+		padding-left: 100px;
+		padding-bottom: 40px;
+		padding-right: 100px;
+		padding-top: 40px;
+	}
+
+	.endingfooter h2 {
+		font-size: 24px;
+		padding: 0px 0px 0px 0px;
+	}
+	.endingfooter h3 {
+		font-size: 16px;
+		padding: 0px 0px 0px 0px;
+	}
+	.endingfooter a {
+		font-size: 16px;
+		padding: 0px 0px 0px 0px;
+		color: white;
+		text-decoration: underline;
+	}
+	.apptile h3 {
+		font-size: 14px;
+	}
+}
+@media (max-width: 900px) {
+	.apptile {
+		background: #F9F9F9;
+		border-radius: 5px;
+		transition: 0.3s;
+		padding-left: 10px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+		padding-right: 0px;
+	}
+	.apptile h2 {
+		display: none;
+	}
+	.apptile h3 {
+		display: none;
+	}
+	.apptile img {
+		margin-top: 10px;
+		background: 0.1;
+	}
+}
+@media (max-width: 600px) {
+	.header {
+		color: #191919;
+		padding: 30px 24px 30px 20px;
+		margin: 0px 0px 0px 0px;
+	}
+	.header-mobile {
+		color: #191919;
+		padding: 30px 0px 30px 0px;
+		margin: 0px 0px 0px 0px;
+	}
+	.header h3 {
+		color: #191919;
+		display: inline;
+		padding: 0px 24px 0px 0px;
+		line-height: 18px;
+	}
+	.header img {
+		display: inline;
+		padding: 0px 32px 0px 0px;
+		line-height: 18px;
+	}
+	.sayori {
+		padding-right: 20px;
+	}
+	.endingfooter {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+@media (max-width: 550px) {
+	.header {
+		color: #191919;
+		padding: 30px 24px 30px 0px;
+		margin: 0px 0px 0px 0px;
+	}
+	.header-mobile {
+		color: #191919;
+		padding: 30px 0px 30px 0px;
+		margin: 0px 0px 0px 0px;
+	}
+	.header h3 {
+		color: #191919;
+		display: inline;
+		padding: 0px 24px 0px 0px;
+		line-height: 18px;
+	}
+	.header img {
+		display: inline;
+		padding: 0px 32px 0px 0px;
+		line-height: 18px;
+	}
+	.sayori {
+		padding-right: 20px;
+	}
+	.endingfooter {
+		background: black;
+		color: white;
+		padding-left: 30px;
+		padding-bottom: 40px;
+		padding-right: 30px;
+		padding-top: 40px;
+	}
+	.endingfooter h2 {
+		font-size: 24px;
+		padding: 0px 0px 0px 0px;
+	}
+	.endingfooter h3 {
+		font-size: 16px;
+		padding: 0px 0px 0px 0px;
+	}
+	.endingfooter a {
+		font-size: 16px;
+		padding: 0px 0px 0px 0px;
+		color: white;
+		text-decoration: underline;
+	}
+	.apptile {
+		background: #F9F9F9;
+		width: 110px;
+		border-radius: 5px;
+		transition: 0.3s;
+		padding-left: 10px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+		padding-right: 0px;
+	}
+	.apptile h2 {
+		display: none;
+	}
+	.apptile h3 {
+		display: none;
+	}
+	.apptile img {
+		margin-top: 10px;
+		background: 0.1;
+	}
+}
+@media (max-width: 520px) {
+	.header {
+		display: none;
+	}
+	.header-mobile {
+		display: block;
+	}
+	.newinvortex {
+		padding: 60px 0px 60px 20px;
+		padding-right: 20px;
+	}
+	.classics {
+		padding: 60px 0px 60px 20px;
+		padding-right: 20px;
+	}
+	.jumpin {
+		padding: 60px 0px 60px 20px;
+		padding-right: 20px;
+	}
+	.updated {
+		padding: 60px 0px 60px 20px;
+		padding-right: 20px;
+	}
+	.note-taking {
+		padding: 60px 0px 60px 20px;
+		padding-right: 20px;
+	}
+	.apptile {
+		padding-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+		padding-right: 0px;
+	}
+}

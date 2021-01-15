@@ -51,6 +51,9 @@
 .btnsep {
     display: none;
 }
+.navlink .fas {
+    display: none;
+}
 
 /* Dark theme */
 
@@ -157,7 +160,7 @@ strong {
     font-family: 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
 }
 .sectiondesc {
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
 }
 .head {
@@ -201,6 +204,12 @@ strong {
 .navigation {
     text-align: center;
     align-items: center;
+}
+.navlink i {
+    font-style: normal;
+}
+.navlink .fas {
+    font-size: 20px;
 }
 
 #topic {
@@ -436,7 +445,7 @@ header {
     font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 20px;
     line-height: 30px;
-    background: url("banners/WinterNightBanner.png");
+    background: url("banners/Dragon.png");
 	background-repeat: no-repeat, repeat;
 	background-size: 100%;
     background-position: center;
@@ -1209,6 +1218,12 @@ footer span {
     }
     .unsupported {
         margin: 0 0 10px 0;
+    }
+    .navi {
+        display: none;
+    }
+    .navlink .fas {
+        display: inherit;
     }
 }
 @media (max-width: 410px) {
