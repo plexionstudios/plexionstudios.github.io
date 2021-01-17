@@ -220,6 +220,12 @@ li img {
     background: #003BFF;
     color: white;
 }
+.version {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .paragraph p {
     margin: 0;
     padding: 0;
@@ -230,7 +236,7 @@ li img {
     padding: 0;
     margin: 10px 0 10px 0;
 }
-.paragraph li::before {
+.paragraph ol li::before {
     content: counter(li);
     margin: 10px;
     padding: 5px;
@@ -239,10 +245,30 @@ li img {
     font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: 600;
 }
-.paragraph li {
+.paragraph ol li {
     counter-increment: li;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.paragraph ul li::before {
+    content: "•";
+    margin: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    color: #003BFF;
+    font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+}
+.paragraph ul li {
+    counter-increment: li;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.paragraph ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 10px 0;
 }
 .sectiondesc {
     font-size: 18px;

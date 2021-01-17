@@ -22,13 +22,13 @@
     </div>
     <header id="voidrising"><p class="big2">Void Rising Datapack</p></header>
     <div class="options" id="options">
-        <a class="button view" target="_blank" href="https://www.planetminecraft.com/data-pack/void-rising-datapack/">View on PMC<i class="fas fa-external-link-alt"></i></a>
+        <a class="button view" title="View the datapack on Planet Minecraft" target="_blank" href="https://www.planetminecraft.com/data-pack/void-rising-datapack/">View on PMC<i class="fas fa-external-link-alt"></i></a>
         <div class="dropdown">
-            <a class="button download important" href="javascript:void(0);">Download<i class="fas fa-chevron-down"></i></a>
+            <a class="button download important" title="View all download options" href="javascript:void(0);">Download<i class="fas fa-chevron-down"></i></a>
             <div class="dropdown-content">
                 <ul>
-                    <li><a href="https://www.planetminecraft.com/data-pack/void-rising-datapack/download/file/13724935/" title="Download from PMC (generally more updated)">PMC</a></li>
-                    <li><a href="../downloads/voidrising121220.zip" title="Download from Website">Website</a></li>
+                    <li><a href="../downloads/voidrising121220.zip" title="Download v1.0 (published 12/12/2020)">1.0 (12/12/2020)</a></li>
+                    <li><a href="../downloads/voidrising17121.zip" title="Download v2.0 (published 17/01/2021)">2.0 (17/01/2021)</a></li>
                 </ul>
             </div>
         </div>
@@ -75,15 +75,29 @@
     <div class="paragraph">
         <p>Once the datapack is installed, you can start the void rising with some simple set-up.</p>
         <ol>
-            <li>Teleport to <code>0 0</code> (x and z) in your world then run <code>function voidrising:prepare</code></li>
-            <li>When you want the void to begin rising, type <code>function voidrising:rise_start</code></li>
+            <li>Teleport to <code>0 0</code> (x and z) in your world</li>
+            <li>When you want the void to begin rising, type <code>function voidrising:start</code></li>
         </ol>
-        <p>You can also configure timings for the warning in <code>time1</code> and the actual rising itself in <code>time2</code> (measured in ticks - 20 ticks = 1 second)</p>
+        <p>You can also configure timings for the warning in <code>warning_time</code> and the actual rising itself in <code>rising_time</code> (measured in ticks - 20 ticks = 1 second)</p>
+    </div>
+    <div class="parhead" id="updates">
+        <a href="#updates">Updates</a><i class="tooltip">Copy link to share</i>
+        <hr>
+    </div>
+    <div class="paragraph">
+        <p class="version">Version 2.0</p>
+        <p>This update fixes a few issues and adds some quality of life changes. Here we go:</p>
+        <ul>
+            <li>The void now stops rising at y245 (can be changed inside the datapack)</li>
+            <li>Timings for the warning & rising event have been sped up</li>
+            <li>The variables names have been changed from time1 and time2 to warning_time and rising_time</li>
+            <li>When the void rises, the actionbar now displays it's current y level</li>
+        </ul>
     </div>
     <footer>
         <center>
         <hr />    
-        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">14.01.2020</a></span>
+        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">17.01.2020</a></span>
         <span class="btnsep"></span><span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
     <!-- jquery --> <!--<script>
