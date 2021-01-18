@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="/twemoji-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/projects/voidrising">
+    <meta property="og:title" content="Void Rising Datapack">
+    <meta property="og:description" content="View and Download my Void Rising Datapack on Minecraft.">
+    <meta property="og:image" content="https://plexion.dev/thumbnails/void-rising.png">
 </head>
 <body>
     <div class="header-popout">
@@ -34,14 +39,14 @@
         </div>
     </div>
     <div class="parhead" id="description">
-        <a href="#description">Description</a><i class="tooltip">Copy link to share</i>
+        <a href="#description">Description</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
         <hr>
     </div>
     <div class="paragraph">
         <p>A lightweight data-pack for Minecraft Java Edition 1.16 that well, makes the void rise. Everything is controlled within the single datapack with customisable variables for timings if needed. Lag is handled well with falling blocks being killed to avoid sand blocks causing lag upon rising.</p>
     </div>
     <div class="parhead" id="screenshots">
-        <a href="#screenshots">Screenshots</a><i class="tooltip">Copy link to share</i>
+        <a href="#screenshots">Screenshots</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
         <hr>
     </div>
     <div class="images">
@@ -56,7 +61,7 @@
         </span>
     </div>
     <div class="parhead" id="installation">
-        <a href="#installation">Installation</a><i class="tooltip">Copy link to share</i>
+        <a href="#installation">Installation</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
         <hr>
     </div>
     <div class="paragraph">
@@ -69,7 +74,7 @@
         </ol>
     </div>
     <div class="parhead" id="set-up">
-        <a href="#set-up">Set-up</a><i class="tooltip">Copy link to share</i>
+        <a href="#set-up">Set-up</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
         <hr>
     </div>
     <div class="paragraph">
@@ -81,7 +86,7 @@
         <p>You can also configure timings for the warning in <code>warning_time</code> and the actual rising itself in <code>rising_time</code> (measured in ticks - 20 ticks = 1 second)</p>
     </div>
     <div class="parhead" id="updates">
-        <a href="#updates">Updates</a><i class="tooltip">Copy link to share</i>
+        <a href="#updates">Updates</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
         <hr>
     </div>
     <div class="paragraph">
@@ -100,114 +105,4 @@
         <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">17.01.2020</a></span>
         <span class="btnsep"></span><span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
-    <!-- jquery --> <!--<script>
-        $(window).on("scroll", function () {
-        if ($(this).scrollTop() > 50) {
-            $("#header").addClass("scrolled");
-        }
-        else {
-            $("#header").removeClass("scrolled");
-        }
-    });
-    </script>-->
-    <!-- jquery --> <script>
-        var data = {rss: "https://medium.com/feed/plexion"}
-        $.get("https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2Fplexion", data, function(response){
-        //Checking Response Status
-        if (response.status == 'ok') {
-        //Defining a variable where I create my response data
-        var output = '';
-        //Response...
-        $.each(response.items, function (k, item) {
-            //Iteration
-            return k < 10;
-        });
-        }
-        });
-    </script>
-    <!--<script>
-        $(document).scroll(function() {
-        var y = $(this).scrollTop();
-        if (y > 330) {
-            $('.header-popout').fadeIn(50);
-        } else {
-            $('.header-popout').fadeOut(50);
-        }
-        });
-    </script>-->
-    <!--<script>
-        $('header').mousemove(function(e){
-            var amountMovedX = (e.pageX * -1 / 6);
-            var amountMovedY = (e.pageY * -1 / 6);
-            $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
-        });
-    </script>-->
-    <!--<script>
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function() {stickyfunction()};
-
-        // Get the header
-        var header = document.getElementById("header");
-
-        // Get the offset position of the navbar
-        var sticky = header.offsetTop;
-
-        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function stickyfunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-        } 
-    </script>-->
-    <script>
-        feather.replace()
-    </script>
-    <script>
-        function hamburger() {
-            var x = document.getElementById("hamburger");
-            if (x.style.display === "inherit") {
-            x.style.display = "none";
-            } else {
-            x.style.display = "inherit";
-            }
-        }
-    </script>
-    <script>
-        function hamburgertoggle() {
-            document.querySelector('hamburgertoggle').addEventListener('click', function() {
-            const icon = this.querySelector('i');
-
-            if (icon.classList.contains('fa-angle-down')) {
-                icon.classList.remove('fa-angle-down');
-                icon.classList.add('fa-angle-up');
-            } else {
-                icon.classList.remove('fa-angle-up');
-                icon.classList.add('fa-angle-down');
-            }
-            });
-        }
-    </script>
-    <script>
-        function category() {
-            var x = document.getElementById("category_view");
-            if (x.style.display === "grid") {
-            x.style.display = "none";
-            } else {
-            x.style.display = "grid";
-            }
-        }
-    </script>
-    <script>
-        scratchblocks.renderMatching('pre.blocks', {
-        style:     'scratch3',   // Optional, defaults to 'scratch2'.
-        });
-    </script>
-    <script>
-        scratchblocks.renderMatching("code.b", {
-        inline: true,
-        style: 'scratch3'
-        });
-    </script>
 </body>
