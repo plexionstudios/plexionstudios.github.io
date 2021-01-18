@@ -32,24 +32,90 @@
             <a class="button download important" title="View all download options" href="javascript:void(0);">Download<i class="fas fa-chevron-down"></i></a>
             <div class="dropdown-content">
                 <ul>
-                    <li><a href="../downloads/voidrising121220.zip" title="Download v1.0 (published 12/12/2020)">1.0 (12/12/2020)</a></li>
-                    <li><a href="../downloads/voidrising17121.zip" title="Download v2.0 (published 17/01/2021)">2.0 (17/01/2021)</a></li>
+                    <li><a href="../downloads/voidrising18121.zip" title="Download v2.1 (published 18/01/2021)">Version 2.1</a></li>
+                    <li><a href="../downloads/voidrising17121.zip" title="Download v2.0 (published 17/01/2021)">Version 2.0</a></li>
+                    <li><a href="../downloads/voidrising121220.zip" title="Download v1.0 (published 12/12/2020)">Version 1.0</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="parhead" id="description">
-        <a href="#description">Description</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
+        <a href="#description"><i class="fas fa-align-left"></i>Description</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
         <hr>
     </div>
     <div class="paragraph">
         <p>A lightweight data-pack for Minecraft Java Edition 1.16 that well, makes the void rise. Everything is controlled within the single datapack with customisable variables for timings if needed. Lag is handled well with falling blocks being killed to avoid sand blocks causing lag upon rising. Upon dying, you are automatically placed into spectator mode to allow you to watch the game in progress without interference.</p>
     </div>
+    <div class="parhead" id="features">
+        <a href="#features"><i class="fas fa-plus"></i>Features</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
+        <hr>
+    </div>
+    <div class="tiles">
+        <span class="tile">
+            <span class="tilebadge">
+                <i class="fas fa-clock"></i>
+            </span>
+            <span class="tileinfo">
+                <p class="tilehead">Customisable timings</p>
+                <p class="tiledesc">Using scoreboards you can configure event timings to make the event as slow or fast as you want!</p>
+            </span>
+        </span>
+        <span class="tile">
+            <span class="tilebadge">
+                <i class="fas fa-sort-amount-up"></i>
+            </span>
+            <span class="tileinfo">
+                <p class="tilehead">Height limiting</p>
+                <p class="tiledesc">Once the void reaches y245, it automatically stops going any further - stopping chaos.</p>
+            </span>
+        </span>
+        <span class="tile">
+            <span class="tilebadge">
+                <i class="fas fa-skull"></i>
+            </span>
+            <span class="tileinfo">
+                <p class="tilehead">Dead spectators</p>
+                <p class="tiledesc">Upon death, you are automatically placed into spectator mode to stop interference with the game.</p>
+            </span>
+        </span>
+        <span class="tile">
+            <span class="tilebadge">
+                <i class="fas fa-universal-access"></i>
+            </span>
+            <span class="tileinfo">
+                <p class="tilehead">Easy to use</p>
+                <p class="tiledesc">All events related to the void rising can be easily paused and reset in a new location if needed.</p>
+            </span>
+        </span>
+        <span class="tile">
+            <span class="tilebadge">
+                <i class="fas fa-exclamation-triangle"></i>
+            </span>
+            <span class="tileinfo">
+                <p class="tilehead">Handled lag</p>
+                <p class="tiledesc">Falling blocks are automatically removed to stop any lag from sand and gravel when rising.</p>
+            </span>
+        </span>
+        <span class="tile">
+            <span class="tilebadge">
+                <i class="fas fa-volume-up"></i>
+            </span>
+            <span class="tileinfo">
+                <p class="tilehead">Clutter-free</p>
+                <p class="tiledesc">Status messages can be swapped between bossbar, actionbar or just disabled along with all sound effects.</p>
+            </span>
+        </span>
+    </div>
     <div class="parhead" id="screenshots">
-        <a href="#screenshots">Screenshots</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
+        <a href="#screenshots"><i class="fas fa-camera"></i>Gallery</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
         <hr>
     </div>
     <div class="images">
+        <span class="imgcontainer">
+            <div class="watch2">
+                <iframe src="https://www.youtube-nocookie.com/embed/sQ-S6D6R85o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
+        </span>
         <span class="imgcontainer">
             <img src="voidrising3.png"></img>
         </span>
@@ -65,12 +131,9 @@
         <span class="imgcontainer">
             <img src="voidrising7.png"></img>
         </span>
-        <span class="imgcontainer">
-            <img src="voidrising8.png"></img>
-        </span>
     </div>
     <div class="parhead" id="installation">
-        <a href="#installation">Installation</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
+        <a href="#installation"><i class="fas fa-cloud-download-alt"></i>Installation</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
         <hr>
     </div>
     <div class="paragraph">
@@ -82,24 +145,34 @@
             <li>Click the right arrow button and move it over (ignore any version errors - it works fine)</li>
         </ol>
     </div>
-    <div class="parhead" id="set-up">
-        <a href="#set-up">Set-up</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
+    <div class="parhead" id="setup">
+        <a href="#setup"><i class="fas fa-save"></i>Setup</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
         <hr>
     </div>
     <div class="paragraph">
         <p>Once the datapack is installed, you can start the void rising with some simple set-up.</p>
         <ol>
-            <li>Teleport to <code>0 0</code> (x and z) in your world</li>
+            <li>Teleport to <code>0 0</code> (x and z) in your world.</li>
             <li>When you want the void to begin rising, type <code>function voidrising:start</code></li>
+            <li>If you want to pause (or stop) the void rising, you can set the <code>enabled</code> score in the <code>global</code> scoreboard to 0.</li>
         </ol>
         <p>You can also configure timings for the warning in <code>warning_time</code> and the actual rising itself in <code>rising_time</code> (measured in ticks - 20 ticks = 1 second)</p>
     </div>
     <div class="parhead" id="updates">
-        <a href="#updates">Updates</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
+        <a href="#updates"><i class="fas fa-sync-alt"></i>Updates</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
         <hr>
     </div>
     <div class="paragraph">
-        <p class="version">Version 2.0</p>
+        <span class="version">Version 2.1<i class="tooltip">Published 18/01/2021</i></span>
+        <p>With this update you can now disable some of the pre-built features and enable some new ones.</p>
+        <ul>
+            <li>Automatic spectator mode upon death is now an option you can disable with the <code>spectator_death</code> score in the <code>global</code> scoreboard.</li>
+            <li>Automatic stopping of rising upon y245 is now an option you can disable with the <code>height_limit</code> score in the <code>global</code> scoreboard.</li>
+            <li>You can now disable all sound effects with the <code>sound_effects</code> score in the <code>global</code> scoreboard.</li>
+            <li>The actionbar messages (The void has risen etc.) can now be disabled with the <code>rising_status</code> score in the <code>global</code> scoreboard.</li>
+            <li>You can replace the actionbar with a new bossbar that displays the progress until the void rises by changing the <code>bossbar_status</code> score in the <code>global</code> scoreboard.</li>
+        </ul>
+        <span class="version">Version 2.0<i class="tooltip">Published 17/01/2021</i></span>
         <p>This update fixes a few issues and adds some quality of life changes. Here we go:</p>
         <ul>
             <li>The void now stops rising at y245 (can be changed inside the datapack)</li>
