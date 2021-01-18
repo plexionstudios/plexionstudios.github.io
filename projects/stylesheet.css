@@ -929,6 +929,9 @@ footer span {
     .images {
         padding: 10px 100px 10px 100px;
     }
+    .tiles {
+        padding: 10px 100px 10px 100px;
+    }
     .options {
         padding: 30px 100px 30px 100px;
     }
@@ -961,6 +964,9 @@ footer span {
         margin-right: 20px;
     }
     .images {
+        padding: 10px 50px 10px 50px;
+    }
+    .tiles {
         padding: 10px 50px 10px 50px;
     }
     .options {
@@ -1014,6 +1020,10 @@ footer span {
         content: ' ';
     }
     .images {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 15px;
+    }
+    .tiles {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 15px;
     }
@@ -1129,6 +1139,9 @@ footer span {
         margin-right: 20px;
     }
     .images {
+        padding: 10px 20px 10px 20px;
+    }
+    .tiles {
         padding: 10px 20px 10px 20px;
     }
     .navigation a:hover {
