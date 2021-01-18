@@ -1,5 +1,5 @@
 
-/* plexion.online 24.12.2020 */
+/* plexion.online 18.01.2021 */
 
 /* Based off of /help page */
 
@@ -94,7 +94,7 @@ strong {
 
 code {
     background: #F2F3F5;
-    font-family: 'Courier New', 'Consolas', Arial, Helvetica, sans-serif;
+    font-family: 'Consolas', Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: 500;
     padding: 4px 8px 4px 8px;
@@ -222,15 +222,15 @@ li img {
     background: #003BFF;
     color: white;
 }
-.version {
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 .paragraph p {
     margin: 0;
     padding: 0;
+}
+.version {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 10px 0;
+    color: #003BFF;
 }
 .paragraph ol {
     list-style: none;
@@ -264,8 +264,8 @@ li img {
 }
 .paragraph ul li {
     counter-increment: li;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 .paragraph ul {
     list-style: none;
@@ -685,8 +685,8 @@ footer i {
           transition:         transform .4s ease-in-out;
 }
 footer:hover .fa-sync-alt {
-    -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+    -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
 }
 footer span {
     padding-left: 10px;

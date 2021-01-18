@@ -631,8 +631,8 @@ footer i {
           transition:         transform .4s ease-in-out;
 }
 footer:hover .fa-sync-alt {
-    -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+    -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
 }
 footer span {
     padding-left: 10px;
