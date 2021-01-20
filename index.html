@@ -22,6 +22,22 @@
 </head>
 <body>
     <div class="header-popout">
+        <div class="ie-alert">
+            <span class="tilebadge">
+                <i class="fab fa-internet-explorer"></i>
+            </span>
+            <span class="tileinfo">
+                <p class="tilehead">You are browsing in Internet Explorer</p>
+                <p class="tiledesc">This page has automatically been optimised and changed to support IE better - consider switching to a more updated and supported browser in the future. If icons are missing, ensure that scripts are enabled for plexion.dev in IE Settings.</p>
+                <p class="tiledesc">Alternatively, you can head to an old page backup that better supports Internet Explorer's framework.</p>
+                <a class="button important" href="versions/2020light">Make the switch</a>
+            </span>
+            <div class="tilebrowsers">
+                <i class="fab fa-chrome"></i>
+                <i class="fab fa-firefox-browser"></i>
+                <i class="fab fa-edge"></i>
+            </div>
+        </div>
         <div class="navigation">
             <a href="/" class="navlink" title="go home"><i class="fas fa-home"></i><i class="navi">home</i></a>
             <a href="/videos" class="navlink" title="browse videos"><i class="fas fa-play-circle"></i><i class="navi">videos</i></a>
@@ -84,8 +100,8 @@
             <a class="head" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/">Minecraft 4k</a>
             <p class="desc">A compilation of the textures in Minecraft 4k added into the latest version.</p>
         </button>
-        <button class="project" id="gsot" onclick="location.href='http://plexion.online/gsot';">
-            <a class="head" href="http://plexion.online/gsot">Grand Scheme of Things</a>
+        <button class="project" id="gsot" onclick="location.href='versions/plexion.online/gsot';">
+            <a class="head" href="versions/plexion.online/gsot">Grand Scheme of Things</a>
             <p class="desc">A Minecraft developer group i'm a part of, check the games out!</p>
         </button>
         <!--<button class="project" id="a" onclick="location.href='#';">
@@ -205,14 +221,14 @@
             <a class="head" href="minecraft_live">Minecraft LIVE Countdown</a>
             <p class="desc">A live countdown to the official 2020 MINECRAFT LIVE!</p>
         </button>
-        <button class="project unsupported-project" id="terraria" onclick="location.href='http://plexion.online/versions/2020light/terraria';">
+        <button class="project unsupported-project" id="terraria" onclick="location.href='versions/2020light/terraria';">
             <i class="fas fa-exclamation-triangle unsupported" title="This page is unsupported and will no longer receieve updates or fixes."></i><br/>
-            <a class="head" href="http://plexion.online/versions/2020light/terraria">Terraria 1.4 Countdown</a>
+            <a class="head" href="versions/2020light/terraria">Terraria 1.4 Countdown</a>
             <p class="desc">An old countdown to the release of Terraria 1.4: Journey's End.</p>
         </button>
-        <button class="project unsupported-project" id="vortexos" onclick="location.href='http://vortex.plexion.online/store';">
+        <button class="project unsupported-project" id="vortexos" onclick="location.href='versions/plexion.online/vortex/store';">
             <i class="fas fa-exclamation-triangle unsupported" title="This page is unsupported and will no longer receieve updates or fixes."></i><br/>
-            <a class="head" href="http://vortex.plexion.online/store">VortexOS Storefront</a>
+            <a class="head" href="versions/plexion.online/vortex/store">VortexOS Storefront</a>
             <p class="desc">An unsupported and non-functional storefront for VortexOS.</p>
         </button>
     </div>
@@ -272,6 +288,13 @@
         </span>
         <span class="moment">
             <center>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/sQ-S6D6R85o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">100 in a day</p>
+            <p class="desc">It took just over a day for this video to reach 100 views, ONE DAY - you boys are genuinely insane.</p>   
+            </center>
+        </span>
+        <span class="moment">
+            <center>
             <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLbaASKiZWzbr-JjJc_yrE3YNpe5xJOKRG" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             <p class="head">The Aftermath</p>
             <p class="desc">I'm quite happy with the content I'm pushing out to my channel these days. A lot more time and effort is put into each video so I would appreciate it if you could subscribe!</p>   
@@ -281,45 +304,15 @@
     <footer>
         <center>
         <hr />    
-        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">30.12.2020</a></span>
+        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">19.01.2021</a></span>
         <span class="btnsep"></span><span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
     <script>
-        feather.replace()
-    </script>
-    <script>
-        function hamburger() {
-            var x = document.getElementById("hamburger");
-            if (x.style.display === "inherit") {
-            x.style.display = "none";
-            } else {
-            x.style.display = "inherit";
-            }
-        }
-    </script>
-    <script>
-        function hamburgertoggle() {
-            document.querySelector('hamburgertoggle').addEventListener('click', function() {
-            const icon = this.querySelector('i');
+        var ua = window.navigator.userAgent;
+        var isIE = /MSIE|Trident/.test(ua);
 
-            if (icon.classList.contains('fa-angle-down')) {
-                icon.classList.remove('fa-angle-down');
-                icon.classList.add('fa-angle-up');
-            } else {
-                icon.classList.remove('fa-angle-up');
-                icon.classList.add('fa-angle-down');
-            }
-            });
-        }
-    </script>
-    <script>
-        function category() {
-            var x = document.getElementById("category_view");
-            if (x.style.display === "grid") {
-            x.style.display = "none";
-            } else {
-            x.style.display = "grid";
-            }
+        if ( isIE ) {
+        document.documentElement.classList.add('ie')
         }
     </script>
 </body>

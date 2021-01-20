@@ -6,11 +6,10 @@
 /* Import fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* Global style colours */
 
@@ -20,6 +19,10 @@
     --main-background: white;
     --secondary-background: #F7F7F7;
     --main-text: #141414;
+    --white-text: white;
+    --main-font: 'Inter', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    --header-font: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    --button-border: #E2E2E2;
 }
 
 /* Remove mobile-specific sections */
@@ -61,7 +64,7 @@ html {
 /* Main website fonts etc. */
 
 body {
-    font-family: 'Inter', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: var(--main-font);
     margin: 0;
     transition: 0.3s ease-in-out;
     background: var(--main-background);
@@ -90,10 +93,8 @@ a:hover {
     color: white;
 }
 ::-moz-selection {
-    background: var(--main-blue);
-    border-radius: 5px;
+    background: var(--secondary-blue);
     color: white;
-    font-style: italic;
 }
 strong {
     font-weight: 500;
@@ -103,9 +104,9 @@ strong {
 
 code {
     background: var(--secondary-background);
-    font-family: 'Consolas', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Mono', Consolas, var(--main-font);
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     padding: 4px 8px 4px 8px;
     border-radius: 5px;
     color:black;
@@ -130,26 +131,40 @@ code {
 .big {
     font-weight: 600;
     font-size: 32px;
-    font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: var(--header-font);
+    margin: 0;
+    padding: 0;
+}
+.big1 {
+    font-weight: 600;
+    font-size: 48px;
+    font-family: var(--header-font);
+    margin: 0;
+    padding: 0;
 }
 .big2 {
     font-weight: 600;
     font-size: 26px;
-    font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: var(--header-font);
+    margin: 0;
+    padding: 0;
 }
 .big3 {
     font-weight: 500;
     font-size: 20px;
     margin: 5px 0 5px 0;
-    font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: var(--header-font);
+    margin: 0;
+    padding: 0;
 }
 .desc {
     font-size: 16px;
+    font-family: var(--main-font);
     margin: 0;
-    font-family: 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    padding: 0;
 }
 .paragraph {
-    font-family: 'Inter', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: var(--main-font);
     font-size: 16px;
     padding: 10px 200px 10px 200px;
     margin: 0;
@@ -159,7 +174,7 @@ code {
     text-align: right;
 }
 .images {
-    font-family: 'Inter', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: var(--main-font);
     font-size: 16px;
     padding: 10px 200px 10px 200px;
     margin: 10px 0 10px 0;
@@ -177,7 +192,7 @@ code {
     margin: 0;
     padding: 0;
     border-radius: 5px;
-    border: 2px solid #E3E5E8;
+    border: 2px solid var(--button-border);
 }
 .tiles {
     padding: 10px 200px 10px 200px;
