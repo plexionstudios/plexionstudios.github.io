@@ -14,12 +14,24 @@
     --main-blue: #003BFF;
     --secondary-blue: #0035E5;
     --main-background: white;
-    --secondary-background: #F7F7F7;
+    --secondary-background: #F4F4F4;
     --main-text: #141414;
     --white-text: white;
     --main-font: 'Inter', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
     --header-font: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
     --button-border: #E2E2E2;
+}
+.dark-mode {
+    --main-background: #16161C;
+    --secondary-background: #1C1C23;
+    --main-text: white;
+    --white-text: white;
+    --button-border: #1D1D2B;
+    --main-blue: #0061FF;
+    --secondary-blue: #004BEF;
+}
+.dark-mode .button:hover {
+    filter: brightness(110%);
 }
 
 /* IE Support */
@@ -118,7 +130,7 @@ html body {
 body {
     font-family: var(--main-font);
     margin: 0;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
     background: var(--main-background);
     color: var(--main-text);
     overflow-x: hidden;
@@ -202,6 +214,15 @@ strong {
     margin: 0;
     padding: 0;
 }
+.year {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: var(--header-font);
+    transition: 0.2s ease-in-out;
+    margin: 10px;
+    padding: 0;
+}
 .headlink {
     font-weight: 400;
     transition: 0.2s ease-in-out;
@@ -229,15 +250,14 @@ strong {
     padding: 3px 0 0 0;
     margin: 0;
 }
-.navigation {
-    text-align: center;
-    align-items: center;
-}
 .navlink i {
     font-style: normal;
 }
 .navlink .fas {
     font-size: 20px;
+}
+.theme {
+    text-align: right;
 }
 
 #topic {
@@ -276,7 +296,7 @@ strong {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: 0.1s ease-in-out;
+    transition: 0.2s ease-in-out;
     margin: 0;
 }
 .watch2 iframe:hover {
@@ -407,7 +427,7 @@ strong {
 }
 .important {
     background: var(--main-blue);
-    color: #F7F7F7;
+    color: var(--white-text);
     border: 2px solid var(--main-blue);
 }
 .rewindbutton {
@@ -459,6 +479,77 @@ strong {
     font-size: 20px;
 }
 
+/* channel-timeline */
+
+/* The actual timeline (the vertical ruler) */
+.channel-timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out;
+}
+  
+/* The actual timeline (the vertical ruler) */
+.channel-timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: var(--secondary-background);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    transition: 0.2s ease-in-out;
+}
+  
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    transition: 0.2s ease-in-out;
+}
+  
+  /* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -18px;
+    background: var(--secondary-background);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: 0.2s ease-in-out;
+}
+  
+  /* Place the container to the left */
+.left {
+    right: 7.05%;
+}
+  
+  /* Place the container to the right */
+.right {
+    left: 50.4%;
+}
+  
+  /* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+  
+  /* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+
 /* Website header */
 
 header {
@@ -477,7 +568,7 @@ header a {
     color: var(--white-text);
 }
 .header-popout {
-    background: var(--main-background);
+    background: var(--secondary-background);
     color: var(--main-text);
     font-family: var(--header-font);
     transition: 0.2s ease-in-out;
@@ -503,7 +594,30 @@ header a {
     text-decoration: none;
 }
 .navigation {
+    text-align: center;
+    align-items: center;
     width: 100%;
+}
+.navigation-toggles {
+    width: 10%;
+    position: sticky;
+    left: 0;
+    top: 16px;
+    z-index: 101;
+    height: 51px;
+}
+.button-toggle {
+    padding: 16px 20px 15px 20px;
+    text-decoration: none;
+    background: var(--secondary-background);
+}
+.button-toggle:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f186";
+    font-weight: 900;
+}
+.dark-mode .button-toggle:before {
+    content: "\f185";
 }
 .navigation a {
     text-decoration: none;
@@ -641,10 +755,12 @@ header a {
 footer {
     font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
     margin-bottom: 20px;
+    transition: 0.2s ease-in-out;
 }
 footer hr {
     margin: 20px 10% 20px 10%;
     border: 1px solid var(--main-text);
+    transition: 0.2s ease-in-out;
 }
 footer i {
     margin-right: 5px;
@@ -675,7 +791,7 @@ footer span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     grid-gap: 10px;
-    transition: 0.3s;
+    transition: 0.2s ease-in-out;
     margin: 10px;
 }
 .moment {
@@ -683,7 +799,7 @@ footer span {
     color: var(--main-text);
     padding: 30px;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: 0.2s ease-in-out;
     filter: brightness(100%);
     justify-self: stretch;
     text-align: center;
@@ -692,14 +808,14 @@ footer span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
-    transition: 0.3s;
+    transition: 0.2s ease-in-out;
     margin: 10px;
 }
 .videofeedinline {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 10px;
-    transition: 0.3s;
+    transition: 0.2s ease-in-out;
     margin: 10px;
 }
 .video {
@@ -707,7 +823,7 @@ footer span {
     color: var(--main-text);
     padding: 0;
     border-radius: 0;
-    transition: 0.3s;
+    transition: 0.2s ease-in-out;
     filter: brightness(100%);
     justify-self: stretch;
 }
@@ -722,7 +838,7 @@ footer span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     grid-gap: 15px;
-    transition: 0.3s;
+    transition: 0.2s ease-in-out;
     margin: 15px;
 }
 .project {
@@ -776,7 +892,7 @@ footer span {
     line-height: 24px;
     vertical-align: middle;
     font-weight: 500;
-    transition: 0.1s ease-in-out;
+    transition: 0.15s ease-in-out;
 }
 .project a:hover {
     text-decoration: none;
@@ -819,7 +935,6 @@ footer span {
 }
 .tilebadge {
     vertical-align: center;
-    display: flex;
     padding: 10px;
     background: white;
     color: #1EBBEE;
@@ -1135,6 +1250,41 @@ footer span {
         margin-right: 15%;
     }
 }
+@media (max-width: 1350px) {
+    .channel-timeline::after {
+        width: 0;
+        display: none;
+    }
+    .container::after {
+        width: 0;
+        display: none;
+    }
+    .left {
+        left: 0%;
+        right: 0%;
+    }
+    .right {
+        left: 0%;
+        right: 0%;
+    }
+    .left::after, .right::after {
+        left: 0%;
+        right: 0%;
+    }
+    .container {
+        width: auto;
+    }
+    .moment {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+@media (max-width: 1000px) {
+    .moment {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 @media (max-width: 700px) {
     .logo {
         display: none;
@@ -1213,6 +1363,13 @@ footer span {
         border-radius: 0;
         width: 100%;
     }
+    .moment {
+        border-radius: 0;
+    }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .watchdiv {
         margin-left: 0;
         margin-right: 0;
@@ -1235,6 +1392,12 @@ footer span {
     }
     .moment {
         border-radius: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .moment p {
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .links {
         display: none;
@@ -1272,14 +1435,6 @@ footer span {
     }
     .videofeed {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-    .moment {
-        padding: 70px 0 70px 0;
-        border-radius: 0;
-    }
-    .moment p {
-        padding-left: 10px;
-        padding-right: 10px;
     }
     .watch2 {
         position: relative;
