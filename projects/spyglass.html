@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/twemoji-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://plexion.dev/projects/spyglass">
     <meta property="og:title" content="Spyglass HUD Remover">
@@ -18,29 +20,44 @@
     <meta property="og:image" content="https://plexion.dev/projects/spyglass1.png">
 </head>
 <body>
-    <div class="header-popout">
+    <header>
         <div class="navigation">
-            <a href="/" class="navlink" title="go home"><i class="fas fa-home"></i><i class="navi">home</i></a>
-            <a href="/videos" class="navlink" title="browse videos"><i class="fas fa-play-circle"></i><i class="navi">videos</i></a>
-            <a href="/accounts" class="navlink" title="my accounts"><i class="fas fa-user-friends"></i><i class="navi">accounts</i></a>
-            <a class="button-toggle" onclick="themeToggle()" href="javascript:void(0)"></a>
+            <span class="brand">plexion</span><!--<span class="brand">プレキシオン</span>--><span class="btnsep"></span>
+            <a href="/" class="navlink" title="go home"><i class="material-icons">home</i><i class="navi">home</i></a>
+            <span class="h-dropdown">
+                <a class="navlink" href="javascript:void(0);" onclick="category()" title="browse videos"><i class="material-icons">movie_creation</i><i class="navi">videos</i></a>
+                <div class="h-dropdown-content">
+                    <ul>
+                        <li><a href="https://youtube.com/plexion" title="latest plexion upload">plexion</a></li>
+                        <li><a href="https://tinyurl.com/plexiongold" title="latest plexionGOLD upload">plexionGOLD</a></li>
+                        <li><a href="/videos" title="view all videos">view all</a></li>
+                    </ul>
+                </div>
+            </span>
+            <a href="/accounts" class="navlink" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">accounts</i></a>
+            <a class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></a>
         </div>
-    </div>
-    <header id="spyglass"><p class="big2">Spyglass HUD Remover</p></header>
-    <div class="options" id="options">
-        <a class="button view" title="View the datapack on Planet Minecraft" target="_blank" href="https://www.planetminecraft.com/texture-pack/spyglass-hud-remover/">View on PMC<i class="fas fa-external-link-alt"></i></a>
-        <a class="button download important" title="Download v1.0 (published 08/11/2020)" href="../downloads/spyglass81120.zip">Download</a>
+    </header>
+    <div class="banner" id="spyglass"></div>
+    <div class="info" id="options">
+        <span class="date">
+            <p class="big2">Spyglass HUD Remover</p>
+            <p class="sectiondesc">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
+        </span>
+        <span class="options">
+            <a class="button view ext" title="View the datapack on Planet Minecraft" target="_blank" href="https://www.planetminecraft.com/texture-pack/spyglass-hud-remover/">More info</a>
+            <a class="button download important" title="Download v1.0 (published 08/11/2020)" href="../downloads/spyglass81120.zip">Download</a>
+        </span>   
     </div>
     <div class="parhead" id="description">
-        <a href="#description"><i class="fas fa-align-left"></i>Description</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
-        <hr>
+        <a href="#description">Description</a>
     </div>
     <div class="paragraph">
-        <p>A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass. This makes it very similar to the OptiFine zoom.</p>
+        <p>A texture pack designed for snapshot 20w45a+ (not tested in future versions) that removes the circular border shown when using the new Spyglass item. The same effect can be achieved in vanilla by using F1 or using OptiFine zoom but this makes the task easier.</p>
     </div>
+    <div class="pardivider"><hr></div>
     <div class="parhead" id="screenshots">
-        <a href="#screenshots"><i class="fas fa-camera"></i>Gallery</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
-        <hr>
+        <a href="#screenshots">Gallery</a>
     </div>
     <div class="images">
         <span class="imgcontainer">
@@ -56,9 +73,9 @@
             <img src="spyglass3.png"></img>
         </span>
     </div>
+    <div class="pardivider"><hr></div>
     <div class="parhead" id="installation">
-        <a href="#installation"><i class="fas fa-cloud-download-alt"></i>Installation</a><i class="tooltip"><i class="fas fa-clipboard"></i>Copy link to share</i>
-        <hr>
+        <a href="#installation">Installation</a>
     </div>
     <div class="paragraph">
         <p>Resource packs are the simplest thing to install on Minecraft. Here are the simple steps.</p>
@@ -73,7 +90,7 @@
     <footer>
         <center>
         <hr />    
-        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">21.01.2021</a></span>
+        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">02/02/2021</a></span>
         <span class="btnsep"></span><span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
     <script>
