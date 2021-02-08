@@ -1,5 +1,5 @@
 
-/* plexion.online 02/02/2021 */
+/* plexion.online 2102.8 */
 
 /* Import fonts */
 
@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* Global style colours */
 
@@ -134,10 +135,10 @@ body {
     box-sizing: border-box;
 }
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--main-text);
     font-weight: normal;
-    transition: 0.1s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 a i {
     font-size: 16px;
@@ -146,6 +147,7 @@ a i {
 }
 a:hover {
     font-weight: 600;
+    text-decoration: underline;
     color: var(--main-blue);
     /*text-shadow: -2.5px 2.5px 0px#003BFF;*/
 }
@@ -445,6 +447,9 @@ strong {
     opacity: 1.0;
     margin-left: 10px;
     margin-right: 10px;
+}
+.dark-mode .button {
+    color: var(--white-text);
 }
 .dark-mode .button:hover {
     color: var(--white-text);
@@ -1080,27 +1085,25 @@ header {
     padding-bottom: 20px;
 }
 footer {
-    font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
-    margin-bottom: 20px;
+    font-family: var(--header-font);
+    padding: 20px;
     transition: 0.2s ease-in-out;
-}
-footer hr {
-    margin: 20px 10% 20px 10%;
-    border: 1px solid var(--main-text);
-    transition: 0.2s ease-in-out;
+    background: var(--secondary-background);
+    text-align: center;
+    margin-top: 20px;
 }
 footer i {
     margin-right: 5px;
     -webkit-transition: -webkit-transform .4s ease-in-out;
           transition:         transform .4s ease-in-out;
 }
-footer:hover .fa-sync-alt {
-    -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
-}
 footer span {
     padding-left: 10px;
     padding-right: 10px;
+}
+footer .brand {
+    margin: 0 0 20px 0;
+    padding: 0;
 }
 
 /* MINECRAFT LIVE COUNTDOWN */
@@ -1135,6 +1138,8 @@ footer span {
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    transform: scale(1.025);
+    z-index: 10;
 }
 .dark-mode .moment:hover {
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.50);
@@ -1171,6 +1176,13 @@ footer span {
 
 /* Website projects */
 
+.videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    grid-gap: 0;
+    transition: 0.2s ease-in-out;
+    margin: 0;
+}
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
@@ -1189,11 +1201,11 @@ footer span {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     height: 230px;
     transform: scale(1.0);
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-     -ms-transition: all 0.15s ease-out;
-      -o-transition: all 0.15s ease-out;
-         transition: all 0.15s ease-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+     -ms-transition: all 0.15s ease-in-out;
+      -o-transition: all 0.15s ease-in-out;
+         transition: all 0.15s ease-in- out;
 }
 .project-info {
     height: 0;
@@ -1208,6 +1220,10 @@ footer span {
 .unsupported-project {
     border: 3px solid #FF9300;
     opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+.dark-mode .unsupported-project {
+    opacity: 0.5;
 }
 .project p {
     padding: 5px 0 0 0;
@@ -1224,6 +1240,8 @@ footer span {
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
     border: 3px solid;
+    transform: scale(1.025);
+    z-index: 10;
 }
 .dark-mode .project:hover {
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.50);
@@ -1841,6 +1859,12 @@ footer span {
 @media (max-width: 490px) {
     .channel-buttons {
         padding: 10px;
+    }
+    .channel-embed {
+        justify-content: center;
+    }
+    .channel-info {
+        text-align: center;
     }
 }
 @media (max-width: 410px) {

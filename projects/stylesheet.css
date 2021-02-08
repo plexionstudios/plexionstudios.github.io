@@ -1,5 +1,5 @@
 
-/* plexion.online 02/02/2021 */
+/* plexion.online 2102.7 */
 
 /* Based off of /help page */
 
@@ -540,7 +540,7 @@ iframe {
     transition: 0.2s ease-in-out;
     border-radius: 5px;
     padding: 8px 22px 8px 22px;
-    background: transparent);
+    background: transparent;
     color: var(--main-blue);
     text-decoration: none;
     font-family: var(--header-font);
@@ -562,6 +562,9 @@ iframe {
     color: var(--main-blue);
     background: var(--background-blue);
     font-weight: 500;
+}
+.dark-mode .button {
+    color: var(--white-text);
 }
 .dark-mode .button:hover {
     color: var(--white-text);
@@ -757,10 +760,9 @@ header {
     color: var(--main-text);
     font-family: var(--header-font);
     transition: 0.2s ease-in-out;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%;
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
@@ -1086,9 +1088,6 @@ footer span {
     .logo a {
         text-decoration: none;
     }
-    .navigation #hamburgertoggle {
-        display: inline;
-    }
     .paragraph {
         padding: 10px;
     }
@@ -1118,15 +1117,6 @@ footer span {
     }
     .video iframe {
         width: 100%;
-    }
-    .header-mobile {
-        display: inherit;
-    }
-    .hamburger {
-        padding-left: 0;
-    }
-    .hamburger ul {
-        text-align: center;
     }
     .btnsep {
         display: block;
@@ -1166,6 +1156,12 @@ footer span {
     }
     .navlink .material-icons {
         display: inherit;
+    }
+    .navigation .navlink {
+        padding: 13px 16px;
+    }
+    .navigation .navlink:hover {
+        padding: 13px 16px;
     }
 }
 @media (max-width: 410px) {
