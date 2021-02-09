@@ -408,6 +408,7 @@ strong {
     color: var(--main-blue);
     background: var(--background-blue);
     font-weight: 500;
+    text-decoration: none;
 }
 .icon-button {
     transition: 0.2s ease-in-out;
@@ -1205,7 +1206,8 @@ footer .brand {
     -moz-transition: all 0.15s ease-in-out;
      -ms-transition: all 0.15s ease-in-out;
       -o-transition: all 0.15s ease-in-out;
-         transition: all 0.15s ease-in- out;
+         transition: all 0.15s ease-in-out;
+    text-decoration: none;
 }
 .project-info {
     height: 0;
