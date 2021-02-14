@@ -1437,6 +1437,13 @@ footer .brand {
     background-position: center;
     color: #72050D;
 }
+#uhc {
+    background: url("tiles/uhc.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+    color: #DCA116;
+}
 #plextra {
     background: url("tiles/plextra.png");
 	background-repeat: no-repeat, repeat;

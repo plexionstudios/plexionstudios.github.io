@@ -92,7 +92,7 @@ a {
     text-decoration: underline;
     color: var(--main-text);
     font-weight: normal;
-    transition: 0.1s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 a i {
     font-size: 16px;
@@ -936,27 +936,25 @@ header {
     padding-bottom: 20px;
 }
 footer {
-    font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
-    margin-bottom: 20px;
+    font-family: var(--header-font);
+    padding: 20px;
     transition: 0.2s ease-in-out;
-}
-footer hr {
-    margin: 20px 10% 20px 10%;
-    border: 1px solid var(--main-text);
-    transition: 0.2s ease-in-out;
+    background: var(--secondary-background);
+    text-align: center;
+    margin-top: 20px;
 }
 footer i {
     margin-right: 5px;
     -webkit-transition: -webkit-transform .4s ease-in-out;
           transition:         transform .4s ease-in-out;
 }
-footer:hover .fa-sync-alt {
-    -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
-}
 footer span {
     padding-left: 10px;
     padding-right: 10px;
+}
+footer .brand {
+    margin: 0 0 20px 0;
+    padding: 0;
 }
 
 /* MINECRAFT LIVE COUNTDOWN */
@@ -978,6 +976,13 @@ footer span {
 }
 #voidrising {
     background: url("../tiles/voidrising.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+    background-position: center;
+    color: white;
+}
+#uhc {
+    background: url("../tiles/uhc.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
