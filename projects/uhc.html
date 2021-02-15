@@ -45,11 +45,15 @@
             <p class="sectiondesc">A simple UHC Datapack designed for the latest versions of Minecraft.</p>
         </span>
         <span class="options">
-            <a class="button view ext" title="View the datapack on Planet Minecraft" target="_blank" href="https://www.planetminecraft.com/data-pack/simple-uhc/">More info</a>
+            <div class="tooltip2">
+                <a class="button view ext" target="_blank" href="https://www.planetminecraft.com/data-pack/simple-uhc/">More info</a>
+                <span class="tooltip-text">View on PMC</span>
+            </div>
             <div class="dropdown">
                 <a class="button download important drop-button" title="View all download options" href="javascript:void(0);">Download</a>
                 <div class="dropdown-content">
                     <ul>
+                        <li><a href="../downloads/plexionuhc15221.zip" title="Download 1.0.2 (published 15/02/2021)">Version 1.0.2</a></li>
                         <li><a href="../downloads/plexionuhc14221BUILD2.zip" title="Download 1.0.1 (published 14/02/2021)">Version 1.0.1</a></li>
                         <li><a href="../downloads/plexionuhc14221.zip" title="Download 1.0 (published 14/02/2021)">Version 1.0</a></li>
                     </ul>
@@ -92,7 +96,7 @@
             </span>
             <span class="tileinfo">
                 <p class="tilehead">Sectioned game</p>
-                <p class="tiledesc">The UHC is split into 3 main sections; the starter period, grace period and main game. More information <a href="https://i.imgur.com/kcz39F6.png">here</a></p>
+                <p class="tiledesc">The UHC is split into 3 main sections; the starter period, grace period and main game. More information <a href="https://i.imgur.com/kcz39F6.png">here</a>.</p>
             </span>
         </span>
         <span class="tile">
@@ -129,6 +133,15 @@
             <span class="tileinfo">
                 <p class="tilehead">Easy to use</p>
                 <p class="tiledesc">All events in the UHC can be easily configured and changed to your liking using the <code>global</code> scoreboard.</p>
+            </span>
+        </span>
+        <span class="tile">
+            <span class="tilebadge">
+                <i class="material-icons">favorite</i>
+            </span>
+            <span class="tileinfo">
+                <p class="tilehead">Natural healing</p>
+                <p class="tiledesc">After the grace period has ended, <code>naturalRegeneration</code> is disabled meaning you can only heal health with golden apples & potions.</p>
             </span>
         </span>
     </div>
@@ -176,16 +189,27 @@
     <div class="paragraph">
         <p>Once the datapack is installed, you can start the game with one simple command.</p>
         <ol>
-            <li>The game can easily be started with <code>function uhc:start</code></li>
+            <li>To ensure everything is loaded correctly, run <code>function uhc:defaults</code> - this will revert all settings to default</li>
+            <li>If you have any options you want to tweak, edit them now through the <code>global</code> scoreboard</li>
+            <li>When everything is ready, you can run <code>function uhc:start</code> and let the games begin!</li>
             <li>If you want to pause (or stop) the events temporarily, you can set the <code>timer_enabled</code> score in the <code>global</code> scoreboard to 0.</li>
         </ol>
-        <p>Other options (timings for starting period & grace period, spectator deaths etc.) can be configured in the <code>global</code> scoreboard.</p>
+        <p>Other options (timings for starting period & grace period, spectator deaths, teams mode etc.) can be configured in the <code>global</code> scoreboard.</p>
     </div>
     <div class="pardivider"><hr></div>
     <div class="parhead" id="updates">
         <a href="#updates">Updates</a>
     </div>
     <div class="paragraph">
+        <span class="version">Version 1.0.2<i class="tooltip">Published 15/02/2021</i></span>
+        <p>This update brings a crucial gamerule change & some teams additions:</p>
+        <ul>
+            <li><code>naturalRegeneration</code> is now enabled for the first 2 phases, but disabled for the rest of the game</li>
+            <li>Loot tables for apples mined from Oak Leaves have been boosted</li>
+            <li>Teams mode is now an option in the <code>global</code> scoreboard, listed as <code>enable_teams</code></li>
+            <li>In teams mode, if the other team is fully eliminated the last remaining team will win</li>
+            <li>In solos mode, the last player standing will win the game</li>
+        </ul>
         <span class="version">Version 1.0.1<i class="tooltip">Published 14/02/2021</i></span>
         <p>This update brings along one addition with Cut Clean and a tweak to the border:</p>
         <ul>
@@ -195,7 +219,7 @@
     </div>
     <footer>
         <p class="brand">plexion.dev</p>  
-        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.14</a></span>
+        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.15</a></span>
         <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
     <script>

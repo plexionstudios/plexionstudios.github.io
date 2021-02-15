@@ -1,5 +1,5 @@
 
-/* plexion.online 2102.7 */
+/* plexion.online 2102.15 */
 
 /* Based off of /help page */
 
@@ -128,6 +128,7 @@ code {
     color:var(--main-text);
     line-height: 26px;
     transition: 0.2s ease-in-out;
+    white-space: nowrap;
 }
 .mc-button {
     background-color: #6F6F6F;
@@ -577,6 +578,34 @@ iframe {
 }
 .dark-mode .button:hover {
     color: var(--white-text);
+}
+.tooltip2 {
+    position: relative;
+    display: inline-block;
+}
+.tooltip2 .tooltip-text {
+    visibility: hidden;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    left: 50%;
+    margin-left: -65px;
+    backdrop-filter: saturate(180%) blur(10px);
+    color: var(--white-text);
+}
+.dark-mode .tooltip2 .tooltip-text {
+    background-color: rgba(255,255,255,.5);
+    color: #141414;
+}
+.tooltip2:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 .dropdown {
     margin: 0 10px 0 10px;
