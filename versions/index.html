@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>page backups  •  plexion</title>
+    <title>The Archives (plexion.dev)</title>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
@@ -10,26 +10,52 @@
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://plexion.dev/versions">
-    <meta property="og:title" content="plexion.dev/versions">
+    <meta property="og:title" content="The Archives">
     <meta property="og:description" content="View old backups of my website.">
     <meta property="og:image" content="https://plexion.dev/thumbnails/plexion2020-rewind.png">
 </head>
 <body>
-    <div class="header-popout">
+    <header>
         <div class="navigation">
-            <a href="/" class="navlink" title="go home"><i class="fas fa-home"></i><i class="navi">home</i></a>
-            <a href="/videos" class="navlink" title="browse videos"><i class="fas fa-play-circle"></i><i class="navi">videos</i></a>
-            <a href="/accounts" class="navlink" title="my accounts"><i class="fas fa-user-friends"></i><i class="navi">accounts</i></a>
+            <span class="brand">plexion.dev</span><!--<span class="brand">プレキシオン</span>--><span class="btnsep"></span>
+            <a href="/" class="navlink active" title="go home"><i class="material-icons">home</i><i class="navi">home</i></a>
+            <span class="h-dropdown">
+                <a class="navlink" href="javascript:void(0);" onclick="category()" title="browse videos"><i class="material-icons">movie_creation</i><i class="navi">videos</i></a>
+                <div class="h-dropdown-content">
+                    <ul>
+                        <li><a href="https://youtube.com/plexion" title="latest plexion upload">plexion</a></li>
+                        <li><a href="https://tinyurl.com/plexiongold" title="latest plexionGOLD upload">plexionGOLD</a></li>
+                        <li><a href="/videos" title="view all videos">view all</a></li>
+                    </ul>
+                </div>
+            </span>
+            <a href="/accounts" class="navlink" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">accounts</i></a>
+            <a class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></a>
+        </div>
+    </header>
+    <div class="section" id="start">
+        <p class="big2">Welcome to The Archives</p>
+        <p class="sectiondesc">Backups from 2019 to 2021 have been saved and are stored here.</p>
+    </div>
+    <div class="section">
+        <p class="big2">2021</p>
+        <div class="dropdown">
+            <a class="button important drop-button" href="javascript:void(0);" title="View backups from 2021">View 2021</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="2102.8/" title="View plexion.dev 2102.8">2102.8</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="section" id="start">
-        <p class="big2">BROWSE VERSIONS</p>
-        <p class="sectiondesc">Old backups of my website can be found here.</p>
-        <br/>
+    <div class="section">
+        <p class="big2">2020</p>
         <div class="dropdown">
-            <a class="button important" href="javascript:void(0);" title="View backups from 2020">Backups from 2020<i class="fas fa-chevron-down"></i></a>
+            <a class="button important drop-button" href="javascript:void(0);" title="View backups from 2020">View 2020</a>
             <div class="dropdown-content">
                 <ul>
                     <li><a href="/v1/" title="View Page as of 22/11/2020">22/11/2020</a></li>
@@ -40,20 +66,53 @@
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="section">
+        <p class="big2">2019</p>
         <div class="dropdown">
-            <a class="button important" href="javascript:void(0);" title="View backups from 2019">Backups from 2019<i class="fas fa-chevron-down"></i></a>
+            <a class="button important drop-button" href="javascript:void(0);" title="View backups from 2019">View 2019</a>
             <div class="dropdown-content">
                 <ul>
                     <li><a href="legacy/" title="View Page as of 24/12/2019">24/12/2019 (no css)</a></li>
                 </ul>
             </div>
         </div>
-        <br/>
     </div>
+    <div class="page-full"></div>
     <footer>
-        <center>
-        <hr />    
-        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">14.01.2020</a></span>
-        <span class="btnsep"></span><span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+        <p class="brand">plexion.dev</p>  
+        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.17</a></span>
+        <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+
+    let theme = localStorage.getItem("theme");
+    if (theme && theme === "dark-mode") {
+        localStorage.setItem("theme", "");
+    } else {
+        localStorage.setItem("theme", "dark-mode");
+    }
+
+    document.getElementById("theme").textContent = localStorage.getItem("theme");
+    }
+    </script>
+    <script>
+        var ua = window.navigator.userAgent;
+        var isIE = /MSIE|Trident/.test(ua);
+
+        if ( isIE ) {
+        document.documentElement.classList.add('ie')
+        }
+    </script>
 </body>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>UHC Datapack (plexion.dev)</title>
+    <title>Void Rising Datapack (plexion.dev)</title>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://plexion.dev/projects/uhc">
-    <meta property="og:title" content="UHC Datapack">
-    <meta property="og:description" content="View and Download my UHC Datapack on Minecraft.">
-    <meta property="og:image" content="https://plexion.dev/thumbnails/uhc.png">
+    <meta property="og:url" content="https://plexion.dev/projects/voidrising">
+    <meta property="og:title" content="Void Rising Datapack">
+    <meta property="og:description" content="View and Download my Void Rising Datapack on Minecraft.">
+    <meta property="og:image" content="https://plexion.dev/thumbnails/void-rising.png">
 </head>
 <body>
     <header>
@@ -38,25 +38,24 @@
             <a class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></a>
         </div>
     </header>
-    <div class="section banner" id="uhc"></div>
+    <div class="section banner" id="voidrising"></div>
     <div class="info" id="options">
         <span class="date">
-            <p class="big2">UHC Datapack</p>
-            <p class="sectiondesc">A simple UHC Datapack designed for the latest versions of Minecraft.</p>
+            <p class="big2">Void Rising Datapack</p>
+            <p class="sectiondesc">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
         </span>
         <span class="options">
             <div class="tooltip2">
-                <a class="button view ext" target="_blank" href="https://www.planetminecraft.com/data-pack/simple-uhc/">More info</a>
+                <a class="button view ext" target="_blank" href="https://www.planetminecraft.com/data-pack/void-rising-datapack/">More info</a>
                 <span class="tooltip-text">View on PMC</span>
             </div>
             <div class="dropdown">
                 <a class="button download important drop-button" title="View all download options" href="javascript:void(0);">Download</a>
                 <div class="dropdown-content">
                     <ul>
-                        <li><a href="../downloads/plexionuhc17221.zip" title="Download 1.0.3 (published 17/02/2021)">Version 1.0.3</a></li>
-                        <li><a href="../downloads/plexionuhc15221.zip" title="Download 1.0.2 (published 15/02/2021)">Version 1.0.2</a></li>
-                        <li><a href="../downloads/plexionuhc14221BUILD2.zip" title="Download 1.0.1 (published 14/02/2021)">Version 1.0.1</a></li>
-                        <li><a href="../downloads/plexionuhc14221.zip" title="Download 1.0 (published 14/02/2021)">Version 1.0</a></li>
+                        <li><a href="../downloads/voidrising18121.zip" title="Download v2.1 (published 18/01/2021)">Version 2.1</a></li>
+                        <li><a href="../downloads/voidrising17121.zip" title="Download v2.0 (published 17/01/2021)">Version 2.0</a></li>
+                        <li><a href="../downloads/voidrising121220.zip" title="Download v1.0 (published 12/12/2020)">Version 1.0</a></li>
                     </ul>
                 </div>
             </div>
@@ -66,7 +65,7 @@
         <a href="#description">Description</a>
     </div>
     <div class="paragraph">
-        <p>A simple, lightweight and easy-to-use UHC datapack designed for 1.16.5 (may backport to older versions). Featuring popular UHC standard additions like Cut Clean and Speed UHC, this is the easiest and simplest way to hold a UHC in latest version on platforms like Minecraft Realms.</p>
+        <p>A lightweight data-pack for Minecraft Java Edition 1.16 that well, makes the void rise. Everything is controlled within the single datapack with customisable variables for timings if needed. Lag is handled well with falling blocks being killed to avoid sand blocks causing lag upon rising. Upon dying, you are automatically placed into spectator mode to allow you to watch the game in progress without interference.</p>
     </div>
     <div class="pardivider"><hr></div>
     <div class="parhead" id="features">
@@ -84,29 +83,11 @@
         </span>
         <span class="tile">
             <span class="tilebadge">
-                <i class="material-icons">more_time</i>
+                <i class="material-icons">vertical_align_top</i>
             </span>
             <span class="tileinfo">
-                <p class="tilehead">Cut Clean</p>
-                <p class="tiledesc">When iron ore and gold ore is mined or animals are killed, the item drops are instantly smelted and ready-to-go.</p>
-            </span>
-        </span>
-        <span class="tile">
-            <span class="tilebadge">
-                <i class="material-icons">filter_alt</i>
-            </span>
-            <span class="tileinfo">
-                <p class="tilehead">Sectioned game</p>
-                <p class="tiledesc">The UHC is split into 3 main sections; the starter period, grace period and main game. More information <a href="https://i.imgur.com/kcz39F6.png">here</a>.</p>
-            </span>
-        </span>
-        <span class="tile">
-            <span class="tilebadge">
-                <i class="material-icons">speed</i>
-            </span>
-            <span class="tileinfo">
-                <p class="tilehead">Speed UHC</p>
-                <p class="tiledesc">Any tool you hold will automatically be enchanted with Efficiency 1 to speed up mining.</p>
+                <p class="tilehead">Height limiting</p>
+                <p class="tiledesc">Once the void reaches y245, it automatically stops going any further - stopping chaos.</p>
             </span>
         </span>
         <span class="tile">
@@ -115,16 +96,7 @@
             </span>
             <span class="tileinfo">
                 <p class="tilehead">Dead spectators</p>
-                <p class="tiledesc">When the grace period has ended, dead players are automatically moved into spectator mode to prevent interference.</p>
-            </span>
-        </span>
-        <span class="tile">
-            <span class="tilebadge">
-                <i class="material-icons">group</i>
-            </span>
-            <span class="tileinfo">
-                <p class="tilehead">Simple teams</p>
-                <p class="tiledesc">Players can easily be assigned either Red or Blue team (<code>team1</code> and <code>team2</code>) to make the game more competitive.</p>
+                <p class="tiledesc">Upon death, you are automatically placed into spectator mode to stop interference with the game.</p>
             </span>
         </span>
         <span class="tile">
@@ -133,16 +105,25 @@
             </span>
             <span class="tileinfo">
                 <p class="tilehead">Easy to use</p>
-                <p class="tiledesc">All events in the UHC can be easily configured and changed to your liking using the <code>global</code> scoreboard.</p>
+                <p class="tiledesc">All events related to the void rising can be easily paused and reset in a new location if needed.</p>
             </span>
         </span>
         <span class="tile">
             <span class="tilebadge">
-                <i class="material-icons">favorite</i>
+                <i class="material-icons">warning</i>
             </span>
             <span class="tileinfo">
-                <p class="tilehead">Natural healing</p>
-                <p class="tiledesc">After the grace period has ended, <code>naturalRegeneration</code> is disabled meaning you can only heal health with golden apples & potions.</p>
+                <p class="tilehead">Handled lag</p>
+                <p class="tiledesc">Falling blocks are automatically removed to stop any lag from sand and gravel when rising.</p>
+            </span>
+        </span>
+        <span class="tile">
+            <span class="tilebadge">
+                <i class="material-icons">volume_up</i>
+            </span>
+            <span class="tileinfo">
+                <p class="tilehead">Clutter-free</p>
+                <p class="tiledesc">Status messages can be swapped between bossbar, actionbar or just disabled along with all sound effects.</p>
             </span>
         </span>
     </div>
@@ -152,31 +133,24 @@
     </div>
     <div class="images">
         <span class="imgcontainer">
-            <img src="uhc0.png"></img>
+            <div class="watch2">
+                <iframe src="https://www.youtube-nocookie.com/embed/sQ-S6D6R85o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
         </span>
         <span class="imgcontainer">
-            <img src="uhc1.png"></img>
+            <img src="voidrising3.png"></img>
         </span>
         <span class="imgcontainer">
-            <img src="uhc2.png"></img>
+            <img src="voidrising4.png"></img>
         </span>
         <span class="imgcontainer">
-            <img src="uhc3.png"></img>
+            <img src="voidrising5.png"></img>
         </span>
         <span class="imgcontainer">
-            <img src="uhc4.png"></img>
+            <img src="voidrising6.png"></img>
         </span>
         <span class="imgcontainer">
-            <img src="uhc5.png"></img>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc6.png"></img>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc7.png"></img>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc8.png"></img>
+            <img src="voidrising7.png"></img>
         </span>
     </div>
     <div class="pardivider"><hr></div>
@@ -197,47 +171,40 @@
         <a href="#setup">Setup</a>
     </div>
     <div class="paragraph">
-        <p>Once the datapack is installed, you can start the game with one simple command.</p>
+        <p>Once the datapack is installed, you can start the void rising with some simple set-up.</p>
         <ol>
-            <li>To ensure everything is loaded correctly, run <code>function uhc:defaults</code> - this will revert all settings to default</li>
-            <li>If you have any options you want to tweak, edit them now through the <code>global</code> scoreboard</li>
-            <li>When everything is ready, you can run <code>function uhc:start</code> and let the games begin!</li>
-            <li>If you want to pause (or stop) the events temporarily, you can set the <code>timer_enabled</code> score in the <code>global</code> scoreboard to 0.</li>
+            <li>Teleport to <code>0 0</code> (x and z) in your world.</li>
+            <li>When you want the void to begin rising, type <code>function voidrising:start</code></li>
+            <li>If you want to pause (or stop) the void rising, you can set the <code>enabled</code> score in the <code>global</code> scoreboard to 0.</li>
         </ol>
-        <p>Other options (timings for starting period & grace period, spectator deaths, teams mode etc.) can be configured in the <code>global</code> scoreboard.</p>
+        <p>You can also configure timings for the warning in <code>warning_time</code> and the actual rising itself in <code>rising_time</code> (measured in ticks - 20 ticks = 1 second)</p>
     </div>
     <div class="pardivider"><hr></div>
     <div class="parhead" id="updates">
         <a href="#updates">Updates</a>
     </div>
     <div class="paragraph">
-        <span class="version">Version 1.0.3<i class="tooltip">Published 17/02/2021</i></span>
-        <p>This update enforces gamemode & effects onto all new players joining</p>
+        <span class="version">Version 2.1<i class="tooltip">Published 18/01/2021</i></span>
+        <p>With this update you can now disable some of the pre-built features and enable some new ones.</p>
         <ul>
-            <li>Pre-game is now set as <code>period</code> -1</li>
-            <li>Victory splash screens are now set as <code>period</code> 3</li>
-            <li>Victory splash screens are now split into 3 functions, <code>solos_victory</code>, <code>red_victory</code> and <code>blue_victory</code></li>
-            <li>Players now have a <code>lastlogin</code> scoreboard entry displaying the last period they were logged on for</li>
+            <li>Automatic spectator mode upon death is now an option you can disable with the <code>spectator_death</code> score in the <code>global</code> scoreboard.</li>
+            <li>Automatic stopping of rising upon y245 is now an option you can disable with the <code>height_limit</code> score in the <code>global</code> scoreboard.</li>
+            <li>You can now disable all sound effects with the <code>sound_effects</code> score in the <code>global</code> scoreboard.</li>
+            <li>The actionbar messages (The void has risen etc.) can now be disabled with the <code>rising_status</code> score in the <code>global</code> scoreboard.</li>
+            <li>You can replace the actionbar with a new bossbar that displays the progress until the void rises by changing the <code>bossbar_status</code> score in the <code>global</code> scoreboard.</li>
         </ul>
-        <span class="version">Version 1.0.2<i class="tooltip">Published 15/02/2021</i></span>
-        <p>This update brings a crucial gamerule change & some teams additions:</p>
+        <span class="version">Version 2.0<i class="tooltip">Published 17/01/2021</i></span>
+        <p>This update fixes a few issues and adds some quality of life changes. Here we go:</p>
         <ul>
-            <li><code>naturalRegeneration</code> is now enabled for the first 2 phases, but disabled for the rest of the game</li>
-            <li>Loot tables for apples mined from Oak Leaves have been boosted</li>
-            <li>Teams mode is now an option in the <code>global</code> scoreboard, listed as <code>enable_teams</code></li>
-            <li>In teams mode, if the other team is fully eliminated the last remaining team will win</li>
-            <li>In solos mode, the last player standing will win the game</li>
-        </ul>
-        <span class="version">Version 1.0.1<i class="tooltip">Published 14/02/2021</i></span>
-        <p>This update brings along one addition with Cut Clean and a tweak to the border:</p>
-        <ul>
-            <li>All animal food drops are instantly smelted</li>
-            <li>The world border will now close in to 50 blocks in the main game period</li>
+            <li>The void now stops rising at y245 (can be changed inside the datapack)</li>
+            <li>Timings for the warning & rising event have been sped up</li>
+            <li>The variables names have been changed from time1 and time2 to warning_time and rising_time</li>
+            <li>When the void rises, the actionbar now displays it's current y level</li>
         </ul>
     </div>
     <footer>
         <p class="brand">plexion.dev</p>  
-        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.17</a></span>
+        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.8</a></span>
         <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
     <script>
