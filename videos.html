@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="navigation">
-            <span class="brand">plexion</span><!--<span class="brand">プレキシオン</span>--><span class="btnsep"></span>
+            <span class="brand">plexion.dev</span><!--<span class="brand">プレキシオン</span>--><span class="btnsep"></span>
             <a href="/" class="navlink" title="go home"><i class="material-icons">home</i><i class="navi">home</i></a>
             <span class="h-dropdown">
                 <a class="navlink active" href="javascript:void(0);" onclick="category()" title="browse videos"><i class="material-icons">movie_creation</i><i class="navi">videos</i></a>
@@ -263,19 +263,9 @@
     </div>
     <footer>
         <p class="brand">plexion.dev</p>  
-        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.8</a></span>
+        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.18</a></span>
         <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
-    <!-- jquery --> <!--<script>
-        $(window).on("scroll", function () {
-        if ($(this).scrollTop() > 50) {
-            $("#header").addClass("scrolled");
-        }
-        else {
-            $("#header").removeClass("scrolled");
-        }
-    });
-    </script>-->
     <!-- jquery --> <script>
         var channelID = "UCwQXJpqlQXT07YBLpKF6RSQ";
         var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
@@ -371,8 +361,6 @@
     } else {
         localStorage.setItem("theme", "dark-mode");
     }
-
-    document.getElementById("theme").textContent = localStorage.getItem("theme");
     }
     </script>
     <script>
