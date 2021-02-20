@@ -24,6 +24,8 @@
     --main-blue: #003BFF;
     --secondary-blue: #0035E5;
     --raised-blue: #0560FF;
+    --optional: #C4962D;
+    --warn: #B00020;
     --background-blue: #E6EFFF;
     --raised-background-blue: #D1E0F9;
     --main-background: white;
@@ -316,7 +318,7 @@ li img {
 }
 .parhead a {
     font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     color: var(--main-text);
     text-decoration: none;
@@ -356,11 +358,18 @@ li img {
     color: var(--white-text);
 }
 .tooltip {
-    font-size: 14px;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px 10px;
+    z-index: 1;
+    transition: 0.2s ease-in-out;
+    backdrop-filter: saturate(180%) blur(10px);
+    color: var(--white-text);
     font-style: normal;
-    padding: 3px 6px 3px 6px;
-    background: var(--main-blue);
-    color: var(--main-background);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: default;
 }
 .dark-mode .tooltip {
     background: var(--white-text);
@@ -369,9 +378,21 @@ li img {
     transition: 0.2s ease-in-out;
 }
 .paragraph p {
-    margin: 10px 0 10px 0;
+    margin: 0 0 10px 0;
     padding: 0;
     transition: 0.2s ease-in-out;
+}
+.tilehead .tooltip {
+    opacity: 0.0;
+    transition: 0.1s ease-in-out;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10px;
+}
+.tilehead:hover .tooltip {
+    opacity: 1.0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .version .tooltip {
     opacity: 0.0;
@@ -391,6 +412,10 @@ li img {
     margin: 10px 0 10px 0;
     color: var(--main-blue);
     transition: 0.2s ease-in-out;
+    cursor: default;
+}
+.optional-update {
+    color: var(--optional);
 }
 .dark-mode .version {
     color: var(--white-text);
@@ -622,6 +647,15 @@ iframe {
 }
 .dark-mode .dropdown:hover .button {
     color: var(--white-text);
+}
+.dropdown-header {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    padding: 6px;
+    color: var(--secondary-blue);
+    background: var(--background-blue);
+    cursor: default;
 }
 .dropdown-content {
     display: none;
