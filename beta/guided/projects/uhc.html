@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<head>
+    <title>UHC — plexion.dev</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
+	<link rel="stylesheet" href="../../stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/twemoji-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/projects/uhc">
+    <meta property="og:title" content="UHC Datapack">
+    <meta property="og:description" content="View and Download my UHC Datapack on Minecraft.">
+    <meta property="og:image" content="https://plexion.dev/thumbnails/uhc.png">
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <span class="brand">plexion.dev</span><!--<span class="brand">プレキシオン</span>--><span class="btnsep"></span>
+            <a href="/" class="navlink active" title="go home"><i class="material-icons">home</i><i class="navi">home</i></a>
+            <span class="h-dropdown">
+                <a class="navlink" href="javascript:void(0);" onclick="category()" title="browse videos"><i class="material-icons">movie_creation</i><i class="navi">videos</i></a>
+                <div class="h-dropdown-content">
+                    <ul>
+                        <li><a href="https://youtube.com/plexion" title="latest plexion upload">plexion</a></li>
+                        <li><a href="https://tinyurl.com/plexiongold" title="latest plexionGOLD upload">plexionGOLD</a></li>
+                        <li><a href="/videos" title="view all videos">view all</a></li>
+                    </ul>
+                </div>
+            </span>
+            <a href="/accounts" class="navlink" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">accounts</i></a>
+            <a class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></a>
+        </div>
+    </header>
+    <div class="section banner" id="uhc"></div>
+    <div class="info" id="options">
+        <span class="date">
+            <p class="big2">UHC</p>
+            <p class="sectiondesc">A simple UHC Datapack designed for the latest versions of Minecraft.</p>
+        </span>
+        <span class="options">
+            <div class="tooltip">
+                <a class="button view ext" target="_blank" href="https://www.planetminecraft.com/data-pack/simple-uhc/">More info</a>
+                <span class="tooltip-text">View on PMC</span>
+            </div>
+            <div class="dropdown">
+                <a class="button download important drop-button" title="View all download options" href="javascript:void(0);">Download</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="dropdown-header">SIDE BRANCH</li>
+                        <li><a href="../downloads/plexionuhc21221BUILD2.zip" title="Download 1.0.4 (published 21/02/2021)">Version 1.0.4</a></li>
+                        <li class="dropdown-header">MAIN BRANCH</li>
+                        <li><a href="../downloads/plexionuhc17221.zip" title="Download 1.0.3 (published 17/02/2021)">Version 1.0.3</a></li>
+                        <li><a href="../downloads/plexionuhc15221.zip" title="Download 1.0.2 (published 15/02/2021)">Version 1.0.2</a></li>
+                        <li><a href="../downloads/plexionuhc14221BUILD2.zip" title="Download 1.0.1 (published 14/02/2021)">Version 1.0.1</a></li>
+                        <li><a href="../downloads/plexionuhc14221.zip" title="Download 1.0 (published 14/02/2021)">Version 1.0</a></li>
+                    </ul>
+                </div>
+            </div>
+        </span>
+    </div>
+    <!--<div class="info more-info" id="more-info">
+        <div class="latest-release">Last updated: 20/02/2021</div>
+    </div>-->
+    <div class="parhead" id="description">
+        <a href="#description">Description</a>
+    </div>
+    <div class="paragraph">
+        <p>A simple, lightweight and easy-to-use UHC datapack designed for 1.16.5 (may backport to older versions). Featuring popular UHC standard additions like Cut Clean and Speed UHC, this is the easiest and simplest way to hold a UHC in latest version on platforms like Minecraft Realms.</p>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="features">
+        <a href="#features">Features</a>
+    </div>
+    <div class="project-tiles">
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">update</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Customisable timings</p>
+                <p class="project-tiledesc">Using scoreboards you can configure event timings to make the event as slow or fast as you want!</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">more_time</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Cut Clean</p>
+                <p class="project-tiledesc">When iron ore and gold ore is mined or animals are killed, the item drops are instantly smelted and ready-to-go.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">filter_alt</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Sectioned game</p>
+                <p class="project-tiledesc">The UHC is split into 3 main sections; the starter period, grace period and main game. More information <a href="https://i.imgur.com/kcz39F6.png">here</a>.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">speed</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Speed UHC</p>
+                <p class="project-tiledesc">Any tool you hold will automatically be enchanted with Efficiency 2 to speed up mining.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">no_accounts</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Dead spectators</p>
+                <p class="project-tiledesc">When the grace period has ended, dead players are automatically moved into spectator mode to prevent interference.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">group</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Simple teams *<span class="project-tooltip">Green Team (<code>team3</code>) added in 1.0.4</span></p>
+                <p class="project-tiledesc">Players can easily be assigned either Red or Blue team (<code>team1</code> and <code>team2</code>) to make the game more competitive.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">accessibility_new</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Easy to use</p>
+                <p class="project-tiledesc">All events in the UHC can be easily configured and changed to your liking using the <code>global</code> scoreboard.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">favorite</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Natural healing *<span class="tooltip">Removed in 1.0.4</span></p>
+                <p class="project-tiledesc">After the grace period has ended, <code>naturalRegeneration</code> is disabled meaning you can only heal health with golden apples & potions.</p>
+            </span>
+        </span>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="screenshots">
+        <a href="#screenshots">Gallery</a>
+    </div>
+    <div class="images">
+        <span class="imgcontainer">
+            <img src="uhc0.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc1.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc2.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc3.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc4.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc5.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc6.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc7.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc8.png"></img>
+        </span>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="installation">
+        <a href="#installation">Installation</a>
+    </div>
+    <div class="paragraph">
+        <p>As with every datapack, there is a very simple installation process.</p>
+        <ol>
+            <li>Click the download button above then save it in your Downloads.</li>
+            <li>Open your singleplayer menu, press <code class="mc-button">Create New World</code> then <code class="mc-button">Data Packs</code></li>
+            <li>Drag the .zip file from your Downloads into the available space on the left.</li>
+            <li>Click the right arrow button and move it over (ignore any version errors - it works fine)</li>
+        </ol>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="setup">
+        <a href="#setup">Setup</a>
+    </div>
+    <div class="paragraph">
+        <p>Once the datapack is installed, you can start the game easily.</p>
+        <ol>
+            <li>If you have any options you want to tweak, edit them now through the <code>global</code> scoreboard</li>
+            <li>When everything is ready, you can run <code>function uhc:start</code> and let the games begin!</li>
+        </ol>
+        <p>If you want to pause (or stop) the events temporarily, you can set the <code>timer_enabled</code> score in the <code>global</code> scoreboard to 0.</p>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="updates">
+        <a href="#updates">Updates</a>
+    </div>
+    <div class="paragraph">
+        <span class="version optional-update">Version 1.0.4<i class="tooltip">Published 21/02/2021</i></span>
+        <p>This update is an optional side-branch to 1.0.3; updating is not necessary</p>
+        <ul>
+            <li>There are now 3 teams, red, blue and green</li>
+            <li>The world border will now shrink considerably less</li>
+            <li><code>naturalRegeneration</code> is now enabled throughout the game</li>
+            <li>The difficulty is now set to peaceful in pre-game then set to normal going forward</li>
+            <li>If a player gets a kill, they will be given a gapple as a reward</li>
+            <li>Apple spawn rates have been reduced</li>
+            <li>Team victories are now more specified in the code</li>
+        </ul>
+        <span class="version">Version 1.0.3<i class="tooltip">Published 17/02/2021</i></span>
+        <p>This update enforces gamemode & effects onto all new players joining</p>
+        <ul>
+            <li>Pre-game is now set as <code>period</code> -1</li>
+            <li>Victory splash screens are now set as <code>period</code> 3</li>
+            <li>Victory splash screens are now split into 3 functions, <code>solos_victory</code>, <code>red_victory</code> and <code>blue_victory</code></li>
+            <li>Players now have a <code>lastlogin</code> scoreboard entry displaying the last period they were logged on for</li>
+        </ul>
+        <span class="version">Version 1.0.2<i class="tooltip">Published 15/02/2021</i></span>
+        <p>This update brings a crucial gamerule change & some teams additions:</p>
+        <ul>
+            <li><code>naturalRegeneration</code> is now enabled for the first 2 phases, but disabled for the rest of the game</li>
+            <li>Loot tables for apples mined from Oak Leaves have been boosted</li>
+            <li>Teams mode is now an option in the <code>global</code> scoreboard, listed as <code>enable_teams</code></li>
+            <li>In teams mode, if the other team is fully eliminated the last remaining team will win</li>
+            <li>In solos mode, the last player standing will win the game</li>
+        </ul>
+        <span class="version">Version 1.0.1<i class="tooltip">Published 14/02/2021</i></span>
+        <p>This update brings along one addition with Cut Clean and a tweak to the border:</p>
+        <ul>
+            <li>All animal food drops are instantly smelted</li>
+            <li>The world border will now close in to 50 blocks in the main game period</li>
+        </ul>
+    </div>
+    <footer>
+        <p class="brand">plexion.dev</p>  
+        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.20</a></span>
+        <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+    </footer>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+
+    let theme = localStorage.getItem("theme");
+    if (theme && theme === "dark-mode") {
+        localStorage.setItem("theme", "");
+    } else {
+        localStorage.setItem("theme", "dark-mode");
+    }
+    }
+    </script>
+</body>

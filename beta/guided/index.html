@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<head>
+    <title>Guided Introduction — plexion.dev</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
+	<link rel="stylesheet" href="../stylesheet.css">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/beta">
+    <meta property="og:title" content="The Beta Channel">
+    <meta property="og:description" content="A way to access early & prototype pages from my website before they're fully released.">
+    <meta property="og:image" content="https://plexion.dev/thumbnails/plexion2020-rewind.png">
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <span class="brand">plexion.dev</span><span class="btnsep"></span>
+            <a href="/" class="navlink active" title="go home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+            <span class="h-dropdown">
+                <a class="navlink" href="javascript:void(0);" onclick="category()" title="browse videos"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
+                <div class="h-dropdown-content">
+                    <ul>
+                        <li><a href="https://youtube.com/plexion" title="latest plexion upload">plexion</a></li>
+                        <li><a href="https://tinyurl.com/plexiongold" title="latest plexionGOLD upload">plexionGOLD</a></li>
+                        <li><a href="/videos" title="view all videos">view all</a></li>
+                    </ul>
+                </div>
+            </span>
+            <a href="/accounts" class="navlink" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
+            <a class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></a>
+        </div>
+    </header>
+    <div class="introduction" id="start">
+        <h1>Welcome!</h1>
+        <p class="desc0">You're probably here from my YouTube or PlanetMinecraft page, so if so hello! If you're here for any other reason, you can skip right through this setup and find all my projects.</p>
+        <a class="button important" href="#skip-intro">Skip Intro</a>
+        <div class="tooltip">
+            <a class="button ext" href="/">home classic</a>
+            <span class="tooltip-text">Returns you to the old layout, will be removed soon.</span>
+        </div>
+    </div>
+    <div class="section" id="choose-a-video">
+        <h2>Choose a video to get started.</h2>
+    </div>
+    <div class="videofeed">
+        <span class="video" onclick="location.href='projects/uhc';">
+            <img src="thumbnails/this-uhc-was-insane.png" alt="Thumbnail for my UHC video">
+        </span>
+        <span class="video" onclick="location.href='projects/voidrising';" alt="Thumbnail for my Void Rising video">
+            <img src="thumbnails/void-rising.png">
+        </span>
+    </div>
+    <div id="skip-intro"></div>
+    <div class="section" id="minecraft">
+        <h2>All of Minecraft</h2>
+        <p class="desc0">Every Minecraft datapack/resource pack i've ever created.</p>
+    </div>
+    <div class="tiles">
+        <span class="info-tile secondary-background" id="uhc" onclick="location.href='projects/uhc';">
+            <p class="tile-head white-text shadow-text">UHC</p>
+            <p class="tile-desc white-text shadow-text">A simple UHC Datapack designed for the latest versions of Minecraft.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2102.20</p>
+            <br>
+            <a class="tile-browse button important con" href="projects/uhc">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="voidrising" onclick="location.href='projects/voidrising';">
+            <p class="tile-head white-text shadow-text">Void Rising</p>
+            <p class="tile-desc white-text shadow-text">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2101.18</p>
+            <br>
+            <a class="tile-browse button important con" href="projects/simple-dark">View</a>
+        </span>
+        <span class="info-tile secondary-background a" id="darktheme" onclick="location.href='projects/simple-dark';">
+            <p class="tile-head white-text shadow-text">Simple Dark</p>
+            <p class="tile-desc white-text shadow-text">Description coming soon!</p>
+            <p class="tile-date white-text shadow-text">Last release: Coming soon!</p>
+            <br>
+            <br>
+            <a class="tile-browse button disabled con" href="projects/simple-dark">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="spyglass" onclick="location.href='projects/spyglass';">
+            <p class="tile-head white-text shadow-text">Spyglass HUD Remover</p>
+            <p class="tile-desc white-text shadow-text">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2011.08</p>
+            <br>
+            <a class="tile-browse button important con" href="projects/spyglass">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="hideandseek" onclick="location.href='https://www.planetminecraft.com/project/hide-amp-seek-4213912/';">
+            <p class="tile-head white-text shadow-text">Haunting Hunters</p>
+            <p class="tile-desc white-text shadow-text">A classic game of hide and seek set inside a haunted mansion with cool powerups purchasable.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2006.10</p>
+            <br>
+            <a class="tile-browse button important ext" href="https://www.planetminecraft.com/project/hide-amp-seek-4213912/">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="gsot" onclick="location.href='versions/plexion.online/gsot';">
+            <p class="tile-head white-text shadow-text">Grand Scheme of Things</p>
+            <p class="tile-desc white-text shadow-text">A minecraft mapmaking developer team i'm involved and a part of. All projects are currently paused but may return at somepoint.</p>
+            <br>
+            <br>
+            <a class="tile-browse button important con" href="versions/plexion.online/gsot">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="corruption" onclick="location.href='https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/';">
+            <p class="tile-head white-text shadow-text">Minecraft Corruption</p>
+            <p class="tile-desc white-text shadow-text">Changes the colour scheme of the Warped Forest to match the Corruption from Terraria.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2002.11</p>
+            <br>
+            <a class="tile-browse button important ext" href="https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="darktheme" onclick="location.href='https://www.planetminecraft.com/texture-pack/metro-dark-theme/';">
+            <p class="tile-head white-text shadow-text">Metro Dark</p>
+            <p class="tile-desc white-text shadow-text">A GUI re-skin that helps your eyes late at night.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2008.19</p>
+            <br>
+            <br>
+            <a class="tile-browse button important ext" href="https://www.planetminecraft.com/texture-pack/metro-dark-theme/">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="mc4k" onclick="location.href='https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/';">
+            <p class="tile-head white-text shadow-text">Minecraft 4k</p>
+            <p class="tile-desc white-text shadow-text">A compilation of the textures in Minecraft 4k added into the latest version.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2001.4</p>
+            <br>
+            <a class="tile-browse button important ext" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/">View</a>
+        </span>
+    </div>
+    <div class="section" id="scratch">
+        <p class="head1">Scratch Projects</p>
+        <p class="desc0">All of my Scratch projects i've created over the past few years.</p>
+    </div>
+    <div class="tiles">
+        <span class="info-tile secondary-background" id="uhc" onclick="location.href='projects/uhc';">
+            <p class="tile-head white-text shadow-text">UHC</p>
+            <p class="tile-desc white-text shadow-text">A simple UHC Datapack designed for the latest versions of Minecraft.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2102.20</p>
+            <br>
+            <a class="tile-browse button important con" href="projects/uhc">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="voidrising" onclick="location.href='projects/voidrising';">
+            <p class="tile-head white-text shadow-text">Void Rising</p>
+            <p class="tile-desc white-text shadow-text">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2101.18</p>
+            <br>
+            <a class="tile-browse button important con" href="projects/simple-dark">View</a>
+        </span>
+        <span class="info-tile secondary-background a" id="darktheme" onclick="location.href='projects/simple-dark';">
+            <p class="tile-head white-text shadow-text">Simple Dark</p>
+            <p class="tile-desc white-text shadow-text">Description coming soon!</p>
+            <p class="tile-date white-text shadow-text">Last release: Coming soon!</p>
+            <br>
+            <a class="tile-browse button disabled con" href="projects/simple-dark">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="spyglass" onclick="location.href='projects/spyglass';">
+            <p class="tile-head white-text shadow-text">Spyglass HUD Remover</p>
+            <p class="tile-desc white-text shadow-text">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2011.08</p>
+            <br>
+            <a class="tile-browse button important con" href="projects/spyglass">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="hideandseek" onclick="location.href='https://www.planetminecraft.com/project/hide-amp-seek-4213912/';">
+            <p class="tile-head white-text shadow-text">Haunting Hunters</p>
+            <p class="tile-desc white-text shadow-text">A classic game of hide and seek set inside a haunted mansion with cool powerups purchasable.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2006.10</p>
+            <br>
+            <a class="tile-browse button important ext" href="https://www.planetminecraft.com/project/hide-amp-seek-4213912/">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="gsot" onclick="location.href='versions/plexion.online/gsot';">
+            <p class="tile-head white-text shadow-text">Grand Scheme of Things</p>
+            <p class="tile-desc white-text shadow-text">A Minecraft developer group i'm a part of, check the games out!</p>
+            <br>
+            <a class="tile-browse button important con" href="versions/plexion.online/gsot">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="corruption" onclick="location.href='https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/';">
+            <p class="tile-head white-text shadow-text">Minecraft Corruption</p>
+            <p class="tile-desc white-text shadow-text">Changes the colour scheme of the Warped Forest to match the Corruption from Terraria.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2002.11</p>
+            <br>
+            <a class="tile-browse button important ext" href="https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="darktheme" onclick="location.href='https://www.planetminecraft.com/texture-pack/metro-dark-theme/';">
+            <p class="tile-head white-text shadow-text">Metro Dark</p>
+            <p class="tile-desc white-text shadow-text">A GUI re-skin that helps your eyes late at night.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2008.19</p>
+            <br>
+            <a class="tile-browse button important ext" href="https://www.planetminecraft.com/texture-pack/metro-dark-theme/">View</a>
+        </span>
+        <span class="info-tile secondary-background" id="mc4k" onclick="location.href='https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/';">
+            <p class="tile-head white-text shadow-text">Minecraft 4k</p>
+            <p class="tile-desc white-text shadow-text">A compilation of the textures in Minecraft 4k added into the latest version.</p>
+            <p class="tile-date white-text shadow-text">Last release: 2001.4</p>
+            <br>
+            <a class="tile-browse button important ext" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/">View</a>
+        </span>
+    </div>
+    <footer>
+        <p class="brand">plexion.dev</p>
+        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.25</a></span>
+        <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+        <br>
+        <br>
+        <a href="https://www.w3.org/WAI/WCAG2AA-Conformance"
+        title="Explanation of WCAG 2 Level AA conformance">
+        <img height="32" width="88"
+            src="https://www.w3.org/WAI/wcag2AA"
+            alt="Level AA conformance,
+                    W3C WAI Web Content Accessibility Guidelines 2.0">
+        </a>
+    </footer>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    });
+
+    function themeToggle() {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+
+    let theme = localStorage.getItem("theme");
+    if (theme && theme === "dark-mode") {
+        localStorage.setItem("theme", "");
+    } else {
+        localStorage.setItem("theme", "dark-mode");
+    }
+    }
+    </script>
+    <script>
+        var ua = window.navigator.userAgent;
+        var isIE = /MSIE|Trident/.test(ua);
+
+        if ( isIE ) {
+        document.documentElement.classList.add('ie')
+        }
+    </script>
+</body>
