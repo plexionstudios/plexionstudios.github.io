@@ -1,8 +1,5 @@
 
-/*
-    plexion.dev — BETA STYLESHEET
-    Last updated: 2102.25
-*/
+/* plexion.online 2102.8 */
 
 /* Import fonts */
 
@@ -15,24 +12,7 @@
 /* Global style colours */
 
 :root {
-    --plexion-blue: #003BFF;
-    --main-blue: #003AF8; /* Fully WCAG 2.0 Compliant - older colour shown above as plexion-blue */
-    --secondary-blue: #0033DA;
-    --raised-blue: #0560FF;
-    --optional: #C4962D;
-    --warn: #B00020;
-    --background-blue: #E6EFFF;
-    --raised-background-blue: #D1E0F9;
-    --main-background: white;
-    --secondary-background: #F7F4F4;
-    --main-text: #141414;
-    --white-text: white;
-    --main-font: 'Inter', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
-    --header-font: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
-    --button-border: #E2E2E2;
-}
-.dark-mode {
-    --main-background: #16161C;
+    --main-background: black;
     --secondary-background: #1C1C23;
     --main-text: white;
     --white-text: white;
@@ -42,10 +22,76 @@
     --raised-blue: #0C6DFF;
     --background-blue: #141E32;
     --raised-background-blue: #182338;
+    --main-font: 'Inter', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    --header-font: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
 }
 
-/* Hides all mobile-specific & removed features */
+/* IE Support */
 
+.ie-alert {
+    display: none;
+}
+.ie .ie-alert {
+    display: flex;
+}
+.ie {
+    font-family: 'Inter', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    color: black;
+    background: white;
+}
+.ie a {
+    color: black;
+}
+.ie .project {
+    font-family: 'Inter', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    color: white;
+    width: 100%;
+    margin: 10px;
+}
+.ie .project .head {
+    color: white;
+}
+.ie .button {
+    border: 2px solid #E2E2E2;
+}
+.ie .important{
+    background: #003BFF;
+    border: 2px solid #1461FF;
+    color: white;
+}
+.ie .important:hover {
+    background: #1461FF;
+}
+.ie .watch2 iframe {
+    width: 40%;
+    height: 40%;
+}
+.ie iframe {
+    display: none;
+}
+.ie .video {
+    display: none;
+}
+.ie .watch2 {
+    display: none;
+}
+.ie .dropdown-content ul {
+    background: #003BFF;
+    color: white;
+    border: 2px solid black;
+}
+.ie .dropdown-content ul a:hover {
+    background: lightskyblue;
+}
+.ie .dropdown-content ul a {
+    color: white;
+}
+
+/* Remove mobile-specific sections */
+
+.navigation .navmob {
+    display: none;
+}
 .project br {
     display: none;
 }
@@ -55,38 +101,43 @@
 .navlink .material-icons {
     display: none;
 }
-.ie-alert {
-    display: none;
-}
 
 /* Define key html variables */
 
 html {
     scroll-behavior: smooth;
 }
+html body {
+    margin: 0;
+}
 
 /* Main website fonts etc. */
 
-* {
-    outline: none;
-}
 body {
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    transition: 0.2s ease-in-out;
     font-family: var(--main-font);
+    margin: 0;
+    transition: 0.2s ease-in-out;
     background: var(--main-background);
     color: var(--main-text);
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 a {
     text-decoration: none;
     color: var(--main-text);
+    font-weight: normal;
     transition: 0.2s ease-in-out;
 }
+a i {
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+}
 a:hover {
+    font-weight: 600;
     text-decoration: underline;
+    color: var(--main-blue);
+    /*text-shadow: -2.5px 2.5px 0px#003BFF;*/
 }
 ::select {
     background: var(--secondary-blue);
@@ -96,89 +147,11 @@ a:hover {
     background: var(--secondary-blue);
     color: var(--white-text);
 }
-strong,b {
-    font-weight: 600;
-}
-p {
-    margin-block-start: 0;
-    margin-block-end: 0;
+strong {
+    font-weight: 500;
 }
 
 /* Main custom classes */
-
-h1 {
-    font-family: var(--header-font);
-    font-size: 36px;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    transition: 0.2s ease-in-out;
-}
-h2 {
-    font-family: var(--header-font);
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    transition: 0.2s ease-in-out; 
-}
-h3 {
-    font-family: var(--header-font);
-    font-size: 22px;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    transition: 0.2s ease-in-out; 
-}
-.desc0 {
-    margin-bottom: 10px;
-}
-.main-background {
-    background: var(--main-background);
-}
-.secondary-background {
-    background: var(--secondary-background);
-}
-
-.introduction {
-    padding: 80px 20px;
-    text-align: center;
-}
-.descriptions {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-}
-.description {
-    padding: 20px;
-    display: flex;
-}
-.description-badge {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.description-badge i {
-    font-size: 64px;
-    justify-self: center;
-    align-self: center;
-    padding: 10px;
-}
-.desc-left {
-    text-align: left;
-}
-.desc-right {
-    text-align: right;
-    display: flex;
-    padding-left: 10%;
-}
-.desc-right .description-text {
-    text-align: right;
-}
-
-
 
 .big {
     font-weight: 600;
@@ -271,8 +244,7 @@ h3 {
 }
 .section {
     text-align: center;
-    padding: 30px;
-    transition: 0.2s ease-in-out;
+    padding: 30px 30px 30px 30px;
 }
 
 .padded {
@@ -396,75 +368,6 @@ h3 {
     color: #333333;
 }
 
-/* Info tiles */
-
-.tiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    grid-gap: 15px;
-    transition: 0.2s ease-in-out;
-    padding: 15px;
-}
-.info-tile {
-    transition: 0.2s ease-in-out;
-    background: var(--secondary-background);
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    bottom: 0;
-    display: block;
-    overflow: hidden;
-}
-.info-tile .button {
-    opacity: 0.5;
-}
-.info-tile:hover {
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
-    filter: saturate(160%) brightness(110%);
-    position: relative;
-    bottom: 5px;
-    cursor: pointer;
-}
-.info-tile:hover .button {
-    opacity: 1.0;
-}
-.dark-mode .info-tile:hover {
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
-}
-.tile-head {
-    font-family: var(--header-font);
-    color: var(--main-text);
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    transition: 0.2s ease-in-out;
-}
-.tile-desc {
-    font-family: var(--main-font);
-    color: var(--main-text);
-    font-size: 18px;
-    font-weight: 400;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    transition: 0.2s ease-in-out;
-}
-.tile-image {
-    max-width: 100%;
-    border-radius: 5px;
-    margin: 20px 0;
-}
-.white-text {
-    color: white;
-}
-.shadow-text {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
 /* Buttons */
 
 .button {
@@ -481,36 +384,18 @@ h3 {
     margin: 0 10px 0 10px;
     line-height: 44px;
     text-transform: uppercase;
-    position: relative;
-    bottom: 0;
-}
-.tile-browse {
-    margin-left: 0;
 }
 .button a {
     margin-bottom: 100px;
 }
 .button i {
-    margin-left: 20px;
-    font-size: 16px;
+    margin-right: 10px;
+    font-size: 24px;
 }
 .button:hover {
     color: var(--main-blue);
     background: var(--background-blue);
     font-weight: 500;
-    text-decoration: none;
-}
-.dark-mode .button {
-    color: var(--raised-blue);
-}
-.dark-mode .button:hover {
-    color: var(--raised-blue);
-}
-.dark-mode .important {
-    color: var(--white-text);
-}
-.dark-mode .important:hover {
-    color: var(--white-text);
 }
 .icon-button {
     transition: 0.2s ease-in-out;
@@ -550,6 +435,12 @@ h3 {
     opacity: 1.0;
     margin-left: 10px;
     margin-right: 10px;
+}
+.dark-mode .button {
+    color: var(--white-text);
+}
+.dark-mode .button:hover {
+    color: var(--white-text);
 }
 .tooltip {
     position: relative;
@@ -643,36 +534,11 @@ h3 {
 }
 .important:hover {
     background: var(--raised-blue);
-    color: var(--white-text);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
-    position: relative;
-    bottom: 2px;
 }
 .dark-mode .important:hover {
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
-}
-.disabled {
-    background: var(--secondary-background);
-    color: var(--main-text);
-}
-.disabled:hover {
-    background: var(--button-border);
-    color: var(--main-text);
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
-    position: relative;
-    bottom: 2px;
-}
-.dark-mode .disabled {
-    color: var(--main-text);
-}
-.dark-mode .disabled:hover {
-    color: var(--main-text);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
@@ -702,25 +568,6 @@ h3 {
 .dropdown:hover .drop-button:after {
     -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-}
-.con:after {
-    font-family: 'Material Icons';
-    content: "arrow_forward";
-    transition: 0.2s ease-in-out;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    display: inline-flex;
-    vertical-align: middle;
-    padding-bottom: 3px;
-    margin-left: 10px;
 }
 .ext:after {
     font-family: 'Material Icons';
@@ -757,15 +604,12 @@ h3 {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 10px;
 }
 .dropdown-content a {
     display: block;
 }
 .dropdown:hover .dropdown-content {
     display: block;
-    position: absolute;
-    top: 36px;
 }
 .buttoni {
     transition: 0.15s ease-in-out;
@@ -1003,6 +847,9 @@ header {
     padding: 3px 9px 3px 9px;
     /*border: 2px solid currentColor*/
 }
+.brand img {
+    width: 64px;
+}
 .h-dropdown {
     position: relative;
     display: inline-block;
@@ -1066,7 +913,6 @@ header {
     display: inline-flex;
     vertical-align: middle;
     padding-bottom: 3px;
-    cursor: default;
 }
 .inner-header {
     display: flex;
@@ -1121,11 +967,9 @@ header {
 .navigation .navlink:hover {
     background: var(--background-blue);
     font-weight: 500;
-    cursor: pointer;
 }
 .navigation .active {
     border-bottom: 2px solid var(--main-blue);
-    padding-bottom: 11px;
     color: var(--main-blue);
 }
 .navigation a:hover .materialicons {
@@ -1185,21 +1029,6 @@ header {
     filter: brightness(110%);
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
     transform: scale(1.015);
-}
-.video img {
-    transition: 0.1s ease-in-out;
-    width: 100%;
-    opacity: 0.5;
-}
-.video img:hover {
-    filter: brightness(110%);
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
-    transform: scale(1.010);
-    filter: saturate(1.20) brightness(1.2);
-    opacity: 1.0;
-}
-.page-full {
-    margin-top: 25%;
 }
 
 /* Hamburger menu */
@@ -1501,238 +1330,231 @@ footer .brand {
 /* Website colours */
 
 #rewind {
-    background: url("tiles/plexion-rewind.png"),url("error.png");
+    background: url("tiles/plexion-rewind.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #FF0000;
 }
 #rewind-2019 {
-    background: url("tiles/rewind-2019.png"),url("error.png");
+    background: url("tiles/rewind-2019.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #FF4400;
 }
 #plexion {
-    background: url("tiles/plexion.png"),url("error.png");
+    background: url("tiles/plexion.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #003BFF;
 }
 #plexionDev {
-    background: url("tiles/plexionDev.png"),url("error.png");
+    background: url("tiles/plexionDev.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #D1A212;
 }
 #plexionVODS {
-    background: url("tiles/plexionvods.png"),url("error.png");
+    background: url("tiles/plexionvods.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #9147FE;
 }
 #osuplexion {
-    background: url("tiles/osuplexion.png"),url("error.png");
+    background: url("tiles/osuplexion.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #F06EA8;
 }
 #plexmas-2019 {
-    background: url("tiles/plexmas-2019.png"),url("error.png");
+    background: url("tiles/plexmas-2019.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #D83861 ;
 }
 #youtube {
-    background: url("tiles/youtube.png"),url("error.png");
+    background: url("tiles/youtube.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #FF5959;
 }
 #twitter {
-    background: url("tiles/twitter.png"),url("error.png");
+    background: url("tiles/twitter.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #59C2FF;
 }
 #twitch {
-    background: url("tiles/twitch.png"),url("error.png");
+    background: url("tiles/twitch.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #B27FFF;
 }
 #github {
-    background: url("tiles/github.png"),url("error.png");
+    background: url("tiles/github.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #605D5D;
 }
 #pmc {
-    background: url("tiles/PMC.png"),url("error.png");
+    background: url("tiles/PMC.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #9FFF56;
 }
 #plexfonts {
-    background: url("tiles/plexfonts.png"),url("error.png");
+    background: url("tiles/plexfonts.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #0046FF;
 }
 #voidrising {
-    background: url("tiles/voidrising.png"),url("error.png");
+    background: url("tiles/voidrising.png");
     background-repeat: no-repeat, repeat;
     background-size: cover;
     background-position: center;
     color: #72050D;
 }
-#uhc {
-    background: url("tiles/uhc.png"),url("error.png");
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
-    background-position: center;
-    color: #DCA116;
-}
 #plextra {
-    background: url("tiles/plextra.png"),url("error.png");
+    background: url("tiles/plextra.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #FFBE75;
 }
 #plexionMUSIC {
-    background: url("tiles/plexionMUSIC.png"),url("error.png");
+    background: url("tiles/plexionMUSIC.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #FF4400;
 }
 #plexionGOLD {
-    background: url("tiles/plexionGOLD.png"),url("error.png");
+    background: url("tiles/plexionGOLD.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #FCD138;
 }
 #LetsTalk {
-    background: url("tiles/LetsTalk.png"),url("error.png");
+    background: url("tiles/LetsTalk.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #1A73E8;
 }
 #osuscratch {
-    background: url("tiles/osu!scratch.png"),url("error.png");
+    background: url("tiles/osu!scratch.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #F06EA8;
 }
 #towermage {
-    background: url("tiles/towermage.png"),url("error.png");
+    background: url("tiles/towermage.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #0000BC;
 }
 #aoth {
-    background: url("tiles/aoth.png"),url("error.png");
+    background: url("tiles/aoth.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #999999;
 }
 #mclive {
-    background: url("tiles/mclive.png"),url("error.png");
+    background: url("tiles/mclive.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #F41C6E;
 }
 #terraria {
-    background: url("tiles/terraria.png"),url("error.png");
+    background: url("tiles/terraria.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #2D9923;
 }
 #vortexos {
-    background: url("tiles/vortexos.png"),url("error.png");
+    background: url("tiles/vortexos.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #0C45D3;
 }
 #plexnews {
-    background: url("tiles/plexnews.png"),url("error.png");
+    background: url("tiles/plexnews.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #FF1200;
 }
 #gsot {
-    background: url("tiles/gsot.png"),url("error.png");
+    background: url("tiles/gsot.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #404040;
 }
 #hideandseek {
-    background: url("tiles/hideandseek.png"),url("error.png");
+    background: url("tiles/hideandseek.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #404040;
 }
 #darktheme {
-    background: url("tiles/darktheme.png"),url("error.png");
+    background: url("tiles/darktheme.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #003BFF;
 }
 #skyplex {
-    background: url("tiles/skyplex.png"),url("error.png");
+    background: url("tiles/skyplex.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #88AB3E;
 }
 #antivirus {
-    background: url("tiles/antivirus.png"),url("error.png");
+    background: url("tiles/antivirus.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #999999;
 }
 #corruption {
-    background: url("tiles/corruption.png"),url("error.png");
+    background: url("tiles/corruption.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #7346EF;
 }
 #spyglass {
-    background: url("tiles/spyglass.png"),url("error.png");
+    background: url("tiles/spyglass.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: #DE923A;
 }
 #mc4k {
-    background: url("tiles/mc4k.png"),url("error.png");
+    background: url("tiles/mc4k.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
@@ -1749,14 +1571,14 @@ footer .brand {
     border: 3px solid currentColor;
 }
 .rewind {
-    background: url("tiles/rewind.png"),url("error.png");
+    background: url("tiles/rewind.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
     color: white;
 }
 .rewindtopic {
-    background: url("rewind.png"),url("error.png");
+    background: url("rewind.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
@@ -1780,11 +1602,6 @@ footer .brand {
 
 /* Website compatability (lower resolutions) */
 
-@media (max-width: 1061px) {
-    .info-tile .button {
-        opacity: 1.0;
-    }
-}
 @media (max-width: 1500px) {
     .videofeed {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -1829,14 +1646,6 @@ footer .brand {
         padding: 140px 30px 140px 30px;
     }
 }
-@media (max-width: 1262px) {
-    .tiles {
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    }
-    .description {
-        margin: 40px 5em;
-    }
-}
 @media (max-width: 1000px) {
     .moment {
         margin-left: 0;
@@ -1853,9 +1662,6 @@ footer .brand {
 @media (max-width: 770px) {
     .channel-info {
         max-width: 400px;
-    }
-    .description {
-        margin: 40px 1em;
     }
 }
 @media (max-width: 700px) {
@@ -1969,12 +1775,6 @@ footer .brand {
     }
     .videofeed {
         padding: 0 10px 10px 10px;
-    }
-    .tiles {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-    .description {
-        margin: 40px 10px;
     }
 }
 @media (max-width: 500px) {
