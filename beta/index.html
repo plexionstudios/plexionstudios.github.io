@@ -7,8 +7,7 @@
     <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
 	<link rel="stylesheet" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="title" content="The Beta Channel">
     <meta name="description" content="A way to access early & prototype pages from plexion.dev before they're fully released.">
     <meta property="og:type" content="website">
@@ -61,32 +60,53 @@
             </span>
         </div>
     </div>
-    <div class="section secondary-background" id="beta">
+    <div class="section" id="beta">
         <h2>Beta releases currently available</h2>
     </div>
-    <div class="tiles secondary-background">
+    <div class="tiles">
         <span class="info-tile main-background" onclick="location.href='guided/';">
-            <p class="tile-head">Guided Introduction</p>
-            <p class="tile-desc">A prototype version of a more guided and structured homepage for plexion.dev - putting the content that most people come for, front and centre.</p>
-            <p class="tile-date">Last release: 2102.24</p>
-            <img class="tile-image" src="guided-introduction.png" alt="A screenshot of the Guided Introduction page" onerror="this.src='error.png'">
-            <a class="tile-browse button important con" href="guided/">Try it</a>
-            <a class="button ext" href="guided/">Source Code</a>
+            <div class="tile-image">
+                <img src="guided-introduction.png" alt="A screenshot of the Guided Introduction page" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding">
+                <p class="overline">Last release: 2103.7</p>
+                <h2>Guided Introduction</h2>
+                <p class="desc0">A prototype version of a more guided and structured homepage for plexion.dev - putting the content that most people come for, front and centre.</p>
+                <br>
+                <a class="tile-browse button important con" href="guided/">Try it</a>
+                <a class="button ext" href="https://github.com/plexionstudios/plexionstudios.github.io/tree/master/beta/guided">Source Code</a>
+            </div>
         </span>
-        <span class="info-tile main-background" onclick="location.href='guided/projects/uhc';">
-            <p class="tile-head">Project Integration</p>
-            <p class="tile-desc">A build of /projects that integrates the root stylesheet with the extra project stylesheet.</p>
-            <p class="tile-date">Last release: 2102.24</p>
-            <img class="tile-image" src="project-integration.png" alt="A screenshot of the Project Integration page" onerror="this.src='error.png'">
-            <a class="tile-browse button important con" href="guided/projects/uhc">Try it</a>
-            <a class="button ext" href="guided/">Source Code</a>
+        <span class="info-tile main-background" onclick="location.href='guided/projects/uhc/';">
+            <div class="tile-image">
+                <img src="project-integration.png" alt="A screenshot of the Project Integration page" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding">
+                <p class="overline">Last release: 2102.24</p>
+                <h2>Project Integration</h2>
+                <p class="desc0">A build of /projects that integrates the root stylesheet with the extra project stylesheet.</p>
+                <br>
+                <a class="tile-browse button important con" href="guided/projects/uhc/">Try it</a>
+                <a class="button ext" href="https://github.com/plexionstudios/plexionstudios.github.io/tree/master/beta/guided/projects">Source Code</a>
+            </div>
         </span>
     </div>
     <footer>
         <p class="brand">plexion.dev</p>  
-        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.24</a></span>
+        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2103.7</a></span>
         <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-header");
+            } else {
+                $("header").removeClass("scrolled-header");
+            }
+        });
+    </script>
     <script>
         (function() {
     let onpageLoad = localStorage.getItem("theme") || "";
@@ -97,17 +117,17 @@
     })();
 
     function themeToggle() {
-    let element = document.body;
-    element.classList.toggle("dark-mode");
+        let element = document.body;
+        element.classList.toggle("dark-mode");
 
-    let theme = localStorage.getItem("theme");
-    if (theme && theme === "dark-mode") {
-        localStorage.setItem("theme", "");
-    } else {
-        localStorage.setItem("theme", "dark-mode");
-    }
+        let theme = localStorage.getItem("theme");
+        if (theme && theme === "dark-mode") {
+            localStorage.setItem("theme", "");
+        } else {
+            localStorage.setItem("theme", "dark-mode");
+        }
 
-    document.getElementById("theme").textContent = localStorage.getItem("theme");
+        document.getElementById("theme").textContent = localStorage.getItem("theme");
     }
     </script>
     <script>

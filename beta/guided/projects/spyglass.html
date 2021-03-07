@@ -96,6 +96,17 @@
         <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
     <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-header");
+            } else {
+                $("header").removeClass("scrolled-header");
+            }
+        });
+    </script>
+    <script>
         (function() {
     let onpageLoad = localStorage.getItem("theme") || "";
     let element = document.body;

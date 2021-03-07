@@ -273,14 +273,14 @@ li img {
     padding: 0;
     transition: 0.2s ease-in-out;
 }
-.tilehead .tooltip {
+.project-tilehead .project-tooltip {
     opacity: 0.0;
     transition: 0.1s ease-in-out;
     padding-left: 0;
     padding-right: 0;
     margin-left: 10px;
 }
-.tilehead:hover .tooltip {
+.project-tilehead:hover .project-tooltip {
     opacity: 1.0;
     padding-left: 10px;
     padding-right: 10px;
@@ -484,7 +484,7 @@ li img {
     .images {
         padding: 10px;
     }
-    .tiles {
+    .project-tiles {
         padding: 10px;
     }
 }

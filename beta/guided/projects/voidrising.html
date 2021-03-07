@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <head>
-    <title>Void Rising Datapack (plexion.dev)</title>
+    <title>Void Rising — plexion.dev</title>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
+    <link rel="stylesheet" href="../stylesheet.css">
 	<link rel="stylesheet" href="stylesheet.css">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/twemoji-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta property="title" content="Void Rising">
+    <meta property="description" content="This datapack allows you to host a void rising event in the latest versions of Minecraft.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://plexion.dev/projects/voidrising">
-    <meta property="og:title" content="Void Rising Datapack">
-    <meta property="og:description" content="View and Download my Void Rising Datapack on Minecraft.">
+    <meta property="og:title" content="Void Rising">
+    <meta property="og:description" content="This datapack allows you to host a void rising event in the latest versions of Minecraft.">
     <meta property="og:image" content="https://plexion.dev/thumbnails/void-rising.png">
 </head>
 <body>
@@ -41,7 +43,7 @@
     <div class="section banner" id="voidrising"></div>
     <div class="info" id="options">
         <span class="date">
-            <p class="big2">Void Rising Datapack</p>
+            <p class="big2">Void Rising</p>
             <p class="sectiondesc">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
         </span>
         <span class="options">
@@ -71,8 +73,8 @@
     <div class="parhead" id="features">
         <a href="#features">Features</a>
     </div>
-    <div class="tiles">
-        <span class="tile">
+    <div class="project-tiles">
+        <span class="project-tile">
             <span class="tilebadge">
                 <i class="material-icons">update</i>
             </span>
@@ -81,7 +83,7 @@
                 <p class="tiledesc">Using scoreboards you can configure event timings to make the event as slow or fast as you want!</p>
             </span>
         </span>
-        <span class="tile">
+        <span class="project-tile">
             <span class="tilebadge">
                 <i class="material-icons">vertical_align_top</i>
             </span>
@@ -90,7 +92,7 @@
                 <p class="tiledesc">Once the void reaches y245, it automatically stops going any further - stopping chaos.</p>
             </span>
         </span>
-        <span class="tile">
+        <span class="project-tile">
             <span class="tilebadge">
                 <i class="material-icons">no_accounts</i>
             </span>
@@ -99,7 +101,7 @@
                 <p class="tiledesc">Upon death, you are automatically placed into spectator mode to stop interference with the game.</p>
             </span>
         </span>
-        <span class="tile">
+        <span class="project-tile">
             <span class="tilebadge">
                 <i class="material-icons">accessibility_new</i>
             </span>
@@ -108,7 +110,7 @@
                 <p class="tiledesc">All events related to the void rising can be easily paused and reset in a new location if needed.</p>
             </span>
         </span>
-        <span class="tile">
+        <span class="project-tile">
             <span class="tilebadge">
                 <i class="material-icons">warning</i>
             </span>
@@ -117,7 +119,7 @@
                 <p class="tiledesc">Falling blocks are automatically removed to stop any lag from sand and gravel when rising.</p>
             </span>
         </span>
-        <span class="tile">
+        <span class="project-tile">
             <span class="tilebadge">
                 <i class="material-icons">volume_up</i>
             </span>
@@ -207,6 +209,17 @@
         <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.8</a></span>
         <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-header");
+            } else {
+                $("header").removeClass("scrolled-header");
+            }
+        });
+    </script>
     <script>
         (function() {
     let onpageLoad = localStorage.getItem("theme") || "";
