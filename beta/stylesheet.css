@@ -59,14 +59,6 @@ table {
 /* Global style colours */
 
 :root {
-    --plexion-blue: #003BFF;
-    --main-blue: #003AF8; /* Fully WCAG 2.0 Compliant - older colour shown above as plexion-blue */
-    --secondary-blue: #0033DA;
-    --raised-blue: #0560FF;
-    --optional: #C4962D;
-    --warn: #B00020;
-    --background-blue: #E6EFFF;
-    --raised-background-blue: #D1E0F9;
     --main-background: white;
     --secondary-background: #F7F4F4;
     --main-text: #141414;
@@ -74,6 +66,14 @@ table {
     --black-text: #141414;
     --main-font: 'Roboto', Arial, Helvetica, sans-serif;
     --header-font: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+    --plexion-blue: #003BFF;
+    --main-blue: #003AF8; /* Fully WCAG 2.0 Compliant - older colour shown above as plexion-blue */
+    --secondary-blue: #0033DA;
+    --raised-blue: #0560FF;
+    --background-blue: #E6EFFF;
+    --raised-background-blue: #D1E0F9;
+    --optional: #C4962D;
+    --warn: #B00020;
     --button-border: #E2E2E2;
 }
 .dark-mode {
@@ -81,12 +81,12 @@ table {
     --secondary-background: #1C1C23;
     --main-text: white;
     --white-text: white;
-    --button-border: #27273D;
     --main-blue: #0061FF;
     --secondary-blue: #004BEF;
     --raised-blue: #0C6DFF;
     --background-blue: #141E32;
     --raised-background-blue: #182338;
+    --button-border: #27273D;
 }
 
 /* Hides all mobile-specific & removed features */
