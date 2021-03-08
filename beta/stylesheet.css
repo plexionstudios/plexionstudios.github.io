@@ -1,4 +1,15 @@
 
+/*
+    plexion.dev — BETA STYLESHEET
+    Last updated: 2103.8
+*/
+
+/* Import fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -45,18 +56,6 @@ table {
 	border-spacing: 0;
 }
 
-/*
-    plexion.dev — BETA STYLESHEET
-    Last updated: 2103.7
-*/
-
-/* Import fonts */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
 /* Global style colours */
 
 :root {
@@ -72,6 +71,7 @@ table {
     --secondary-background: #F7F4F4;
     --main-text: #141414;
     --white-text: white;
+    --black-text: #141414;
     --main-font: 'Roboto', Arial, Helvetica, sans-serif;
     --header-font: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
     --button-border: #E2E2E2;
@@ -215,6 +215,9 @@ h3 {
     padding: 80px 20px;
     text-align: center;
 }
+.big-intro {
+    padding: 120px 20px;
+}
 .descriptions {
     display: grid;
     justify-content: center;
@@ -344,6 +347,24 @@ h3 {
     text-align: center;
     padding: 30px;
     transition: 0.2s ease-in-out;
+}
+.choose-a-video {
+    background: url("videos.png");
+	background-repeat: repeat;
+	background-size: cover;
+    background-position: center;
+}
+.dark-mode .choose-a-video {
+    background: url("videos-dark.png");
+	background-repeat: repeat;
+	background-size: cover;
+    background-position: center;
+}
+.updated {
+    background: url("newinvortex.png");
+	background-repeat: repeat;
+	background-size: cover;
+    background-position: center;
 }
 
 .padded {
@@ -484,6 +505,7 @@ h3 {
     display: block;
     overflow: hidden;
     border: 1px solid var(--button-border);
+    text-align: left;
 }
 .card-padding {
     padding: 20px;
@@ -530,6 +552,7 @@ h3 {
     color: var(--main-text);
     margin-block-start: 0;
     margin-block-end: 0;
+    margin: 5px 0;
     transition: 0.2s ease-in-out;
 }
 .tile-image {
@@ -546,6 +569,9 @@ h3 {
 }
 .white-text {
     color: white;
+}
+.black-text {
+    color: var(--black-text);
 }
 .shadow-text {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -1592,245 +1618,210 @@ footer .brand {
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #FF0000;
 }
 #rewind-2019 {
     background: url("tiles/rewind-2019.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #FF4400;
 }
 #plexion {
     background: url("tiles/plexion.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #003BFF;
 }
 #plexionDev {
     background: url("tiles/plexionDev.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #D1A212;
 }
 #plexionVODS {
     background: url("tiles/plexionvods.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #9147FE;
 }
 #osuplexion {
     background: url("tiles/osuplexion.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #F06EA8;
 }
 #plexmas-2019 {
     background: url("tiles/plexmas-2019.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #D83861 ;
 }
 #youtube {
     background: url("tiles/youtube.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #FF5959;
 }
 #twitter {
     background: url("tiles/twitter.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #59C2FF;
 }
 #twitch {
     background: url("tiles/twitch.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #B27FFF;
 }
 #github {
     background: url("tiles/github.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #605D5D;
 }
 #pmc {
     background: url("tiles/PMC.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #9FFF56;
 }
 #plexfonts {
     background: url("tiles/plexfonts.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #0046FF;
 }
 #voidrising {
     background: url("tiles/voidrising.png"),url("error.png");
     background-repeat: no-repeat, repeat;
     background-size: cover;
     background-position: center;
-    color: #72050D;
 }
 #uhc {
     background: url("tiles/uhc.png"),url("error.png");
     background-repeat: no-repeat, repeat;
     background-size: cover;
     background-position: center;
-    color: #DCA116;
 }
 #plextra {
     background: url("tiles/plextra.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #FFBE75;
 }
 #plexionMUSIC {
     background: url("tiles/plexionMUSIC.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #FF4400;
 }
 #plexionGOLD {
     background: url("tiles/plexionGOLD.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #FCD138;
 }
 #LetsTalk {
     background: url("tiles/LetsTalk.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #1A73E8;
 }
 #osuscratch {
     background: url("tiles/osu!scratch.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #F06EA8;
 }
 #towermage {
     background: url("tiles/towermage.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #0000BC;
 }
 #aoth {
     background: url("tiles/aoth.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #999999;
 }
 #mclive {
     background: url("tiles/mclive.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #F41C6E;
 }
 #terraria {
     background: url("tiles/terraria.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #2D9923;
 }
 #vortexos {
     background: url("tiles/vortexos.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #0C45D3;
 }
 #plexnews {
     background: url("tiles/plexnews.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #FF1200;
 }
 #gsot {
     background: url("tiles/gsot.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #404040;
 }
 #hideandseek {
     background: url("tiles/hideandseek.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #404040;
 }
 #darktheme {
     background: url("tiles/darktheme.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #003BFF;
 }
 #simple-dark {
     background: url("tiles/simple-dark.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #003BFF;
 }
 #skyplex {
     background: url("tiles/skyplex.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #88AB3E;
 }
 #antivirus {
     background: url("tiles/antivirus.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #999999;
 }
 #corruption {
     background: url("tiles/corruption.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #7346EF;
 }
 #spyglass {
     background: url("tiles/spyglass.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #DE923A;
 }
 #mc4k {
     background: url("tiles/mc4k.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: #54A016;
 }
 #a {
     background: var(--main-background);
@@ -1847,14 +1838,12 @@ footer .brand {
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: white;
 }
 .rewindtopic {
     background: url("rewind.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
-    color: white;
 }
 .rewind .button:hover {
     color: #F74FE3;

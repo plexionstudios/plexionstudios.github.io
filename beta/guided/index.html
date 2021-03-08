@@ -44,7 +44,7 @@
             </div>
         </div>
     </header>
-    <div class="introduction" id="start">
+    <div class="introduction big-intro" id="start">
         <h1>Welcome!</h1>
         <p class="desc0">You're probably here from my YouTube or PlanetMinecraft page, so if so hello! If you're here for any other reason, you can skip right through this setup and find all my projects.</p>
         <a class="button important" href="#minecraft">Skip Intro</a>
@@ -53,21 +53,43 @@
             <span class="tooltip-text">Returns you to the old layout, will be removed soon.</span>
         </div>
     </div>
-    <div class="section" id="choose-a-video">
-        <h2>Select the video</h2>
+    <div class="introduction choose-a-video" id="choose-a-video">
+        <h2>Choose a video</h2>
+        <p class="desc0">This will bring you to the requested project page for the video.</p>
     </div>
-    <div class="videofeed">
+    <div class="videofeed choose-a-video">
         <div class="tooltip videofeed-tooltip">
-            <span class="video" onclick="location.href='projects/uhc/';">
+            <span class="video" onclick="location.href='projects/uhc';">
                 <img src="thumbnails/this-uhc-was-insane.png" alt="Thumbnail for my UHC video">
             </span>
             <a href="https://youtu.be/sQ-S6D6R85o" class="white-text tooltip-text">This Minecraft UHC was INSANE.</a>
         </div>
         <div class="tooltip videofeed-tooltip">
-            <span class="video" onclick="location.href='projects/voidrising/';">
+            <span class="video" onclick="location.href='projects/voidrising';">
                 <img src="thumbnails/void-rising.png" alt="Thumbnail for my Void Rising video">
             </span>
             <a href="https://youtu.be/sQ-S6D6R85o" class="white-text tooltip-text">Minecraft but the VOID RISES</a>
+        </div>
+    </div>
+    <div class="introduction updated" id="recently-updated">
+        <h2 class="black-text">Recently updated</h2>
+        <p class="desc0 black-text">Projects that have recieved patches and feature updates recently.</p>
+        <div class="tiles">
+            <span class="info-tile card-padding" id="uhc" onclick="location.href='projects/uhc';">
+                <p class="tile-head white-text shadow-text">UHC</p>
+                <p class="tile-desc white-text shadow-text">A simple UHC Datapack featuring many standards from the genre compatiable with the latest versions of Minecraft.</p>
+                <p class="tile-date overline white-text shadow-text">Last release: 2102.20</p>
+                <br>
+                <a class="tile-browse button important con" href="projects/uhc">View</a>
+            </span>
+            <span class="info-tile card-padding a" id="simple-dark" onclick="location.href='projects/simple-dark';">
+                <p class="tile-head white-text shadow-text">Simple Dark</p>
+                <p class="tile-desc white-text shadow-text">Description coming soon!</p>
+                <p class="tile-date overline white-text shadow-text">Last release: Coming soon!</p>
+                <br>
+                <br>
+                <a class="tile-browse button disabled con" href="projects/simple-dark">View</a>
+            </span>
         </div>
     </div>
     <div class="section" id="search">
@@ -86,21 +108,21 @@
         <span class="info-tile card-padding" id="uhc" onclick="location.href='projects/uhc';">
             <p class="tile-head white-text shadow-text">UHC</p>
             <p class="tile-desc white-text shadow-text">A simple UHC Datapack featuring many standards from the genre compatiable with the latest versions of Minecraft.</p>
-            <p class="tile-date white-text shadow-text">Last release: 2102.20</p>
+            <p class="tile-date overline white-text shadow-text">Last release: 2102.20</p>
             <br>
             <a class="tile-browse button important con" href="projects/uhc">View</a>
         </span>
         <span class="info-tile card-padding" id="voidrising" onclick="location.href='projects/voidrising';">
             <p class="tile-head white-text shadow-text">Void Rising</p>
             <p class="tile-desc white-text shadow-text">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
-            <p class="tile-date white-text shadow-text">Last release: 2101.18</p>
+            <p class="tile-date overline white-text shadow-text">Last release: 2101.18</p>
             <br>
             <a class="tile-browse button important con" href="projects/simple-dark">View</a>
         </span>
         <span class="info-tile card-padding a" id="simple-dark" onclick="location.href='projects/simple-dark';">
             <p class="tile-head white-text shadow-text">Simple Dark</p>
             <p class="tile-desc white-text shadow-text">Description coming soon!</p>
-            <p class="tile-date white-text shadow-text">Last release: Coming soon!</p>
+            <p class="tile-date overline white-text shadow-text">Last release: Coming soon!</p>
             <br>
             <br>
             <a class="tile-browse button disabled con" href="projects/simple-dark">View</a>
@@ -108,14 +130,14 @@
         <span class="info-tile card-padding" id="spyglass" onclick="location.href='projects/spyglass';">
             <p class="tile-head white-text shadow-text">Spyglass HUD Remover</p>
             <p class="tile-desc white-text shadow-text">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
-            <p class="tile-date white-text shadow-text">Last release: 2011.08</p>
+            <p class="tile-date overline white-text shadow-text">Last release: 2011.08</p>
             <br>
             <a class="tile-browse button important con" href="projects/spyglass">View</a>
         </span>
         <span class="info-tile card-padding" id="hideandseek" onclick="location.href='https://www.planetminecraft.com/project/hide-amp-seek-4213912/';">
             <p class="tile-head white-text shadow-text">Haunting Hunters</p>
             <p class="tile-desc white-text shadow-text">A classic game of hide and seek set inside a haunted mansion with cool powerups purchasable.</p>
-            <p class="tile-date white-text shadow-text">Last release: 2006.10</p>
+            <p class="tile-date overline white-text shadow-text">Last release: 2006.10</p>
             <br>
             <a class="tile-browse button important ext" href="https://www.planetminecraft.com/project/hide-amp-seek-4213912/">View</a>
         </span>
@@ -129,14 +151,14 @@
         <span class="info-tile card-padding" id="corruption" onclick="location.href='https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/';">
             <p class="tile-head white-text shadow-text">Minecraft Corruption</p>
             <p class="tile-desc white-text shadow-text">Changes the colour scheme of the Warped Forest to match the Corruption from Terraria.</p>
-            <p class="tile-date white-text shadow-text">Last release: 2002.11</p>
+            <p class="tile-date overline white-text shadow-text">Last release: 2002.11</p>
             <br>
             <a class="tile-browse button important ext" href="https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/">View</a>
         </span>
         <span class="info-tile card-padding" id="darktheme" onclick="location.href='https://www.planetminecraft.com/texture-pack/metro-dark-theme/';">
             <p class="tile-head white-text shadow-text">Metro Dark</p>
             <p class="tile-desc white-text shadow-text">A GUI re-skin that helps your eyes late at night.</p>
-            <p class="tile-date white-text shadow-text">Last release: 2008.19</p>
+            <p class="tile-date overline white-text shadow-text">Last release: 2008.19</p>
             <br>
             <br>
             <a class="tile-browse button important ext" href="https://www.planetminecraft.com/texture-pack/metro-dark-theme/">View</a>
@@ -144,7 +166,7 @@
         <span class="info-tile card-padding" id="mc4k" onclick="location.href='https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/';">
             <p class="tile-head white-text shadow-text">Minecraft 4k</p>
             <p class="tile-desc white-text shadow-text">A compilation of the textures in Minecraft 4k added into the latest version.</p>
-            <p class="tile-date white-text shadow-text">Last release: 2001.4</p>
+            <p class="tile-date overline white-text shadow-text">Last release: 2001.4</p>
             <br>
             <a class="tile-browse button important ext" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/">View</a>
         </span>
