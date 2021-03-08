@@ -222,10 +222,12 @@ h3 {
     display: grid;
     justify-content: center;
     align-content: center;
+    transition: 0.2s ease-in-out;
 }
 .description {
     padding: 20px;
     display: flex;
+    transition: 0.2s ease-in-out;
 }
 .description-badge {
     display: flex;
@@ -233,12 +235,14 @@ h3 {
     align-content: center;
     margin-left: 20px;
     margin-right: 20px;
+    transition: 0.2s ease-in-out;
 }
 .description-badge i {
     font-size: 64px;
     justify-self: center;
     align-self: center;
     padding: 10px;
+    transition: 0.2s ease-in-out;
 }
 .desc-left {
     text-align: left;
@@ -563,6 +567,8 @@ h3 {
     overflow: hidden;
     display: flex;
     align-items: center;
+    justify-items: center;
+    transition: 0.2s ease-in-out;
 }
 .tile-image img {
     width: 100%;
@@ -1143,7 +1149,7 @@ header {
 }
 .brand {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 3px 9px 3px 9px;
     color: var(--main-text);
     transition: 0.2s ease-in-out;
@@ -1915,13 +1921,16 @@ footer .brand {
         margin-left: 10%;
         margin-right: 10%;
     }
+    .tile-image {
+        height: 250px;
+    }
 }
 @media (max-width: 1262px) {
     .tiles {
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     }
     .description {
-        margin: 40px 5em;
+        margin: 0 10px;
     }
 }
 @media (max-width: 1000px) {
@@ -1936,13 +1945,24 @@ footer .brand {
     .channel-buttons {
         padding: 10px 10px 10px 128px;
     }
+    .tile-image {
+        height: 250px;
+    }
 }
 @media (max-width: 770px) {
     .channel-info {
         max-width: 400px;
     }
     .description {
-        margin: 40px 1em;
+        margin: 0 0;
+        padding: 10px;
+    }
+    .description-badge {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .tile-image {
+        height: 200px;
     }
 }
 @media (max-width: 700px) {
@@ -2065,7 +2085,11 @@ footer .brand {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
     .description {
-        margin: 40px 10px;
+        padding: 5px;
+    }
+    .description-badge {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
 @media (max-width: 500px) {
@@ -2078,6 +2102,26 @@ footer .brand {
         text-align: center;
         border-radius: 0;
         width: 100%;
+    }
+    .tiles {
+        padding: 15px 0;
+    }
+    .info-tile {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    .tile-image {
+        border-radius: 0;
+    }
+    .card-padding {
+        padding: 20px 10px;
+    }
+    .button {
+        margin: 0 5px;
+    }
+    .tile-browse {
+        margin-left: 0;
     }
     .moment {
         border-radius: 0;
@@ -2133,10 +2177,13 @@ footer .brand {
         display: inherit;
     }
     .navigation .navlink {
-        padding: 13px 16px;
+        padding: 12px 16px;
     }
     .navigation .navlink:hover {
-        padding: 13px 16px;
+        padding: 12px 16px;
+    }
+    .tile-image {
+        height: 150px;
     }
 }
 @media (max-width: 490px) {
@@ -2189,5 +2236,12 @@ footer .brand {
     .google-search {
         margin-left: 0;
         margin-right: 0;
+    }
+    .description {
+        padding: 10px;
+        text-align: center;
+    }
+    .description-badge {
+        display: none;
     }
 }
