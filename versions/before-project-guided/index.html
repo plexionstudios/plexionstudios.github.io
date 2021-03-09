@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<head>
+    <title>plexion.dev</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/twemoji-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <script src="https://unpkg.com/feather-icons"></script> <!-- feather -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/">
+    <meta property="og:title" content="plexion.dev">
+    <meta property="og:description" content="This is my website, I guess.">
+    <meta property="og:image" content="https://plexion.dev/thumbnails/what-happened.png">
+</head>
+<body>
+    <!--<div class="navigation-toggles">
+        <a class="button-toggle" onclick="themeToggle()" href="javascript:void(0)"></a>
+    </div>-->
+    <header>
+        <div class="ie-alert">
+            <span class="tilebadge">
+                <i class="fab fa-internet-explorer"></i>
+            </span>
+            <span class="tileinfo">
+                <p class="tilehead">You are browsing in Internet Explorer</p>
+                <p class="tiledesc">Please stop using Internet Explorer, so many features & updates are missing in HTML, JS, CSS etc. It makes website development very difficult and is the reason that this version of my website is missing so many features. If you really don't want to switch, navigate over to my old website that has more support for IE's framework.</p>
+                <a class="button important" href="versions/2020light">Make the switch</a>
+            </span>
+            <div class="tilebrowsers">
+                <i class="fab fa-chrome"></i>
+                <i class="fab fa-firefox-browser"></i>
+                <i class="fab fa-edge"></i>
+            </div>
+        </div>
+        <div class="navigation">
+            <span class="brand">plexion.dev</span><!--<span class="brand">プレキシオン</span>--><span class="btnsep"></span>
+            <a href="/" class="navlink active" title="go home"><i class="material-icons">home</i><i class="navi">home</i></a>
+            <span class="h-dropdown">
+                <a class="navlink" href="javascript:void(0);" onclick="category()" title="browse videos"><i class="material-icons">movie_creation</i><i class="navi">videos</i></a>
+                <div class="h-dropdown-content">
+                    <ul>
+                        <li><a href="https://youtube.com/plexion" title="latest plexion upload">plexion</a></li>
+                        <li><a href="https://tinyurl.com/plexiongold" title="latest plexionGOLD upload">plexionGOLD</a></li>
+                        <li><a href="/videos" title="view all videos">view all</a></li>
+                    </ul>
+                </div>
+            </span>
+            <a href="/accounts" class="navlink" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">accounts</i></a>
+            <a class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></a>
+        </div>
+    </header>
+    <!--<div class="section a" id="topic">
+        <p class="big2">No topics available.</p>
+        <p class="sectiondesc">You can't just look through the HTML and find the future.</p>
+        <br/>
+        <a class="button" target="_blank" href="http://plexion.online/gab/" title="You can't be serious">Try again <i class="fas fa-arrow-right"></i></a>
+        <br/>
+        <br/>
+    </div>-->
+    <!--<div class="section" id="start">
+        <p class="big2">WELCOME</p>
+        <p class="sectiondesc">You can find some projects i've worked on in the past below.</p>
+        <br/>
+        <div class="dropdown">
+            <a class="button important" href="javascript:void(0);" onclick="category()" title="View page categories">Browse categories<i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#minecraft" title="Browse Minecraft">Minecraft</a></li>
+                    <li><a href="#scratch" title="Browse Scratch">Scratch</a></li>
+                    <li><a href="#channels" title="Browse Channels">Channels</a></li>
+                    <li><a href="#extras" title="Browse the Extras">Extras</a></li>
+                    <li><a href="#timeline" title="Browse the Timeline">Timeline</a></li>
+                </ul>
+            </div>
+        </div>
+        <a class="button" href="accounts" title="View my accounts">My socials</a>
+    </div>-->
+    <!--<div class="section">
+        <a class="button important" href="#">Important Button</a>
+        <a class="button" href="#">Button</a>
+        <div class="dropdown">
+            <a class="button drop-button" href="javascript:void(0);" onclick="category()" title="View page categories">Dropdown</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#minecraft" title="Browse Minecraft">Minecraft</a></li>
+                    <li><a href="#scratch" title="Browse Scratch">Scratch</a></li>
+                    <li><a href="#channels" title="Browse Channels">Channels</a></li>
+                    <li><a href="#extras" title="Browse the Extras">Extras</a></li>
+                    <li><a href="#timeline" title="Browse the Timeline">Timeline</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tooltip">
+            <a class="button" href="#">Tooltip Button</a>
+            <span class="tooltip-text">This is a tooltip</span>
+        </div>
+        <div class="tooltip">
+            <a class="button important" href="#">LARGE TOOLTIP BUTTON LARGE TOOLTIP BUTTON LARGE TOOLTIP BUTTON </a>
+            <div class="tooltip-text">This is a tooltip</div>
+        </div>
+    </div>-->
+    <div class="section" style="padding-top: 100px; padding-bottom: 100px;">
+        <p class="big2">You are currently browsing using the Classic layout.</p>
+        <p class="sectiondesc">To make sure you don't miss out on new projects & updates, head over to the new frontfacing build. If your device cannot handle the build, this classic layout will stay here just incase along with previous website builds.</p>
+        <br>
+        <a class="button important" href="/">Try it out</a>
+        <a class="button" href="/versions/2020light/">legacy</a>
+    </div>
+    <div class="section" id="minecraft">
+        <p class="big2">Minecraft</p>
+        <p class="sectiondesc">All my datapacks, resourcepacks & mappacks in Minecraft: Java Edition.</p>
+    </div>
+    <div class="projects">
+        <button class="project" id="uhc" onclick="location.href='projects/uhc';">
+            <a class="head" href="projects/uhc">UHC Datapack</a>
+            <p class="desc">A simple UHC Datapack designed for the latest versions of Minecraft.</p>
+        </button>
+        <button class="project" id="voidrising" onclick="location.href='projects/voidrising';">
+            <a class="head" href="projects/voidrising">Void Rising Datapack</a>
+            <p class="desc">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
+        </button>
+        <button class="project" id="spyglass" onclick="location.href='projects/spyglass';">
+            <a class="head" href="projects/spyglass">Spyglass HUD Remover</a>
+            <p class="desc">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
+        </button>
+        <button class="project" id="hideandseek" onclick="location.href='https://www.planetminecraft.com/project/hide-amp-seek-4213912/';">
+            <a class="head" href="https://www.planetminecraft.com/project/hide-amp-seek-4213912/">Haunting Hunters</a>
+            <p class="desc">A classic game of hide and seek set inside a haunted mansion with cool powerups purchasable.</p>
+        </button>
+        <button class="project" id="corruption" onclick="location.href='https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/';">
+            <a class="head" href="https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/">Corruption in Minecraft</a>
+            <p class="desc">Changes the colour scheme of the Warped Forest to match the Corruption from Terraria.</p>
+        </button>
+        <button class="project" id="darktheme" onclick="location.href='https://www.planetminecraft.com/texture-pack/metro-dark-theme/';">
+            <a class="head" href="https://www.planetminecraft.com/texture-pack/metro-dark-theme/">Metro Dark Theme</a>
+            <p class="desc">A GUI re-skin that helps your eyes late at night.</p>
+        </button>
+        <button class="project" id="mc4k" onclick="location.href='https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/';">
+            <a class="head" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/">Minecraft 4k</a>
+            <p class="desc">A compilation of the textures in Minecraft 4k added into the latest version.</p>
+        </button>
+        <button class="project" id="gsot" onclick="location.href='versions/plexion.online/gsot';">
+            <a class="head" href="versions/plexion.online/gsot">Grand Scheme of Things</a>
+            <p class="desc">A Minecraft developer group i'm a part of, check the games out!</p>
+        </button>
+        <!--<button class="project" id="a" onclick="location.href='#';">
+            <a class="head" href="#">Coming soon!</a>
+            <p class="desc">Working on some stuff right now.</p>
+        </button>-->
+        <!--<button class="project" id="skyplex">
+            <a class="head skyplex" href="..\skyplex\"><p>Skyplex</p></a>
+            <p class="desc">Skyplex is a multiplayer Minecraft game with unlimited possibilities.</p>
+        </button>-->
+    </div>
+    <div class="section" id="channels">
+        <p class="big2">YOUTUBE CHANNELS</p>
+        <p class="sectiondesc">I have admittedly.. quite a lot of channels to be honest.</p>
+    </div>
+    <div class="projects">
+        <button class="project" id="plexion" onclick="location.href='https://youtube.com/plexion';">
+            <img class="pfp" src="pfp/plexion.png"></img>
+            <a class="head" href="https://youtube.com/plexion">plexion</a>
+            <p class="desc">My main channel, where my most high quality content is posted.</p>
+        </button>
+        <button class="project" id="plexionGOLD" onclick="location.href='https://tinyurl.com/plexiongold';">
+            <img class="pfp" src="pfp/plexionGOLD.png"></img>
+            <a class="head" href="https://tinyurl.com/plexiongold">plexionGOLD</a>
+            <p class="desc">The higher quality second channel for clips & cut scenes.</p>
+        </button>
+        <button class="project" id="plexionVODS" onclick="location.href='https://tinyurl.com/plexvods';">
+            <img class="pfp" src="pfp/plexionVODS.png"></img>
+            <a class="head" href="https://tinyurl.com/plexvods">plexionVODS</a>
+            <p class="desc">A full archive of <i>almost</i> all my streams, no matter what platform.</p>
+        </button>
+        <!--<button class="project" id="plexionMUSIC" onclick="location.href='https://tinyurl.com/plexionmusic';">
+            <img class="pfp" src="pfp/plexionMUSIC.png"></img>
+            <a class="head" href="https://tinyurl.com/plexionmusic">plexionMUSIC</a>
+            <p class="desc">More of a joke than anything.</p>
+        </button>-->
+        <button class="project" id="plexionDev" onclick="location.href='https://tinyurl.com/vortexosyoutube';">
+            <img class="pfp" src="pfp/plexionDev.png"></img>
+            <a class="head" href="https://tinyurl.com/vortexosyoutube">plexionDev</a>
+            <p class="desc">My devlog channel for a variety of my scratch projects, quite fun.</p>
+        </button>
+        <button class="project" id="osuplexion" onclick="location.href='https://tinyurl.com/osuplexion';">
+            <img class="pfp" src="pfp/osu!plexion.png"></img>
+            <a class="head" href="https://tinyurl.com/osuplexion">osu!plexion</a>
+            <p class="desc">One of my alternate channels that has the occasional osu! upload.</p>
+        </button>
+        <button class="project" id="plextra" onclick="location.href='https://tinyurl.com/plexion2';">
+            <img class="pfp" src="pfp/plextra.png"></img>
+            <a class="head" href="https://tinyurl.com/plexion2">plextra</a>
+            <p class="desc">Don't expect anything mindblowing here, it's my second channel.</p>
+        </button>
+        <!--<button class="project" id="LetsTalk" onclick="location.href='https://tinyurl.com/letstalkpodcast';">
+            <img class="pfp" src="pfp/LetsTalk.png"></img>
+            <a class="head" href="https://tinyurl.com/letstalkpodcast">Let's Talk</a>
+            <p class="desc">I talk on this channel, it's really cool.</p>
+        </button>-->
+    </div>
+    <div class="section">
+        <p class="big2">MY AMAZING VIDEOS</p>
+        <p class="sectiondesc">They are oh so great and awesome and cool.</p>
+    </div>
+    <div class="projects">
+        <button class="project" id="plexnews" onclick="location.href='https://youtube.com/playlist?list=PLbaASKiZWzbqsfS_bq9s0-3MaJwET_FjI';">
+            <a class="head" href="https://youtube.com/playlist?list=PLbaASKiZWzbqsfS_bq9s0-3MaJwET_FjI">Plex News</a>
+            <p class="desc">A news show that covers all things Minecraft!</p>
+        </button>
+        <button class="project" id="plexmas-2019" onclick="location.href='watch/plexmas2019';">
+            <a class="head" href="watch/pxmas19">Plexmas 2019</a>
+            <p class="desc">A series of videos that were uploaded throughout christmas. It was unfortunately cancelled though.</p>
+        </button>
+        <button class="project" id="rewind-2019" onclick="location.href='watch/rwnd19';">
+            <a class="head" href="watch/rwnd19">Plexion Rewind 2019</a>
+            <p class="desc">The Rewind for 2019 showing the top videos on my channel that year.</p>
+        </button>
+        <button class="project" id="rewind" onclick="location.href='watch/rwnd20';">
+            <a class="head" href="watch/rwnd20">The #PLEXION2020 Rewind.</a>
+            <p class="desc">The revamped rewind for 2020 showing the amazing milestones, top videos and the best moments of the year.</p>
+        </button>
+    </div>
+    <div class="section" id="scratch">
+        <p class="big2">Scratch</p>
+        <p class="sectiondesc">I've made quite a few projects in Scratch. However, none of them are actually finished.</p>
+    </div>
+    <div class="projects">
+        <button class="project" id="plexfonts" onclick="location.href='https://scratch.mit.edu/projects/448813989/';">
+            <a class="head" href="https://scratch.mit.edu/projects/448813989/">PlexFonts</a>
+            <p class="desc">A font renderer for Scratch, built from the ground up.</p>
+        </button>
+        <button class="project" id="vortexos" onclick="location.href='https://scratch.mit.edu/projects/405720977/';">
+            <a class="head" href="https://scratch.mit.edu/projects/405720977/">VortexOS</a>
+            <p class="desc">An 'operating system' created all in Scratch. Rework is scheduled at some point.</p>
+        </button>
+        <button class="project" id="osuscratch" onclick="location.href='https://scratch.mit.edu/projects/412027544/';">
+            <a class="head" href="https://scratch.mit.edu/projects/412027544/">osu!scratch</a>
+            <p class="desc">A re-creation of osu! in Scratch under heavy development.</p>
+        </button>
+        <button class="project" id="antivirus" onclick="location.href='https://scratch.mit.edu/projects/360638558/';">
+            <a id="head" class="head antivirus" href="https://scratch.mit.edu/projects/360638558/">Antivirus</a>
+            <p class="desc">A classic shooting game featuring a shop.</p>
+        </button>
+        <button class="project" id="aoth" onclick="location.href='https://scratch.mit.edu/projects/360638558/';">
+            <a class="head" href="https://scratch.mit.edu/projects/360638558/">Adventures of the Hero</a>
+            <p class="desc">Original title; I know. AOTH is a small series of boss fights you can work your way through.</p>
+        </button>
+        <button class="project" id="towermage" onclick="location.href='https://scratch.mit.edu/projects/301016807/';">
+            <a class="head" href="https://scratch.mit.edu/projects/301016807/">Tower Mage</a>
+            <p class="desc">A heavy work-in-progress game that features the character in a blue cave-like enviroment.</p>
+        </button>
+    </div>
+    <div class="section" id="extras">
+        <p class="big2">EXTRAS</p>
+        <p class="sectiondesc">Any other projects i've made that don't fit into these categories. Mainly countdowns to be honest..</p>
+    </div>
+    <div class="projects">
+        <button class="project unsupported-project" id="mclive" onclick="location.href='minecraft_live';">
+            <i class="fas fa-exclamation-triangle unsupported" title="This page is unsupported and will no longer receieve updates or fixes."></i><br/>
+            <a class="head" href="minecraft_live">Minecraft LIVE Countdown</a>
+            <p class="desc">A live countdown to the official 2020 MINECRAFT LIVE!</p>
+        </button>
+        <button class="project unsupported-project" id="terraria" onclick="location.href='versions/2020light/terraria';">
+            <i class="fas fa-exclamation-triangle unsupported" title="This page is unsupported and will no longer receieve updates or fixes."></i><br/>
+            <a class="head" href="versions/2020light/terraria">Terraria 1.4 Countdown</a>
+            <p class="desc">An old countdown to the release of Terraria 1.4: Journey's End.</p>
+        </button>
+        <button class="project unsupported-project" id="vortexos" onclick="location.href='versions/plexion.online/vortex/store';">
+            <i class="fas fa-exclamation-triangle unsupported" title="This page is unsupported and will no longer receieve updates or fixes."></i><br/>
+            <a class="head" href="versions/plexion.online/vortex/store">VortexOS Storefront</a>
+            <p class="desc">An unsupported and non-functional storefront for VortexOS.</p>
+        </button>
+    </div>
+    <div class="section" id="timeline">
+        <p class="big2">Channel TIMELINE</p>
+        <p class="sectiondesc">A short but sweet history of my channel.</p>
+    </div>
+    <div class="channel-timeline">
+        <div class="container left">
+          <div class="moment">
+            <p class="year">October 2018</p>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/3AfvqPD9guI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">Where it all started.</p>
+            <p class="desc">My first video back in 2018 was this one, I simply taught people how to do something in Scratch. If i'm being honest, the only things bad about this video are the lack of audio and the text that moves at 2000 miles per hour. This eventually became my most viewed video, somehow?</p>   
+          </div>
+        </div>
+        <div class="container right">
+          <div class="moment">
+            <p class="year">October 2018</p>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/Mj0KvcPl5QI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">And it continued..</p>
+            <p class="desc">Seeing that people liked the video I thought I would make another video. The first idea that came to my head was, "how about i teach people how to draw a sword!". I still question what this is actually teaching people to this day. I ended up editing the video and re-releasing it for Plexmas.</p>
+          </div>
+        </div>
+        <div class="container left">
+            <div class="moment">
+                <p class="year">April 2019</p>
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/zHFxnI2Wf2w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <p class="head">200 VIEWS!</p>
+                <p class="desc">In April 2019, I published a video called 'PewDiePie Congratulations - 8 Bit Mix' featuring a mix of an 8-bit congratulations remix and the official vocals. At one point, the video reached the #2 spot on my channel's most viewed shelf until being overtaken later on.</p>   
+            </div>
+          </div>
+          <div class="container right">
+            <div class="moment">
+                <p class="year">December 2019</p>
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLbaASKiZWzbqlTCQZcSPt4hUCMsKdNFGK" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <p class="head">Plexmas 2019.</p>
+                <p class="desc">Walking to school one day I came up with this idea, "How about I make a special series for Christmas this year, it won't be that bad". I then created it and ran it from the 13th of December to, what was going to be the 25th but was eventually cancelled on the 17th. I really didn't think that through.</p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="moment">
+                <p class="year">January 2020</p>
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/tU0UwEGgTWU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <p class="head">The Key to Success</p>
+                <p class="desc">After school on a Friday, I recorded a video on a new game made by a YouTuber I watch, DaniDev! I downloaded the game and played it while recording. I edited it and uploaded it, not expecting much attention on the video. The day after, I wake up to have a notification feed flooded with subscriber and comment notifications. It was surreal to see and I thank you all so much!</p>   
+            </div>
+          </div>
+          <div class="container right">
+            <div class="moment">
+                <p class="year">April 2020</p>
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/4RLahHkq17w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <p class="head">The Grand Milestone</p>
+                <p class="desc">On the 11th of April 2020, I reached the milestone of 100 SUBS! This then lead to a grand 100 sub special video featuring a compilation of my favourite videos and you boys!</p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="moment">
+                <p class="year">November 2020</p>
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/lrMCqNwL-VE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <p class="head">AGAIN?!</p>
+                <p class="desc">After the already incredible milestone earlier this year, on the 19th of November 2020 I reached 200 SUBSCRIBERS. WHAT.</p>     
+            </div>
+          </div>
+          <div class="container right">
+            <div class="moment">
+                <p class="year">January 2021</p>
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/sQ-S6D6R85o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <p class="head">100 in a day</p>
+                <p class="desc">It took just over a day for this video to reach 100 views, ONE DAY - you boys are genuinely insane.</p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="moment">
+                <p class="year">Present Day</p>
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UUwQXJpqlQXT07YBLpKF6RSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <p class="head">The Aftermath</p>
+                <p class="desc">I'm quite happy with the content I'm pushing out to my channel these days. A lot more time and effort is put into each video so I would appreciate it if you could subscribe!</p>   
+            </div>
+          </div>
+      </div> 
+    <!--<div class="timeline">
+        <span class="moment">
+            <center>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/3AfvqPD9guI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">Where it all started.</p>
+            <p class="desc">My first video back in 2018 was this one, I simply taught people how to do something in Scratch. If i'm being honest, the only things bad about this video are the lack of audio and the text that moves at 2000 miles per hour. This eventually became my most viewed video, somehow?</p>   
+            </center>
+        </span>
+        <span class="moment">
+            <center>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/Mj0KvcPl5QI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">And it continued..</p>
+            <p class="desc">Seeing that people liked the video I thought I would make another video. The first idea that came to my head was, "how about i teach people how to draw a sword!". I still question what this is actually teaching people to this day. I ended up editing the video and re-releasing it for Plexmas.</p>   
+            </center>
+        </span>
+        <span class="moment">
+            <center>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/zHFxnI2Wf2w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">200 VIEWS!</p>
+            <p class="desc">In April 2019, I published a video called 'PewDiePie Congratulations - 8 Bit Mix' featuring a mix of an 8-bit congratulations remix and the official vocals. The video became my 2nd most viewed video hitting 288 views total! It stayed like this for quite a while.</p>   
+            </center>
+        </span>
+        <span class="moment">
+            <center>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLbaASKiZWzbqlTCQZcSPt4hUCMsKdNFGK" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">Plexmas 2019.</p>
+            <p class="desc">Walking to school one day I came up with this idea, "How about I make a special series for Christmas this year, it won't be that bad". I then created it and ran it from the 13th of December to, what was going to be the 25th but was eventually cancelled on the 17th. I really didn't think that through.</p>   
+            </center>
+        </span>
+        <span class="moment">
+            <center>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/tU0UwEGgTWU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">The Key to Success</p>
+            <p class="desc">After school on a Friday, I recorded a video on a new game made by a YouTuber I watch, DaniDev! I downloaded the game and played it while recording. I edited it and uploaded it, not expecting much attention on the video. The day after, I wake up to have a notification feed flooded with subscriber and comment notifications. It was surreal to see and I thank you all so much!</p>   
+            </center>
+        </span>
+        <span class="moment">
+            <center>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/4RLahHkq17w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">The Grand Milestone</p>
+            <p class="desc">On the 11th of April, I reached the milestone of 100 SUBS! This then lead to a grand 100 sub special video featuring a compilation of my favourite videos and you boys!</p>   
+            </center>
+        </span>
+        <span class="moment">
+            <center>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/lrMCqNwL-VE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">AGAIN?!</p>
+            <p class="desc">After the already incredible milestone earlier this year, on the 19th of November I reached 200 SUBSCRIBERS. WHAT.</p>   
+            </center>
+        </span>
+        <span class="moment">
+            <center>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/sQ-S6D6R85o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">100 in a day</p>
+            <p class="desc">It took just over a day for this video to reach 100 views, ONE DAY - you boys are genuinely insane.</p>   
+            </center>
+        </span>
+        <span class="moment">
+            <center>
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLbaASKiZWzbr-JjJc_yrE3YNpe5xJOKRG" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <p class="head">The Aftermath</p>
+            <p class="desc">I'm quite happy with the content I'm pushing out to my channel these days. A lot more time and effort is put into each video so I would appreciate it if you could subscribe!</p>   
+            </center>
+        </span>
+    </div>-->
+    <footer>
+        <p class="brand">plexion.dev</p>  
+        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.8</a></span>
+        <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+    </footer>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+
+    let theme = localStorage.getItem("theme");
+    if (theme && theme === "dark-mode") {
+        localStorage.setItem("theme", "");
+    } else {
+        localStorage.setItem("theme", "dark-mode");
+    }
+    }
+    </script>
+    <script>
+        var ua = window.navigator.userAgent;
+        var isIE = /MSIE|Trident/.test(ua);
+
+        if ( isIE ) {
+        document.documentElement.classList.add('ie')
+        }
+    </script>
+</body>

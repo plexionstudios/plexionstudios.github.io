@@ -210,6 +210,11 @@ h3 {
     letter-spacing: 1px;
     transition: 0.2s ease-in-out;
 }
+.new {
+    padding: 2px 4px;
+    background: var(--optional);
+    border-radius: 3px;
+}
 
 .introduction {
     padding: 80px 20px;
@@ -369,6 +374,12 @@ h3 {
 	background-repeat: repeat;
 	background-size: cover;
     background-position: center;
+}
+.updated-background {
+    background: #62EA27;
+}
+.updated-background .info-tile {
+    border-color: #2B6B0B;
 }
 
 .padded {
@@ -1017,18 +1028,7 @@ h3 {
     transition: 0.2s ease-in-out;
 }
   
-/* The actual timeline (the vertical ruler) */
-.channel-timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background: var(--secondary-background);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-    transition: 0.2s ease-in-out;
-}
+
   
 /* Container around content */
 .container {
@@ -1039,19 +1039,7 @@ h3 {
     transition: 0.2s ease-in-out;
 }
   
-  /* The circles on the timeline */
-.container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -18px;
-    background: var(--secondary-background);
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-    transition: 0.2s ease-in-out;
-}
+
   
   /* Place the container to the left */
 .left {

@@ -12,31 +12,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta property="title" content="plexion Content">
+    <meta property="title" content="Content">
     <meta property="description" content="View the most recent content uploaded on all plexion channels.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://plexion.dev/videos">
-    <meta property="og:title" content="plexion Content">
+    <meta property="og:title" content="Content">
     <meta property="og:description" content="View the most recent content uploaded on all plexion channels.">
     <meta property="og:image" content="https://plexion.dev/thumbnails/we-hosted-an-election.png">
 </head>
 <body>
     <header>
         <div class="navigation">
-            <span class="brand">plexion.dev</span><!--<span class="brand">プレキシオン</span>--><span class="btnsep"></span>
-            <a href="/" class="navlink" title="go home"><i class="material-icons">home</i><i class="navi">home</i></a>
+            <span class="brand">plexion.dev</span><span class="btnsep"></span>
+            <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
             <span class="h-dropdown">
-                <a class="navlink active" href="javascript:void(0);" onclick="category()" title="browse videos"><i class="material-icons">movie_creation</i><i class="navi">videos</i></a>
+                <a class="navlink" href="/videos" onclick="category()" title="Browse Content"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
                 <div class="h-dropdown-content">
                     <ul>
-                        <li><a href="https://youtube.com/plexion" title="latest plexion upload">plexion</a></li>
-                        <li><a href="https://tinyurl.com/plexiongold" title="latest plexionGOLD upload">plexionGOLD</a></li>
-                        <li><a href="/videos" title="view all videos">view all</a></li>
+                        <li><a href="https://youtube.com/plexion" title="Watch plexion on YouTube">plexion</a></li>
+                        <li><a href="https://tinyurl.com/plexiongold" title="Watch plexionGOLD on YouTube">plexionGOLD</a></li>
+                        <li><a href="https://tinyurl.com/plexionvods" title="Watch plexionVODS on YouTube">plexionVODS</a></li>
+                        <li><a href="https://tinyurl.com/osuplexion" title="Watch osu!plexion on YouTube">osu!plexion</a></li>
+                        <li><a href="/videos" title="view all videos">View all</a></li>
                     </ul>
                 </div>
             </span>
-            <a href="/accounts" class="navlink" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">accounts</i></a>
-            <a class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></a>
+            <a href="/accounts" class="navlink" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
+            <div class="tooltip navlink-tooltip">
+                <span class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></span>
+                <span class="tooltip-text">Change theme</span>
+            </div>
         </div>
     </header>
     <div class="banner plexion-banner"></div>
