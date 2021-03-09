@@ -37,9 +37,9 @@
             <a class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></a>
         </div>
     </header>
-    <div class="section" id="start">
-        <p class="big2">Welcome to The Archives</p>
-        <p class="sectiondesc">Backups from 2019 to 2021 have been saved and are stored here.</p>
+    <div class="introduction" id="start">
+        <h1>Welcome to The Archives</h1>
+        <p class="desc0">Backups from 2019 to 2021 have been saved and are stored here.</p>
     </div>
     <div class="section">
         <p class="big2">2021</p>
@@ -84,6 +84,17 @@
         <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.17</a></span>
         <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
     </footer>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-header");
+            } else {
+                $("header").removeClass("scrolled-header");
+            }
+        });
+    </script>
     <script>
         (function() {
     let onpageLoad = localStorage.getItem("theme") || "";

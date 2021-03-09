@@ -129,12 +129,9 @@ body {
     color: var(--main-text);
 }
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--main-text);
     transition: 0.2s ease-in-out;
-}
-a:hover {
-    text-decoration: underline;
 }
 ::select {
     background: var(--secondary-blue);
@@ -259,6 +256,9 @@ h3 {
 }
 .desc-right .description-text {
     text-align: right;
+}
+.description-text {
+    max-width: 900px;
 }
 
 
