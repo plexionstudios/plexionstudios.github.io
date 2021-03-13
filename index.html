@@ -44,20 +44,60 @@
             </div>
         </div>
     </header>
-    <div class="introduction big-intro" id="start">
-        <h1>Welcome!</h1>
-        <p class="desc0">You're probably here from my YouTube or PlanetMinecraft page, so if so hello! If you're here for any other reason, you can skip right through this setup and find all my projects.</p>
-        <a class="button important" href="#minecraft">Skip Intro</a>
-        <div class="tooltip">
-            <a class="button ext" href="versions/before-project-guided/">Home Classic</a>
-            <span class="tooltip-text">Returns you to the old layout, will be removed soon.</span>
+    <div class="table-of-contents">
+        <span class="text">
+            <h1>Welcome Back.</h1>
+            <p class="desc1">Here are some quick links to get you started:</p>
+            <br>
+            <ul class="quick-links">
+                <li><a class="quick-link" href="projects/simple-dark" title="View Simple Dark resource pack">Simple Dark</a></li>
+                <li><a class="quick-link" href="projects/uhc" title="View UHC Datapack">UHC Datapack</a></li>
+                <li><a class="quick-link" href="projects/voidrising" title="View Void Rising Datapack">Void Rising Datapack</a></li>
+            </ul>
+            <br>
+            <br>
+            <p class="overline secondary-text">More links</p>
+            <ul class="quick-links">
+                <li><a class="quick-link" href="accounts" title="View my social accounts">Social accounts</a></li>
+                <li><a class="quick-link" href="versions/before-project-guided" title="View all">View all projects</a></li>
+            </ul>
+        </span>
+        <span class="image">
+            <img src="welcome.png" class="image-light">
+            <img src="welcomed.png" class="image-dark">
+        </span>
+    </div>
+    <!--<div class="section">
+        <a class="button important" href="#">Important Button</a>
+        <a class="button" href="#">Button</a>
+        <div class="dropdown">
+            <a class="button drop-button" href="javascript:void(0);" onclick="category()" title="View page categories">Dropdown</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#minecraft" title="Browse Minecraft">Minecraft</a></li>
+                    <li><a href="#scratch" title="Browse Scratch">Scratch</a></li>
+                    <li><a href="#channels" title="Browse Channels">Channels</a></li>
+                    <li><a href="#extras" title="Browse the Extras">Extras</a></li>
+                    <li><a href="#timeline" title="Browse the Timeline">Timeline</a></li>
+                </ul>
+            </div>
         </div>
+        <div class="tooltip">
+            <a class="button" href="#">Tooltip Button</a>
+            <span class="tooltip-text">This is a tooltip</span>
+        </div>
+        <div class="tooltip">
+            <a class="button important" href="#">LARGE TOOLTIP BUTTON LARGE TOOLTIP BUTTON LARGE TOOLTIP BUTTON </a>
+            <div class="tooltip-text">This is a tooltip</div>
+        </div>
+        <br>
+        <input placeholder="Enter some text">
+    </div>-->
+    <div class="text" id="choose-a-video">
+        <h2>Have a video on your mind?</h2>
+        <p class="desc0">Choose the thumbnail you're looking for and you'll be brought right to the project.</p>
     </div>
-    <div class="introduction choose-a-video" id="choose-a-video">
-        <h2>Choose a video</h2>
-        <p class="desc0">This will bring you to the requested project page for the video.</p>
-    </div>
-    <div class="videofeed choose-a-video">
+    <div class="videofeed">
         <div class="tooltip videofeed-tooltip">
             <span class="video" onclick="location.href='projects/uhc';">
                 <img src="thumbnails/this-uhc-was-insane.png" alt="Thumbnail for my UHC video">
@@ -400,9 +440,37 @@
         <div class="tiles" id="jsonContent"></div>
     </div>
     <footer>
-        <p class="brand">plexion.dev</p>
-        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2103.9</a></span>
-        <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+        <h1>plexion.dev</h1>
+        <p class="desc0">Last updated: 2103.13</p>
+        <br>
+        <div class="footer-links">
+            <span class="footer-link">
+                <p class="overline secondary-text">Cool pages</p>
+                <ul class="quick-links">
+                    <li><a href="/videos" class="quick-link small-link">Content</a></li>
+                    <li><a href="/accounts" class="quick-link small-link">Accounts</a></li>
+                    <li><a href="/versions/before-project-guided" class="quick-link small-link">View all</a></li>
+                    <li><a href="/beta/" class="quick-link small-link">The Beta Channel</a></li>
+                </ul>
+            </span>
+            <span class="footer-link">
+                <p class="overline secondary-text">Follow me</p>
+                <ul class="quick-links">
+                    <li><a href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                    <li><a href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                    <li><a href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                    <li><a href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                </ul>
+            </span>
+            <span class="footer-link">
+                <p class="overline secondary-text">Build Info</p>
+                <ul class="quick-links">
+                    <li><a href="/versions/" class="quick-link small-link">The Archives</a></li>
+                    <li><a href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                    <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/labels/Beta%20Channel" class="quick-link small-link">Report an Issue</a></li>
+                </ul>
+            </span>
+        </div>
     </footer>
     <script>
         $(window).scroll(function() {    

@@ -62,6 +62,7 @@ table {
     --main-background: white;
     --secondary-background: #F7F4F4;
     --main-text: #141414;
+    --secondary-text: #2D2D2D;
     --white-text: white;
     --black-text: #141414;
     --main-font: 'Roboto', Arial, Helvetica, sans-serif;
@@ -78,8 +79,10 @@ table {
 }
 .dark-mode {
     --main-background: #16161C;
-    --secondary-background: #1C1C23;
+    --secondary-background: #101016;
+    --highlight-background: #1C1C23;
     --main-text: white;
+    --secondary-text: #C9D1D1;
     --white-text: white;
     --main-blue: #0061FF;
     --secondary-blue: #004BEF;
@@ -102,6 +105,17 @@ table {
 }
 .ie-alert {
     display: none;
+}
+
+.image-dark {
+    display: none;
+}
+
+.dark-mode .image-light {
+    display: none;
+}
+.dark-mode .image-dark {
+    display: inherit;
 }
 
 /* Define key html variables */
@@ -129,7 +143,7 @@ body {
     color: var(--main-text);
 }
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--main-text);
     transition: 0.2s ease-in-out;
 }
@@ -183,20 +197,14 @@ h3 {
 .desc0 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: var(--main-text);
+    color: var(--secondary-text);
     transition: 0.2s ease-in-out;
 }
 .desc1 {
     font-size: 16px;
     margin-bottom: 8px;
-    color: var(--main-text);
+    color: var(--secondary-text);
     transition: 0.2s ease-in-out;
-}
-.main-background {
-    background: var(--main-background);
-}
-.secondary-background {
-    background: var(--secondary-background);
 }
 .overline {
     font-family: var(--main-font);
@@ -206,6 +214,15 @@ h3 {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.2s ease-in-out;
+}
+.main-background {
+    background: var(--main-background);
+}
+.secondary-background {
+    background: var(--secondary-background);
+}
+.secondary-text {
+    color: var(--secondary-text);
 }
 .new {
     padding: 2px 4px;
@@ -220,6 +237,63 @@ h3 {
 .big-intro {
     padding: 120px 20px;
 }
+
+.desc1 {
+    font-size: 22px;
+}
+.quick-links li {
+    margin: 10px 0;
+}
+.quick-link {
+    font-size: 28px;
+    text-decoration: none
+}
+.quick-link:after {
+    font-family: 'Material Icons';
+    content: "arrow_forward";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 32px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: var(--main-text);
+}
+.quick-link:hover {
+    background: var(--main-text);
+    color: var(--main-background);
+}
+.quick-link:hover:after {
+    margin-left: 15px;
+    color: var(--main-background);
+}
+.small-link {
+    font-size: 18px;
+}
+.small-link:after {
+    font-size: 24px;
+    margin-left: 5px;
+}
+.small-link:hover:after {
+    margin-left: 10px;
+}
+
+.footer-links {
+    display: flex;
+}
+.footer-link {
+    width: 400px;
+}
+
 .descriptions {
     display: grid;
     justify-content: center;
@@ -356,6 +430,23 @@ h3 {
     text-align: center;
     padding: 30px;
     transition: 0.2s ease-in-out;
+}
+.table-of-contents {
+    padding: 90px 250px;
+    margin: 30px 0;
+    display: flex;
+    transition: 0.2s ease-in-out;
+}
+.text {
+    padding: 20px;
+}
+.image {
+    display: flex;
+    margin-left: auto;
+    border-radius: 10px;
+}
+.image img {
+    border-radius: 10px;
 }
 .choose-a-video {
     background: url("videos.png");
@@ -602,6 +693,22 @@ h3 {
 
 /* Buttons */
 
+input {
+    background: var(--main-background);
+    border: 1px solid var(--button-border);
+    border-radius: 5px;
+    padding: 8px 22px;
+    font-family: var(--header-font);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+    color: var(--main-text);
+}
+input:focus {
+    background: var(--secondary-background);
+    color: var(--main-text);
+    outline: none;
+}
 .button {
     transition: 0.2s ease-in-out;
     border-radius: 5px;
@@ -613,11 +720,12 @@ h3 {
     font-size: 16px;
     font-weight: 500;
     filter: brightness(100%);
-    margin: 0 10px 0 10px;
-    line-height: 44px;
+    margin: 10px;
+    display: inline-block;
     text-transform: uppercase;
     position: relative;
     bottom: 0;
+    text-align: center;
 }
 .tile-browse {
     margin-left: 0;
@@ -1346,11 +1454,9 @@ header {
     padding-bottom: 20px;
 }
 footer {
-    font-family: var(--header-font);
-    padding: 20px;
+    padding: 90px 150px;
     transition: 0.2s ease-in-out;
     background: var(--secondary-background);
-    text-align: center;
     margin-top: 20px;
 }
 footer i {
@@ -1862,6 +1968,11 @@ footer .brand {
         opacity: 1.0;
     }
 }
+@media (max-width: 1650px) {
+    .table-of-contents {
+        padding: 90px 120px;
+    }
+}
 @media (max-width: 1500px) {
     .videofeed {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -1912,6 +2023,9 @@ footer .brand {
     .tile-image {
         height: 250px;
     }
+    .table-of-contents {
+        padding: 90px 30px;
+    }
 }
 @media (max-width: 1262px) {
     .tiles {
@@ -1919,6 +2033,23 @@ footer .brand {
     }
     .description {
         margin: 0 10px;
+    }
+    .table-of-contents {
+        padding: 60px 30px;
+        background: url("welcome.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .dark-mode .table-of-contents {
+        padding: 60px 30px;
+        background: url("welcomed.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .table-of-contents .image {
+        display: none;
     }
 }
 @media (max-width: 1000px) {
@@ -1936,6 +2067,9 @@ footer .brand {
     .tile-image {
         height: 250px;
     }
+    footer {
+        padding: 90px;
+    }
 }
 @media (max-width: 770px) {
     .channel-info {
@@ -1951,6 +2085,9 @@ footer .brand {
     }
     .tile-image {
         height: 200px;
+    }
+    footer {
+        padding: 30px;
     }
 }
 @media (max-width: 700px) {
@@ -2079,6 +2216,12 @@ footer .brand {
         margin-left: 5px;
         margin-right: 5px;
     }
+    .table-of-contents {
+        padding: 60px 10px;
+    }
+    .footer-links {
+        display: inherit;
+    }
 }
 @media (max-width: 500px) {
     .projects {
@@ -2104,9 +2247,6 @@ footer .brand {
     }
     .card-padding {
         padding: 20px 10px;
-    }
-    .button {
-        margin: 0 5px;
     }
     .tile-browse {
         margin-left: 0;
@@ -2173,6 +2313,12 @@ footer .brand {
     .tile-image {
         height: 150px;
     }
+    .button {
+        padding-left: auto;
+        padding-right: auto;
+        display: block;
+        margin: 10px 0;
+    }
 }
 @media (max-width: 490px) {
     .channel-buttons {
@@ -2231,5 +2377,9 @@ footer .brand {
     }
     .description-badge {
         display: none;
+    }
+    .table-of-contents {
+        padding: 30px 0;
+        margin: 0;
     }
 }
