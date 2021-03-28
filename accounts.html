@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <link rel="shortcut icon" type="ico" href="favicon.ico"/>
-	<link rel="stylesheet" href="../stylesheet.css">
+	<link rel="stylesheet" href="stylesheet.css">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/twemoji-awesome.css">
@@ -20,32 +20,43 @@
     <meta property="og:image" content="https://plexion.dev/thumbnails/what-happened.png">
 </head>
 <body>
+    <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
     <header>
-        <div class="navigation">
-            <span class="brand">plexion.dev</span><span class="btnsep"></span>
-            <a href="/" class="navlink" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
-            <span class="h-dropdown">
-                <a class="navlink" href="/videos" onclick="category()" title="Browse Content"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
-                <div class="h-dropdown-content">
+        <span class="header-brand">
+            <span class="brand">plexion.dev</span>
+        </span>
+        <span class="navigation">
+            <span class="header-links">
+                <a href="/" class="navlink" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">event</i><i class="navi">Events<i class="new margin-left">BETA</i></i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
+                <a href="/accounts" class="navlink active" title="My Accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
+            </span>
+        </span>
+        <span class="header-space">
+            <span class="h-dropdown account-dropdown">
+                <a class="navlink navlink-nohide" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
+                <div class="h-dropdown-content" id="account-dropdown-content">
                     <ul>
-                        <li><a href="https://youtube.com/plexion" title="Watch plexion on YouTube">plexion</a></li>
-                        <li><a href="https://tinyurl.com/plexiongold" title="Watch plexionGOLD on YouTube">plexionGOLD</a></li>
-                        <li><a href="https://tinyurl.com/plexionvods" title="Watch plexionVODS on YouTube">plexionVODS</a></li>
-                        <li><a href="https://tinyurl.com/osuplexion" title="Watch osu!plexion on YouTube">osu!plexion</a></li>
-                        <li><a href="/videos" title="view all videos">View all</a></li>
+                        <li>
+                            <div class="card-padding secondary-background">
+                                <h4>Page Settings</h4>
+                                <p class="descsmall">These settings are saved locally across the page.</p>
+                            </div>
+                        </li>
+                        <div class="channel-divider"></div>
+                        <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
+                        <div class="channel-divider"></div>
+                        <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
                     </ul>
                 </div>
             </span>
-            <a href="/accounts" class="navlink active" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
-            <div class="tooltip navlink-tooltip">
-                <span class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></span>
-                <span class="tooltip-text">Change theme</span>
-            </div>
-        </div>
+        </span>
     </header>
     <div class="introduction big-intro" id="start">
         <h1>My accounts</h1>
-        <p class="desc0">Incase you're on a quest to follow me on every social media (which you should) here are some of my most important accounts.</p>
+        <p class="desc0">Incase you're on a quest to follow me on every social media (which you should), here are some of my most important accounts.</p>
     </div>
     <div class="tiles">
         <span class="info-tile card-padding" id="youtube" onclick="location.href='https://youtube.com/plexion';">
@@ -93,35 +104,40 @@
     </div>
     <footer>
         <h1>plexion.dev</h1>
-        <p class="desc0">Last updated: 2103.13</p>
-        <br>
-        <div class="footer-links">
-            <span class="footer-link">
-                <p class="overline secondary-text">Cool pages</p>
-                <ul class="quick-links">
-                    <li><a href="/videos" class="quick-link small-link">Content</a></li>
-                    <li><a href="/accounts" class="quick-link small-link">Accounts</a></li>
-                    <li><a href="/versions/before-project-guided" class="quick-link small-link">View all</a></li>
-                    <li><a href="/beta/" class="quick-link small-link">The Beta Channel</a></li>
-                </ul>
-            </span>
-            <span class="footer-link">
-                <p class="overline secondary-text">Follow me</p>
-                <ul class="quick-links">
-                    <li><a href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
-                    <li><a href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
-                    <li><a href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
-                    <li><a href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
-                </ul>
-            </span>
-            <span class="footer-link">
-                <p class="overline secondary-text">Build Info</p>
-                <ul class="quick-links">
-                    <li><a href="/versions/" class="quick-link small-link">The Archives</a></li>
-                    <li><a href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
-                    <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/labels/Beta%20Channel" class="quick-link small-link">Report an Issue</a></li>
-                </ul>
-            </span>
+        <p class="desc0">Build: 2103.26</p>
+        <div class="footer-extras">
+            <br>
+            <div class="footer-links">
+                <span class="footer-link">
+                    <p class="overline secondary-text">Cool pages</p>
+                    <ul class="quick-links">
+                        <li><a href="/videos" class="quick-link small-link">Content</a></li>
+                        <li><a href="/accounts" class="quick-link small-link">Accounts</a></li>
+                        <li><a href="/versions/before-project-guided" class="quick-link small-link">View all</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <p class="overline secondary-text">Follow me</p>
+                    <ul class="quick-links">
+                        <li><a href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                        <li><a href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                        <li><a href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                        <li><a href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <p class="overline secondary-text">Build Info</p>
+                    <ul class="quick-links">
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
+                        <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
+                        <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
+                    </ul>
+                </span>
+            </div>
+            <br>
+            <p class="overline secondary-text">Have any questions?</p>
+            <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
         </div>
     </footer>
     <script>
@@ -145,23 +161,157 @@
     })();
 
     function themeToggle() {
-    let element = document.body;
-    element.classList.toggle("dark-mode");
+        let element = document.body;
+        element.classList.toggle("dark-mode");
 
-    let theme = localStorage.getItem("theme");
-    if (theme && theme === "dark-mode") {
-        localStorage.setItem("theme", "");
-    } else {
-        localStorage.setItem("theme", "dark-mode");
-    }
+        let theme = localStorage.getItem("theme");
+        if (theme && theme === "dark-mode") {
+            localStorage.setItem("theme", "");
+        } else {
+            localStorage.setItem("theme", "dark-mode");
+        }
+
+        document.getElementById("theme").textContent = localStorage.getItem("theme");
     }
     </script>
     <script>
-        var ua = window.navigator.userAgent;
-        var isIE = /MSIE|Trident/.test(ua);
+        (function() {
+    let onpageLoad = localStorage.getItem("embed") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("embed").textContent =
+        localStorage.getItem("embed") || "light";
+    })();
 
-        if ( isIE ) {
-        document.documentElement.classList.add('ie')
+    function disableEmbeds() {
+        let element = document.body;
+        element.classList.toggle("disable-embeds");
+
+        let embed = localStorage.getItem("embed");
+        if (embed && embed === "disable-embeds") {
+            localStorage.setItem("embed", "");
+        } else {
+            localStorage.setItem("embed", "disable-embeds");
         }
+
+        document.getElementById("embed").textContent = localStorage.getItem("embed");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("guided") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("guided").textContent =
+        localStorage.getItem("guided") || "light";
+    })();
+
+    function disableGuided() {
+        let element = document.body;
+        element.classList.toggle("disable-guided");
+
+        let embed = localStorage.getItem("guided");
+        if (embed && embed === "disable-guided") {
+            localStorage.setItem("guided", "");
+        } else {
+            localStorage.setItem("guided", "disable-guided");
+        }
+
+        document.getElementById("guided").textContent = localStorage.getItem("guided");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("animations") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("animations").textContent =
+        localStorage.getItem("animations") || "light";
+    })();
+
+    function removeAnimations() {
+        let element = document.body;
+        element.classList.toggle("disable-animations");
+
+        let embed = localStorage.getItem("animations");
+        if (embed && embed === "disable-animations") {
+            localStorage.setItem("animations", "");
+        } else {
+            localStorage.setItem("animations", "disable-animations");
+        }
+
+        document.getElementById("animations").textContent = localStorage.getItem("animations");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("experience") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("experience").textContent =
+        localStorage.getItem("experience") || "light";
+    })();
+
+    function experienceToggle() {
+        let element = document.body;
+        element.classList.toggle("minimal");
+
+        let embed = localStorage.getItem("experience");
+        if (embed && embed === "minimal") {
+            localStorage.setItem("experience", "");
+        } else {
+            localStorage.setItem("experience", "minimal");
+        }
+
+        document.getElementById("experience").textContent = localStorage.getItem("experience");
+    }
+    function experienceDefault() {
+        let element = document.body;
+        element.classList.remove("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "");
+    }
+    function experienceMinimal() {
+        let element = document.body;
+        element.classList.add("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "minimal");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("colour") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("colour").textContent =
+        localStorage.getItem("colour") || "light";
+    })();
+
+    function colourBlue() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.remove("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "");
+    }
+    function colourRed() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.add("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "red");
+    }
+    function colourGreen() {
+        let element = document.body;
+        element.classList.remove("red");
+        element.classList.add("green");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "green");
+    }
     </script>
 </body>

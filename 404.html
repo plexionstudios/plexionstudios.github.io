@@ -38,12 +38,38 @@
 </style>
 <body class="dark-mode">
     <header>
-        <div class="navigation">
-            <span class="brand">plexion.dev</span><span class="btnsep"></span>
-            <a href="/" class="navlink active" title="go home"><i class="material-icons">home</i><i class="navi">Home</i></a>
-            <a href="/videos" class="navlink" title="browse videos"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
-            <a href="/accounts" class="navlink" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
-        </div>
+        <span class="header-brand">
+            <span class="brand">plexion.dev</span>
+        </span>
+        <span class="navigation">
+            <span class="header-links">
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">event</i><i class="navi">Events</i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
+                <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
+            </span>
+        </span>
+        <span class="header-space">
+            <span class="h-dropdown account-dropdown">
+                <a class="navlink navlink-nohide" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
+                <div class="h-dropdown-content" id="account-dropdown-content">
+                    <ul>
+                        <li>
+                            <div class="card-padding secondary-background">
+                                <h4>Page Settings</h4>
+                                <p class="descsmall">Sorry, Settings aren't available on error pages.</p>
+                            </div>
+                        </li>
+                        <div class="channel-divider"></div>
+                        <li>
+                            <div class="card-padding">
+                                <p class="descsmall">No settings available :(</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+        </span>
     </header>
     <div class="descriptions" style="padding-top: 240px;">
         <div class="description desc-left" id="error-description">
@@ -70,5 +96,15 @@
                 $("header").removeClass("scrolled-header");
             }
         });
+    </script>
+    <script>
+        function accountdropdown() {
+            var x = document.getElementById("account-dropdown-content");
+            if (x.style.display === "block") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "block";
+            }
+        }
     </script>
 </body>

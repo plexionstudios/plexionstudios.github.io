@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <title>uh oh, that ain't good</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="/favicon.ico"/>
+	<link rel="stylesheet" href="/stylesheet.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    :root {
+        --optional: #C4962D;
+        --warn: #B00020;
+    }
+    .error {
+        margin-top: 80px;
+    }
+    .error .big2 {
+        margin: 0;
+    }
+    .map {
+        border-radius: 5px;
+        border: 1px solid var(--button-border);
+    }
+    .errorcode {
+        text-align: center;
+        font-family: 'Roboto Mono', 'Consolas';
+        font-size: 20px;
+        color: var(--main-blue);
+    }
+    @media (max-width: 670px){
+        .map {
+            width: 95%;
+        }
+    }
+</style>
+<body class="dark-mode">
+    <header>
+        <div class="navigation">
+            <span class="brand">plexion.dev</span><span class="btnsep"></span>
+            <a href="/" class="navlink active" title="go home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+            <a href="/videos" class="navlink" title="browse videos"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
+            <a href="/accounts" class="navlink" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
+        </div>
+    </header>
+    <div class="descriptions" style="padding-top: 240px;">
+        <div class="description desc-left" id="error-description">
+            <span class="description-badge">
+                <i class="material-icons">error</i>
+            </span>
+            <span class="description-text">
+                <h2>404.</h2>
+                <p class="desc0">It seems the page you tried to navigate to is either unaccessible or just nonexistent. If a link on a page brought you here, report it at <a href="https://github.com/plexionstudios/plexionstudios.github.io/issues">plexionstudios.github.io/issues</a>; otherwise it's gonna be your fault.</p>
+            </span>
+        </div>
+    </div>
+    <div class="section">
+        <a class="button important con" href="/">Return</a>
+        <a class="button" href="/versions/">The Archives</a>
+    </div>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-header");
+            } else {
+                $("header").removeClass("scrolled-header");
+            }
+        });
+    </script>
+</body>

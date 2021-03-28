@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<head>
+    <title>Content — plexion.dev</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="../stylesheet.css">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/twemoji-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta property="title" content="Content">
+    <meta property="description" content="View the most recent content uploaded on all plexion channels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/videos">
+    <meta property="og:title" content="Content">
+    <meta property="og:description" content="View the most recent content uploaded on all plexion channels.">
+    <meta property="og:image" content="https://plexion.dev/thumbnails/we-hosted-an-election.png">
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <span class="brand">plexion.dev</span><span class="btnsep"></span>
+            <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+            <span class="h-dropdown">
+                <a class="navlink" href="/videos" onclick="category()" title="Browse Content"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
+                <div class="h-dropdown-content">
+                    <ul>
+                        <li><a href="https://youtube.com/plexion" title="Watch plexion on YouTube">plexion</a></li>
+                        <li><a href="https://tinyurl.com/plexiongold" title="Watch plexionGOLD on YouTube">plexionGOLD</a></li>
+                        <li><a href="https://tinyurl.com/plexionvods" title="Watch plexionVODS on YouTube">plexionVODS</a></li>
+                        <li><a href="https://tinyurl.com/osuplexion" title="Watch osu!plexion on YouTube">osu!plexion</a></li>
+                        <li><a href="/videos" title="view all videos">View all</a></li>
+                    </ul>
+                </div>
+            </span>
+            <a href="/accounts" class="navlink" title="my accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
+            <div class="tooltip navlink-tooltip">
+                <span class="navlink button-toggle" onclick="themeToggle()" href="javascript:void(0)"></span>
+                <span class="tooltip-text">Change theme</span>
+            </div>
+        </div>
+    </header>
+    <div class="banner plexion-banner"></div>
+    <div class="channel-embed">
+        <span class="channel-pfp">
+                <img src="pfp/plexion.png" class="pfp" onerror="this.src='errorsq.png'"></img>
+        </span>
+        <span class="channel-info">
+            <p class="channel-name">plexion</p>
+            <p class="channel-desc">Hello! This channel is heavily focused around Minecraft. If you haven't heard of Minecraft before, you know where the exit is. I put a lot of effort into my videos (especially the newer ones) so it's greatly appreciated if you could subscribe!</p>
+        </span>
+        <div class="line-break"></div>
+        <div class="channel-buttons">
+            <a class="button important subscribe" href="https://youtube.com/plexion?sub_confirmation=1">SUBSCRIBE</a>
+            <a class="button subscribe2" href="https://youtube.com/playlist?list=UUwQXJpqlQXT07YBLpKF6RSQ">Watch more</a>
+            <span class="share-url">
+                <a class="icon-button subscribe2" href="#"><i class="material-icons">share</i></a>
+                <code class="url">https://youtube.com/plexion</code>
+            </span>
+        </div>   
+    </div>
+    <div class="channel-section">
+        <p class="big2"><i class="material-icons">tag</i>PLEXION2021</p>
+    </div>
+    <div class="videofeed">
+        <span class="video">
+            <div class="watch2"><iframe id="video0" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video1" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video2" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video3" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+    </div>
+    <div class="channel-divider"></div>
+    <div class="channel-section">
+        <p class="big2"><i class="material-icons">tag</i>PLEXION2020</p>
+    </div>
+    <div class="videofeed">
+        <span class="video">
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/lrMCqNwL-VE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/aS0cUNGDmdw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/UKubKhsn6hg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/zJwrsbEC2HQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </span>
+    </div>
+    <div class="banner plexionGOLD-banner"></div>
+    <div class="channel-embed">
+        <span class="channel-pfp">
+                <img src="pfp/plexionGOLD.png" class="pfp" onerror="this.src='errorsq.png'"></img>
+        </span>
+        <span class="channel-info">
+            <p class="channel-name">plexionGOLD</p>
+            <p class="channel-desc">Extra Scenes and Cut Content from my main videos.<br>The originals 🡒 <a href="https://youtube.com/plexion">https://youtube.com/plexion</a></p>
+        </span>
+        <div class="line-break"></div>
+        <div class="channel-buttons">
+            <a class="button important subscribe" href="https://youtube.com/channel/UCMEzAAFrDIUiEwJ6DxvQ_eA?sub_confirmation=1">SUBSCRIBE</a>
+            <a class="button subscribe2" href="https://youtube.com/playlist?list=UUMEzAAFrDIUiEwJ6DxvQ_eA">Watch more</a>
+            <span class="share-url">
+                <a class="icon-button subscribe2" href="#"><i class="material-icons">share</i></a>
+                <code class="url">https://plexion.dev/gold</code>
+            </span>
+        </div>
+    </div>
+    <div class="channel-section">
+        <p class="big2"><i class="material-icons">video_library</i>Latest videos</p>
+    </div>
+    <div class="videofeed">
+        <span class="video">
+            <div class="watch2"><iframe id="video4" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video5" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video6" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video7" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+    </div>
+    <div class="banner plexionVODS-banner"></div>
+    <div class="channel-embed">
+        <span class="channel-pfp">
+                <img src="pfp/plexionVODS.png" class="pfp" onerror="this.src='errorsq.png'"></img>
+        </span>
+        <span class="channel-info">
+            <p class="channel-name">plexionVODS</p>
+            <p class="channel-desc">This is my VODS channel - VODS meaning archives of past streams. You can catch these live (when they happen) at <a href="https://twitch.tv/plexionlive">https://twitch.tv/plexionlive</a>. Although, I barely ever stream, so it's a bit of a graveyard over there.</p>
+        </span>
+        <div class="line-break"></div>
+        <div class="channel-buttons">
+            <a class="button important subscribe" href="https://youtube.com/channel/UC_p3wc1BpnekbhFJ3QlDVUg?sub_confirmation=1">SUBSCRIBE</a>
+            <a class="button subscribe2" href="https://youtube.com/playlist?list=UU_p3wc1BpnekbhFJ3QlDVUg">Watch more</a>
+            <span class="share-url">
+                <a class="icon-button subscribe2" href="#"><i class="material-icons">share</i></a>
+                <code class="url">https://plexion.dev/vods</code>
+            </span>
+        </div>
+    </div>
+    <div class="channel-section">
+        <p class="big2"><i class="material-icons">video_library</i>Latest videos</p>
+    </div>
+    <div class="videofeed">
+        <span class="video">
+            <div class="watch2"><iframe id="video8" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video9" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video10" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video11" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+    </div>
+    <div class="banner osuplexion-banner"></div>
+    <div class="channel-embed">
+        <span class="channel-pfp">
+                <img src="pfp/osu!plexion.png" class="pfp" onerror="this.src='errorsq.png'"></img>
+        </span>
+        <span class="channel-info">
+            <p class="channel-name">osu!plexion</p>
+            <p class="channel-desc">The place where I upload me playing random osu! beatmaps. I mainly play 4* to 5* maps - i'm not very good LMAO</p>
+        </span>
+        <div class="line-break"></div>
+        <div class="channel-buttons">
+            <a class="button important subscribe" href="https://youtube.com/channel/UCKUAuos-wkvZTeWh4TUW0lg?sub_confirmation=1">SUBSCRIBE</a>
+            <a class="button subscribe2" href="https://youtube.com/playlist?list=UUKUAuos-wkvZTeWh4TUW0lg">Watch more</a>
+            <span class="share-url">
+                <a class="icon-button subscribe2" href="#"><i class="material-icons">share</i></a>
+                <code class="url">https://plexion.dev/osuplexion</code>
+            </span>
+        </div>
+    </div>
+    <div class="channel-section">
+        <p class="big2"><i class="material-icons">video_library</i>Latest videos</p>
+    </div>
+    <div class="videofeed">
+        <span class="video">
+            <div class="watch2"><iframe id="video12" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video13" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video14" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+        <span class="video">
+            <div class="watch2"><iframe id="video15" frameborder="0" allowfullscreen></iframe></div>
+        </span>
+    </div>
+    <div class="section" id="channels">
+        <p class="big2">All channels</p>
+        <p class="sectiondesc">I have admittedly.. quite a lot of channels to be honest.</p>
+    </div>
+    <div class="projects">
+        <button class="project" id="plexion" onclick="location.href='https://youtube.com/plexion';">
+            <img class="pfp" src="pfp/plexion.png"></img>
+            <a class="head" href="https://youtube.com/plexion">plexion</a>
+            <p class="desc">My main channel, where my most high quality content is posted.</p>
+        </button>
+        <button class="project" id="plexionGOLD" onclick="location.href='https://tinyurl.com/plexiongold';">
+            <img class="pfp" src="pfp/plexionGOLD.png"></img>
+            <a class="head" href="https://tinyurl.com/plexiongold">plexionGOLD</a>
+            <p class="desc">The higher quality second channel for clips & cut scenes.</p>
+        </button>
+        <button class="project" id="plexionVODS" onclick="location.href='https://tinyurl.com/plexvods';">
+            <img class="pfp" src="pfp/plexionVODS.png"></img>
+            <a class="head" href="https://tinyurl.com/plexvods">plexionVODS</a>
+            <p class="desc">A full archive of <i>almost</i> all my streams, no matter what platform.</p>
+        </button>
+        <button class="project" id="plexionMUSIC" onclick="location.href='https://tinyurl.com/plexionmusic';">
+            <img class="pfp" src="pfp/plexionMUSIC.png"></img>
+            <a class="head" href="https://tinyurl.com/plexionmusic">plexionMUSIC</a>
+            <p class="desc">More of a joke than anything.</p>
+        </button>
+        <button class="project" id="plexionDev" onclick="location.href='https://tinyurl.com/vortexosyoutube';">
+            <img class="pfp" src="pfp/plexionDev.png"></img>
+            <a class="head" href="https://tinyurl.com/vortexosyoutube">plexionDev</a>
+            <p class="desc">My devlog channel for a variety of my scratch projects, quite fun.</p>
+        </button>
+        <button class="project" id="osuplexion" onclick="location.href='https://tinyurl.com/osuplexion';">
+            <img class="pfp" src="pfp/osu!plexion.png"></img>
+            <a class="head" href="https://tinyurl.com/osuplexion">osu!plexion</a>
+            <p class="desc">One of my alternate channels that has the occasional osu! upload.</p>
+        </button>
+        <button class="project" id="plextra" onclick="location.href='https://tinyurl.com/plexion2';">
+            <img class="pfp" src="pfp/plextra.png"></img>
+            <a class="head" href="https://tinyurl.com/plexion2">plextra</a>
+            <p class="desc">Don't expect anything mindblowing here, it's my second channel.</p>
+        </button>
+        <button class="project" id="LetsTalk" onclick="location.href='https://tinyurl.com/letstalkpodcast';">
+            <img class="pfp" src="pfp/LetsTalk.png"></img>
+            <a class="head" href="https://tinyurl.com/letstalkpodcast">Let's Talk</a>
+            <p class="desc">I talk on this channel, it's really cool.</p>
+        </button>
+    </div>
+    <footer>
+        <p class="brand">plexion.dev</p>  
+        <span><i class="material-icons website-build">sync</i> <a href="/versions/" title="View page archives">build 2102.18</a></span>
+        <span class="btnsep"></span><span><i class="material-icons">link</i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+    </footer>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-header");
+            } else {
+                $("header").removeClass("scrolled-header");
+            }
+        });
+    </script>
+    <!-- jquery --> <script>
+        var channelID = "UCwQXJpqlQXT07YBLpKF6RSQ";
+        var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
+        $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
+        var link = data.items[0].link;
+        var id = link.substr(link.indexOf("=")+1);
+        $("#video0").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+            var link = data.items[1].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video1").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+            var link = data.items[2].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video2").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+        var link = data.items[3].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video3").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+        
+        });
+    </script>
+    <!-- jquery --> <script>
+        var channelID = "UCMEzAAFrDIUiEwJ6DxvQ_eA";
+        var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
+        $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
+        var link = data.items[0].link;
+        var id = link.substr(link.indexOf("=")+1);
+        $("#video4").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+            var link = data.items[1].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video5").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+            var link = data.items[2].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video6").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+        var link = data.items[3].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video7").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+        
+        });
+    </script>
+    <!-- jquery --> <script>
+        var channelID = "UC_p3wc1BpnekbhFJ3QlDVUg";
+        var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
+        $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
+        var link = data.items[0].link;
+        var id = link.substr(link.indexOf("=")+1);
+        $("#video8").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+            var link = data.items[1].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video9").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+            var link = data.items[2].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video10").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+        var link = data.items[3].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video11").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+        
+        });
+    </script>
+    <!-- jquery --> <script>
+        var channelID = "UCKUAuos-wkvZTeWh4TUW0lg";
+        var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
+        $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
+        var link = data.items[0].link;
+        var id = link.substr(link.indexOf("=")+1);
+        $("#video12").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+            var link = data.items[1].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video13").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+            var link = data.items[2].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video14").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+        var link = data.items[3].link;
+            var id = link.substr(link.indexOf("=")+1);
+        $("#video15").attr("src","https://youtube.com/embed/"+ id + "?&showinfo=0&rel=0");
+        
+        });
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+
+    let theme = localStorage.getItem("theme");
+    if (theme && theme === "dark-mode") {
+        localStorage.setItem("theme", "");
+    } else {
+        localStorage.setItem("theme", "dark-mode");
+    }
+    }
+    </script>
+    <script>
+        var ua = window.navigator.userAgent;
+        var isIE = /MSIE|Trident/.test(ua);
+
+        if ( isIE ) {
+        document.documentElement.classList.add('ie')
+        }
+    </script>
+</body>

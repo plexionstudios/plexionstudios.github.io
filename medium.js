@@ -10,13 +10,16 @@ $(function () {
             var display = '';
             $.each(response.items, function (k, item) {
                 var src = item["thumbnail"]; // use thumbnail url
-                display += `<div class="info-tile" onclick="location.href='${item.link}';">`;
+                display += `<div class="info-tile medium-card" onclick="location.href='${item.link}';">`;
                 display += `<div class="tile-image"><img src="${src}" alt="Cover image" onerror="this.src='error.png'"></div>`;
                 display += `<div class="card-padding">`;
                 display += `<h2 class="tile-head"><a href="${item.link}">${item.title}</a></h2>`;
                 var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
                 yourString = yourString.replace('h4', 'p');
                 yourString = yourString.replace('h3', 'p');
+                yourString = yourString.replace('<p>', '<p class="desc0">');
+                yourString = yourString.replace('<figcaption>', '<p class="desc0">');
+                yourString = yourString.replace('</figcaption>', '</p>');
                 var maxLength = 120; // maximum number of characters to extract
                 //trim the string to the maximum length
                 var trimmedString = yourString.substr(0, maxLength);
@@ -37,17 +40,17 @@ $(function () {
 mediumPromise.then(function()
     {
         //Pagination
-        pageSize = 4;
+        pageSize = 3;
 
-        var pageCount = $(".card").length / pageSize;
+        var pageCount = $(".medium-card").length / pageSize;
 
         for (var i = 0; i < pageCount; i++) {
             $("#pagin").append(`<li class="page-item"><a class="page-link" href="#">${(i + 1)}</a></li> `);
         }
-        $("#pagin li:nth-child(1)").addClass("active");
+        $("#pagin li:nth-child(1)").addClass("medium-active");
         showPage = function (page) {
-            $(".card").hide();
-            $(".card").each(function (n) {
+            $(".medium-card").hide();
+            $(".medium-card").each(function (n) {
                 if (n >= pageSize * (page - 1) && n < pageSize * page)
                     $(this).show();
             });

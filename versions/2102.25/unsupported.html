@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <title>plexion</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/twemoji-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <script src="https://unpkg.com/feather-icons"></script> <!-- feather -->
+</head>
+<body>
+    <header>
+        <a href="/" id="logo" title="Go to the home page">plexion</a>
+        <a href="/" class="nav home2" title="Go to the home page">home</a>
+        <a href="videos" class="nav videos2" title="Go to the videos page">videos</a>
+        <a href="about" class="nav about2" title="Go to the about page">about</a>
+        <!--<a href="https://scratch.mit.edu/users/PushToTheLimit/" target="_blank" class="nav scratch" title="Go to my Scratch profile">scratch <i class="fas fa-external-link-alt"></i></a>
+        <a href="https://osu.ppy.sh/users/15364179" target="_blank" class="nav osu" title="Go to my osu! profile">osu! <i class="fas fa-external-link-alt"></i></a>-->
+    </header>
+    <header class="header-mobile">
+        <center>
+        <a href="/" id="logo" title="Open the hamburger menu">plexion</a>
+        <a href="javascript:void(0);" onclick="hamburger()" onclick="hamburgertoggle()" id="hamburgertoggle"><i data-feather="menu"></i></a>
+    </header>
+    <div class="hamburger" id="hamburger">
+        <ul>
+            <li><a href="/" id="nav" class="home">home</a></li>
+            <li><a href="videos" id="nav" class="videos">videos</a></li>
+            <li><a href="about" id="nav" class="about">about</a></li>
+            <!--<li><a href="https://scratch.mit.edu/users/PushToTheLimit/" target="_blank" id="nav" class="scratch">scratch <i class="fas fa-external-link-alt"></i></a></li>
+            <li><a href="https://osu.ppy.sh/users/15364179" target="_blank" id="nav" class="osu">osu! <i class="fas fa-external-link-alt"></i></a></li>
+            <li><a href="https://youtube.com/plexion" target="_blank" id="nav" class="youtube">youtube <i class="fas fa-external-link-alt"></i></a></li>-->
+        </ul>
+    </div>
+    <div class="section unsupportedprojects" id="topic">
+        <p class="big2">Unsupported projects</p>
+        <p class="desc">Learn about what an unsupported project is, how to spot if one is unsupported and why it's unsupported.</p>
+    </div>
+    <div class="section" id="what-does-it-mean-if-a-project-is-unsupported">
+        <p class="big2">What does it mean if a project is unsupported?</p>
+        <p class="sectiondesc">When a project is unsupported, no more updates will be pushed to the page and it will be left basically archived. Overtime, the project will eventually become obsolete and not function.</p>
+    </div>
+    <div class="section" id="why-is-a-project-generally-unsupported">
+        <p class="big2">Why is a project generally unsupported?</p>
+        <p class="sectiondesc">A project can be discontinued for a variety of reasons:</p>
+        <br/>
+        <p class="big3">It has been replaced.</p>
+        <p class="desc">The project you are looking at may have been replaced with a better made version. In this case, a notice should be placed somewhere in the page.</p>
+        <br/>
+        <p class="big3">It's no longer needed.</p>
+        <p class="desc">The project may have 'expired' and is no longer useful. This is the case a lot of the time for countdowns to specific dates when the time has already passed.</p>
+    </div>
+    <div class="section" id="how-to-spot-if-a-project-is-unsupported">
+        <p class="big2">How to spot if a project is unsupported.</p>
+        <p class="sectiondesc">If the project name has a warning symbol on the left or ontop of it, it means the project is unsupported. You can see it in action here:</p>
+    </div>
+    <div class="projects">
+        <button class="project" id="mclive" onclick="location.href='minecraft_live';">
+            <i class="fas fa-exclamation-triangle unsupported" title="See plexionstudios.github.io/unsupported"></i><br/>
+            <a class="head" href="minecraft_live">Minecraft LIVE Countdown</a>
+            <p class="desc">A live countdown to the official 2020 MINECRAFT LIVE!</p>
+        </button>
+    </div>
+    <footer>
+        <center>
+        <hr />    
+        <span><i class="fas fa-sync-alt"></i> <strong>last updated:</strong> <a href="/versions/" title="View page archives">22.11.2020</a></span>
+        <span><i class="fas fa-code-branch"></i> <a href="https://github.com/plexionstudios/plexionstudios.github.io" title="View files on github">fork on github</a></span>
+    </footer>
+    <script>
+        feather.replace()
+    </script>
+    <script>
+        function hamburger() {
+            var x = document.getElementById("hamburger");
+            if (x.style.display === "inherit") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "inherit";
+            }
+        }
+    </script>
+    <script>
+        function hamburgertoggle() {
+            document.querySelector('hamburgertoggle').addEventListener('click', function() {
+            const icon = this.querySelector('i');
+
+            if (icon.classList.contains('fa-angle-down')) {
+                icon.classList.remove('fa-angle-down');
+                icon.classList.add('fa-angle-up');
+            } else {
+                icon.classList.remove('fa-angle-up');
+                icon.classList.add('fa-angle-down');
+            }
+            });
+        }
+    </script>
+    <script>
+        function category() {
+            var x = document.getElementById("category_view");
+            if (x.style.display === "grid") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "grid";
+            }
+        }
+    </script>
+</body>
