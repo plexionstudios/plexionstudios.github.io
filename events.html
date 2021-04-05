@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
     <script src="medium.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <meta name="title" content="Events on #PLEXION2021">
     <meta name="description" content="The central page for all info on new Minecraft events featured on plexion.">
     <meta property="og:type" content="website">
@@ -19,6 +19,7 @@
     <meta name="theme-color" content="#003AF8">
 </head>
 <body>
+    <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
     <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
     <header class="transparent-background">
         <span class="header-brand">
@@ -82,13 +83,14 @@
     <div class="tiles">
         <span class="info-tile" id="racetotheend" onclick="location.href='projects/racetotheend';">
             <div class="card-padding card-info">
-                <span class="new overline white-text">NEW!</span>
+                <!--<span class="new overline white-text">NEW!</span>-->
                 <h2 class="tile-head white-text shadow-text">Race To The End</h2>
                 <p class="tile-desc white-text shadow-text">A simple, yet challenging datapack that tasks teams of 3 to beat Minecraft.</p>
                 <p class="tile-date overline white-text shadow-text">Build: 2103.28 (28/03/2021)</p>
             </div>
             <div class="card-options">
-                <a class="tile-browse button important con" href="projects/racetotheend">View</a>
+                <a class="tile-browse button tile-view con" href="projects/racetotheend">View</a>
+                <a class="tile-browse icon-button important tile-download" href="downloads/racetotheend20321.zip"><i class="material-icons material-icons-outlined">file_download</i></a>
             </div>
         </span>
         <span class="info-tile" id="uhc" onclick="location.href='projects/uhc';">
@@ -98,7 +100,8 @@
             <p class="tile-date overline white-text shadow-text">Build: 2102.20 (20/02/2021)</p>
             </div>
             <div class="card-options">
-                <a class="tile-browse button important con" href="projects/uhc">View</a>
+                <a class="tile-browse button tile-view con" href="projects/uhc">View</a>
+                <a class="tile-browse icon-button important tile-download" href="downloads/plexionuhc21221BUILD2.zip"><i class="material-icons material-icons-outlined">file_download</i></a>
             </div>
         </span>
         <span class="info-tile" id="voidrising" onclick="location.href='projects/voidrising';">
@@ -108,7 +111,8 @@
                 <p class="tile-date overline white-text shadow-text">Build: 2101.18 (18/01/2021)</p>
             </div>
             <div class="card-options">
-                <a class="tile-browse button important con" href="projects/simple-dark">View</a>
+                <a class="tile-browse button tile-view con" href="projects/simple-dark">View</a>
+                <a class="tile-browse icon-button important tile-download" href="downloads/voidrising18121.zip"><i class="material-icons material-icons-outlined">file_download</i></a>
             </div>
         </span>
     </div>
@@ -122,7 +126,7 @@
     </div>
     <footer>
         <h1>plexion.dev</h1>
-        <p class="desc0">Build: 2103.28</p>
+        <p class="desc0">Build: 2104.5</p>
         <div class="footer-extras">
             <br>
             <div class="footer-links">

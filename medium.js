@@ -12,8 +12,8 @@ $(function () {
                 var src = item["thumbnail"]; // use thumbnail url
                 display += `<div class="info-tile medium-card" onclick="location.href='${item.link}';">`;
                 display += `<div class="tile-image"><img src="${src}" alt="Cover image" onerror="this.src='error.png'"></div>`;
-                display += `<div class="card-padding">`;
-                display += `<h2 class="tile-head"><a href="${item.link}">${item.title}</a></h2>`;
+                display += `<div class="card-padding card-info">`;
+                display += `<p class="overline">Medium Post</p><h2 class="tile-head">${item.title}</h2>`;
                 var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
                 yourString = yourString.replace('h4', 'p');
                 yourString = yourString.replace('h3', 'p');
@@ -27,8 +27,8 @@ $(function () {
                 trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
                 display += `<p class="desc0">${trimmedString}...</p>`;
                 
-                display += `<br><a href="${item.link}" target="_blank" class="tile-browse button important ext">Read More</a>`;
-                display += '</div></div>';
+                display += `</div><div class="card-options card-nobg"><a href="${item.link}" target="_blank" class="tile-browse button important ext">Read More</a></div>`;
+                display += '</div>';
                 return k < 10;
             });
 

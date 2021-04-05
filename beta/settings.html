@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
-	<link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
+	<link rel="stylesheet" href="../stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
     <script src="medium.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,7 +19,6 @@
     <meta name="theme-color" content="#003AF8">
 </head>
 <body>
-    <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
     <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
     <header>
         <span class="header-brand">
@@ -48,6 +47,7 @@
                         <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
                         <div class="channel-divider"></div>
                         <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
+                        <li><a href="/beta/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">new_releases</i>Beta Settings<i class="new overline margin-left">BETA</i></a></li>
                         <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
                     </ul>
                 </div>
@@ -59,8 +59,9 @@
     </div>-->
     <div class="table-of-contents secondary-background no-bottom-margin">
         <span class="text">
-            <h1>Settings</h1>
+            <h1>Beta Settings</h1>
             <p class="desc1">Configure many options across all of plexion.dev for this browser only.</p>
+            <strong class="desc0">Any settings found in the main page will reflect here and vice-versa.</strong>
         </span>
     </div>
     <!--<div class="tabs">
@@ -68,6 +69,11 @@
         <a href="#performance" class="tab label-with-icon"><i class="material-icons">tune</i><i class="navi">Performance</i></a>
     </div>-->
     <div class="settings">
+        <p class="overline settings-label label-with-icon" id="beta"><i class="material-icons">new_releases</i>Beta</p>
+            <div class="section">
+                <p class="desc0">No options available :(</p>
+            </div>
+        <div class="channel-divider"></div>
         <!-- Appearance -->
         <p class="overline settings-label label-with-icon" id="appearance"><i class="material-icons">palette</i>Appearance</p>
         <div class="setting">
@@ -91,7 +97,7 @@
                         </ul>
                     </div>
                 </div>
-                <a class="icon-button"><i class="material-icons">exit_to_app</i></a>
+                <a class="icon-button"><i class="material-icons">settings</i></a>
             </div>
             <div class="description desc-left">
                 <span class="description-text settings-title">
@@ -173,16 +179,11 @@
                 <p class="desc2">Hides the quick links & thumbnail chooser from the main page, only showing the classic projects view.</p>
             </span>
         </div>
-        <!-- System Update -->
-        <!--<div class="channel-divider"></div>
-        <p class="overline settings-label label-with-icon" id="beta"><i class="material-icons">system_update_alt</i>Beta</p>
-        <div class="section">
-            <p class="desc0">No options available :(</p>
-        </div>-->
+        <!-- Beta -->
     </div>
     <footer>
         <h1>plexion.dev</h1>
-        <p class="desc0">Build: 2103.26</p>
+        <p class="desc0"><i class="new overline margin-right">BETA</i>Build: 2103.30</p>
         <div class="footer-extras">
             <br>
             <div class="footer-links">
@@ -216,6 +217,9 @@
             <br>
             <p class="overline secondary-text">Have any questions?</p>
             <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
+            <br>
+            <p class="overline secondary-text">Something not looking right?</p>
+            <p class="desc0">Report it on <a href="https://github.com/plexionstudios/plexionstudios.github.io/issues?q=is%3Aopen+is%3Aissue+label%3A%22Beta+Channel%22">Github</a>! It is a beta build afterall.</a></p>
         </div>
     </footer>
     <script>
