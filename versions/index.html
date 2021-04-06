@@ -19,6 +19,59 @@
     <meta property="og:image" content="https://plexion.dev/thumbnails/plexion2020-rewind.png">
 </head>
 <body>
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <div class="popup-bg" id="share">
+        <div class="share-dialog">
+            <div class="card-padding share-header with-icon">
+                <h2>Share this page</h2>
+                <a class="icon-button icon-button-s share-close"><i class="material-icons">close</i></a>
+            </div>
+            <div class="channel-divider"></div>
+            <div class="card-padding share-info">
+                <div class="share-places">
+                    <p class="desc0">Choose an option below to share wherever you choose:</p>
+                    <div class="tooltip">
+                        <a class="icon-button share-twitter tile-browse fas-icon-button" id="share-twitter" href="https://twitter.com/intent/tweet?" target="_blank" onclick="window.open('https://twitter.com/intent/tweet?text=gaming%20at%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Twitter</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-facebook tile-browse fas-icon-button" href="https://www.facebook.com/sharer/sharer.php?u=&t=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Facebook</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-reddit tile-browse fas-icon-button" href="http://www.reddit.com/submit?url=&title=" target="_blank" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i class="fab fa-reddit" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Reddit</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-linkedin tile-browse fas-icon-button" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i class="fab fa-linkedin" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">LinkedIn</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-email"><i class="material-icons" href="mailto:?subject=&body=:%20" target="_blank" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(document.URL)); return false;">email</i></a>
+                        <span class="tooltip-text">Email</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-os"><i class="material-icons">open_in_new</i></a>
+                        <span class="tooltip-text">Native share</span>
+                    </div>
+                    <script>const shareButton = document.querySelector('.share-os');shareButton.addEventListener('click', event => {if (navigator.share) { navigator.share({title: encodeURIComponent(document.title),url: encodeURIComponent(document.URL)}).then(() => {console.log('Opened Web Share API dialog!');}).catch(console.error);} else {console.log('Web Share API unsupported in browser or operating system.');}});</script>
+                </div>
+                <br>
+                <div class="channel-divider"></div>
+                <br>
+                <div class="share-other">
+                    <p class="desc0">Alternatively, you can just copy the link:</p>
+                    <code class="share-https big-code" id="current-page-link"></code>
+                    <textarea class="hide-textarea" id="current-page-link2"></textarea>
+                    <script>document.getElementById("current-page-link").innerHTML =window.location.href;document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
+                    <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
+                    <br>
+                    <a class="button tile-browse share-copy" href="javascript:void(0);" onclick="copyURL()">Copy Page Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
     <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
     <header>
         <span class="header-brand">
@@ -45,6 +98,9 @@
                         </li>
                         <div class="channel-divider"></div>
                         <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
+                        <div class="channel-divider"></div>
+                        <li><a href="javascript:void(0);" onclick="sharePage()" title="Share the link to this page" class="dropdown-with-icon" id="share-page"><i class="material-icons">share</i>Share</a></li>
+                        <script>var modal = document.getElementById("share");var btn = document.getElementById("share-page");var span = document.getElementsByClassName("share-close")[0];btn.onclick = function() {modal.style.display = "flex";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}}</script>
                         <div class="channel-divider"></div>
                         <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
                         <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
@@ -106,7 +162,7 @@
     <div class="page-full"></div>
     <footer>
         <h1>plexion.dev</h1>
-        <p class="desc0">Build: 2104.3</p>
+        <p class="desc0">Last updated: 07/04/2021</p>
         <div class="footer-extras">
             <br>
             <div class="footer-links">
@@ -140,6 +196,34 @@
             <br>
             <p class="overline secondary-text">Have any questions?</p>
             <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
+            <br>
+            <br>
+            <p class="overline secondary-text">plexion.dev Build 2104.7</p>
+            <div class="debug-info">
+                <br>
+                <br>
+                <p class="overline secondary-text">Debug Information<i class="overline new margin-left">Experimental</i></p>
+                <br>
+                <label class="overline margin-right">theme</label><code id="theme"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">embed</label><code id="embed"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">guided</label><code id="guided"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">scratch</label><code id="scratch"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">animations</label><code id="animations"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">experience</label><code id="experience"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">colour</label><code id="colour"></code>
+            </div>
         </div>
     </footer>
     <script>

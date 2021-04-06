@@ -16,37 +16,12 @@
 
 /* Main custom classes */
 
-code {
-    background: var(--secondary-background);
-    font-family: 'Roboto Mono', Consolas, var(--main-font);
-    font-size: 15px;
-    font-weight: 400;
-    padding: 4px 8px 4px 8px;
-    border-radius: 5px;
-    color:var(--main-text);
-    line-height: 26px;
-    transition: 0.2s ease-in-out;
-    white-space: nowrap;
-}
 .mc-button {
     background-color: #6F6F6F;
-    background: url("mc-button.png");
-	background-repeat: repeat;
-	background-size: cover;
-    background-position: center;
-    font-family: 'minecraftia_2020regular', 'Segoe UI', 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 200;
-    padding: 8px 20px 8px 20px;
-    border-radius: 0;
     color:white;
-    line-height: 32px;
-    border: 2px solid black;
     text-shadow: 2px 2px 0px #383838;
-}
-.dark-mode .mc-button {
-    background-color: #383838;
-    background: url("d-mc-button.png");
 }
 .paragraph {
     font-family: var(--main-font);
@@ -55,11 +30,28 @@ code {
     margin: 0;
 }
 .info {
-    padding: 30px 200px 30px 200px;
-    background: var(--secondary-background);
-    display: flex;
+    padding: 30px;
+    margin: 0 200px;
+    background: var(--main-background);
+    border: 1px solid var(--button-border);
     margin-bottom: 20px;
     transition: 0.2s ease-in-out;
+    position: relative;
+    bottom: 100px;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    border-radius: 5px;
+}
+.project-options {
+    display: flex;
+}
+.project-stats {
+    margin-top: 30px;
+    display: flex;
+}
+.project-stats span {
+    margin-right: 30px;
 }
 .last-updated {
     font-weight: 500;
@@ -77,9 +69,12 @@ code {
     padding: 10px 200px 10px 200px;
     margin: 10px 0 10px 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 15px;
     justify-items: middle;
+    transition: 0.2s ease-in-out;
+}
+.imgcontainer {
     transition: 0.2s ease-in-out;
 }
 .images .imgcontainer {
@@ -92,9 +87,28 @@ code {
     margin: 0;
     padding: 0;
     border-radius: 5px;
-    border: 2px solid var(--button-border);
+    border: 1px solid var(--button-border);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
     transition: 0.2s ease-in-out;
+}
+/*.imgcontainer:hover {
+    position: relative;
+    width: 180%;
+}*/
+.imgcontainer .watch2 {
+    border-radius: 5px;
+    border: 1px solid var(--button-border);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
     transition: 0.2s ease-in-out;
+}
+.project-spotlight {
+    padding-top: 450px;
+    transition: 0.2s ease-in-out;
+    border-bottom: 1px solid var(--button-border);
 }
 .project-tiles {
     padding: 10px 200px 10px 200px;
@@ -107,11 +121,15 @@ code {
 }
 .project-tile {
     display: flex;
-    background: var(--secondary-background);
     padding: 10px;
     border-radius: 10px;
     color: var(--main-text);
     transition: 0.2s ease-in-out;
+    border: 1px solid var(--button-border);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    cursor: default;
 }
 .project-tilebadge {
     vertical-align: center;
@@ -122,11 +140,6 @@ code {
     height: 32px;
     transition: 0.2s ease-in-out;
     text-align: center;
-}
-.dark-mode .project-tilebadge {
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.35);
 }
 .project-tilebadge i {
     font-size: 36px;
@@ -271,9 +284,6 @@ li img {
 .optional-update {
     color: var(--optional);
 }
-.dark-mode .version {
-    color: var(--white-text);
-}
 .paragraph ol {
     list-style: none;
     counter-reset: li;
@@ -319,6 +329,7 @@ li img {
     counter-increment: li;
     margin-top: 2px;
     margin-bottom: 2px;
+    color: var(--main-text);
     transition: 0.2s ease-in-out;
 }
 .paragraph ul {
@@ -326,6 +337,9 @@ li img {
     padding: 0;
     margin: 10px 0 10px 0;
     transition: 0.2s ease-in-out;
+}
+.paragraph li {
+    font-size: 17px;
 }
 .sectiondesc {
     font-size: 16px;
@@ -345,15 +359,6 @@ li img {
 }
 .navlink .fas {
     font-size: 20px;
-}
-.dropdown-header {
-    font-size: 14px;
-    font-weight: 500;
-    text-align: left;
-    padding: 6px;
-    color: var(--secondary-blue);
-    background: var(--background-blue);
-    cursor: default;
 }
 
 /* Website compatability (lower resolutions) */
@@ -386,7 +391,7 @@ li img {
         padding: 10px 100px 10px 100px;
     }
     .info {
-        padding: 30px 100px 30px 100px;
+        margin: 0 100px;
     }
 }
 @media (max-width: 1250px) {
@@ -417,7 +422,9 @@ li img {
         padding: 10px 50px 10px 50px;
     }
     .info {
-        padding: 30px 50px 30px 50px;
+        margin: 0 50px;
+    }
+    .project-options {
         display: grid;
     }
     .date {
@@ -427,6 +434,7 @@ li img {
     .options {
         margin-top: 10px;
         text-align: right;
+        margin-left: 0;
     }
 }
 @media (max-width: 700px) {
@@ -451,6 +459,13 @@ li img {
     .project-tiles {
         padding: 10px;
     }
+    .info {
+        margin: 0;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        padding: 30px 10px;
+    }
 }
 @media (max-width: 640px) {
     .images {
@@ -463,7 +478,11 @@ li img {
     }
 }
 @media (max-width: 500px) {
-    .info {
+    .project-spotlight {
+        padding-top: 350px;
+    }
+    .project-stats {
+        justify-content: center;
         text-align: center;
     }
 }
