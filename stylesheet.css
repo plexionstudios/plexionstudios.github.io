@@ -1065,6 +1065,108 @@ input:focus::placeholder {
     bottom: 20px;
     right: 0;
 }*/
+.con:after {
+    font-family: 'Material Icons';
+    content: "arrow_forward";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.disabled:after {
+    font-family: 'Material Icons';
+    content: "error";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: var(--white-text);
+}
+.ext:after {
+    font-family: 'Material Icons';
+    content: "open_in_new";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: var(--main-text);
+}
+.dow:after {
+    font-family: 'Material Icons Outlined';
+    content: "file_download";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: var(--main-text);
+}
+.dropd:after {
+    font-family: 'Material Icons';
+    content: "arrow_drop_down";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-left: 0;
+    text-decoration: none;
+}
 .button {
     transition: 0.2s ease-in-out;
     border-radius: 5px;
@@ -1568,108 +1670,6 @@ span.ripple {
     position: relative;
     bottom: 2px;
     color: var(--main-blue);
-}
-.con:after {
-    font-family: 'Material Icons';
-    content: "arrow_forward";
-    transition: 0.2s ease-in-out;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    display: inline-flex;
-    vertical-align: middle;
-    padding-bottom: 3px;
-    margin-left: 5px;
-    text-decoration: none;
-}
-.disabled:after {
-    font-family: 'Material Icons';
-    content: "error";
-    transition: 0.2s ease-in-out;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    display: inline-flex;
-    vertical-align: middle;
-    padding-bottom: 3px;
-    margin-left: 5px;
-    text-decoration: none;
-    color: var(--white-text);
-}
-.ext:after {
-    font-family: 'Material Icons';
-    content: "open_in_new";
-    transition: 0.2s ease-in-out;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    display: inline-flex;
-    vertical-align: middle;
-    padding-bottom: 3px;
-    margin-left: 5px;
-    text-decoration: none;
-    color: var(--main-text);
-}
-.dow:after {
-    font-family: 'Material Icons Outlined';
-    content: "file_download";
-    transition: 0.2s ease-in-out;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    vertical-align: middle;
-    padding-bottom: 3px;
-    margin-left: 5px;
-    text-decoration: none;
-    color: var(--main-text);
-}
-.dropd:after {
-    font-family: 'Material Icons';
-    content: "arrow_drop_down";
-    transition: 0.2s ease-in-out;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    display: inline-flex;
-    vertical-align: middle;
-    padding-bottom: 3px;
-    margin-left: 0;
-    text-decoration: none;
 }
 .rewindbutton {
     background: #AD296D;
