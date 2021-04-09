@@ -61,9 +61,10 @@ table {
 :root {
     --main-background: white;
     --secondary-background: #F5F5F5;
-    --raised-shadow: 0.08;
-    --main-text: #141414;
-    --secondary-text: #3f3f3f;
+    --raised-shadow: 0.1;
+    --header-text: rgba(0,0,0,1);
+    --main-text: rgba(0,0,0,0.87);
+    --secondary-text: rgba(0,0,0,0.6);
     --white-text: white;
     --black-text: #141414;
     --main-font: 'Roboto', Arial, Helvetica, sans-serif;
@@ -85,6 +86,32 @@ table {
     --download-bg: #0C9D58;
     --raised-download-bg: #08B260;
     --background-download: rgba(12, 157, 88, 0.1);
+    /*SHADOWS*/
+    --dp1: 0px 5px 5px 0px rgba(0,0,0,0.05);
+    --dp2: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    --dp3: 0px 5px 5px 0px rgba(0,0,0,0.15);
+    --dp4: 0px 5px 5px 0px rgba(0,0,0,0.2);
+    --dp5: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    --dp6: 0px 5px 5px 0px rgba(0,0,0,0.3);
+}
+.dark-mode {
+    --main-background: #121212;
+    --secondary-background: #1E1E1E;
+    --button-border: #383838;
+    --raised-shadow: 0.3;
+    --header-text: rgba(255,255,255,1);
+    --main-text: rgba(255,255,255,0.87);
+    --secondary-text: rgba(255,255,255,0.6);
+    --white-text: white;
+    --main-blue: #1178FF;
+    --raised-blue: #2D8FFF;
+    /*SHADOWS*/
+    --dp1: 0px 5px 5px 0px rgba(0,0,0,0.35);
+    --dp2: 0px 5px 5px 0px rgba(0,0,0,0.4);
+    --dp3: 0px 5px 5px 0px rgba(0,0,0,0.45);
+    --dp4: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    --dp5: 0px 5px 5px 0px rgba(0,0,0,0.55);
+    --dp6: 0px 5px 5px 0px rgba(0,0,0,0.6);
 }
 .old-dark {
     --main-background: #0A0A0C;
@@ -113,17 +140,6 @@ table {
     --raised-background-blue: rgba(12,109,255,0.15); /* Selected Dropdowns (uses raised-blue) */
     --button-border: #17171f;
     --warn-background: rgba(196,150,45,0.1);
-}
-.dark-mode {
-    --main-background: #121212;
-    --secondary-background: #1E1E1E;
-    --button-border: #383838;
-    --raised-shadow: 0.25;
-    --main-text: white;
-    --secondary-text: #C9D1D1;
-    --white-text: white;
-    --main-blue: #1178FF;
-    --raised-blue: #2D8FFF;
 }
 
 iframe {
@@ -276,7 +292,7 @@ code {
 
 h1 {
     font-family: var(--header-font);
-    color: var(--main-text);
+    color: var(--header-text);
     font-size: 36px;
     font-weight: 600;
     margin: 0;
@@ -297,7 +313,7 @@ hr {
 }
 h2 {
     font-family: var(--header-font);
-    color: var(--main-text);
+    color: var(--header-text);
     font-size: 28px;
     font-weight: 600;
     margin: 0;
@@ -306,7 +322,7 @@ h2 {
 }
 h3 {
     font-family: var(--main-font);
-    color: var(--main-text);
+    color: var(--header-text);
     font-size: 22px;
     font-weight: 500;
     margin: 0;
@@ -315,7 +331,7 @@ h3 {
 }
 h4 {
     font-family: var(--main-font);
-    color: var(--main-text);
+    color: var(--header-text);
     font-size: 18px;
     font-weight: 500;
     margin: 0;
@@ -329,7 +345,7 @@ h4 {
 .desc0 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: var(--secondary-text);
+    color: var(--main-text);
     transition: 0.2s ease-in-out;
 }
 .descbig {
@@ -338,30 +354,37 @@ h4 {
 .descsmall {
     font-size: 14px;
     margin-bottom: 10px;
-    color: var(--secondary-text);
+    color: var(--main-text);
     font-family: var(--main-font);
     transition: 0.2s ease-in-out;
 }
 .desc2 {
     font-size: 16px;
     margin-bottom: 10px;
-    color: var(--secondary-text);
+    color: var(--main-text);
     transition: 0.2s ease-in-out;
 }
 .desc1 {
     font-size: 16px;
     margin-bottom: 8px;
-    color: var(--secondary-text);
+    color: var(--main-text);
     transition: 0.2s ease-in-out;
 }
 .overline {
     font-family: var(--main-font);
-    color: var(--main-text);
+    color: var(--secondary-text);
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.2s ease-in-out;
+}
+.image-caption {
+    font-family: var(--main-font);
+    color: var(--secondary-text);
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+    text-align: center;
 }
 .main-background {
     background: var(--main-background);
@@ -373,8 +396,8 @@ h4 {
 .button-border {
     border-bottom: 1px solid var(--button-border);
 }
-.secondary-text {
-    color: var(--secondary-text);
+.header-text {
+    color: var(--header-text);
 }
 .main-blue {
     color: var(--raised-background-blue);
@@ -929,6 +952,7 @@ h4 {
     overflow: hidden;
     border: 1px solid var(--button-border);
     text-align: left;
+    box-shadow: var(--dp1);
 }
 .card-cover {
     height: 50px;
@@ -966,9 +990,7 @@ h4 {
     opacity: 0.5;
 }
 .info-tile:hover, .info-tile:focus, .info-tile:focus-within {
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    box-shadow: var(--dp6);
     position: relative;
     bottom: 5px;
     cursor: pointer;
@@ -1206,7 +1228,7 @@ input:focus::placeholder {
     transition: 0.2s ease-in-out;
     display: inline-block;
     border-radius: 5px;
-    padding: 9px 0;
+    padding: 8px 9px;
     text-align: center;
     background: transparent;
     color: var(--main-blue);
@@ -1219,7 +1241,6 @@ input:focus::placeholder {
     text-transform: uppercase;
     position: relative;
     bottom: 0;
-    width: 46px;
 }
 .icon-button i {
     color: var(--main-blue);
@@ -1249,6 +1270,10 @@ input:focus::placeholder {
 .fas-icon-button {
     position: relative;
     top: 4px;
+}
+.fas-icon-button i {
+    padding: 0;
+    margin: 0;
 }
 .important.icon-button i {
     color: var(--white-text);
@@ -1556,7 +1581,6 @@ span.ripple {
     background: var(--main-background);
     color: var(--main-text);
     transition: 0.2s ease-in-out;
-    border: 1px solid var(--button-border);
     border-radius: 0;
     border-top: 0;
     border-top-left-radius: 0;
@@ -1581,14 +1605,12 @@ span.ripple {
 .important {
     background: var(--main-blue);
     color: var(--white-text);
-    box-shadow: none;
+    box-shadow: var(--dp3);
 }
 .important:hover, .important:focus {
     background: var(--raised-blue);
     color: var(--white-text);
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    box-shadow: var(--dp6);
     position: relative;
     outline: none;
 }
@@ -1690,6 +1712,10 @@ span.ripple {
     border-top: solid 1px var(--button-border);
     cursor: default;
 }
+.dropdown-content .dropdown-header:first-child, .h-dropdown-content .dropdown-header:first-child {
+    border-top: none;
+    border-radius: 5px;
+}
 .dropdown-content {
     display: none;
     position: absolute;
@@ -1702,16 +1728,6 @@ span.ripple {
     display: block;
     position: absolute;
     top: 43px;
-}
-.icon-button-dropdown {
-    width: 200px;
-}
-.h-dropdown:hover .icon-button-dropdown, .h-dropdown:focus .icon-button-dropdown, .h-dropdown:focus-within .icon-button-dropdown {
-    top: 54px;
-    right: 0;
-}
-.icon-button-dropdown a {
-    font-family: var(--main-font);
 }
 .subscribe {
     color: var(--white-text);
@@ -2022,8 +2038,6 @@ header:hover .active, header:focus .active, header:focus-within .active {
     transition: 0.2s ease-in-out;
     border: 1px solid var(--button-border);
     border-radius: 5px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
@@ -2073,6 +2087,16 @@ header:hover .active, header:focus .active, header:focus-within .active {
     background: var(--background-blue);
     color: var(--main-text);
     border: none;
+}
+.icon-button-dropdown {
+    width: 200px;
+}
+.h-dropdown:hover .icon-button-dropdown, .h-dropdown:focus .icon-button-dropdown, .h-dropdown:focus-within .icon-button-dropdown, .icon-button-dropdown {
+    top: 55px;
+    right: 0;
+}
+.icon-button-dropdown a {
+    font-family: var(--main-font);
 }
 .inner-header {
     display: flex;
@@ -2986,16 +3010,6 @@ footer .brand {
     }
 }
 @media (max-width: 500px) {
-    .projects {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 0px;
-        margin: 0;
-    }
-    .project {
-        text-align: center;
-        border-radius: 0;
-        width: 100%;
-    }
     .tiles {
         padding: 15px 0;
     }
@@ -3003,6 +3017,9 @@ footer .brand {
         border-radius: 0;
         border-left: none;
         border-right: none;
+    }
+    .card-options {
+        opacity: 1.0;
     }
     .tile-image {
         border-radius: 0;

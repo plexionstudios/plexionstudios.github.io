@@ -109,7 +109,11 @@
             </span>
         </span>
     </header>
-    <div class="project-spotlight" id="racetotheend"></div>
+    <div class="project-spotlight project-video" id="racetotheend">
+        <div class="watch2">
+            <iframe src="https://www.youtube-nocookie.com/embed/uGNJd_jD70g?controls=0&autoplay=1&mute=1&start=646&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+        </div>
+    </div>
     <div class="info" id="options">
         <div class="project-options">
             <span class="date">
@@ -123,7 +127,20 @@
                 </div>
             </span>
             <span class="options">
-                <a class="button download important tile-download2 project-download" title="Download latest release" href="../downloads/racetotheend20321.zip">Download</a>
+                <a class="button download tile-view tile-browse" title="Watch the featured video" target="_blank" href="https://youtu.be/uGNJd_jD70g">Featured Video</a>
+                <a class="button download important tile-download2 project-download tile-browse" title="Download latest release" href="../downloads/racetotheend20321.zip">Download</a>
+                <script>function moreoptionsdropdown() {var x = document.getElementById("moreoptions-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
+                <div class="h-dropdown account-dropdown">
+                    <a class="icon-button tile-view2 tile-browse project-more" href="javascript:void(0);" onclick="moreoptionsdropdown()"><i class="material-icons">more_vert</i></a>
+                    <div class="h-dropdown-content icon-button-dropdown" id="moreoptions-dropdown-content">
+                        <ul>
+                            <li class="dropdown-header overline">This Project</li>
+                            <li><a target="_blank" href="https://youtu.be/uGNJd_jD70g" title="Watch the featured video" class="dropdown-with-icon"><i class="material-icons">play_circle_filled</i>Watch featured video</a></li>
+                            <li class="dropdown-header overline">More Downloads</li>
+                            <li><a class="dropdown-with-icon">No updates have been released.. :(</a></li>
+                        </ul>
+                    </div>
+                </div>
             </span>
         </div>
         <div class="project-stats">
@@ -196,6 +213,7 @@
             <div class="watch2">
                 <iframe src="https://www.youtube-nocookie.com/embed/uGNJd_jD70g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+            <p class="image-caption">Featured video</p>
         </span>
     </div>
     <div class="parhead" id="installation">
@@ -217,7 +235,7 @@
     </div>
     <footer>
         <h1>plexion.dev</h1>
-        <p class="desc0">Last updated: 07/04/2021</p>
+        <p class="desc0">Last updated: 09/04/2021</p>
         <div class="footer-extras">
             <br>
             <div class="footer-links">
@@ -253,7 +271,7 @@
             <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
             <br>
             <br>
-            <p class="overline secondary-text">plexion.dev Build 2104.7</p>
+            <p class="overline secondary-text">plexion.dev Build 2104.9</p>
             <div class="debug-info">
                 <br>
                 <br>
