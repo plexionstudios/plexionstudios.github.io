@@ -74,6 +74,7 @@ table {
     --main-blue: #003AF8; /* Fully WCAG 2.0 Compliant - older colour shown above as plexion-blue */
     --secondary-blue: #0033DA;
     --raised-blue: #0560FF;
+    --target-colour: rgba(5,96,255,0.3);
     --background-blue: rgba(0,58,248,0.1); /* Default Button Backgrounds (uses main-blue) */
     --raised-background-blue: rgba(5,96,255,0.2); /* Selected Dropdowns (uses raised-blue) */
     --optional: #C4962D;
@@ -103,15 +104,24 @@ table {
     --main-text: rgba(255,255,255,0.87);
     --secondary-text: rgba(255,255,255,0.6);
     --white-text: white;
-    --main-blue: #1178FF;
-    --raised-blue: #2D8FFF;
+    --main-blue: #2D8CFF;
+    --raised-blue: #4FA7FF;
+    --target-colour: rgba(79,167,255,0.3);
+    --background-blue: rgba(45,140,255,0.15); /* Default Button Backgrounds (uses main-blue) */
+    --raised-background-blue: rgba(79,167,255,0.25); /* Selected Dropdowns (uses raised-blue) */
     /*SHADOWS*/
     --dp1: 0px 5px 5px 0px rgba(0,0,0,0.35);
-    --dp2: 0px 5px 5px 0px rgba(0,0,0,0.4);
-    --dp3: 0px 5px 5px 0px rgba(0,0,0,0.45);
-    --dp4: 0px 5px 5px 0px rgba(0,0,0,0.5);
-    --dp5: 0px 5px 5px 0px rgba(0,0,0,0.55);
-    --dp6: 0px 5px 5px 0px rgba(0,0,0,0.6);
+    --dp2: 0px 5px 5px 0px rgba(0,0,0,0.45);
+    --dp3: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    --dp4: 0px 5px 5px 0px rgba(0,0,0,0.65);
+    --dp5: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    --dp6: 0px 5px 5px 0px rgba(0,0,0,0.8);
+}
+.metro-dark-theme {
+    --main-blue: #0070D9;
+    --main-blue: linear-gradient(0deg, rgba(0,112,217,1) 0%, rgba(0,92,179,1) 100%);
+    --raised-blue: #1C91FF;
+    --raised-blue: linear-gradient(0deg, rgba(0,112,217,1) 0%, rgba(0,112,217,1) 100%);
 }
 .old-dark {
     --main-background: #0A0A0C;
@@ -255,10 +265,10 @@ a:hover, a:focus {
     color: var(--white-text);
 }
 ::selection {
-    background: var(--raised-background-blue);
+    background: var(--target-colour);
 }
 ::-moz-selection {
-    background: var(--raised-background-blue);
+    background: var(--target-colour);
 }
 strong,b {
     font-weight: 600;
@@ -283,6 +293,8 @@ code {
     transition: 0.2s ease-in-out;
     font-family: var(--code-font);
     white-space: nowrap;
+    display: inline-block;
+    margin: 2px 0;
 }
 .big-code {
     font-size: 16px;
@@ -418,6 +430,72 @@ h4 {
 .tags {
     display: flex;
 }
+.datapack:before {
+    font-family: 'Material Icons';
+    content: "code";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-right: 3px;
+    text-decoration: none;
+    color: var(--main-text);
+}
+.resourcepack:before {
+    font-family: 'Material Icons';
+    content: "invert_colors";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-right: 3px;
+    text-decoration: none;
+    color: var(--main-text);
+}
+.map:before {
+    font-family: 'Material Icons';
+    content: "public";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-right: 3px;
+    text-decoration: none;
+    color: var(--main-text);
+}
+.datapack:hover:before, .resourcepack:hover:before, .map:hover:before {
+    color: var(--white-text);
+}
 .tag {
     padding: 2px 4px;
     background: var(--main-blue);
@@ -425,19 +503,41 @@ h4 {
     border-radius: 3px;
     transition: 0.2s ease-in-out;
     margin: 0 5px;
+    cursor: default;
+}
+.tag:before {
+    color: var(--white-text);
+}
+.tag:hover {
+    filter: brightness(110%);
+    box-shadow: var(--dp4);
 }
 .experimental {
     background: var(--optional);
 }
+.creator:before {
+    font-family: 'Material Icons';
+    content: "account_circle";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-right: 3px;
+    text-decoration: none;   
+}
 
 /* END */
 
-.margin-left {
-    margin-left: 10px;
-}
-.margin-right {
-    margin-right: 10px;
-}
 
 .introduction {
     padding: 80px 20px;
@@ -889,7 +989,7 @@ h4 {
 /* Share dialog */
 
 .popup-bg {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.8);
     width: 100%;
     height: 100%;
     z-index: 5000;
@@ -897,7 +997,6 @@ h4 {
     justify-content: center;
     align-items: center;
     position: fixed;
-    backdrop-filter: blur(2px);
     animation: fade 0.15s ease-in-out;
 }
 .share-dialog {
@@ -974,8 +1073,6 @@ h4 {
     background: rgba(0,0,0,0.5);
     backdrop-filter: saturate(130%) blur(10px);
     border-radius: none;
-    position: relative;
-    bottom: -90px;
 }
 .info-tile:hover .card-options, .info-tile:focus .card-options, .info-tile:focus-within .card-options {
     bottom: 0;
@@ -984,10 +1081,8 @@ h4 {
     background: transparent;
 }
 .card-info {
-    min-height: 135px;
-}
-.info-tile .button, .info-tile .icon-button {
-    opacity: 0.5;
+    height: 125px;
+    padding-bottom: 0;
 }
 .info-tile:hover, .info-tile:focus, .info-tile:focus-within {
     box-shadow: var(--dp6);
@@ -1034,6 +1129,7 @@ h4 {
     align-items: center;
     justify-items: center;
     transition: 0.2s ease-in-out;
+    border-bottom: 1px solid var(--button-border);
 }
 .tile-image img {
     width: 100%;
@@ -1087,6 +1183,66 @@ input:focus::placeholder {
     bottom: 20px;
     right: 0;
 }*/
+.zip:before {
+    font-family: 'Material Icons Outlined';
+    content: "inventory_2";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 5px;
+    text-decoration: none;
+    color: var(--main-text);
+}
+.dir:before {
+    font-family: 'Material Icons Outlined';
+    content: "folder";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 5px;
+    text-decoration: none;
+    color: var(--main-text);
+}
+.doc:before {
+    font-family: 'Material Icons Outlined';
+    content: "description";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 5px;
+    text-decoration: none;
+    color: var(--main-text);
+}
 .con:after {
     font-family: 'Material Icons';
     content: "arrow_forward";
@@ -1109,7 +1265,7 @@ input:focus::placeholder {
 }
 .disabled:after {
     font-family: 'Material Icons';
-    content: "error";
+    content: "cancel";
     transition: 0.2s ease-in-out;
     font-weight: normal;
     font-style: normal;
@@ -1126,7 +1282,7 @@ input:focus::placeholder {
     padding-bottom: 3px;
     margin-left: 5px;
     text-decoration: none;
-    color: var(--white-text);
+    color: var(--warn);
 }
 .ext:after {
     font-family: 'Material Icons';
@@ -1152,6 +1308,26 @@ input:focus::placeholder {
 .dow:after {
     font-family: 'Material Icons Outlined';
     content: "file_download";
+    transition: 0.2s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: var(--main-text);
+}
+.wat:after {
+    font-family: 'Material Icons';
+    content: "play_circle";
     transition: 0.2s ease-in-out;
     font-weight: normal;
     font-style: normal;
@@ -1198,7 +1374,7 @@ input:focus::placeholder {
     text-decoration: none;
     font-family: var(--header-font);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     filter: brightness(100%);
     margin: 10px;
     display: inline-block;
@@ -1213,13 +1389,18 @@ input:focus::placeholder {
 .button:hover, .button:focus, .button:focus-within {
     color: var(--main-blue);
     background: var(--background-blue);
-    font-weight: 500;
     text-decoration: none;
     outline: none;
     opacity: 1.0;
 }
 .button:after, .button:hover:after, .button:focus:after {
     color: var(--main-blue);
+}
+.option {
+    padding: 8px 12px;
+}
+.option, .option:hover, .option:focus, .option:focus-within {
+    box-shadow: none;
 }
 .important:after, .important:hover:after, .important:focus:after {
     color: var(--white-text);
@@ -1235,7 +1416,7 @@ input:focus::placeholder {
     text-decoration: none;
     font-family: var(--header-font);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     filter: brightness(100%);
     margin: 10px;
     text-transform: uppercase;
@@ -1249,7 +1430,6 @@ input:focus::placeholder {
 .icon-button:hover, .icon-button:focus {
     color: var(--main-blue);
     background: var(--background-blue);
-    font-weight: 500;
     outline: none;
 }
 .share-twitter i {
@@ -1329,6 +1509,40 @@ input[type=checkbox]:checked .check-status {
     height: 3px;
     padding: 3px;
     transition: opacity 0.0, color 0.2s ease-in-out;
+}
+.toggle-box {
+    padding: 0;
+    border-radius: 3px;
+    margin-bottom: 14px;
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    border: 2px solid var(--main-text);
+    display: inline-flex;
+    transition: 0.1s ease-in-out;
+}
+.toggle-box:hover, .toggle-box:focus {
+    background: transparent;
+    border-color: var(--main-blue);
+}
+.toggle-box .toggle-check {
+    padding: 0;
+    transition: opacity 0.0, color 0.2s ease-in-out;
+}
+.toggle-check i {
+    font-size: 18px;
+    padding-bottom: 0;
+    position: relative;
+    bottom: 2px;
+    opacity: 0.0;
+}
+.sort-datapack .sort-0, .sort-resourcepack .sort-1, .sort-map .sort-2 {
+    background: var(--main-text);
+}
+.sort-datapack .sort-0-check, .sort-resourcepack .sort-1-check, .sort-map .sort-2-check {
+    color: var(--main-background);
+    opacity: 1.0;
 }
 .toggle:hover, .toggle:focus {
     background: transparent;
@@ -1508,24 +1722,21 @@ span.ripple {
 }
 .tooltip .tooltip-text {
     visibility: hidden;
-    background-color: rgba(0,0,0,.5);
+    background: var(--main-text);
     font-family: var(--main-font);
     font-size: 14px;
     text-align: center;
     border-radius: 5px;
     padding: 6px 10px;
     position: absolute;
+    width: 200px;
     z-index: 1;
     top: 100%;
     opacity: 0;
     transition: 0.2s ease-in-out;
     left: 0;
     backdrop-filter: saturate(180%) blur(10px);
-    color: var(--white-text);
-}
-.dark-mode .tooltip .tooltip-text {
-    background-color: rgba(255,255,255,.5);
-    color: #141414;
+    color: var(--main-background);
 }
 .tooltip:hover .tooltip-text {
     visibility: visible;
@@ -1567,6 +1778,8 @@ span.ripple {
     margin: 0;
     padding: 0;
     backdrop-filter: saturate(150%) blur(4px);
+    border: 1px solid var(--button-border);
+    box-shadow: var(--dp2);
     transition: 0.2s ease-in-out;
 }
 .dropdown:hover .dropdown-content, .dropdown:focus .dropdown-content {
@@ -1638,16 +1851,17 @@ span.ripple {
     background: var(--raised-download-bg);
 }
 .disabled {
-    background: var(--warn);
-    color: var(--white-text);
-    box-shadow: none;
+    background: transparent;
+    color: var(--warn);
+    box-shadow: inset 0px 0px 0px 2px var(--warn);
 }
 .disabled:after, .disabled:hover:after, .disabled:focus:after {
-    color: var(--white-text);
+    color: var(--warn);
 }
 .disabled:hover, .disabled:focus, .disabled:focus-within {
-    background: var(--warn);
-    color: var(--white-text);
+    background: transparent;
+    color: var(--warn);
+    box-shadow: inset 0px 0px 0px 2px var(--warn);
     cursor: not-allowed;
 }
 .dark-mode .disabled {
@@ -2195,9 +2409,7 @@ header:hover .active, header:focus .active, header:focus-within .active {
 }
 .scrolled-header {
     border-bottom: 1px solid var(--button-border);
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
+    box-shadow: var(--dp1);
 }
 .transparent-background {
     background: transparent;
@@ -2844,6 +3056,9 @@ footer .brand {
     .settings-title h4 {
         margin-bottom: 10px;
     }
+    .plexbg2 {
+        background-size: 150%;
+    }
 }
 @media (max-width: 770px) {
     .channel-info {
@@ -3008,6 +3223,12 @@ footer .brand {
     .banner-buttons {
         bottom: 80px;
     }
+    .plexbg2 {
+        background-size: 230%;
+    }
+    .text {
+        padding: 10px;
+    }
 }
 @media (max-width: 500px) {
     .tiles {
@@ -3124,7 +3345,10 @@ footer .brand {
         margin-left: 0;
         margin-right: 0;
     }
-    .tile-download:before {
+    .icon-button {
+        box-shadow: inset 0px 0px 0px 2px var(--main-blue);
+    }
+    .button-download:before {
         content: "Download";
         margin-right: 5px;
     }
@@ -3323,4 +3547,37 @@ footer .brand {
 }
 .dev .debug-info {
     display: inherit;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+.no-padding-top {
+    padding-top: 0;
+}
+.no-margin-left {
+    margin-left: 0;
+}
+.margin-left {
+    margin-left: 10px;
+}
+.margin-right {
+    margin-right: 10px;
+}
+
+:target {
+    -webkit-animation: target-fade 3s 1;
+    -moz-animation: target-fade 3s 1;
+    border: 2px solid var(--target-colour);
+    border-radius: 5px;
+}
+
+@-webkit-keyframes target-fade {
+    0% { background-color: var(--target-colour); }
+    100% { background-color: rgba(0,0,0,0); }
+}
+
+@-moz-keyframes target-fade {
+    0% { background-color: var(--target-colour); }
+    100% { background-color: rgba(0,0,0,0); }
 }
