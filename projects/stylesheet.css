@@ -492,6 +492,9 @@ li img {
     .paragraph {
         padding: 10px;
     }
+    .tiles-paragraph {
+        padding: 10px 0;
+    }
     .parhead hr {
         margin-left: 10px;
         margin-right: 10px;
@@ -516,6 +519,7 @@ li img {
         border-right: none;
         border-radius: 0;
         padding: 30px 10px;
+        box-shadow: none;
     }
 }
 @media (max-width: 640px) {
