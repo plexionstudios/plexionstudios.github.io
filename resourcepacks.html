@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <head>
-    <title>Settings — plexion.dev</title>
+    <title>Resourcepacks — plexion.dev</title>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
+    <link rel="stylesheet" href="../stylesheet.css">
 	<link rel="stylesheet" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
-    <script src="medium.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <meta name="title" content="plexion.dev">
     <meta name="description" content="The easiest and simplest way to try out all Minecraft datapacks featured on plexion for yourself.">
     <meta property="og:type" content="website">
@@ -79,11 +79,11 @@
         </span>
         <span class="navigation">
             <span class="header-links">
-                <a href="/" class="navlink" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
                 <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">emoji_events</i><i class="navi">Events</i></a>
                 <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">play_circle</i><i class="navi">Content</i></a>
                 <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">switch_account</i><i class="navi">Accounts</i></a>
-                <a href="/settings" class="navlink mobile-only active" title="Page Settings"><i class="material-icons">settings</i><i class="navi">Settings</i></a>
+                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons">settings</i><i class="navi">Settings</i></a>
             </span>
         </span>
         <span class="header-space">
@@ -109,147 +109,107 @@
             </span>
         </span>
     </header>
-    <!--<div class="under-construction warning">
-        <h4>This page is under-construction</h4>
-    </div>-->
-    <div class="table-of-contents button-border no-bottom-margin">
-        <span class="text">
-            <h1>Settings</h1>
-            <p class="desc1">Configure many options across all of plexion.dev for this browser only.</p>
-        </span>
-    </div>
-    <!--<div class="tabs">
-        <a href="#appearance" class="tab active label-with-icon"><i class="material-icons">palette</i><i class="navi">Appearance</i></a>
-        <a href="#performance" class="tab label-with-icon"><i class="material-icons">tune</i><i class="navi">Performance</i></a>
-    </div>-->
-    <div class="settings">
-        <!-- Appearance -->
-        <label class="overline settings-label label-with-icon" id="appearance"><i class="material-icons">palette</i>Appearance</label>
-        <div class="setting">
-            <div class="preview">
-                <p class="overline">Theme Preview</p>
-                <br>
-                <h1>H1</h1>
-                <h2>H2</h2>
-                <h3>H3</h3>
-                <h4>H4</h4>
-                <p class="desc0">DESC0</p>
-                <p class="desc1">DESC1</p>
-                <br>
-                <a class="button tile-browse">Button</a>
-                <a class="button important">Button</a>
-                <a class="button disabled">Button</a>
-                <div class="dropdown">
-                    <a class="button drop-button">Dropdown</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="javascript:void(0)" title="Browse Minecraft">Link</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <a class="icon-button"><i class="material-icons">exit_to_app</i></a>
-            </div>
-            <div class="description desc-left" id="dark-theme">
-                <span class="description-text settings-title">
-                    <h4 class="main-title">Dark theme</h4>
-                </span>
-                <span class="description-text settings-text">
-                    <a onclick="themeToggle()" href="javascript:void(0)" class="toggle tile-browse theme-toggle"><span class="toggle-dot theme-dot"></span></a>
-                    <p class="desc2">Switch between the Light theme for daytime and the Dark theme for night-time browsing.</p>
-                </span>
-            </div>
-        </div>
-        <!--<div class="description desc-left" id="accent-colour">
-            <span class="description-text settings-title">
-                <h4 class="main-title">Accent colour</h4>
-            </span>
-            <span class="description-text settings-text">
-                <li class="toggles">
-                    <ul>
-                        <a onclick="colourBlue()" href="javascript:void(0)" class="toggle-circle tile-browse"><span class="toggle-dot colour-dot-0"></span></a>
-                        <span class="desc2 header-bold main-text" style="color: var(--colour-blue);">Blue</span>
-                    </ul>
-                    <ul>
-                        <a onclick="colourRed()" href="javascript:void(0)" class="toggle-circle tile-browse"><span class="toggle-dot colour-dot-1"></span></a>
-                        <span class="desc2 header-bold main-text" style="color: var(--colour-red);">Red</span>
-                    </ul>
-                    <ul>
-                        <a onclick="colourGreen()" href="javascript:void(0)" class="toggle-circle tile-browse"><span class="toggle-dot colour-dot-2"></span></a>
-                        <span class="desc2 header-bold main-text" style="color: var(--colour-green);">Green</span>
-                    </ul>
-                </li>
-                <p class="desc2">Changes the global accent colour for buttons, dropdowns, links etc.</p>
-            </span>
-        </div>-->
-        <!--<div class="description desc-left" id="switch-experience">
-            <span class="description-text settings-title">
-                <h4 class="main-title">Switch experience</h4>
-            </span>
-            <span class="description-text settings-text">
-                <li class="toggles">
-                    <ul>
-                        <a onclick="experienceDefault()" href="javascript:void(0)" class="toggle-circle tile-browse"><span class="toggle-dot experience-dot-0"></span></a>
-                        <span class="desc2 header-bold main-text">Default</span>
-                    </ul>
-                    <ul>
-                        <a onclick="experienceMinimal()" href="javascript:void(0)" class="toggle-circle tile-browse"><span class="toggle-dot experience-dot-1"></span></a>
-                        <span class="desc2 header-bold main-text">Minimal<i class="new overline margin-left">BETA</i></span>
-                    </ul>
-                </li>
-                <p class="desc2">Removes unnecessary elements from the page and makes some elements smaller.</p>
-            </span>
-        </div>-->
-        <div class="description desc-left" id="disable-animations">
-            <span class="description-text settings-title">
-                <h4 class="main-title">Disable animations</h4>
-            </span>
-            <span class="description-text settings-text">
-                <a onclick="removeAnimations()" href="javascript:void(0)" class="toggle tile-browse animations-toggle"><span class="toggle-dot animations-dot"></span></a>
-                <p class="desc2">Removes all transitions & animations from every element on the page.</p>
-            </span>
-        </div>
+    <div class="app-bar blue-bg">
         <div class="description desc-left">
+            <span class="description-badge">
+                <i class="material-icons icon-resourcepack">invert_colors</i>
+            </span>
             <span class="description-text">
-                <h4>Some settings are no longer available</h4>
-                <p class="desc2">If you configured your accent colour or page experience, you can disable them in the <a href="legacy-settings">Legacy Settings</a> page.</p>
+                <span>
+                    <h1>Resourcepacks</h1>
+                </span>
             </span>
         </div>
-        <!-- Performance -->
-        <div class="channel-divider"></div>
-        <label class="overline settings-label label-with-icon" id="performance"><i class="material-icons">tune</i>Performance</label>
-        <div class="description desc-left" id="disable-video-embeds">
-            <span class="description-text settings-title">
-                <h4 class="main-title">Disable video embeds</h4>
-            </span>
-            <span class="description-text settings-text">
-                <a onclick="disableEmbeds()" href="javascript:void(0)" class="toggle tile-browse embed-toggle"><span class="toggle-dot embed-dot"></span></a>
-                <p class="desc2">Prevents all YouTube iframe's from rendering and slowing down your device.</p>
-            </span>
-        </div>
-        <div class="description desc-left" id="hide-guided-introduction">
-            <span class="description-text settings-title">
-                <h4 class="main-title">Hide guided introduction</h4>
-            </span>
-            <span class="description-text settings-text">
-                <a onclick="disableGuided()" href="javascript:void(0)" class="toggle tile-browse guided-toggle"><span class="toggle-dot guided-dot"></span></a>
-                <p class="desc2">Hides the quick links & thumbnail chooser from the main page, only showing the classic projects view.</p>
-            </span>
-        </div>
-        <!--<div class="description desc-left">
-            <span class="description-text settings-title">
-                <h4 class="main-title">Hide Scratch projects</h4>
-            </span>
-            <span class="description-text settings-text">
-                <a onclick="enableScratch()" href="javascript:void(0)" class="toggle tile-browse scratch-toggle"><span class="toggle-dot scratch-dot"></span></a>
-                <p class="desc2">Hides the now deprecated scratch projects section from the main page by default.</p>
-            </span>
-        </div>-->
-        <!-- System Update -->
-        <!--<div class="channel-divider"></div>
-        <p class="overline settings-label label-with-icon" id="beta"><i class="material-icons">system_update_alt</i>Beta</p>
-        <div class="section">
-            <p class="desc0">No options available :(</p>
-        </div>-->
+    </div>
+    <div class="section"></div>
+    <div class="tiles">
+        <span class="info-tile main-background" onclick="location.href='projects/simple-dark';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/simple-dark.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">09/03/2021</label>
+                <h2>Simple Dark</h2>
+                <p class="desc0">A sleek and modern dark-themed GUI resource pack for Minecraft.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option con" href="projects/simple-dark">View</a>
+                <a class="tile-browse button option dow" href="downloads/simple-dark9321.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='https://www.planetminecraft.com/texture-pack/1-17-backport/';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/117backport.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">18/02/2021</label>
+                <h2>1.17 Backport</h2>
+                <p class="desc0">A very simple backport of all new 1.17 textures in 1.16.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option ext" href="https://www.planetminecraft.com/texture-pack/1-17-backport/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/spyglass';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/spyglass.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">08/11/2020</label>
+                <h2>Spyglass HUD Remover</h2>
+                <p class="desc0">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option con" href="projects/spyglass">View</a>
+                <a class="tile-browse button option dow" href="downloads/spyglass81120.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/metrodark';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/darktheme.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">19/08/2020</label>
+                <h2>Metro Dark</h2>
+                <p class="desc0">A GUI re-skin that helps your eyes late at night. Predecessor to Simple Dark.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option con" href="projects/metrodark">View</a>
+                <a class="tile-browse button option dow" href="downloads/metropitchblack.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/corruption.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">11/02/2020</label>
+                <h2>Minecraft Corruption</h2>
+                <p class="desc0">Changes the colour scheme of the Warped Forest to match the Corruption from Terraria.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option ext" href="https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/mc4k.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">04/01/2020</label>
+                <h2>Minecraft 4k</h2>
+                <p class="desc0">It's not actually 4k resolution. A compilation of the textures in Minecraft 4k added into the latest version.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option ext" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/">View</a>
+            </div>
+        </span>
     </div>
     <footer>
         <h1>plexion.dev</h1>
@@ -428,29 +388,6 @@
     </script>
     <script>
         (function() {
-    let onpageLoad = localStorage.getItem("scratch") || "";
-    let element = document.body;
-    element.classList.add(onpageLoad);
-    document.getElementById("scratch").textContent =
-        localStorage.getItem("scratch") || "light";
-    })();
-
-    function enableScratch() {
-        let element = document.body;
-        element.classList.toggle("show-scratch");
-
-        let embed = localStorage.getItem("scratch");
-        if (embed && embed === "show-scratch") {
-            localStorage.setItem("scratch", "");
-        } else {
-            localStorage.setItem("scratch", "show-scratch");
-        }
-
-        document.getElementById("scratch").textContent = localStorage.getItem("scratch");
-    }
-    </script>
-    <script>
-        (function() {
     let onpageLoad = localStorage.getItem("animations") || "";
     let element = document.body;
     element.classList.add(onpageLoad);
@@ -543,31 +480,4 @@
         localStorage.setItem("colour", "green");
     }
     </script>
-    <!--<script>
-        function createRipple(event) {
-            const button = event.currentTarget;
-        
-            const circle = document.createElement("span");
-            const diameter = Math.max(button.clientWidth, button.clientHeight);
-            const radius = diameter / 2;
-        
-            circle.style.width = circle.style.height = `${diameter}px`;
-            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
-            circle.classList.add("ripple");
-        
-            const ripple = button.getElementsByClassName("ripple")[0];
-        
-            if (ripple) {
-                ripple.remove();
-            }
-        
-            button.appendChild(circle);
-        }
-        
-        const buttons = document.getElementsByClassName("button");
-        for (const button of buttons) {
-            button.addEventListener("click", createRipple);
-        }
-    </script>-->
 </body>

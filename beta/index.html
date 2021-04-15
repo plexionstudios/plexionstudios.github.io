@@ -78,27 +78,21 @@
         </span>
         <span class="navigation">
             <span class="header-links">
-                <span class="h-dropdown">
-                    <a href="/" class="navlink active dropd" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
-                    <div class="h-dropdown-content">
-                        <ul>
-                            <li><a href="/" title="Return Home">Home</a></li>
-                            <li><a href="/beta/" title="Return to The Beta Channel">Beta Channel</a></li>
-                        </ul>
-                    </div>
-                </span>
-                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">event</i><i class="navi">Events</i></a>
-                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
-                <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
+                <a href="/" class="navlink" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/beta/" class="navlink active" title="Return to The Beta Channel"><i class="material-icons">new_releases</i><i class="navi">Beta</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">emoji_events</i><i class="navi">Events</i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">play_circle</i><i class="navi">Content</i></a>
+                <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">switch_account</i><i class="navi">Accounts</i></a>
+                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons">settings</i><i class="navi">Settings</i></a>
             </span>
         </span>
         <span class="header-space">
             <span class="h-dropdown account-dropdown">
-                <a class="navlink navlink-nohide" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
+                <a class="navlink navlink-nohide navlink-icon" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
                 <div class="h-dropdown-content" id="account-dropdown-content">
                     <ul>
                         <li>
-                            <div class="card-padding secondary-background">
+                            <div class="card-padding">
                                 <h4>Page Settings</h4>
                                 <p class="descsmall">These settings are saved locally across the page.</p>
                             </div>
@@ -108,7 +102,6 @@
                         <div class="channel-divider"></div>
                         <li><a href="javascript:void(0);" onclick="sharePage()" title="Share the link to this page" class="dropdown-with-icon" id="share-page"><i class="material-icons">share</i>Share</a></li>
                         <script>var modal = document.getElementById("share");var btn = document.getElementById("share-page");var span = document.getElementsByClassName("share-close")[0];btn.onclick = function() {modal.style.display = "flex";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}}</script>
-                        <div class="channel-divider"></div>
                         <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
                         <li><a href="/beta/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">new_releases</i>Beta Settings<i class="new overline margin-left">BETA</i></a></li>
                         <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
@@ -119,21 +112,10 @@
     </header>
     <div class="introduction" id="start">
         <h1>You've entered The Beta Channel</h1>
-        <p class="desc0">If you're already familiar with what's going on here, you can navigate down and choose a project.</p>
+        <p class="desc0">The Beta Channel is an easy and simple way to test out upcoming releases of plexion.dev before they're fully finished & rolled out.</p>
         <a class="button" href="#beta">Take a look</a>
     </div>
-    <div class="spotlight" id="what-is-the-beta-channel">
-        <div class="text">
-            <h2>What is The Beta Channel?</h2>
-            <p class="desc0">The Beta Channel is an easy and simple way to test out upcoming releases of plexion.dev before they're fully finished & rolled out.</p>
-        </div>
-    </div>
-    <div class="spotlight" id="how-to-signup">
-        <div class="text">
-            <h2>How to signup?</h2>
-            <p class="desc0">Using The Beta Channel <strong>doesn't require any signup</strong> as everything is hosted online right here.</p>
-        </div>
-    </div>
+    <div class="section"></div>
     <div class="section" id="beta">
         <h2>Beta releases currently available</h2>
     </div>
@@ -177,18 +159,47 @@
     </footer>-->
     <footer>
         <h1>plexion.dev</h1>
-        <p class="desc0">Last updated: 07/04/2021</p>
+        <p class="desc0">Last updated: 16/04/2021</p>
         <div class="footer-extras">
             <br>
+            <div class="footer-pages">
+                <h4>Explore</h4>
+                <div class="small-tiles">
+                    <a class="small-tile" href="/">
+                        <div class="tile-icon icon-all">
+                            <i class="material-icons">grid_view</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Projects</h4>
+                        </div>
+                    </a>
+                    <a class="small-tile" href="/events">
+                        <div class="tile-icon icon-events">
+                            <i class="material-icons">emoji_events</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Events</h4>
+                        </div>
+                    </a>
+                    <a class="small-tile" href="/videos">
+                        <div class="tile-icon icon-content">
+                            <i class="material-icons">play_circle</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Content</h4>
+                        </div>
+                    </a>
+                    <a class="small-tile" href="/accounts">
+                        <div class="tile-icon icon-share">
+                            <i class="material-icons">switch_account</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Accounts</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <div class="footer-links">
-                <span class="footer-link">
-                    <p class="overline secondary-text">Cool pages</p>
-                    <ul class="quick-links">
-                        <li><a href="/videos" class="quick-link small-link">Content</a></li>
-                        <li><a href="/accounts" class="quick-link small-link">Accounts</a></li>
-                        <li><a href="/versions/before-project-guided" class="quick-link small-link">View all</a></li>
-                    </ul>
-                </span>
                 <span class="footer-link">
                     <p class="overline secondary-text">Follow me</p>
                     <ul class="quick-links">
@@ -209,14 +220,11 @@
                 </span>
             </div>
             <br>
-            <p class="overline secondary-text">Have any questions?</p>
+            <p class="overline header-text">Have any questions?</p>
             <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
             <br>
-            <p class="overline secondary-text">Something not looking right?</p>
-            <p class="desc0">Report it on <a href="https://github.com/plexionstudios/plexionstudios.github.io/issues?q=is%3Aopen+is%3Aissue+label%3A%22Beta+Channel%22">Github</a>! It is a beta build afterall.</a></p>
             <br>
-            <br>
-            <p class="overline secondary-text">plexion.dev <i class="new overline">BETA</i>Build 2104.7</p>
+            <p class="overline secondary-text">plexion.dev Build 2104.16</p>
             <div class="debug-info">
                 <br>
                 <br>

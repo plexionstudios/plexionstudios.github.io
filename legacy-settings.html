@@ -83,7 +83,7 @@
                 <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">emoji_events</i><i class="navi">Events</i></a>
                 <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">play_circle</i><i class="navi">Content</i></a>
                 <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">switch_account</i><i class="navi">Accounts</i></a>
-                <a href="/settings" class="navlink mobile-only active" title="Page Settings"><i class="material-icons">settings</i><i class="navi">Settings</i></a>
+                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons">settings</i><i class="navi">Settings</i></a>
             </span>
         </span>
         <span class="header-space">
@@ -114,8 +114,8 @@
     </div>-->
     <div class="table-of-contents button-border no-bottom-margin">
         <span class="text">
-            <h1>Settings</h1>
-            <p class="desc1">Configure many options across all of plexion.dev for this browser only.</p>
+            <h1>Legacy Settings</h1>
+            <p class="desc1">Settings that are no longer supported mainstream and will be removed in future builds.</p>
         </span>
     </div>
     <!--<div class="tabs">
@@ -125,41 +125,7 @@
     <div class="settings">
         <!-- Appearance -->
         <label class="overline settings-label label-with-icon" id="appearance"><i class="material-icons">palette</i>Appearance</label>
-        <div class="setting">
-            <div class="preview">
-                <p class="overline">Theme Preview</p>
-                <br>
-                <h1>H1</h1>
-                <h2>H2</h2>
-                <h3>H3</h3>
-                <h4>H4</h4>
-                <p class="desc0">DESC0</p>
-                <p class="desc1">DESC1</p>
-                <br>
-                <a class="button tile-browse">Button</a>
-                <a class="button important">Button</a>
-                <a class="button disabled">Button</a>
-                <div class="dropdown">
-                    <a class="button drop-button">Dropdown</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="javascript:void(0)" title="Browse Minecraft">Link</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <a class="icon-button"><i class="material-icons">exit_to_app</i></a>
-            </div>
-            <div class="description desc-left" id="dark-theme">
-                <span class="description-text settings-title">
-                    <h4 class="main-title">Dark theme</h4>
-                </span>
-                <span class="description-text settings-text">
-                    <a onclick="themeToggle()" href="javascript:void(0)" class="toggle tile-browse theme-toggle"><span class="toggle-dot theme-dot"></span></a>
-                    <p class="desc2">Switch between the Light theme for daytime and the Dark theme for night-time browsing.</p>
-                </span>
-            </div>
-        </div>
-        <!--<div class="description desc-left" id="accent-colour">
+        <div class="description desc-left" id="accent-colour">
             <span class="description-text settings-title">
                 <h4 class="main-title">Accent colour</h4>
             </span>
@@ -180,8 +146,8 @@
                 </li>
                 <p class="desc2">Changes the global accent colour for buttons, dropdowns, links etc.</p>
             </span>
-        </div>-->
-        <!--<div class="description desc-left" id="switch-experience">
+        </div>
+        <div class="description desc-left" id="switch-experience">
             <span class="description-text settings-title">
                 <h4 class="main-title">Switch experience</h4>
             </span>
@@ -198,44 +164,11 @@
                 </li>
                 <p class="desc2">Removes unnecessary elements from the page and makes some elements smaller.</p>
             </span>
-        </div>-->
-        <div class="description desc-left" id="disable-animations">
-            <span class="description-text settings-title">
-                <h4 class="main-title">Disable animations</h4>
-            </span>
-            <span class="description-text settings-text">
-                <a onclick="removeAnimations()" href="javascript:void(0)" class="toggle tile-browse animations-toggle"><span class="toggle-dot animations-dot"></span></a>
-                <p class="desc2">Removes all transitions & animations from every element on the page.</p>
-            </span>
-        </div>
-        <div class="description desc-left">
-            <span class="description-text">
-                <h4>Some settings are no longer available</h4>
-                <p class="desc2">If you configured your accent colour or page experience, you can disable them in the <a href="legacy-settings">Legacy Settings</a> page.</p>
-            </span>
         </div>
         <!-- Performance -->
         <div class="channel-divider"></div>
         <label class="overline settings-label label-with-icon" id="performance"><i class="material-icons">tune</i>Performance</label>
-        <div class="description desc-left" id="disable-video-embeds">
-            <span class="description-text settings-title">
-                <h4 class="main-title">Disable video embeds</h4>
-            </span>
-            <span class="description-text settings-text">
-                <a onclick="disableEmbeds()" href="javascript:void(0)" class="toggle tile-browse embed-toggle"><span class="toggle-dot embed-dot"></span></a>
-                <p class="desc2">Prevents all YouTube iframe's from rendering and slowing down your device.</p>
-            </span>
-        </div>
-        <div class="description desc-left" id="hide-guided-introduction">
-            <span class="description-text settings-title">
-                <h4 class="main-title">Hide guided introduction</h4>
-            </span>
-            <span class="description-text settings-text">
-                <a onclick="disableGuided()" href="javascript:void(0)" class="toggle tile-browse guided-toggle"><span class="toggle-dot guided-dot"></span></a>
-                <p class="desc2">Hides the quick links & thumbnail chooser from the main page, only showing the classic projects view.</p>
-            </span>
-        </div>
-        <!--<div class="description desc-left">
+        <div class="description desc-left">
             <span class="description-text settings-title">
                 <h4 class="main-title">Hide Scratch projects</h4>
             </span>
@@ -243,13 +176,7 @@
                 <a onclick="enableScratch()" href="javascript:void(0)" class="toggle tile-browse scratch-toggle"><span class="toggle-dot scratch-dot"></span></a>
                 <p class="desc2">Hides the now deprecated scratch projects section from the main page by default.</p>
             </span>
-        </div>-->
-        <!-- System Update -->
-        <!--<div class="channel-divider"></div>
-        <p class="overline settings-label label-with-icon" id="beta"><i class="material-icons">system_update_alt</i>Beta</p>
-        <div class="section">
-            <p class="desc0">No options available :(</p>
-        </div>-->
+        </div>
     </div>
     <footer>
         <h1>plexion.dev</h1>

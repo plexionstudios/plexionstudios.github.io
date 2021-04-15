@@ -224,24 +224,6 @@ li img {
 .parhead .overline {
     color: var(--header-text);
 }
-.dark-mode .parhead {
-    color: var(--white-text);
-}
-.parhead a {
-    font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--main-text);
-    text-decoration: none;
-    transition: 0.2s ease-in-out;
-}
-.parhead a:hover, .parhead a:focus {
-    color: var(--main-background);
-}
-.parhead i {
-    margin-left: 10px;
-    margin-right: 10px;
-}
 .project-tooltip {
     background-color: rgba(0,0,0,.5);
     text-align: center;
