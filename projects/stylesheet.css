@@ -163,31 +163,10 @@
     padding: 10px;
     border-radius: 10px;
     color: var(--main-text);
+    background: var(--main-background);
     transition: 0.2s ease-in-out;
     border: 1px solid var(--button-border);
-    box-shadow: var(--dp1);
     cursor: default;
-}
-.project-tilebadge {
-    vertical-align: center;
-    display: flex;
-    padding: 10px;
-    border-radius: 50%;
-    margin: 10px;
-    height: 32px;
-    transition: 0.2s ease-in-out;
-    text-align: center;
-}
-.project-tilebadge i {
-    font-size: 36px;
-    flex-direction: column;
-    justify-content: center;
-    display: flex;
-    width: 36px;
-    height: 36px;
-    padding-bottom: 0;
-    transition: 0.2s ease-in-out;
-    opacity: 0.7;
 }
 .project-tilehead {
     font-family: var(--header-font);
