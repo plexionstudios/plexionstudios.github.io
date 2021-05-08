@@ -77,11 +77,10 @@
         </span>
         <span class="navigation">
             <span class="header-links">
-                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">grid_view</i><i class="navi">Home</i></a>
-                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">emoji_events</i><i class="navi">Events</i></a>
-                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">play_circle</i><i class="navi">Content</i></a>
-                <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">switch_account</i><i class="navi">Accounts</i></a>
-                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons">settings</i><i class="navi">Settings</i></a>
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons-outlined">emoji_events</i><i class="navi">Events</i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons-outlined">play_circle</i><i class="navi">Content</i></a>
+                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons-outlined">settings</i><i class="navi">Settings</i></a>
             </span>
         </span>
         <span class="header-space">
@@ -98,8 +97,14 @@
                         <div class="channel-divider"></div>
                         <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
                         <div class="channel-divider"></div>
-                        <li><a href="javascript:void(0);" onclick="sharePage()" title="Share the link to this page" class="dropdown-with-icon" id="share-page"><i class="material-icons">share</i>Share</a></li>
+                        <textarea class="hide-textarea" id="current-page-link2"></textarea>
+                        <script>document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
+                        <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
+                        <li><a href="javascript:void(0);" onclick="copyURL()" title="Share the link to this page" class="dropdown-with-icon"><i class="material-icons">link</i>Copy page link</a></li>
+                        <li><a href="javascript:void(0);" title="Share this page natively" class="share-os dropdown-with-icon"><i class="material-icons">share</i>Share via OS</a></li>
+                        <script>const shareButton = document.querySelector('.share-os');shareButton.addEventListener('click', event => {if (navigator.share) { navigator.share({title: encodeURIComponent(document.title),url: encodeURIComponent(document.URL)}).then(() => {console.log('Opened Web Share API dialog!');}).catch(console.error);} else {console.log('Web Share API unsupported in browser or operating system.');}});</script>
                         <script>var modal = document.getElementById("share");var btn = document.getElementById("share-page");var span = document.getElementsByClassName("share-close")[0];btn.onclick = function() {modal.style.display = "flex";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}}</script>
+                        <div class="channel-divider"></div>
                         <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
                         <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
                     </ul>
@@ -112,7 +117,7 @@
         <div class="project-options">
             <span class="date">
                 <h2>Lava Rising</h2>
-                <p class="desc0">The easiest way to host a Lava Rising event in the latest versions of Minecraft with everything fully customisable and easy to use.</p>
+                <p class="desc3">The easiest way to host a Lava Rising event in the latest versions of Minecraft with everything fully customisable and easy to use.</p>
                 <div class="tags">
                     <span class="tag overline tile-browse multiplayer">Multiplayer</span>
                     <span class="tag overline challenge">Challenge</span>
@@ -121,7 +126,7 @@
                 </div>
             </span>
             <span class="options">
-                <a class="button download important project-download tile-browse dow" title="Download latest release" href="../downloads/lavarising15421.zip">Download</a>
+                <a class="button important tile-browse" title="Download latest release" href="../downloads/lavarising27421.zip">Download</a>
                 <script>function moreoptionsdropdown() {var x = document.getElementById("moreoptions-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
                 <div class="h-dropdown account-dropdown">
                     <a class="icon-button tile-browse project-more" href="javascript:void(0);" onclick="moreoptionsdropdown()"><i class="material-icons">more_vert</i></a>
@@ -130,7 +135,8 @@
                             <li class="dropdown-header overline">This Project</li>
                             <li><a target="_blank" href="https://www.planetminecraft.com/data-pack/lava-rising/" title="View more on Planet Minecraft" class="dropdown-with-icon"><i class="material-icons">open_in_new</i>View on PMC</a></li>
                             <li class="dropdown-header overline">More Downloads</li>
-                            <li><a class="dropdown-with-icon">No updates have been released.. :(</a></li>
+                            <li><a href="../downloads/lavarising27421.zip" title="Download 1.01 (published 27/04/2021)">Version 1.01</a></li>
+                            <li><a href="../downloads/lavarising15421.zip" title="Download 1.0 (published 15/04/2021)">Version 1.0</a></li>
                         </ul>
                     </div>
                 </div>
@@ -140,19 +146,19 @@
             <span>
                 <label class="overline">Type</label>
                 <br>
-                <a class="desc0 datapack" href="https://minecraft.fandom.com/wiki/Data_Pack">Datapack</a>
+                <a class="desc3 datapack" href="https://minecraft.fandom.com/wiki/Data_Pack">Datapack</a>
             </span>
             <span>
                 <label class="overline">Supports</label>
                 <br>
                 <div class="tooltip">
-                    <p class="desc0">1.13-1.16*</p>
+                    <p class="desc3">1.13-1.16*</p>
                     <span class="tooltip-text">* As tested, may support other versions.</span>
                 </div>
             </span>
             <span class="first-release">
                 <label class="overline">First release</label>
-                <p class="desc0">15/04/2021</p>
+                <p class="desc3">15/04/2021</p>
             </span>
         </div>
     </div>
@@ -160,7 +166,7 @@
         <label class="overline">Overview</label>
     </div>
     <div class="paragraph">
-        <p class="desc0">A lightweight and easy-to-use datapack that makes the lava rise from the bottom of the world to the top, forcing players to build up and attack, or get engulfed by the lava. You have 1 life, once you die, you're out and left to spectate the game. The last player remaining wins!</p>
+        <p class="desc3">A lightweight and easy-to-use datapack that makes the lava rise from the bottom of the world to the top, forcing players to build up and attack, or get engulfed by the lava. You have 1 life, once you die, you're out and left to spectate the game. The last player remaining wins!</p>
     </div>
     <div class="parhead" id="features">
         <label class="overline">Features</label>
@@ -241,14 +247,14 @@
         <label class="overline">Installation & Setup</label>
     </div>
     <div class="paragraph">
-        <p class="desc0">As with every datapack, there is a very simple installation process.</p>
+        <p class="desc3">As with every datapack, there is a very simple installation process.</p>
         <ol>
             <li>Click the download button above then save it in your <code class="dir">Downloads</code> folder.</li>
             <li>Open your singleplayer menu, press <code class="mc-button">Create New World</code> then <code class="mc-button">Data Packs</code></li>
             <li>Drag the <code class="zip">Datapack.zip</code> file from your <code class="dir">Downloads</code> into the available space on the left.</li>
             <li>Hover over the datapack, then click the <code class="mc-button"><i class="material-icons">play_arrow</i></code> button (ignore any version errors - it works fine)</li>
         </ol>
-        <p class="desc0">Once the datapack is installed, you can start the Lava Rising with some simple set-up.</p>
+        <p class="desc3">Once the datapack is installed, you can start the Lava Rising with some simple set-up.</p>
         <ol>
             <li>Teleport to <code>0 0</code> (x and z) in your world.</li>
             <li>When you want the void to begin rising, type <code>function voidrising:start</code></li>
@@ -256,74 +262,92 @@
         </ol>
         <p>You can also configure timings for the warning in <code>warning_time</code> and the actual rising itself in <code>rising_time</code> (measured in ticks - 20 ticks = 1 second)</p>
     </div>
-    <footer>
-        <h1>plexion.dev</h1>
-        <p class="desc0">Last updated: 16/04/2021</p>
-        <div class="footer-extras">
-            <br>
-            <div class="footer-pages">
-                <h4>Explore</h4>
-                <div class="small-tiles">
-                    <a class="small-tile" href="/">
-                        <div class="tile-icon icon-all">
-                            <i class="material-icons">grid_view</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Projects</h4>
-                        </div>
-                    </a>
-                    <a class="small-tile" href="/events">
-                        <div class="tile-icon icon-events">
-                            <i class="material-icons">emoji_events</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Events</h4>
-                        </div>
-                    </a>
-                    <a class="small-tile" href="/videos">
-                        <div class="tile-icon icon-content">
-                            <i class="material-icons">play_circle</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Content</h4>
-                        </div>
-                    </a>
-                    <a class="small-tile" href="/accounts">
-                        <div class="tile-icon icon-share">
-                            <i class="material-icons">switch_account</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Accounts</h4>
-                        </div>
-                    </a>
-                </div>
+    <div class="parhead" id="updates">
+        <label class="overline">Updates</label>
+    </div>
+    <div class="paragraph tiles-paragraph tiles">
+        <span class="info-tile">
+            <div class="card-padding">
+                <label class="overline">Published 27/04/2021</label>
+                <h3>Version 1.01</h3>
+                <p class="desc3">Fixed some very game-breaking bugs:</p>
+                <ul>
+                    <li>Deaths are now reset before the main period (players will no longer instantly 'die')</li>
+                    <li>The world border is now a LOT slower when shrinking to 80 blocks.</li>
+                    <li>The grace period has been nearly doubled in length.</li>
+                </ul>
             </div>
+            <div class="card-options card-nobg no-padding-top">
+                <a class="tile-browse button option dow" href="../downloads/lavarising27421.zip">Download</a>
+            </div>
+        </span>
+    </div>
+    <footer>
+        <span class="desc0">Home</span><i class="material-icons navnext">navigate_next</i><strong class="desc0">Lava Rising</strong>
+        <p class="desc2">Last modified on 27/04/2021</p>
+        <br>
+        <div class="footer-extras">
             <div class="footer-links">
                 <span class="footer-link">
-                    <p class="overline">Drop a follow</p>
+                    <h4>Explore</h4>
                     <ul class="quick-links">
-                        <li><a href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
-                        <li><a href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
-                        <li><a href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
-                        <li><a href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                        <li><a target="_blank" href="/" class="quick-link small-link icon-all"><i class="material-icons">grid_view</i>Projects</a></li>
+                        <li><a target="_blank" href="/events" class="quick-link small-link icon-events"><i class="material-icons">emoji_events</i>Events</a></li>
+                        <li><a target="_blank" href="/videos" class="quick-link small-link icon-content"><i class="material-icons">play_circle</i>Content</a></li>
+                        <li><a target="_blank" href="/accounts" class="quick-link small-link icon-accounts"><i class="material-icons">switch_account</i>Accounts</a></li>
+                        <li><a target="_blank" href="/medium" class="quick-link small-link icon-medium"><i class="material-icons">article</i>Medium</a></li>
+                        <li><a target="_blank" href="/support" class="quick-link small-link icon-support"><i class="material-icons">help_outline</i>Support</a></li>
+                    </ul>
+                    <br>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="/datapacks" class="quick-link small-link icon-datapack"><i class="material-icons">code</i>Datapacks</a></li>
+                        <li><a target="_blank" href="/resourcepacks" class="quick-link small-link icon-resourcepack"><i class="material-icons">invert_colors</i>Resourcepacks</a></li>
+                        <li><a target="_blank" href="/maps" class="quick-link small-link icon-map"><i class="material-icons">public</i>Maps</a></li>
                     </ul>
                 </span>
                 <span class="footer-link">
-                    <p class="overline secondary-text">Build Info</p>
+                    <h4>Socials</h4>
                     <ul class="quick-links">
-                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
-                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
+                        <li><a target="_blank" href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                        <li><a target="_blank" href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                        <li><a target="_blank" href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                        <li><a target="_blank" href="https://osu.ppy.sh/users/15364179" class="quick-link small-link">osu! profile</a></li>
+                        <li><a target="_blank" href="https://planetminecraft.com/member/plexiondev/" class="quick-link small-link">PMC profile</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>Channels</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://youtube.com/plexion" class="quick-link small-link">plexion</a></li>
+                        <li><a target="_blank" href="/gold" class="quick-link small-link">plexionGOLD</a></li>
+                        <li><a target="_blank" href="/osuplexion" class="quick-link small-link">osu!plexion</a></li>
+                        <li><a target="_blank" href="/vods" class="quick-link small-link">plexionVODS</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCa_Athc7tNM5qGYoV4bkJXg" class="quick-link small-link">Let's Talk</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCzLpMY-4wJDLKv9SjQhOkAw" class="quick-link small-link">plexionDev</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UC0NYCYnD-knNSzu_S7mklWg" class="quick-link small-link">plexionSHORTS</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCj8niB3t9HEZOLY3PQcB2jw" class="quick-link small-link">plexionMUSIC</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCr1k0PAb2BaBdW3jf7lSQDg" class="quick-link small-link">plextra</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>plexion.dev</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
                         <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/commits/master" class="quick-link small-link">View github archives</a></li>
                         <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
                     </ul>
                 </span>
             </div>
             <br>
-            <h4>Have any questions?</h4>
-            <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
+            <div class="channel-divider"></div>
             <br>
-            <br>
-            <p class="overline secondary-text">plexion.dev Build 2104.16</p>
+            <span class="footer-end">
+                <p class="secondary-text desc2">Build 2104.27</p>
+                <a href="mailto:plexionbusiness@gmail.com" class="desc2 secondary-text">Send an email</a>                
+            </span>
             <div class="debug-info">
                 <br>
                 <br>

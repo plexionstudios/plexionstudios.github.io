@@ -27,7 +27,7 @@ $(function () {
                 trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
                 display += `<p class="desc0">${trimmedString}...</p>`;
                 
-                display += `</div><div class="card-options card-nobg"><a href="${item.link}" target="_blank" class="tile-browse button important ext">Read More</a></div>`;
+                display += `</div><div class="card-options card-nobg"><a href="${item.link}" target="_blank" class="tile-browse button option ext">Read More</a></div>`;
                 display += '</div>';
                 return k < 10;
             });
@@ -40,7 +40,7 @@ $(function () {
 mediumPromise.then(function()
     {
         //Pagination
-        pageSize = 3;
+        pageSize = 6;
 
         var pageCount = $(".medium-card").length / pageSize;
 

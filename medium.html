@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <head>
-    <title>UHC Datapack — plexion.dev</title>
+    <title>Medium Feed — plexion.dev</title>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
-    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
 	<link rel="stylesheet" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <meta property="title" content="UHC">
-    <meta property="description" content="The plexion UHC datapack makes hosting a UHC in the latest versions of Minecraft simple and easy."
+    <script src="medium.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="title" content="@plexion Medium Feed">
+    <meta name="description" content="A simple feed of all medium posts from @plexion">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://plexion.dev/projects/uhc">
-    <meta property="og:title" content="UHC">
-    <meta property="og:description" content="The plexion UHC datapack makes hosting a UHC in the latest versions of Minecraft simple and easy.">
-    <meta property="og:image" content="https://plexion.dev/thumbnails/uhc.png">
+    <meta property="og:url" content="https://plexion.dev/">
+    <meta property="og:title" content="@plexion Medium Feed">
+    <meta property="og:description" content="A simple feed of all medium posts from @plexion">
+    <meta property="og:image" content="https://plexion.dev/tiles/LetsTalk.png">
     <meta name="theme-color" content="#003AF8">
 </head>
 <body>
@@ -79,10 +79,10 @@
         </span>
         <span class="navigation">
             <span class="header-links">
-                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/" class="navlink" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
                 <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons-outlined">emoji_events</i><i class="navi">Events</i></a>
                 <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons-outlined">play_circle</i><i class="navi">Content</i></a>
-                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons-outlined">settings</i><i class="navi">Settings</i></a>
+                <a href="/settings" class="navlink mobile-only active" title="Page Settings"><i class="material-icons-outlined">settings</i><i class="navi">Settings</i></a>
             </span>
         </span>
         <span class="header-space">
@@ -114,292 +114,16 @@
             </span>
         </span>
     </header>
-    <div class="project-spotlight project-video" id="uhc">
-        <div class="watch2">
-            <iframe src="https://www.youtube-nocookie.com/embed/5HILNKwRwzs?controls=0&autoplay=1&mute=1&start=729&rel=0&loop=1&playlist=5HILNKwRwzs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
-        </div>
+    <div class="app-bar">
+        <h1>Medium Feed</h1>
+        <p class="desc0">Discover all the amazing posts from <a target="_blank" href="https://plexion.medium.com" title="Read more">@plexion</a></p>
     </div>
-    <div class="info" id="options">
-        <div class="project-options">
-            <span class="date">
-                <h2>UHC</h2>
-                <p class="desc3">A simple UHC Datapack designed for the latest versions of Minecraft.</p>
-                <div class="tags">
-                    <span class="tag overline tile-browse multiplayer">Multiplayer</span>
-                    <span class="tag overline challenge">Challenge</span>
-                    <span class="tag overline pvp">PvP</span>
-                </div>
-            </span>
-            <span class="options">
-                <a class="button tile-browse" title="Watch the featured video" target="_blank" href="https://youtu.be/5HILNKwRwzs">Watch</a>
-                <a class="button important tile-browse" title="Download latest release" href="../downloads/plexionuhc21221BUILD2.zip">Download</a>
-                <script>function moreoptionsdropdown() {var x = document.getElementById("moreoptions-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
-                <div class="h-dropdown account-dropdown">
-                    <a class="icon-button tile-browse project-more" href="javascript:void(0);" onclick="moreoptionsdropdown()"><i class="material-icons">more_vert</i></a>
-                    <div class="h-dropdown-content icon-button-dropdown" id="moreoptions-dropdown-content">
-                        <ul>
-                            <li class="dropdown-header overline">This Project</li>
-                            <li><a target="_blank" href="https://www.planetminecraft.com/data-pack/simple-uhc/" title="View more on Planet Minecraft" class="dropdown-with-icon"><i class="material-icons">open_in_new</i>View on PMC</a></li>
-                            <li><a target="_blank" href="https://youtu.be/5HILNKwRwzs" title="Watch the featured video" class="dropdown-with-icon"><i class="material-icons">play_circle_filled</i>Watch featured video</a></li>
-                            <li class="dropdown-header overline">More Downloads</li>
-                            <li><a href="../downloads/plexionuhc21221BUILD2.zip" title="Download 1.0.4 (published 21/02/2021)">Version 1.0.4</a></li>
-                            <li><a href="../downloads/plexionuhc17221.zip" title="Download 1.0.3 (published 17/02/2021)">Version 1.0.3</a></li>
-                            <li><a href="../downloads/plexionuhc15221.zip" title="Download 1.0.2 (published 15/02/2021)">Version 1.0.2</a></li>
-                            <li><a href="../downloads/plexionuhc14221BUILD2.zip" title="Download 1.0.1 (published 14/02/2021)">Version 1.0.1</a></li>
-                            <li><a href="../downloads/plexionuhc14221.zip" title="Download 1.0 (published 14/02/2021)">Version 1.0</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </span>
-        </div>
-        <div class="project-stats">
-            <span>
-                <label class="overline">Type</label>
-                <br>
-                <a class="desc3 datapack" href="https://minecraft.fandom.com/wiki/Data_Pack">Datapack</a>
-            </span>
-            <span>
-                <label class="overline">Supports</label>
-                <br>
-                <div class="tooltip">
-                    <p class="desc3">1.13-1.16*</p>
-                    <span class="tooltip-text">* As tested, may support other versions.</span>
-                </div>
-            </span>
-            <span class="first-release">
-                <label class="overline">First release</label>
-                <p class="desc3">14/02/2021</p>
-            </span>
-            <span>
-                <label class="overline">Last updated</label>
-                <p class="desc3">21/02/2021</p>
-            </span>
-        </div>
-    </div>
-    <!--<div class="info more-info" id="more-info">
-        <div class="latest-release">Last updated: 20/02/2021</div>
-    </div>-->
-    <div class="parhead" id="description">
-        <label class="overline">Overview</label>
-    </div>
-    <div class="paragraph">
-        <p class="desc3">A simple, lightweight and easy-to-use UHC datapack designed for 1.16.5 (may backport to older versions). Featuring popular UHC standard additions like Cut Clean and Speed UHC, this is the easiest and simplest way to hold a UHC in latest version on platforms like Minecraft Realms.</p>
-    </div>
-    <div class="parhead" id="features">
-        <label class="overline">Features</label>
-    </div>
-    <div class="project-tiles">
-        <span class="small-tile">
-            <span class="tile-icon">
-                <i class="material-icons">update</i>
-            </span>
-            <span class="tile-text">
-                <h4>Customisable timings</h4>
-                <p class="desc2">Using scoreboards you can configure event timings to make the event as slow or fast as you want!</p>
-            </span>
-        </span>
-        <span class="small-tile">
-            <span class="tile-icon">
-                <i class="material-icons">more_time</i>
-            </span>
-            <span class="tile-text">
-                <h4>Cut Clean</h4>
-                <p class="desc2">When iron ore and gold ore is mined or animals are killed, the item drops are instantly smelted and ready-to-go.</p>
-            </span>
-        </span>
-        <span class="small-tile">
-            <span class="tile-icon">
-                <i class="material-icons">filter_alt</i>
-            </span>
-            <span class="tile-text">
-                <h4>Sectioned game</h4>
-                <p class="desc2">The UHC is split into 3 main sections; the starter period, grace period and main game. More information <a href="https://i.imgur.com/kcz39F6.png">here</a>.</p>
-            </span>
-        </span>
-        <span class="small-tile">
-            <span class="tile-icon">
-                <i class="material-icons">speed</i>
-            </span>
-            <span class="tile-text">
-                <h4>Speed UHC</h4>
-                <p class="desc2">Any tool you hold will automatically be enchanted with Efficiency 2 to speed up mining.</p>
-            </span>
-        </span>
-        <span class="small-tile">
-            <span class="tile-icon">
-                <i class="material-icons">no_accounts</i>
-            </span>
-            <span class="tile-text">
-                <h4>Dead spectators</h4>
-                <p class="desc2">When the grace period has ended, dead players are automatically moved into spectator mode to prevent interference.</p>
-            </span>
-        </span>
-        <span class="small-tile">
-            <span class="tile-icon">
-                <i class="material-icons">group</i>
-            </span>
-            <span class="tile-text">
-                <label class="overline">*Green Team (<code>team3</code>) added in 1.0.4</label>
-                <h4>Simple teams</h4>
-                <p class="desc2">Players can easily be assigned either Red or Blue team (<code>team1</code> and <code>team2</code>) to make the game more competitive.</p>
-            </span>
-        </span>
-        <span class="small-tile">
-            <span class="tile-icon">
-                <i class="material-icons">accessibility_new</i>
-            </span>
-            <span class="tile-text">
-                <h4>Easy to use</h4>
-                <p class="desc2">All events in the UHC can be easily configured and changed to your liking using the <code>global</code> scoreboard.</p>
-            </span>
-        </span>
-        <span class="small-tile">
-            <span class="tile-icon">
-                <i class="material-icons">favorite</i>
-            </span>
-            <span class="tile-text">
-                <label class="overline">*Removed in 1.0.4</label>
-                <h4>Natural healing </h4>
-                <p class="desc2">After the grace period has ended, <code>naturalRegeneration</code> is disabled meaning you can only heal health with golden apples & potions.</p>
-            </span>
-        </span>
-    </div>
-    <div class="parhead" id="screenshots">
-        <label class="overline">Gallery</label>
-    </div>
-    <div class="images">
-        <span class="imgcontainer">
-            <div class="watch2">
-                <iframe src="https://www.youtube-nocookie.com/embed/5HILNKwRwzs?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p class="image-caption">Featured video</p>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc0.png"></img>
-            <p class="image-caption">Starter period</p>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc1.png"></img>
-            <p class="image-caption">Grace period</p>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc2.png"></img>
-            <p class="image-caption">Main period</p>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc3.png"></img>
-            <p class="image-caption">Mining an iron ore</p>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc5.png"></img>
-            <p class="image-caption">Cut Clean in action</p>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc6.png"></img>
-            <p class="image-caption">Victory screen</p>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc7.png"></img>
-            <p class="image-caption">Red Team example</p>
-        </span>
-        <span class="imgcontainer">
-            <img src="uhc8.png"></img>
-            <p class="image-caption">Blue team example</p>
-        </span>
-    </div>
-    <div class="parhead" id="installation">
-        <label class="overline">Installation & Setup</label>
-    </div>
-    <div class="paragraph">
-        <p class="desc3">As with every datapack, there is a very simple installation process.</p>
-        <ol>
-            <li>Click the download button above then save it in your <code class="dir">Downloads</code> folder.</li>
-            <li>Open your singleplayer menu, press <code class="mc-button">Create New World</code> then <code class="mc-button">Data Packs</code></li>
-            <li>Drag the <code class="zip">Datapack.zip</code> file from your <code class="dir">Downloads</code> into the available space on the left.</li>
-            <li>Hover over the datapack, then click the <code class="mc-button"><i class="material-icons">play_arrow</i></code> button (ignore any version errors - it works fine)</li>
-        </ol>
-        <br>
-        <p class="desc3">Once the datapack is installed, you can start the game easily.</p>
-        <ol>
-            <li>If you have any options you want to tweak, edit them now through the <code>global</code> scoreboard</li>
-            <li>When everything is ready, you can run <code>function uhc:start</code> and let the games begin!</li>
-        </ol>
-        <p>If you want to pause (or stop) the events temporarily, you can set the <code>timer_enabled</code> score in the <code>global</code> scoreboard to 0.</p>
-    </div>
-    <div class="parhead" id="updates">
-        <label class="overline">Updates</label>
-    </div>
-    <div class="paragraph tiles-paragraph tiles">
-        <span class="info-tile">
-            <div class="card-padding">
-                <label class="overline">Published 21/02/2021</label>
-                <h3>Version 1.0.4</h3>
-                <p class="desc3">This update is an optional side-branch to 1.0.3; updating is not necessary</p>
-                <ul>
-                    <li>There are now 3 teams, red, blue and green</li>
-                    <li>The world border will now shrink considerably less</li>
-                    <li><code>naturalRegeneration</code> is now enabled throughout the game</li>
-                    <li>The difficulty is now set to peaceful in pre-game then set to normal going forward</li>
-                    <li>If a player gets a kill, they will be given a gapple as a reward</li>
-                    <li>Apple spawn rates have been reduced</li>
-                    <li>Team victories are now more specified in the code</li>
-                </ul>
-            </div>
-            <div class="card-options card-nobg no-padding-top">
-                <a class="tile-browse button option dow" href="../downloads/plexionuhc21221BUILD2.zip">Download</a>
-            </div>
-        </span>
-        <span class="info-tile">
-            <div class="card-padding">
-                <label class="overline">Published 17/02/2021</label>
-                <h3>Version 1.0.3</h3>
-                <p class="desc3">This update enforces gamemode & effects onto all new players joining</p>
-                <ul>
-                    <li>Pre-game is now set as <code>period</code> -1</li>
-                    <li>Victory splash screens are now set as <code>period</code> 3</li>
-                    <li>Victory splash screens are now split into 3 functions, <code>solos_victory</code>, <code>red_victory</code> and <code>blue_victory</code></li>
-                    <li>Players now have a <code>lastlogin</code> scoreboard entry displaying the last period they were logged on for</li>
-                </ul>
-            </div>
-            <div class="card-options card-nobg no-padding-top">
-                <a class="tile-browse button option dow" href="../downloads/plexionuhc17221.zip">Download</a>
-            </div>
-        </span>
-        <span class="info-tile">
-            <div class="card-padding">
-                <label class="overline">Published 15/02/2021</label>
-                <h3>Version 1.0.2</h3>
-                <p class="desc3">This update brings a crucial gamerule change & some teams additions:</p>
-                <ul>
-                    <li><code>naturalRegeneration</code> is now enabled for the first 2 phases, but disabled for the rest of the game</li>
-                    <li>Loot tables for apples mined from Oak Leaves have been boosted</li>
-                    <li>Teams mode is now an option in the <code>global</code> scoreboard, listed as <code>enable_teams</code></li>
-                    <li>In teams mode, if the other team is fully eliminated the last remaining team will win</li>
-                    <li>In solos mode, the last player standing will win the game</li>
-                </ul>
-            </div>
-            <div class="card-options card-nobg no-padding-top">
-                <a class="tile-browse button option dow" href="../downloads/plexionuhc15221.zip">Download</a>
-            </div>
-        </span>
-        <span class="info-tile">
-            <div class="card-padding">
-                <label class="overline">Published 14/02/2021</label>
-                <h3>Version 1.0.1</h3>
-                <p class="desc3">This update brings along one addition with Cut Clean and a tweak to the border:</p>
-                <ul>
-                    <li>All animal food drops are instantly smelted</li>
-                    <li>The world border will now close in to 50 blocks in the main game period</li>
-                </ul>
-            </div>
-            <div class="card-options card-nobg no-padding-top">
-                <a class="tile-browse button option dow" href="../downloads/plexionuhc14221.zip">Download</a>
-            </div>
-        </span>
+    <div class="medium-feed">
+        <div class="tiles" id="jsonContent"></div>
     </div>
     <footer>
-        <span class="desc0">Home</span><i class="material-icons navnext">navigate_next</i><strong class="desc0">UHC</strong>
-        <p class="desc2">Last modified on 20/04/2021</p>
+        <span class="desc0">Home</span><i class="material-icons navnext">navigate_next</i><strong class="desc0">Medium Feed</strong>
+        <p class="desc2">Last modified on 21/04/2021</p>
         <br>
         <div class="footer-extras">
             <div class="footer-links">
@@ -460,7 +184,7 @@
             <div class="channel-divider"></div>
             <br>
             <span class="footer-end">
-                <p class="secondary-text desc2">Build 2104.20</p>
+                <p class="secondary-text desc2">Build 2104.21</p>
                 <a href="mailto:plexionbusiness@gmail.com" class="desc2 secondary-text">Send an email</a>                
             </span>
             <div class="debug-info">
@@ -572,6 +296,29 @@
     </script>
     <script>
         (function() {
+    let onpageLoad = localStorage.getItem("scratch") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("scratch").textContent =
+        localStorage.getItem("scratch") || "light";
+    })();
+
+    function enableScratch() {
+        let element = document.body;
+        element.classList.toggle("show-scratch");
+
+        let embed = localStorage.getItem("scratch");
+        if (embed && embed === "show-scratch") {
+            localStorage.setItem("scratch", "");
+        } else {
+            localStorage.setItem("scratch", "show-scratch");
+        }
+
+        document.getElementById("scratch").textContent = localStorage.getItem("scratch");
+    }
+    </script>
+    <script>
+        (function() {
     let onpageLoad = localStorage.getItem("animations") || "";
     let element = document.body;
     element.classList.add(onpageLoad);
@@ -664,4 +411,31 @@
         localStorage.setItem("colour", "green");
     }
     </script>
+    <!--<script>
+        function createRipple(event) {
+            const button = event.currentTarget;
+        
+            const circle = document.createElement("span");
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const radius = diameter / 2;
+        
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+            circle.classList.add("ripple");
+        
+            const ripple = button.getElementsByClassName("ripple")[0];
+        
+            if (ripple) {
+                ripple.remove();
+            }
+        
+            button.appendChild(circle);
+        }
+        
+        const buttons = document.getElementsByClassName("button");
+        for (const button of buttons) {
+            button.addEventListener("click", createRipple);
+        }
+    </script>-->
 </body>

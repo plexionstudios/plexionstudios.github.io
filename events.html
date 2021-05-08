@@ -79,11 +79,10 @@
         </span>
         <span class="navigation">
             <span class="header-links">
-                <a href="/" class="navlink" title="Return Home"><i class="material-icons">grid_view</i><i class="navi">Home</i></a>
-                <a href="/events" class="navlink active" title="Minecraft Events"><i class="material-icons">emoji_events</i><i class="navi">Events</i></a>
-                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">play_circle</i><i class="navi">Content</i></a>
-                <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">switch_account</i><i class="navi">Accounts</i></a>
-                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons">settings</i><i class="navi">Settings</i></a>
+                <a href="/" class="navlink" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink active" title="Minecraft Events"><i class="material-icons-outlined">emoji_events</i><i class="navi">Events</i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons-outlined">play_circle</i><i class="navi">Content</i></a>
+                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons-outlined">settings</i><i class="navi">Settings</i></a>
             </span>
         </span>
         <span class="header-space">
@@ -100,8 +99,14 @@
                         <div class="channel-divider"></div>
                         <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
                         <div class="channel-divider"></div>
-                        <li><a href="javascript:void(0);" onclick="sharePage()" title="Share the link to this page" class="dropdown-with-icon" id="share-page"><i class="material-icons">share</i>Share</a></li>
+                        <textarea class="hide-textarea" id="current-page-link2"></textarea>
+                        <script>document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
+                        <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
+                        <li><a href="javascript:void(0);" onclick="copyURL()" title="Share the link to this page" class="dropdown-with-icon"><i class="material-icons">link</i>Copy page link</a></li>
+                        <li><a href="javascript:void(0);" title="Share this page natively" class="share-os dropdown-with-icon"><i class="material-icons">share</i>Share via OS</a></li>
+                        <script>const shareButton = document.querySelector('.share-os');shareButton.addEventListener('click', event => {if (navigator.share) { navigator.share({title: encodeURIComponent(document.title),url: encodeURIComponent(document.URL)}).then(() => {console.log('Opened Web Share API dialog!');}).catch(console.error);} else {console.log('Web Share API unsupported in browser or operating system.');}});</script>
                         <script>var modal = document.getElementById("share");var btn = document.getElementById("share-page");var span = document.getElementsByClassName("share-close")[0];btn.onclick = function() {modal.style.display = "flex";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}}</script>
+                        <div class="channel-divider"></div>
                         <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
                         <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
                     </ul>
@@ -109,17 +114,14 @@
             </span>
         </span>
     </header>
-    <div class="spotlight big-spotlight under-header" id="racetotheend">
-        <div class="text">
-            <h1 class="white-text shadow-text">New Minecraft Events, Every Month</h1>
-            <p class="desc0 white-text shadow-text">Every month a new Minecraft Event/Tournament video is available on my channel. With videos like <a href="https://youtube.com/watch?v=sQ-S6D6R85o">Minecraft but the VOID RISES</a> and <a href="https://youtube.com/watch?v=5HILNKwRwzs">This Minecraft UHC was INSANE.</a>, it's some of the most fun i've had on YouTube EVER.</p>
+    <div class="section big-section large-section under-header events" id="events">
+        <div class="text limited-section">
+            <h1 class="white-text h7">New Minecraft Events, Every Month</h1>
+            <p class="desc0 white-text desc-margin">Every month a new Minecraft Event/Tournament video is available on my channel. They bring back old classics from Minecraft's early days and create new exciting events for everyone to enjoy.</p>
         </div>
         <div class="videofeed">
             <span class="video">
-                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/uGNJd_jD70g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            </span>
-            <span class="video">
-                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/5HILNKwRwzs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/yrCv6cWoLzg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             </span>
             <span class="video">
                 <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/KE80kjUe8Kg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
@@ -128,12 +130,30 @@
                 <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/sQ-S6D6R85o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             </span>
         </div>
+        <div class="section"></div>
+        <a class="button important con" href="events-in-order">Watch more</a>
     </div>
-    <div class="spotlight">
+    <div class="section big-section limited-section">
         <h1>Want to host one for yourself?</h1>
-        <p class="desc0">Gather some friends together and add one of these datapacks to your world. It's as simple as that.</p>
+        <p class="desc0 desc-margin">Gather some friends together and add one of these datapacks to your world. It's as simple as that.</p>
+        <a class="b-link" href="/projects/installing#datapack">Help on Installing Datapacks</a>
     </div>
     <div class="tiles">
+        <span class="info-tile main-background" onclick="location.href='projects/lavarising';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/lavarising.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left datapack">Datapack</label>
+                <label class="overline tag project-updated">19/04/2021</label>
+                <h2>Lava Rising</h2>
+                <p class="desc0">A lightweight and easy-to-use datapack that makes the lava rise from the bottom of the world to the top.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/lavarising">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/lavarising15421.zip">Download</a>
+            </div>
+        </span>
         <span class="info-tile main-background" onclick="location.href='projects/racetotheend';">
             <div class="tile-image tile-smallimage">
                 <img src="tiles/racetotheend.png" alt="Cover image" onerror="this.src='error.png'">
@@ -145,8 +165,8 @@
                 <p class="desc0">A simple, yet challenging datapack that tasks teams of 3 to beat Minecraft.</p>
             </div>
             <div class="card-options card-nobg">
-                <a class="tile-browse button option con" href="projects/racetotheend">View</a>
-                <a class="tile-browse button option dow" href="downloads/racetotheend20321.zip">Download</a>
+                <a class="tile-browse button option" title="View this project" href="projects/racetotheend">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/racetotheend20321.zip">Download</a>
             </div>
         </span>
         <span class="info-tile main-background" onclick="location.href='projects/uhc';">
@@ -160,8 +180,8 @@
                 <p class="desc0">A simple UHC Datapack featuring many standards from the genre compatiable with the latest versions of Minecraft.</p>
             </div>
             <div class="card-options card-nobg">
-                <a class="tile-browse button option con" href="projects/uhc">View</a>
-                <a class="tile-browse button option dow" href="downloads/plexionuhc21221BUILD2.zip">Download</a>
+                <a class="tile-browse button option" title="View this project" href="projects/uhc">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/plexionuhc21221BUILD2.zip">Download</a>
             </div>
         </span>
         <span class="info-tile main-background" onclick="location.href='projects/voidrising';">
@@ -175,85 +195,223 @@
                 <p class="desc0">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
             </div>
             <div class="card-options card-nobg">
-                <a class="tile-browse button option con" href="projects/voidrising">View</a>
-                <a class="tile-browse button option dow" href="downloads/voidrising18121.zip">Download</a>
+                <a class="tile-browse button option" title="View this project" href="projects/voidrising">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/voidrising18121.zip">Download</a>
             </div>
         </span>
     </div>
-    <div class="spotlight">
+    <div class="section">
+        <a class="b-link" href="/datapacks">All Datapacks</a>
+    </div>
+    <div class="section large-section limited-section-padding" style="background: var(--background-blue); transition: 0.2s ease-in-out;">
         <h1>Something not working?</h1>
-        <p class="desc0">If you're having problems setting up or using a datapack, head over into the comments of the video or the PMC page and tell me about it. I'm happy to help!</p>
-        <a class="button important tile-browse" href="https://youtube.com/plexion">YouTube</a>
-        <a class="button tile-browse" href="https://planetminecraft.com/member/plexionlive/">PMC Profile</a>
+        <p class="desc0 desc-margin">If you're having problems setting up or using a datapack, head over into the comments of the video or the PMC page and tell me about it. I'm happy to help!</p>
+        <a class="b-link" href="https://youtube.com/plexion">YouTube</a>
+        <a class="b-link" href="https://planetminecraft.com/member/plexionlive/">PMC Profile</a>
+        <a class="b-link" href="/support">Re-assurance</a>
+        <!--<br>
+        <br>
+        <br>
+        <p class="desc0">If you need help on setting up a server or using Minecraft Realms, follow this hyperlink:</p>
+        <a class="b-link" href="/projects/installing#datapack">Using on a Server/Realms</a>-->
+    </div>
+    <div class="section big-section limited-section">
+        <h1>The <i style="color: var(--main-blue); transition: 0.2s ease-in-out;">benefits</i> of Event Datapacks</h1>
+        <p class="desc0 desc-margin">All Event Datapacks listed have many benefits over the competition.</p>
+    </div>
+    <div class="spotlight-tiles">
+        <span class="spotlight-tile">
+            <div class="tile-icon reliable">
+                <i class="material-icons-outlined">thumb_up</i>
+            </div>
+            <div class="tile-text">
+                <h1>To be trusted</h1>
+                <p class="desc3">Each datapack has been tested before release and on my channel so you can know that the datapack won't fail on you. If it does happen to fail, which is very rare, simply contact me via PMC, YouTube replies or by email @ <a href="mailto:plexionbusiness@gmail.com">plexionbusiness@gmail.com</a> and i'll get the problem fixed as soon as possible.</p>
+            </div>
+        </span>
+        <span class="spotlight-tile">
+            <div class="tile-icon easy-to-use">
+                <i class="material-icons-outlined">accessibility_new</i>
+            </div>
+            <div class="tile-text">
+                <h1>Ready in seconds<i class="exi">1</i></h1>
+                <p class="desc3">Datapacks are very easy to install and setup, with only a few clicks required. Every datapack also features customisable options via scoreboards to allow further customisation for your event. This allows all events to be fully controllable incase there's something you want changed.</p>
+            </div>
+            <div class="icon">
+                <a class="button option con" href="/projects/installing#datapack">More information</a>
+            </div>
+        </span>
+        <span class="spotlight-tile">
+            <div class="tile-icon handled-lag">
+                <i class="material-icons">report_problem</i>
+            </div>
+            <div class="tile-text">
+                <h1>Performance is key</h1>
+                <p class="desc3">All datapacks are optimised to reduce client-side lag and server-side lag. However, this does come with some consequences, mainly with falling blocks which are usually killed in most datapacks to prevent lag. Currently, these features are not optional and are hard-coded into the events.</p>
+            </div>
+        </span>
+    </div>
+    <div class="section big-section limited-section">
+        <h1>Still not convinced?</h1>
+        <p class="desc0 desc-margin">Read these absolutely stunning reviews from fellow plexion datapack consumers™.<i class="exi">2</i></p>
+        <div class="small-tiles">
+            <span class="small-tile" style="max-width: 300px;">
+                <p class="desc3">"what's the url of this?"</p>
+                <h4>- Yakup396</h4>
+            </span>
+            <span class="small-tile" style="max-width: 300px;">
+                <p class="desc3">"huh, yea i guess thats neat :)"</p>
+                <h4>- A_Bread_Boii</h4>
+            </span>
+            <span class="small-tile" style="max-width: 300px;">
+                <p class="desc3">"wow plexion thats so cool and awsome!"</p>
+                <h4>- Equton</h4>
+            </span>
+            <span class="small-tile" style="max-width: 300px;">
+                <p class="desc3">"xD"</p>
+                <h4>- FiMiS</h4>
+            </span>
+        </div>
+        <label class="overline">Sourced from PMC</label>
+    </div>
+    <div class="section big-section"></div>
+    <div class="section limited-section">
+        <h1>GOGOGOGOGOGOGOGOGOGO</h1>
+        <p class="desc0 desc-margin">DOWNLOAD ONEEEEEEEE</p>
+    </div>
+    <div class="tiles">
+        <span class="info-tile main-background" onclick="location.href='projects/lavarising';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/lavarising.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left datapack">Datapack</label>
+                <label class="overline tag project-updated">19/04/2021</label>
+                <h2>Lava Rising</h2>
+                <p class="desc0">A lightweight and easy-to-use datapack that makes the lava rise from the bottom of the world to the top.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/lavarising">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/lavarising15421.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/racetotheend';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/racetotheend.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left datapack">Datapack</label>
+                <label class="overline">28/03/2021</label>
+                <h2>Race To The End</h2>
+                <p class="desc0">A simple, yet challenging datapack that tasks teams of 3 to beat Minecraft.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/racetotheend">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/racetotheend20321.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/uhc';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/uhc.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left datapack">Datapack</label>
+                <label class="overline">20/02/2021</label>
+                <h2>UHC</h2>
+                <p class="desc0">A simple UHC Datapack featuring many standards from the genre compatiable with the latest versions of Minecraft.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/uhc">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/plexionuhc21221BUILD2.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/voidrising';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/voidrising.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left datapack">Datapack</label>
+                <label class="overline">18/01/2021</label>
+                <h2>Void Rising</h2>
+                <p class="desc0">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/voidrising">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/voidrising18121.zip">Download</a>
+            </div>
+        </span>
     </div>
     <footer>
-        <h1>plexion.dev</h1>
-        <p class="desc0">Last updated: 16/04/2021</p>
+        <p class="descsmall"><i class="exi">1</i>You obviously cannot setup the datapack in seconds, unless you are Dream.</p>
+        <p class="descsmall"><i class="exi">2</i>It has not been proven whether the consumers were actually happy with the plexion products or if they were held at gunpoint.</p>
+        <br>
+        <div class="channel-divider"></div>
+        <br>
+        <span class="desc0">Home</span><i class="material-icons navnext">navigate_next</i><strong class="desc0">Events</strong>
+        <p class="desc2">Last modified on 07/05/2021</p>
+        <br>
         <div class="footer-extras">
-            <br>
-            <div class="footer-pages">
-                <h4>Explore</h4>
-                <div class="small-tiles">
-                    <a class="small-tile" href="/">
-                        <div class="tile-icon icon-all">
-                            <i class="material-icons">grid_view</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Projects</h4>
-                        </div>
-                    </a>
-                    <a class="small-tile" href="/events">
-                        <div class="tile-icon icon-events">
-                            <i class="material-icons">emoji_events</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Events</h4>
-                        </div>
-                    </a>
-                    <a class="small-tile" href="/videos">
-                        <div class="tile-icon icon-content">
-                            <i class="material-icons">play_circle</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Content</h4>
-                        </div>
-                    </a>
-                    <a class="small-tile" href="/accounts">
-                        <div class="tile-icon icon-share">
-                            <i class="material-icons">switch_account</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Accounts</h4>
-                        </div>
-                    </a>
-                </div>
-            </div>
             <div class="footer-links">
                 <span class="footer-link">
-                    <p class="overline">Drop a follow</p>
+                    <h4>Explore</h4>
                     <ul class="quick-links">
-                        <li><a href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
-                        <li><a href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
-                        <li><a href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
-                        <li><a href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                        <li><a target="_blank" href="/" class="quick-link small-link icon-all"><i class="material-icons">grid_view</i>Projects</a></li>
+                        <li><a target="_blank" href="/events" class="quick-link small-link icon-events"><i class="material-icons">emoji_events</i>Events</a></li>
+                        <li><a target="_blank" href="/videos" class="quick-link small-link icon-content"><i class="material-icons">play_circle</i>Content</a></li>
+                        <li><a target="_blank" href="/accounts" class="quick-link small-link icon-accounts"><i class="material-icons">switch_account</i>Accounts</a></li>
+                        <li><a target="_blank" href="/medium" class="quick-link small-link icon-medium"><i class="material-icons">article</i>Medium</a></li>
+                        <li><a target="_blank" href="/support" class="quick-link small-link icon-support"><i class="material-icons">help_outline</i>Support</a></li>
+                    </ul>
+                    <br>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="/datapacks" class="quick-link small-link icon-datapack"><i class="material-icons">code</i>Datapacks</a></li>
+                        <li><a target="_blank" href="/resourcepacks" class="quick-link small-link icon-resourcepack"><i class="material-icons">invert_colors</i>Resourcepacks</a></li>
+                        <li><a target="_blank" href="/maps" class="quick-link small-link icon-map"><i class="material-icons">public</i>Maps</a></li>
                     </ul>
                 </span>
                 <span class="footer-link">
-                    <p class="overline secondary-text">Build Info</p>
+                    <h4>Socials</h4>
                     <ul class="quick-links">
-                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
-                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
+                        <li><a target="_blank" href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                        <li><a target="_blank" href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                        <li><a target="_blank" href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                        <li><a target="_blank" href="https://osu.ppy.sh/users/15364179" class="quick-link small-link">osu! profile</a></li>
+                        <li><a target="_blank" href="https://planetminecraft.com/member/plexiondev/" class="quick-link small-link">PMC profile</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>Channels</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://youtube.com/plexion" class="quick-link small-link">plexion</a></li>
+                        <li><a target="_blank" href="/gold" class="quick-link small-link">plexionGOLD</a></li>
+                        <li><a target="_blank" href="/osuplexion" class="quick-link small-link">osu!plexion</a></li>
+                        <li><a target="_blank" href="/vods" class="quick-link small-link">plexionVODS</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCa_Athc7tNM5qGYoV4bkJXg" class="quick-link small-link">Let's Talk</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCzLpMY-4wJDLKv9SjQhOkAw" class="quick-link small-link">plexionDev</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UC0NYCYnD-knNSzu_S7mklWg" class="quick-link small-link">plexionSHORTS</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCj8niB3t9HEZOLY3PQcB2jw" class="quick-link small-link">plexionMUSIC</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCr1k0PAb2BaBdW3jf7lSQDg" class="quick-link small-link">plextra</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>plexion.dev</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
                         <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/commits/master" class="quick-link small-link">View github archives</a></li>
                         <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
                     </ul>
                 </span>
             </div>
             <br>
-            <h4>Have any questions?</h4>
-            <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
+            <div class="channel-divider"></div>
             <br>
-            <br>
-            <p class="overline secondary-text">plexion.dev Build 2104.16</p>
+            <span class="footer-end">
+                <p class="secondary-text desc2">Build 2105.7</p>
+                <a href="mailto:plexionbusiness@gmail.com" class="desc2 secondary-text">Send an email</a>                
+            </span>
             <div class="debug-info">
                 <br>
                 <br>
