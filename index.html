@@ -62,7 +62,7 @@
     </div>
     <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
     <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
-    <header>
+    <header class="transparent-background">
         <span class="header-brand">
             <span class="brand">plexion.dev</span>
         </span>
@@ -122,12 +122,18 @@
             </ul>
         </span>
     </div>-->
+    <div class="section big-section plexbg2 large-section spotlight-section align-left margin-bottom under-header" style="background-image: url(thumbnails/ELECTION.png);">
+        <h1 class="white-text shadow-text">The Election</h1>
+        <p class="desc0 white-text shadow-text">Watch now on YouTube</p>
+        <br>
+        <a class="button important tile-browse" target="_blank" href="https://youtu.be/RbjH16xr1Is">Watch</a>
+    </div>
     <div class="section big-section plexbg2 large-section spotlight-section">
         <h1>Watch the Minecraft Events</h1>
         <p class="desc0">New videos released every<i class="exi">1</i> month.</p>
         <br>
         <a class="button" href="/events">Events Homepage</a>
-        <a class="button important" href="https://youtube.com/playlist?list=PLbaASKiZWzbpxBMr1gvlwFXrVcOVswVjv">Watch on YouTube</a>
+        <a class="button important" target="_blank" href="https://youtube.com/playlist?list=PLbaASKiZWzbpxBMr1gvlwFXrVcOVswVjv">Watch on YouTube</a>
     </div>
     <!--<div class="section">
         <a class="button important" href="#">Important Button</a>
@@ -704,6 +710,7 @@
                         <li><a target="_blank" href="/accounts" class="quick-link small-link icon-accounts"><i class="material-icons">switch_account</i>Accounts</a></li>
                         <li><a target="_blank" href="/medium" class="quick-link small-link icon-medium"><i class="material-icons">article</i>Medium</a></li>
                         <li><a target="_blank" href="/support" class="quick-link small-link icon-support"><i class="material-icons">help_outline</i>Support</a></li>
+                        <li><a target="_blank" href="/about" class="quick-link small-link icon-support"><i class="material-icons">info_outline</i>About Me</a></li>
                     </ul>
                     <br>
                     <ul class="quick-links">
@@ -787,9 +794,9 @@
             var scroll = $(window).scrollTop();
 
             if (scroll >= 30) {
-                $("header").addClass("scrolled-header");
+                $("header").addClass("scrolled-bg-header");
             } else {
-                $("header").removeClass("scrolled-header");
+                $("header").removeClass("scrolled-bg-header");
             }
         });
     </script>

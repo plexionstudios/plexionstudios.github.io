@@ -182,7 +182,8 @@
 li img {
     margin: 5px 40px 5px 40px;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 2px solid var(--main-background);
+    transition: 0.2s ease-in-out;
 }
 .pardivider {
     margin: 10px 200px;

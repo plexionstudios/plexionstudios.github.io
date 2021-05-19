@@ -60,6 +60,7 @@ table {
 /* Global style colours */
 
 :root {
+    --brand-colour: #3359F2;
     --main-background: white;
     --secondary-background: #F5F5F5;
     --raised-background: rgba(204,204,204,0.4);
@@ -73,12 +74,12 @@ table {
     --header-font: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
     --code-font: 'Consolas','Monaco','Lucida Console','Liberation Mono','DejaVu Sans Mono','Bitstream Vera Sans Mono','Courier New';
     --plexion-blue: #003BFF;
-    --main-blue: #003AF8; /* Fully WCAG 2.0 Compliant - older colour shown above as plexion-blue */
+    --main-blue: #1646F4;
     --secondary-blue: #0033DA;
-    --raised-blue: #0560FF;
+    --raised-blue: #0088FF;
     --target-colour: rgba(5,96,255,0.3);
-    --background-blue: rgba(0,58,248,0.1); /* Default Button Backgrounds (uses main-blue) */
-    --raised-background-blue: rgba(5,96,255,0.2); /* Selected Dropdowns (uses raised-blue) */
+    --background-blue: rgba(22,70,244,0.1); /* Default Button Backgrounds (uses main-blue) */
+    --raised-background-blue: rgba(0,136,255,0.2); /* Selected Dropdowns (uses raised-blue) */
     --optional: #C4962D;
     --updated: rgb(84, 178, 233);
     --warn: #B00020;
@@ -107,8 +108,8 @@ table {
     --icon-shadow: 0px 5px 5px rgba(0,0,0,0.25);
 }
 .dark-mode {
-    --main-background: #121212;
-    --secondary-background: #1E1E1E;
+    --main-background: #000000;
+    --secondary-background: #0f0f0f;
     --raised-background: rgba(66,66,66,0.4);
     --button-border: #383838;
     --raised-shadow: 0.3;
@@ -116,8 +117,8 @@ table {
     --main-text: rgba(255,255,255,0.87);
     --secondary-text: rgba(255,255,255,0.6);
     --white-text: white;
-    --main-blue: #2D8CFF;
-    --raised-blue: #4FA7FF;
+    --main-blue: #1c92f3;
+    --raised-blue: #11a8ff;
     --target-colour: rgba(79,167,255,0.3);
     --background-blue: rgba(45,140,255,0.15); /* Default Button Backgrounds (uses main-blue) */
     --raised-background-blue: rgba(79,167,255,0.25); /* Selected Dropdowns (uses raised-blue) */
@@ -269,6 +270,7 @@ a {
     text-decoration: none;
     color: var(--main-blue);
     transition: 0.2s ease-in-out;
+    font-weight: 500;
 }
 a:hover, a:focus {
     background: transparent;
@@ -357,7 +359,7 @@ code {
 /* HEADERS AND DESCRIPTIONS */
 
 .h8 {
-    font-family: var(--main-font);
+    font-family: var(--header-font);
     color: var(--header-text);
     font-size: 120px;
     font-weight: 600;
@@ -366,7 +368,7 @@ code {
     transition: 0.2s ease-in-out;
 }
 .h7 {
-    font-family: var(--main-font);
+    font-family: var(--header-font);
     color: var(--header-text);
     font-size: 55px;
     font-weight: 600;
@@ -375,7 +377,7 @@ code {
     transition: 0.2s ease-in-out;
 }
 h6, .h6 {
-    font-family: var(--main-font);
+    font-family: var(--header-font);
     color: var(--header-text);
     font-size: 72px;
     font-weight: 600;
@@ -384,7 +386,7 @@ h6, .h6 {
     transition: 0.2s ease-in-out;
 }
 h1, .h1 {
-    font-family: var(--main-font);
+    font-family: var(--header-font);
     color: var(--header-text);
     font-size: 36px;
     font-weight: 600;
@@ -606,12 +608,15 @@ h1 .exi {
     color: var(--main-text);
 }
 .tag {
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 13px;
     padding: 4px 8px;
     background: var(--raised-background);
     color: var(--main-text);
-    border-radius: 20px;
+    border-radius: 5px;
     transition: 0.2s ease-in-out;
-    margin: 0 5px;
+    margin: 5px;
     cursor: default;
 }
 .project-updated {
@@ -670,6 +675,25 @@ h1 .exi {
 }
 .big-intro {
     padding: 120px 20px;
+}
+
+.col-yt {
+    color: #FF0000;
+}
+.col-tw {
+    color: #1D9BF0;
+}
+.col-sp {
+    color: #2FE58F;
+}
+.col-twc {
+    color: #9147FF;
+}
+.col-di {
+    color: #5865F2; /* New blurple */
+}
+.col-in {
+    color: #C53F6F;
 }
 
 .desc1 {
@@ -963,6 +987,9 @@ h1 .exi {
 }
 .big-section {
     padding: 90px 30px;
+}
+.big-section.align-left, .spotlight-section.align-left {
+    padding-left: 300px;
 }
 .large-section {
     padding: 150px 30px;
@@ -1590,26 +1617,6 @@ input:focus::placeholder {
     margin-left: 5px;
     text-decoration: none;
 }
-.disabled:after {
-    font-family: 'Material Icons';
-    content: "close";
-    transition: 0.2s ease-in-out;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    line-height: 0.5;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    vertical-align: middle;
-    position: relative;
-    bottom: 2px;
-    margin-left: 5px;
-    text-decoration: none;
-    color: var(--warn);
-}
 .ext:after {
     font-family: 'Material Icons';
     content: "open_in_new";
@@ -1691,23 +1698,22 @@ input:focus::placeholder {
 }
 .button {
     transition: 0.2s ease-in-out;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 10px 22px;
+    margin: 10px 5px;
     background: transparent;
     color: var(--main-blue);
     text-decoration: none;
     font-family: var(--main-font);
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
-    filter: brightness(100%);
-    margin: 10px 5px;
-    display: inline-block;
     position: relative;
     bottom: 0;
+    display: inline-block;
     text-align: center;
     border: none;
-    box-shadow: inset 0px 0px 0px 2px var(--main-blue);
     cursor: pointer;
+    
 }
 .button-with-icon {
     padding: 6px 26px;
@@ -1734,18 +1740,17 @@ input:focus::placeholder {
 .icon-button {
     transition: 0.2s ease-in-out;
     display: inline-block;
-    border-radius: 50px;
+    border-radius: 5px;
     padding: 8px 9px;
     text-align: center;
     background: transparent;
     color: var(--main-blue);
     text-decoration: none;
-    font-family: var(--header-font);
-    font-size: 16px;
+    font-family: var(--main-font);
+    font-size: 17px;
     font-weight: 600;
     filter: brightness(100%);
     margin: 10px;
-    text-transform: uppercase;
     position: relative;
     bottom: 0;
 }
@@ -1756,6 +1761,7 @@ input:focus::placeholder {
 .icon-button:hover, .icon-button:focus {
     color: var(--main-blue);
     background: var(--background-blue);
+    text-decoration: none;
     outline: none;
 }
 .share-twitter i {
@@ -2088,7 +2094,6 @@ span.ripple {
     margin: 0 10px 0 10px;
 }
 .dropdown:hover .button, .dropdown:focus .button {
-    border-radius: 25px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     color: var(--secondary-blue);
@@ -2112,7 +2117,8 @@ span.ripple {
 }
 .dropdown:hover .dropdown-content, .dropdown:focus .dropdown-content {
     opacity: 1.0;
-    top: 0;
+    position: absolute;
+    top: -10px;
     display: block;
 }
 .dropdown-content ul {
@@ -2221,19 +2227,21 @@ span.ripple {
     vertical-align: middle;
     position: relative;
     bottom: 2px;
-    margin-left: 0;
+    margin-left: 5px;
     text-decoration: none;
     color: var(--main-blue);
+    display: inherit;
+}
+.important.drop-button:after {
+    color: var(--white-text);
 }
 .drop-button:hover, .drop-button:focus {
     bottom: 0;
     box-shadow: none;
 }
-.dropdown:hover .drop-button:after, .dropdown:focus .drop-button:after {
+.dropdown:hover .drop-button:after, .dropdown:focus .drop-button:after, .dropdown:focus-within .drop-button:after {
     -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-    position: relative;
-    bottom: 2px;
     color: var(--main-blue);
 }
 .rewindbutton {
@@ -2270,7 +2278,7 @@ span.ripple {
 .dropdown:hover .dropdown-content {
     display: block;
     position: absolute;
-    top: 43px;
+    top: 40px;
 }
 .subscribe {
     color: var(--white-text);
@@ -2425,7 +2433,6 @@ span.ripple {
 .under-header {
     position: relative;
     bottom: 50px;
-    padding: 90px 30px 90px 30px;
     transition: none;
 }
 .plexbg {
@@ -2879,6 +2886,7 @@ footer {
     transition: 0.2s ease-in-out;
     margin-top: 50px;
     border-top: 1px solid var(--button-border);
+    background: var(--main-background);
 }
 footer i {
     margin-right: 5px;
@@ -3076,8 +3084,8 @@ footer .brand {
 	background-size: cover;
     background-position: center;
 }
-#plexionDev {
-    background: url("tiles/plexionDev.png"),url("error.png");
+#plexion.dev {
+    background: url("tiles/plexion.dev.png"),url("error.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;
@@ -3306,6 +3314,12 @@ footer .brand {
     color: #F74FE3;
 }
 
+.check.material-icons {
+    font-size: 16px;
+    color: var(--main-blue);
+    margin-left: 5px;
+}
+
 /* Global classes */
 
 .align-left {
@@ -3345,6 +3359,9 @@ footer .brand {
         margin-left: 250px;
         margin-right: 250px;
     }
+    .big-section.align-left, .spotlight-section.align-left {
+        padding-left: 200px;
+    }
     .limited-section-padding {
         padding-left: 250px;
         padding-right: 250px;
@@ -3373,6 +3390,9 @@ footer .brand {
     .limited-section {
         margin-left: 100px;
         margin-right: 100px;
+    }
+    .big-section.align-left, .spotlight-section.align-left {
+        padding-left: 100px;
     }
     .limited-section-padding {
         padding-left: 100px;
@@ -3619,6 +3639,10 @@ footer .brand {
     }
     .big-section {
         padding: 90px 10px;
+    }
+    .big-section.align-left, .spotlight-section.align-left {
+        padding-left: 10px;
+        text-align: center;
     }
     .large-section {
         padding: 150px 10px;
@@ -3879,6 +3903,9 @@ footer .brand {
         text-align: center;
         width: auto;
     }
+    .icon-button i {
+        display: none;
+    }
     .icon-button-s {
         padding: 9px 0;
         display: inline-block;
@@ -3896,7 +3923,7 @@ footer .brand {
         margin-right: 0;
     }
     .icon-button {
-        box-shadow: inset 0px 0px 0px 2px var(--main-blue);
+        padding: 10px 22px;
     }
     .button-download:before {
         content: "Download";
@@ -3905,9 +3932,6 @@ footer .brand {
     .project-more:before {
         content: "More options";
         margin-right: 5px;
-    }
-    .share-places .icon-button {
-        box-shadow: inset 0px 0px 0px 2px var(--main-blue);
     }
     .share-places .fas-icon-button {
         top: 0;
@@ -4120,6 +4144,13 @@ footer .brand {
 .align-middle {
     display: flex;
     align-items: center;
+}
+
+.brand-colour {
+    background: var(--brand-colour);
+}
+.brand-colour p, .brand-colour h1, .brand-colour h4 {
+    color: var(--white-text);
 }
 
 :target {

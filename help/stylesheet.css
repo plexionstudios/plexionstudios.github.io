@@ -782,8 +782,8 @@ footer span {
     background-position: center;
     color: #003BFF;
 }
-#plexionDev {
-    background: url("tiles/plexionDev.png");
+#plexion.dev {
+    background: url("tiles/plexion.dev.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
     background-position: center;

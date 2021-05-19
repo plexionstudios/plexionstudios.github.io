@@ -1,86 +1,36 @@
 <!DOCTYPE html>
 <head>
-    <title>Events on #PLEXION2021 — plexion.dev</title>
+    <title>About Me — plexion.dev</title>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+    <link rel="stylesheet" href="twemoji-awesome.css">
+    <link rel="stylesheet" href="projects/stylesheet.css">
 	<link rel="stylesheet" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
-    <script src="medium.js"></script>
+    <!--<script src="medium.js"></script>-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <meta name="title" content="Events on #PLEXION2021">
-    <meta name="description" content="The central page for all info on new Minecraft events featured on plexion.">
+    <meta name="title" content="About @plexion">
+    <meta name="description" content="Everything you would want to know about plexion, the world's greatest youtuber ever (true)">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://plexion.dev/events">
-    <meta property="og:title" content="Events on #PLEXION2021">
-    <meta property="og:description" content="The central page for all info on new Minecraft events featured on plexion.">
-    <meta property="og:image" content="https://plexion.dev/thumbnails/racetotheend.png">
+    <meta property="og:url" content="https://plexion.dev/about">
+    <meta property="og:title" content="About @plexion">
+    <meta property="og:description" content="Everything you would want to know about plexion, the world's greatest youtuber ever (true)">
+    <meta property="og:image" content="https://plexion.dev/tiles/LetsTalk.png">
     <meta name="theme-color" content="#003AF8">
 </head>
 <body>
-    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
-    <div class="popup-bg" id="share">
-        <div class="share-dialog">
-            <div class="card-padding share-header with-icon">
-                <h2>Share this page</h2>
-                <a class="icon-button icon-button-s share-close"><i class="material-icons">close</i></a>
-            </div>
-            <div class="channel-divider"></div>
-            <div class="card-padding share-info">
-                <div class="share-places">
-                    <p class="desc0">Choose an option below to share wherever you choose:</p>
-                    <div class="tooltip">
-                        <a class="icon-button share-twitter tile-browse fas-icon-button" id="share-twitter" href="https://twitter.com/intent/tweet?" target="_blank" onclick="window.open('https://twitter.com/intent/tweet?text=gaming%20at%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter" style="font-size: 24px;"></i></a>
-                        <span class="tooltip-text">Twitter</span>
-                    </div>
-                    <div class="tooltip">
-                        <a class="icon-button share-facebook tile-browse fas-icon-button" href="https://www.facebook.com/sharer/sharer.php?u=&t=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook" style="font-size: 24px;"></i></a>
-                        <span class="tooltip-text">Facebook</span>
-                    </div>
-                    <div class="tooltip">
-                        <a class="icon-button share-reddit tile-browse fas-icon-button" href="http://www.reddit.com/submit?url=&title=" target="_blank" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i class="fab fa-reddit" style="font-size: 24px;"></i></a>
-                        <span class="tooltip-text">Reddit</span>
-                    </div>
-                    <div class="tooltip">
-                        <a class="icon-button share-linkedin tile-browse fas-icon-button" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i class="fab fa-linkedin" style="font-size: 24px;"></i></a>
-                        <span class="tooltip-text">LinkedIn</span>
-                    </div>
-                    <div class="tooltip">
-                        <a class="icon-button share-email"><i class="material-icons" href="mailto:?subject=&body=:%20" target="_blank" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(document.URL)); return false;">email</i></a>
-                        <span class="tooltip-text">Email</span>
-                    </div>
-                    <div class="tooltip">
-                        <a class="icon-button share-os"><i class="material-icons">open_in_new</i></a>
-                        <span class="tooltip-text">Native share</span>
-                    </div>
-                    <script>const shareButton = document.querySelector('.share-os');shareButton.addEventListener('click', event => {if (navigator.share) { navigator.share({title: encodeURIComponent(document.title),url: encodeURIComponent(document.URL)}).then(() => {console.log('Opened Web Share API dialog!');}).catch(console.error);} else {console.log('Web Share API unsupported in browser or operating system.');}});</script>
-                </div>
-                <br>
-                <div class="channel-divider"></div>
-                <br>
-                <div class="share-other">
-                    <p class="desc0">Alternatively, you can just copy the link:</p>
-                    <code class="share-https big-code" id="current-page-link"></code>
-                    <textarea class="hide-textarea" id="current-page-link2"></textarea>
-                    <script>document.getElementById("current-page-link").innerHTML =window.location.href;document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
-                    <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
-                    <br>
-                    <a class="button tile-browse share-copy" href="javascript:void(0);" onclick="copyURL()">Copy Page Link</a>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
     <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
-    <header>
+    <header class="transparent-background">
         <span class="header-brand">
             <span class="brand">plexion.dev</span>
         </span>
         <span class="navigation">
             <span class="header-links">
-                <a href="/" class="navlink" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
-                <a href="/events" class="navlink active" title="Minecraft Events"><i class="material-icons-outlined">emoji_events</i><i class="navi">Events</i></a>
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons-outlined">emoji_events</i><i class="navi">Events</i></a>
                 <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons-outlined">play_circle</i><i class="navi">Content</i></a>
                 <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons-outlined">settings</i><i class="navi">Settings</i></a>
             </span>
@@ -114,112 +64,94 @@
             </span>
         </span>
     </header>
-    <div class="section big-section main-background">
-        <div class="text limited-section">
-            <h6>Videos in order</h6>
-            <p class="desc0 desc-margin">All event videos, listed in order of upload date. Find one that peaks your interest? Just click to watch.</p>
-            <a class="b-link" href="https://youtube.com/playlist?list=PLbaASKiZWzbpxBMr1gvlwFXrVcOVswVjv">Watch on YouTube</a>
-        </div>
+    <div class="section big-section brand-colour align-left limited-section-padding under-header">
+        <h1 class="h7">HELLOOO</h1>
+        <p class="desc0 desc-margin">It is me, the man, the myth, the legend; plexion. On this page you can learn all about me, or not - whatever suits you. I think now's the time I'm supposed to go 𝓺𝓾𝓲𝓻𝓴𝔂 𝓽𝔀𝓲𝓽𝓽𝓮𝓻 𝓰𝓲𝓻𝓵 mode for my 𝓬𝓪𝓻𝓻𝓭 but oh well.</p>
+        <h4>Take a look at this very awesome selfie to compensate:</h4>
+            <div class="images">
+                <span class="imgcontainer">
+                    <img src="https://pbs.twimg.com/media/Eu126uKWYAAE7D0?format=jpg&name=large"></img>
+                    <p class="image-caption">(serious /srs /j /gen /dababy)</p>
+                </span>
+            </div>
     </div>
-    <div class="video-timeline">
-        <div class="clickable-video-tile">
-            <div class="video-tile-date">
-                <h1>January 17th</h1>
-            </div>
-            <div class="video-tile-info" onclick="location.href='https://youtube.com/watch?v=sQ-S6D6R85o';">
-                <span class="video-tile-thumbnail">
-                    <img src="thumbnails/void-rising.png" alt="Void Rising thumbnail">
-                </span>
-                <span class="video-tile-desc">
-                    <h1>Minecraft but the VOID RISES</h1>
-                    <p class="desc3">In this video, things got crazy. Joined by 10 people, we fought to the death in Minecraft but the Void Rises. This challenge is a sequel to the video I uploaded last year where instead of the void, we made the lava rise. However, instead of only 3 people, we got 10 people together and it made it so much more intense.</p>
-                    <strong class="desc3">Uses the Void Rising Datapack</strong>
-                </span>
-                <div class="icon">
-                    <i class="material-icons">navigate_next</i>
-                </div>
-            </div>
-        </div>
-        <div class="clickable-video-tile">
-            <div class="video-tile-date">
-                <h1>January 26th</h1>
-            </div>
-            <div class="video-tile-info" onclick="location.href='https://youtube.com/watch?v=KE80kjUe8Kg';">
-                <span class="video-tile-thumbnail">
-                    <img src="thumbnails/capture-the-helmet.png" alt="Capture The Helmet thumbnail">
-                </span>
-                <span class="video-tile-desc">
-                    <h1>This Minecraft Event turned into CHAOS</h1>
-                    <p class="desc3">In this video, we played a FFA Capture The Helmet Event. The premise of the event all centered around a single helmet. Upon wearing the helmet, you gain points but get affected with glowing & slowness. The first to 20,000 points wins the game, who will win? Watch till the end to find out.</p>
-                    <strong class="desc3 disabled-text">Uses an Unreleased Datapack</strong>
-                </span>
-                <div class="icon">
-                    <i class="material-icons">navigate_next</i>
-                </div>
-            </div>
-        </div>
-        <div class="clickable-video-tile">
-            <div class="video-tile-date">
-                <h1>February 23rd</h1>
-            </div>
-            <div class="video-tile-info" onclick="location.href='https://youtube.com/watch?v=5HILNKwRwzs';">
-                <span class="video-tile-thumbnail">
-                    <img src="thumbnails/this-uhc-was-insane.png" alt="UHC thumbnail">
-                </span>
-                <span class="video-tile-desc">
-                    <h1>This Minecraft UHC was INSANE.</h1>
-                    <p class="desc3">In this video, we brought everyone (almost) back together to play in this 3v3v3 UHC! This was mental.</p>
-                    <strong class="desc3">Uses the UHC Datapack</strong>
-                </span>
-                <div class="icon">
-                    <i class="material-icons">navigate_next</i>
-                </div>
-            </div>
-        </div>
-        <div class="clickable-video-tile">
-            <div class="video-tile-date">
-                <h1>March 28th</h1>
-            </div>
-            <div class="video-tile-info" onclick="location.href='https://youtube.com/watch?v=uGNJd_jD70g';">
-                <span class="video-tile-thumbnail">
-                    <img src="thumbnails/racetotheend.png" alt="Race To The End thumbnail">
-                </span>
-                <span class="video-tile-desc">
-                    <h1>This Minecraft Event didn't GO TO PLAN..</h1>
-                    <p class="desc3">Yeah.. this didn't go to plan at all. In this video, we brought everyone together to play Minecraft: Race To The End. However, as times went on, it became really stupid & funny.</p>
-                    <strong class="desc3">Uses the Race To The End Datapack</strong>
-                </span>
-                <div class="icon">
-                    <i class="material-icons">navigate_next</i>
-                </div>
-            </div>
-        </div>
-        <div class="clickable-video-tile">
-            <div class="video-tile-date">
-                <h1>April 28th</h1>
-            </div>
-            <div class="video-tile-info" onclick="location.href='https://youtube.com/watch?v=yrCv6cWoLzg';">
-                <span class="video-tile-thumbnail">
-                    <img src="thumbnails/lava-rising.png" alt="Lava Rising thumbnail">
-                </span>
-                <span class="video-tile-desc">
-                    <h1>Minecraft but the LAVA RISES</h1>
-                    <p class="desc3">Today we played Minecraft, but the Lava Rises. This was crazy. Joined by over 10 people, this was one of the biggest and most fun to record events ever.</p>
-                    <strong class="desc3">Uses the Lava Rising Datapack</strong>
-                </span>
-                <div class="icon">
-                    <i class="material-icons">navigate_next</i>
-                </div>
-            </div>
-        </div>
+    <div class="paragraph">
+        <p class="desc0 desc-margin">Anyways, you probably want to know a bit about me, so here we go:</p>
     </div>
-    <div class="section big-section limited-section">
-        <h1>With more coming soon!</h1>
-        <p class="desc0 desc-margin">More event videos are planned for later in the year, so stay tuned!</p>
+    <div class="paragraph">
+        <div id="bio">
+            <h4>General waffle to make the Twitter Girls happy™:</h4>
+            <ul>
+                <li><i class="material-icons margin-right">person</i><span class="desc0">Name: <strong>Cobain</strong></span></li>
+                <li><i class="material-icons margin-right">label</i><span class="desc0">Pronouns: <strong>he/him</strong> ✨✨✨🥺🥺</span></li>
+                <li><i class="material-icons margin-right">fact_check</i><span class="desc0">Age: <strong>Minor</strong></span></li>
+                <li><i class="material-icons margin-right">cake</i><span class="desc0">Birthday: <strong>16th December</strong></span></li>
+                <li><i class="material-icons margin-right">tips_and_updates</i><span class="desc0">Built: <strong>Different</strong> 💪</span></li>
+            </ul>
+        </div>
+        <div id="interests">
+            <br>
+            <div class="channel-divider"></div>
+            <label class="overline">INTERESTS</label>
+            <br>
+            <br>
+            <h4>Favourite Artists + Music</h4>
+            <ul>
+                <label class="overline margin-left">HYPERPOP</label>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/ab67616100005174e69dfc8140b3d23716dbf36c" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/channel/UCgVCTlNEvc7at5cAkTsKWCA">glaive</a> - <a href="https://youtu.be/gd-7Ye_vX1k">astrid</a></span></li>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/7a5af4d377e72f6bb8ba398582601e3683562510" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/miraie">miraie</a> - <a href="https://youtu.be/5Bd8rscNuEc">facade</a></span></li>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/2d33ff45cc5150f8e2918865f25c56d7dace74e7" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://open.spotify.com/artist/2QpNu8tDPv9n7oY34J1TtN?si=2jatz2GtTyuryUzGJ_ZjHw">p4rkr</a> - <a href="https://youtu.be/9KljsSMNy5g">ok im cool</a></span></li>
+                <label class="overline margin-left">OTHERS  </label>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/ab6761610000517441d8564976cf9fa475dcd768" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/channel/UCcgdJABWFq6cyoyzOE9NWiA">MC Virgins</a> - <a href="https://youtu.be/08fjqkLnBwM">Forever Virgins</a></span></li>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/6a16d67e33f8a58dc9af12dfa11c83be7c71d27a" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/channel/UCH-yX2TEpxmqr8-jRdfRgNQ">khai dreams</a> - <a href="https://youtu.be/uPp1ZVeG2Eg">All I Need</a></span></li>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/ab67616d00001e024d45507688e64ea6bfb98068" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/channel/UC3S-tYM-oNvzuCQHD8cUvqg">Lovejoy</a> - <a href="https://youtu.be/WXqbR-h5VMY">One Day</a></span></li>
+            </ul>
+            <h4>Favourite Content Creators</h4>
+            <p class="descsmall">gogy 🥺🥺🥺</p>
+            <ul>
+                <li><img class="pfp margin-right" src="https://yt3.ggpht.com/QLzrjAFif3FSfySZFnzP2ApaiFPHU6dF7WwGciKNQx0Z9-iaeH0nPlUJUtrzNO8slYGtno0Evw0=s88-c-k-c0x00ffffff-no-rj" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/miraie">Miraie<i class="material-icons check">check_circle</i></a></li>
+                <li><img class="pfp margin-right" src="https://yt3.ggpht.com/ytc/AAUvwniq8sHi0_Abe7nCjLnWd2D1mfisF0Z5QtLwbWBHcQ=s88-c-k-c0x00ffffff-no-rj" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/binfy">Binfy<i class="material-icons check">check_circle</i></a></li>
+                <li><img class="pfp margin-right" src="https://yt3.ggpht.com/ytc/AAUvwngsxo2_bbEd8Ad62V4gyda5K-iXDnizxFWY-JWP=s88-c-k-c0x00ffffff-no-rj" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/jschlattLIVE">jschlattLIVE<i class="material-icons check">check_circle</i></a></li>
+                <li><img class="pfp margin-right" src="https://yt3.ggpht.com/ytc/AAUvwniqcr5z0qK4eW1pqA_KGp3kiODMVG0wLs-zzsjXuw=s88-c-k-c0x00ffffff-no-rj" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/tommyinnit">TommyInnit<i class="material-icons check">check_circle</i></a></li>
+                <li><img class="pfp margin-right" src="https://yt3.ggpht.com/sMq-6E9hyHkXjWCG7KKLoIm1Z-GnghDCF6FfLMLGCcI9RLeSmsuP3WSuANbtkfk_EzB9XyWhTg=s88-c-k-c0x00ffffff-no-rj" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/plexion">Diana pp</a> YEP</li>
+            </ul>
+        </div>
+        <div id="socials">
+            <br>
+            <div class="channel-divider"></div>
+            <label class="overline">FIND ME</label>
+            <br>
+            <br>
+            <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+            <h4>Socials</h4>
+            <ul>
+                <li><i class="fab fa-youtube margin-right col-yt" style="font-size: 24px;"></i><span class="desc0">YouTube: <a href="https://youtube.com/plexion">plexion</a></span></li>
+                <li><i class="fab fa-twitter margin-right col-tw" style="font-size: 24px;"></i><span class="desc0">Twitter: <a href="https://twitter.com/plexionlive">@plexionlive</a></span></li>
+                <li><i class="fab fa-spotify margin-right col-sp" style="font-size: 24px;"></i><span class="desc0">Spotify: <a href="https://open.spotify.com/user/musicalpika?si=c86c6e10b72b4d4c">cobainn</a></span></li>
+                <li><i class="material-icons margin-right">code</i><span class="desc0">DEV Twitter: <a href="https://twitter.com/plexionDev">@plexionDev</a></span></li>
+                <li><i class="fab fa-twitch margin-right col-twc" style="font-size: 24px;"></i><span class="desc0">Twitch: <a href="https://twitch.tv/plexionLIVE">plexionLIVE</a></span></li>
+                <li><img class="pfp margin-right" src="pfp/PMC.png" style="width: 24px; height: 24px; border: 0; position: relative; bottom: 3px;"><span class="desc0">PMC: <a href="https://planetminecraft.com/member/plexiondev">plexionDev</a></span></li>
+                <li><i class="fab fa-github margin-right" style="font-size: 24px;"></i><span class="desc0">Github: <a href="https://github.com/plexionstudios">plexionstudios</a></span></li>
+                <li><img class="pfp margin-right" src="https://i.ppy.sh/013ed2c11b34720790e74035d9f49078d5e9aa64/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f4272616e645f6964656e746974795f67756964656c696e65732f696d672f75736167652d66756c6c2d636f6c6f75722e706e67" style="width: 24px; height: 24px; border: 0; position: relative; bottom: 3px; border-radius: 0; border: 0;"><span class="desc0">osu!: <a href="https://osu.ppy.sh/u/plexion">plexion</a></span></li>
+            </ul>
+            <h4><i class="material-icons">lock</i> Private Socials + Contact</h4>
+            <p class="descsmall">Only add me if you know me IRL (or i won't accept)</p>
+            <ul>
+                <li><i class="fab fa-twitter margin-right col-tw" style="font-size: 24px;"></i><span class="desc0">Private Twitter: <a href="https://twitter.com/dothebingbong">@dothebingbong</a></span></li>
+                <li><i class="fab fa-instagram margin-right col-in" style="font-size: 24px;"></i><span class="desc0">Private Instagram: <a href="https://instagram.com/cobain4k">@cobain4k</a></span></li>
+                <li><img class="pfp margin-right" src="https://discord.com/assets/3437c10597c1526c3dbd98c737c2bcae.svg" style="width: 24px; height: 24px; border: 0; position: relative; bottom: 3px; border-radius: 0; border: 0;"><span class="desc0">Private Discord: <a href="javascript:void(0)">plexion#2021</a></span></li>
+            </ul>
+            <h4>Contact me</h4>
+            <ul>
+                <li><i class="fab fa-twitter margin-right col-tw" style="font-size: 24px;"></i><span class="desc0">Twitter DMs: <a href="https://twitter.com/plexionlive">@plexionlive</a></span></li>
+                <li><i class="material-icons margin-right">email</i><span class="desc0">Business Email: <a href="mailto:plexionbusiness@gmail.com">plexionbusiness@gmail.com</a></span></li>
+                <li><i class="material-icons margin-right">email</i><span class="desc0">Extra Business Email: <a href="mailto:plexionnet@gmail.com">plexionnet@gmail.com</a></span></li>
+            </ul>
+        </div>
     </div>
     <footer>
-        <span class="desc0">Home</span><i class="material-icons navnext">navigate_next</i><strong class="desc0">Events</strong>
-        <p class="desc2">Last modified on 07/05/2021</p>
+        <span class="desc0">Home</span><i class="material-icons navnext">navigate_next</i><strong class="desc0">About Me</strong>
+        <p class="desc2">Last modified on 18/05/2021</p>
         <br>
         <div class="footer-extras">
             <div class="footer-links">
@@ -281,7 +213,7 @@
             <div class="channel-divider"></div>
             <br>
             <span class="footer-end">
-                <p class="secondary-text desc2">Build 2105.7</p>
+                <p class="secondary-text desc2">Build 2105.18</p>
                 <a href="mailto:plexionbusiness@gmail.com" class="desc2 secondary-text">Send an email</a>                
             </span>
             <div class="debug-info">
@@ -393,6 +325,29 @@
     </script>
     <script>
         (function() {
+    let onpageLoad = localStorage.getItem("scratch") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("scratch").textContent =
+        localStorage.getItem("scratch") || "light";
+    })();
+
+    function enableScratch() {
+        let element = document.body;
+        element.classList.toggle("show-scratch");
+
+        let embed = localStorage.getItem("scratch");
+        if (embed && embed === "show-scratch") {
+            localStorage.setItem("scratch", "");
+        } else {
+            localStorage.setItem("scratch", "show-scratch");
+        }
+
+        document.getElementById("scratch").textContent = localStorage.getItem("scratch");
+    }
+    </script>
+    <script>
+        (function() {
     let onpageLoad = localStorage.getItem("animations") || "";
     let element = document.body;
     element.classList.add(onpageLoad);
@@ -485,4 +440,31 @@
         localStorage.setItem("colour", "green");
     }
     </script>
+    <!--<script>
+        function createRipple(event) {
+            const button = event.currentTarget;
+        
+            const circle = document.createElement("span");
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const radius = diameter / 2;
+        
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+            circle.classList.add("ripple");
+        
+            const ripple = button.getElementsByClassName("ripple")[0];
+        
+            if (ripple) {
+                ripple.remove();
+            }
+        
+            button.appendChild(circle);
+        }
+        
+        const buttons = document.getElementsByClassName("button");
+        for (const button of buttons) {
+            button.addEventListener("click", createRipple);
+        }
+    </script>-->
 </body>
