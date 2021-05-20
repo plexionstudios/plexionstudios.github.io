@@ -105,7 +105,7 @@ table {
     --tdp4: 0px 5px 5px rgba(0,0,0,0.2);
     --tdp5: 0px 5px 5px rgba(0,0,0,0.25);
     --tdp6: 0px 5px 5px rgba(0,0,0,0.3);
-    --icon-shadow: 0px 5px 5px rgba(0,0,0,0.25);
+    --icon-shadow: 0px 5px 5px rgba(0,0,0,0.15);
 }
 .dark-mode {
     --main-background: #000000;
@@ -620,7 +620,8 @@ h1 .exi {
     cursor: default;
 }
 .project-updated {
-    background: var(--updated);
+    background: var(--brand-colour);
+    color: var(--white-text);
 }
 .project-updated:before {
     font-family: 'Material Icons';
@@ -1346,26 +1347,32 @@ footer .small-tiles, .app-bar .small-tiles {
     color: var(--secondary-text);
     cursor: pointer;
 }
-.spotlight-tile .tile-icon {
-    background: var(--main-blue);
+.spotlight-tile .tile-icon, .app-icon {
+    background: var(--brand-colour);
     transition: 0.2s ease-in-out;
     border-radius: 10px;
     padding: 10px;
     display: inline-block;
     cursor: default;
 }
+.app-icon-container {
+    display: inline-block;
+    text-align: center;
+    width: 110px;
+}
+.app-icon {
+    margin: 10px;
+}
 .spotlight-tile .tile-icon:hover {
     cursor: default;
 }
 .spotlight-tile .reliable {
     background: #25AA3D;
-    background: linear-gradient(180deg, rgba(37,170,61,1) 0%, rgba(27,134,46,1) 100%);
 }
 .spotlight-tile .handled-lag {
     background: #E09F35;
-    background: linear-gradient(180deg, rgba(227,159,45,1) 0%, rgba(199,135,29,1) 100%);
 }
-.spotlight-tile .tile-icon i {
+.spotlight-tile .tile-icon i, .app-icon i {
     color: var(--white-text);
     transition: 0.2s ease-in-out;
     text-shadow: var(--icon-shadow);
