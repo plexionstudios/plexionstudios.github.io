@@ -117,6 +117,11 @@
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
     transition: 0.2s ease-in-out;
 }
+.imgcontainer.def-size img {
+    width: auto;
+    max-height: 199px;
+    padding: 20px;
+}
 /*.imgcontainer:hover {
     position: relative;
     width: 180%;
@@ -495,6 +500,11 @@ li img {
     }
 }
 @media (max-width: 500px) {
+    .imgcontainer.def-size img {
+        max-width: 100%;
+        max-height: 199px;
+        padding: 0;
+    }
     .project-spotlight {
         padding-top: 350px;
     }

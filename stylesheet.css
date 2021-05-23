@@ -62,6 +62,7 @@ table {
 :root {
     --brand-colour: #3359F2;
     --main-background: white;
+    --dark-background: #0f0f0f;
     --secondary-background: #F5F5F5;
     --raised-background: rgba(204,204,204,0.4);
     --raised-shadow: 0.1;
@@ -106,6 +107,22 @@ table {
     --tdp5: 0px 5px 5px rgba(0,0,0,0.25);
     --tdp6: 0px 5px 5px rgba(0,0,0,0.3);
     --icon-shadow: 0px 5px 5px rgba(0,0,0,0.15);
+    /* REFRESH */
+    --bright-yellow: #F2C359;
+    --highlight-yellow: #FFCF68;
+    --pastel-yellow: #F9DA9A;
+    --bright-white: #FFFFFF;
+    --darker-white: #F7F7F7;
+    --darkest-white: #EDEDED;
+    --bright-red: #E35855;
+    --highlight-red: #F75956;
+    --pastel-red: #F77D7B;
+    --bright-blue: #3359F2;
+    --highlight-blue: #3D5FF1;
+    --pastel-blue: #7581EF;
+    --bright-grey: #0F0F0F;
+    --highlight-grey: #161616;
+    --pastel-grey: #1E1E1E;
 }
 .dark-mode {
     --main-background: #000000;
@@ -225,6 +242,9 @@ iframe {
 
 .image-dark {
     display: none;
+}
+.backing-white {
+    background: rgba(255,255,255,0.3);
 }
 
 .dark-mode .image-light {
@@ -362,7 +382,9 @@ code {
     font-family: var(--header-font);
     color: var(--header-text);
     font-size: 120px;
-    font-weight: 600;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
     padding: 20px 0;
     margin: 0;
     transition: 0.2s ease-in-out;
@@ -371,7 +393,9 @@ code {
     font-family: var(--header-font);
     color: var(--header-text);
     font-size: 55px;
-    font-weight: 600;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
     padding: 10px 0;
     margin: 0;
     transition: 0.2s ease-in-out;
@@ -380,7 +404,9 @@ h6, .h6 {
     font-family: var(--header-font);
     color: var(--header-text);
     font-size: 72px;
-    font-weight: 600;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
     padding: 15px 0;
     margin: 0;
     transition: 0.2s ease-in-out;
@@ -389,10 +415,17 @@ h1, .h1 {
     font-family: var(--header-font);
     color: var(--header-text);
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
     padding: 10px 0;
     margin: 0;
     transition: 0.2s ease-in-out;
+}
+h1 .material-icons, .h1 .material-icons {
+    font-size: 48px;
+    opacity: 1.0;
+    color: var(--header-text);
 }
 .big-header {
     font-size: 64px;
@@ -411,6 +444,17 @@ h2, .h2 {
     color: var(--header-text);
     font-size: 28px;
     font-weight: 600;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s ease-in-out; 
+}
+.h9 {
+    font-family: var(--main-font);
+    color: var(--header-text);
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
     margin: 0;
     padding: 0;
     transition: 0.2s ease-in-out; 
@@ -484,12 +528,17 @@ a.desc3 {
 }
 .overline {
     font-family: var(--main-font);
-    color: var(--secondary-text);
+    font-weight: 600;
     font-size: 14px;
-    font-weight: 500;
+    color: var(--main-text);
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: 0.2s ease-in-out;
+    cursor: default;
+}
+.last-updated {
+    color: var(--main-text);
 }
 .exi {
     font-family: var(--main-font);
@@ -543,6 +592,7 @@ h1 .exi {
 }
 .tags {
     display: flex;
+    flex-wrap: wrap;
 }
 .datapack:before {
     font-family: 'Material Icons';
@@ -622,26 +672,6 @@ h1 .exi {
 .project-updated {
     background: var(--brand-colour);
     color: var(--white-text);
-}
-.project-updated:before {
-    font-family: 'Material Icons';
-    content: "new_releases";
-    transition: 0.2s ease-in-out;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 18px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    display: inline-flex;
-    vertical-align: middle;
-    padding-bottom: 3px;
-    margin-right: 3px;
-    text-decoration: none; 
 }
 .experimental {
     background: var(--optional);
@@ -1087,7 +1117,7 @@ h1 .exi {
 .shadow p {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
-.whitetext p {
+.whitetext p, .white-text .material-icons {
     color: var(--white-text);
 }
 
@@ -1329,6 +1359,17 @@ footer .small-tiles, .app-bar .small-tiles {
     transition: 0.2s ease-in-out;
     position: relative;
 }
+.colour-tile {
+    background: var(--main-background);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--button-border);
+    transition: 0.2s ease-in-out;
+    position: relative;
+}
+.colour-tile h1 {
+    padding: 0;
+}
 .small-tile .icon {
     position: absolute;
     bottom: 10px;
@@ -1445,7 +1486,7 @@ footer .small-tiles, .app-bar .small-tiles {
     background: transparent;
 }
 .card-info {
-    height: 125px;
+    height: 100px;
     padding-bottom: 0;
     overflow: hidden;
 }
@@ -1496,8 +1537,11 @@ footer .small-tiles, .app-bar .small-tiles {
 .tile-image img {
     width: 100%;
 }
-.white-text {
-    color: white;
+.white-text, .col-white {
+    color: var(--white-text);;
+}
+.col-brand {
+    color: var(--brand-colour);
 }
 .black-text {
     color: var(--black-text);
@@ -2021,9 +2065,12 @@ span.ripple {
 .button a {
     margin-bottom: 100px;
 }
-.button i {
-    margin-left: 20px;
-    font-size: 16px;
+.button .material-icons {
+    font-size: 24px;
+    display: inline-block;
+    line-height: 0;
+    position: relative;
+    top: 1px;
 }
 .dark-mode .important {
     color: var(--white-text);
@@ -2965,6 +3012,10 @@ footer .brand {
     transition: 0.2s ease-in-out;
     filter: brightness(100%);
     justify-self: stretch;
+}
+.video-limited .watch2 {
+    max-width: 650px;
+    overflow: hidden;
 }
 .preview-img {
     margin: 20px;

@@ -17,8 +17,8 @@ $(function () {
                 var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
                 yourString = yourString.replace('h4', 'p');
                 yourString = yourString.replace('h3', 'p');
-                yourString = yourString.replace('<p>', '<p class="desc0">');
-                yourString = yourString.replace('<figcaption>', '<p class="desc0">');
+                yourString = yourString.replace('<p>', '<p class="desc3">');
+                yourString = yourString.replace('<figcaption>', '<p class="desc3">');
                 yourString = yourString.replace('</figcaption>', '</p>');
                 var maxLength = 120; // maximum number of characters to extract
                 //trim the string to the maximum length
@@ -27,7 +27,7 @@ $(function () {
                 trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
                 display += `<p class="desc0">${trimmedString}...</p>`;
                 
-                display += `</div><div class="card-options card-nobg"><a href="${item.link}" target="_blank" class="tile-browse button option ext">Read More</a></div>`;
+                display += `</div><div class="card-options card-nobg"><a href="${item.link}" target="_blank" class="tile-browse button option">Continue reading</a></div>`;
                 display += '</div>';
                 return k < 10;
             });
