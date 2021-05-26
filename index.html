@@ -62,7 +62,7 @@
     </div>
     <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
     <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
-    <header class="transparent-background">
+    <header>
         <span class="header-brand">
             <span class="brand">plexion.dev</span>
         </span>
@@ -122,15 +122,15 @@
             </ul>
         </span>
     </div>-->
-    <div class="section big-section plexbg2 large-section spotlight-section margin-bottom under-header limited-section-padding dark-mode" style="background-image: url(thumbnails/ELECTION.png);">
+    <!--<div class="section big-section plexbg2 large-section spotlight-section margin-bottom under-header limited-section-padding dark-mode" style="background-image: url(thumbnails/ELECTION.png);">
         <h1 class="shadow-text h7">The Election</h1>
         <p class="desc0 shadow-text">Watch now on YouTube</p>
         <br>
         <a class="button important tile-browse" target="_blank" href="https://youtu.be/RbjH16xr1Is">Watch</a>
-    </div>
+    </div>-->
     <div class="section big-section plexbg2 large-section spotlight-section">
-        <h1 class="h7">Watch the Minecraft Events</h1>
-        <p class="desc0">New videos released every<i class="exi">1</i> month.</p>
+        <h1 class="h7">AN EVENT A MONTH</h1>
+        <p class="desc0">New videos released every month.</p>
         <br>
         <a class="button" href="/events">Events Homepage</a>
         <a class="button important" target="_blank" href="https://youtube.com/playlist?list=PLbaASKiZWzbpxBMr1gvlwFXrVcOVswVjv">Watch on YouTube</a>
@@ -719,12 +719,8 @@
         <div class="tiles" id="jsonContent"></div>
     </div>-->
     <footer>
-        <p class="descsmall"><i class="exi">1</i>Hopefully.</p>
-        <br>
-        <div class="channel-divider"></div>
-        <br>
         <strong class="desc0">Home</strong><i class="material-icons navnext" style="opacity: 0.0;">navigate_next</i>
-        <p class="desc2">Last modified on 23/04/2021</p>
+        <p class="desc2">Last modified on 25/05/2021</p>
         <br>
         <div class="footer-extras">
             <div class="footer-links">
@@ -735,6 +731,7 @@
                         <li><a target="_blank" href="/events" class="quick-link small-link icon-events"><i class="material-icons">emoji_events</i>Events</a></li>
                         <li><a target="_blank" href="/videos" class="quick-link small-link icon-content"><i class="material-icons">play_circle</i>Content</a></li>
                         <li><a target="_blank" href="/accounts" class="quick-link small-link icon-accounts"><i class="material-icons">switch_account</i>Accounts</a></li>
+                        <li><a target="_blank" href="/accounts" class="quick-link small-link"><i class="material-icons col-brand">verified</i>My Brand</a></li>
                         <li><a target="_blank" href="/medium" class="quick-link small-link icon-medium"><i class="material-icons">article</i>Medium</a></li>
                         <li><a target="_blank" href="/support" class="quick-link small-link icon-support"><i class="material-icons">help_outline</i>Support</a></li>
                         <li><a target="_blank" href="/about" class="quick-link small-link icon-support"><i class="material-icons">info_outline</i>About Me</a></li>
@@ -786,7 +783,7 @@
             <div class="channel-divider"></div>
             <br>
             <span class="footer-end">
-                <p class="secondary-text desc2">Build 2104.23</p>
+                <p class="secondary-text desc2">Build 2105.25</p>
                 <a href="mailto:plexionbusiness@gmail.com" class="desc2 secondary-text">Send an email</a>                
             </span>
             <div class="debug-info">
@@ -821,9 +818,9 @@
             var scroll = $(window).scrollTop();
 
             if (scroll >= 30) {
-                $("header").addClass("scrolled-bg-header");
+                $("header").addClass("scrolled-header");
             } else {
-                $("header").removeClass("scrolled-bg-header");
+                $("header").removeClass("scrolled-header");
             }
         });
     </script>

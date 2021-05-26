@@ -384,7 +384,6 @@ code {
     font-size: 120px;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.2px;
     padding: 20px 0;
     margin: 0;
     transition: 0.2s ease-in-out;
@@ -395,7 +394,6 @@ code {
     font-size: 55px;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.2px;
     padding: 10px 0;
     margin: 0;
     transition: 0.2s ease-in-out;
@@ -406,7 +404,6 @@ h6, .h6 {
     font-size: 72px;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.2px;
     padding: 15px 0;
     margin: 0;
     transition: 0.2s ease-in-out;
@@ -417,7 +414,6 @@ h1, .h1 {
     font-size: 36px;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.2px;
     padding: 10px 0;
     margin: 0;
     transition: 0.2s ease-in-out;
@@ -454,7 +450,6 @@ h2, .h2 {
     font-size: 30px;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.2px;
     margin: 0;
     padding: 0;
     transition: 0.2s ease-in-out; 
@@ -2604,7 +2599,8 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
 }
 .brand {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
     padding: 0 6px;
     font-family: var(--header-font);
     color: var(--header-text);
@@ -2875,7 +2871,7 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
     color: var(--main-blue);
 }
 .scrolled-bg-header .brand {
-    font-weight: 600;
+    font-weight: 700;
 }
 .dropdown-with-icon .material-icons {
     margin-right: 14px;
