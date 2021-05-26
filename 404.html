@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <link rel="shortcut icon" type="ico" href="/favicon.ico"/>
 	<link rel="stylesheet" href="/stylesheet.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
@@ -36,7 +36,7 @@
         }
     }
 </style>
-<body class="dark-mode">
+<body>
     <header>
         <span class="header-brand">
             <span class="brand">plexion.dev</span>
@@ -48,29 +48,32 @@
         </span>
         <span class="header-space">
             <span class="h-dropdown account-dropdown">
-                <a class="navlink navlink-nohide" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
+                <a class="navlink navlink-nohide navlink-icon" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
                 <div class="h-dropdown-content" id="account-dropdown-content">
                     <ul>
                         <li>
-                            <div class="card-padding secondary-background">
+                            <div class="card-padding">
                                 <h4>Page Settings</h4>
-                                <p class="descsmall">Sorry, Settings aren't available on error pages.</p>
+                                <p class="descsmall">These settings are saved locally across the page. Settings on error pages are very limited.</p>
                             </div>
                         </li>
                         <div class="channel-divider"></div>
-                        <li>
-                            <div class="card-padding">
-                                <p class="descsmall">No settings available :(</p>
-                            </div>
-                        </li>
+                        <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
+                        <div class="channel-divider"></div>
+                        <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
                     </ul>
                 </div>
             </span>
         </span>
     </header>
     <div class="section large-section spotlight-section align-left limited-section-padding" style="padding-top: 240px;">
-        <h1 class="h8">404.</h1>
-        <p class="desc0">It seems the page you tried to navigate to is either unaccessible or just nonexistent. It's either my fault or your fault pfft</p>
+        <h1 class="h8" style="padding: 0;">EH?</h1>
+        <p class="desc1">you need a map or what</p>
+        <br>
+        <div class="channel-divider"></div>
+        <br>
+        <p class="desc0">Anyways, it seems you've encountered a <strong>404</strong>. Check you've entered the URL correctly or submit an <a href="https://github.com/plexionstudios/plexionstudios.github.io/issues">issue</a> if you think this is my doing.</p>
         <a class="button important" href="/">Return Home</a>
         <a class="button" href="/versions/">The Archives</a>
     </div>
@@ -84,6 +87,29 @@
                 $("header").removeClass("scrolled-header");
             }
         });
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+
+        let theme = localStorage.getItem("theme");
+        if (theme && theme === "dark-mode") {
+            localStorage.setItem("theme", "");
+        } else {
+            localStorage.setItem("theme", "dark-mode");
+        }
+
+        document.getElementById("theme").textContent = localStorage.getItem("theme");
+    }
     </script>
     <script>
         function accountdropdown() {

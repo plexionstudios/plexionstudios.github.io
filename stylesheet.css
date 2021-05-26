@@ -1520,13 +1520,14 @@ footer .small-tiles, .app-bar .small-tiles {
 }
 .tile-image {
     max-width: 100%;
-    height: 300px;
+    height: auto;
     border-radius: 0;
     margin: 0;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-items: center;
+    border-bottom: 1px solid var(--button-border);
     transition: 0.2s ease-in-out;
 }
 .tile-image img {
@@ -1744,11 +1745,11 @@ input:focus::placeholder {
 }
 .button {
     transition: 0.2s ease-in-out;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px 22px;
     margin: 10px 5px;
     background: transparent;
-    color: var(--main-blue);
+    color: var(--bright-blue);
     text-decoration: none;
     font-family: var(--main-font);
     font-size: 17px;
@@ -1759,13 +1760,12 @@ input:focus::placeholder {
     text-align: center;
     border: none;
     cursor: pointer;
-    
 }
 .button-with-icon {
     padding: 6px 26px;
 }
 .button:hover, .button:focus, .button:focus-within, .dark-mode .button:hover, .dark-mode .button:focus, .dark-mode .button:focus-within {
-    color: var(--main-blue);
+    color: var(--bright-blue);
     background: var(--background-blue);
     text-decoration: none;
     outline: none;
@@ -2199,13 +2199,14 @@ span.ripple {
     background: var(--background-blue);
 }
 .important {
-    background: var(--main-blue);
+    background: var(--bright-blue);
     color: var(--white-text);
     font-weight: 500;
     box-shadow: none;
 }
 .important:hover, .important:focus, .important:focus-within, .dark-mode .important:hover, .dark-mode .important:focus, .dark-mode .important:focus-within {
-    background: var(--raised-blue);
+    background: var(--bright-blue);
+    opacity: 0.7;
     color: var(--white-text);
     box-shadow: var(--dp2);
     position: relative;
@@ -2687,8 +2688,8 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
 }
 #account-dropdown-content a, #moreoptions-dropdown-content a {
     font-family: var(--main-font);
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
 }
 .h-dropdown-content li a {
     margin: 0;
@@ -2875,7 +2876,7 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
 }
 .dropdown-with-icon .material-icons {
     margin-right: 14px;
-    opacity: 0.7;
+    opacity: 0.8;
     color: var(--main-text);
     transition: 0.2s ease-in-out;
     text-shadow: none;
@@ -3486,9 +3487,6 @@ footer .brand {
         margin-left: 10%;
         margin-right: 10%;
     }
-    .tile-image {
-        height: 250px;
-    }
     .table-of-contents {
         padding: 90px 30px;
     }
@@ -3509,6 +3507,9 @@ footer .brand {
     }
     .table-of-contents .image {
         display: none;
+    }
+    .plexbg2, .support {
+        background-size: 200%;
     }
 }
 @media (max-width: 1180px) {
@@ -3554,9 +3555,6 @@ footer .brand {
     .channel-buttons {
         padding: 10px 10px 10px 128px;
     }
-    .tile-image {
-        height: 250px;
-    }
     footer {
         padding: 90px;
     }
@@ -3584,9 +3582,6 @@ footer .brand {
     .settings-title h4 {
         margin-bottom: 10px;
     }
-    .plexbg2, .support {
-        background-size: 150%;
-    }
 }
 @media (max-width: 770px) {
     .channel-info {
@@ -3599,9 +3594,6 @@ footer .brand {
     .description-badge {
         margin-left: 10px;
         margin-right: 10px;
-    }
-    .tile-image {
-        height: 200px;
     }
     footer {
         padding: 30px;
@@ -3702,7 +3694,7 @@ footer .brand {
         padding: 150px 10px;
     }
     .spotlight-section {
-        padding: 250px 10px;
+        padding: 180px 10px;
     }
     #topic {
         padding: 120px 30px 120px 30px;
@@ -3775,7 +3767,7 @@ footer .brand {
         bottom: 80px;
     }
     .plexbg2, .support {
-        background-size: 230%;
+        background-size: 350%;
     }
     .text {
         padding: 10px;
@@ -3832,6 +3824,13 @@ footer .brand {
     }
     .card-options {
         opacity: 1.0;
+    }
+    .card-info {
+        text-align: center;
+        height: 130px;
+    }
+    .card-info .no-margin-left {
+        margin-left: 5px;
     }
     .tile-image {
         border-radius: 0;
@@ -3939,9 +3938,6 @@ footer .brand {
     }
     .mobile-only {
         display: initial;
-    }
-    .tile-image {
-        height: 150px;
     }
     .navi {
         font-size: 12px;

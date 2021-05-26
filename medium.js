@@ -11,16 +11,16 @@ $(function () {
             $.each(response.items, function (k, item) {
                 var src = item["thumbnail"]; // use thumbnail url
                 display += `<div class="info-tile medium-card" onclick="location.href='${item.link}';">`;
-                display += `<div class="tile-image"><img src="${src}" alt="Cover image" onerror="this.src='error.png'"></div>`;
-                display += `<div class="card-padding card-info">`;
-                display += `<p class="overline">Medium Post</p><h2 class="tile-head">${item.title}</h2>`;
+                display += `<div class="tile-image" style="max-height: 400px;"><img src="${src}" alt="Cover image" onerror="this.src='error.png'"></div>`;
+                display += `<div class="card-padding card-info" style="height: 140px;">`;
+                display += `<p class="overline">Medium Post</p><h2 class="h9">${item.title}</h2>`;
                 var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
                 yourString = yourString.replace('h4', 'p');
                 yourString = yourString.replace('h3', 'p');
                 yourString = yourString.replace('<p>', '<p class="desc3">');
                 yourString = yourString.replace('<figcaption>', '<p class="desc3">');
                 yourString = yourString.replace('</figcaption>', '</p>');
-                var maxLength = 120; // maximum number of characters to extract
+                var maxLength = 320; // maximum number of characters to extract
                 //trim the string to the maximum length
                 var trimmedString = yourString.substr(0, maxLength);
                 //re-trim if we are in the middle of a word
