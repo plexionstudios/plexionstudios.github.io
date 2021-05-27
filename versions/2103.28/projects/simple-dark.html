@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<head>
+    <title>Simple Dark (plexion.dev)</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
+    <link rel="stylesheet" href="../stylesheet.css">
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta property="title" content="Simple Dark">
+    <meta property="description" content="A sleek and modern dark-themed GUI resource pack for Minecraft.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/projects/simple-dark">
+    <meta property="og:title" content="Simple Dark">
+    <meta property="og:description" content="A sleek and modern dark-themed GUI resource pack for Minecraft.">
+    <meta property="og:image" content="https://plexion.dev/thumbnails/uhc.png">
+</head>
+<body>
+    <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
+    <header>
+        <span class="header-brand">
+            <span class="brand">plexion.dev</span>
+        </span>
+        <span class="navigation">
+            <span class="header-links">
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">event</i><i class="navi">Events<i class="new margin-left">BETA</i></i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
+                <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
+            </span>
+        </span>
+        <span class="header-space">
+            <span class="h-dropdown account-dropdown">
+                <a class="navlink navlink-nohide" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
+                <div class="h-dropdown-content" id="account-dropdown-content">
+                    <ul>
+                        <li>
+                            <div class="card-padding secondary-background">
+                                <h4>Page Settings</h4>
+                                <p class="descsmall">These settings are saved locally across the page.</p>
+                            </div>
+                        </li>
+                        <div class="channel-divider"></div>
+                        <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
+                        <div class="channel-divider"></div>
+                        <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
+                    </ul>
+                </div>
+            </span>
+        </span>
+    </header>
+    <div class="social-banner" id="simple-dark"></div>
+    <div class="info" id="options">
+        <span class="date">
+            <h2>Simple Dark</h2>
+            <p class="desc0">A sleek and modern dark-themed GUI resource pack for Minecraft.</p>
+        </span>
+        <span class="options">
+            <a class="button view ext" target="_blank" href="https://www.planetminecraft.com/texture-pack/simple-dark/">More info</a>
+            <a class="button download important" title="Download 1.0 (published 09/03/2021)" href="../downloads/simple-dark9321.zip">Download</a>
+        </span>
+    </div>
+    <!--<div class="info more-info" id="more-info">
+        <div class="latest-release">Last updated: 20/02/2021</div>
+    </div>-->
+    <div class="parhead" id="description">
+        <a href="#description">Description</a>
+    </div>
+    <div class="paragraph">
+        <p class="desc0">Simple Dark is the successor to my previous dark-themed resource pack, <a href="https://www.planetminecraft.com/texture-pack/metro-dark-theme/">Metro Dark</a>. This pack is built from the ground up with a sleek and modern design whilst keeping the dark aesthetic. Every GUI in the base game is themed along with most of the Realms GUIs making the experience seamless.</p>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="features">
+        <a href="#features">Features</a>
+    </div>
+    <div class="project-tiles">
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">palette</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Simple colour scheme</p>
+                <p class="desc0">The entire pack uses a set colour palette making the experience consistent and seamless.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">dark_mode</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Fully themed</p>
+                <p class="desc0">All native Minecraft GUIs and additional Realms GUIs have been fully themed with the same aesthetic.</p>
+            </span>
+        </span>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="screenshots">
+        <a href="#screenshots">Gallery</a>
+    </div>
+    <div class="images">
+        <span class="imgcontainer">
+            <img src="simple-dark0.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="simple-dark1.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="simple-dark2.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="simple-dark3.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="simple-dark4.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="simple-dark5.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="simple-dark6.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="simple-dark7.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="simple-dark8.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="simple-dark9.png"></img>
+        </span>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="installation">
+        <a href="#installation">Installation</a>
+    </div>
+    <div class="paragraph">
+        <p class="desc0">Resource packs are the simplest thing to install on Minecraft. Here are the simple steps.</p>
+        <ol>
+            <li>Click the download button above then save it in your Downloads.</li>
+            <li>Press <code>WIN</code> + <code>R</code> then type <code>%appdata%</code></li>
+            <li>Navigate to <code>.minecraft</code> then <code>resourcepacks</code> and drag the .zip file inside.</li>
+            <li>Open Minecraft, then go to <code class="mc-button">Options...</code> then <code class="mc-button">Resource Packs...</code> and find the pack in there.</li>
+            <li>Apply the pack with the <code class="mc-button">></code> button and press <code class="mc-button">Done</code></li>
+        </ol>
+    </div>
+    <footer>
+        <h1>plexion.dev</h1>
+        <p class="desc0">Build: 2103.28</p>
+        <div class="footer-extras">
+            <br>
+            <div class="footer-links">
+                <span class="footer-link">
+                    <p class="overline secondary-text">Cool pages</p>
+                    <ul class="quick-links">
+                        <li><a href="/videos" class="quick-link small-link">Content</a></li>
+                        <li><a href="/accounts" class="quick-link small-link">Accounts</a></li>
+                        <li><a href="/versions/before-project-guided" class="quick-link small-link">View all</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <p class="overline secondary-text">Follow me</p>
+                    <ul class="quick-links">
+                        <li><a href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                        <li><a href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                        <li><a href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                        <li><a href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <p class="overline secondary-text">Build Info</p>
+                    <ul class="quick-links">
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
+                        <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
+                        <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
+                    </ul>
+                </span>
+            </div>
+            <br>
+            <p class="overline secondary-text">Have any questions?</p>
+            <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
+        </div>
+    </footer>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-header");
+            } else {
+                $("header").removeClass("scrolled-header");
+            }
+        });
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+
+        let theme = localStorage.getItem("theme");
+        if (theme && theme === "dark-mode") {
+            localStorage.setItem("theme", "");
+        } else {
+            localStorage.setItem("theme", "dark-mode");
+        }
+
+        document.getElementById("theme").textContent = localStorage.getItem("theme");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("embed") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("embed").textContent =
+        localStorage.getItem("embed") || "light";
+    })();
+
+    function disableEmbeds() {
+        let element = document.body;
+        element.classList.toggle("disable-embeds");
+
+        let embed = localStorage.getItem("embed");
+        if (embed && embed === "disable-embeds") {
+            localStorage.setItem("embed", "");
+        } else {
+            localStorage.setItem("embed", "disable-embeds");
+        }
+
+        document.getElementById("embed").textContent = localStorage.getItem("embed");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("guided") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("guided").textContent =
+        localStorage.getItem("guided") || "light";
+    })();
+
+    function disableGuided() {
+        let element = document.body;
+        element.classList.toggle("disable-guided");
+
+        let embed = localStorage.getItem("guided");
+        if (embed && embed === "disable-guided") {
+            localStorage.setItem("guided", "");
+        } else {
+            localStorage.setItem("guided", "disable-guided");
+        }
+
+        document.getElementById("guided").textContent = localStorage.getItem("guided");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("animations") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("animations").textContent =
+        localStorage.getItem("animations") || "light";
+    })();
+
+    function removeAnimations() {
+        let element = document.body;
+        element.classList.toggle("disable-animations");
+
+        let embed = localStorage.getItem("animations");
+        if (embed && embed === "disable-animations") {
+            localStorage.setItem("animations", "");
+        } else {
+            localStorage.setItem("animations", "disable-animations");
+        }
+
+        document.getElementById("animations").textContent = localStorage.getItem("animations");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("experience") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("experience").textContent =
+        localStorage.getItem("experience") || "light";
+    })();
+
+    function experienceToggle() {
+        let element = document.body;
+        element.classList.toggle("minimal");
+
+        let embed = localStorage.getItem("experience");
+        if (embed && embed === "minimal") {
+            localStorage.setItem("experience", "");
+        } else {
+            localStorage.setItem("experience", "minimal");
+        }
+
+        document.getElementById("experience").textContent = localStorage.getItem("experience");
+    }
+    function experienceDefault() {
+        let element = document.body;
+        element.classList.remove("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "");
+    }
+    function experienceMinimal() {
+        let element = document.body;
+        element.classList.add("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "minimal");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("colour") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("colour").textContent =
+        localStorage.getItem("colour") || "light";
+    })();
+
+    function colourBlue() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.remove("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "");
+    }
+    function colourRed() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.add("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "red");
+    }
+    function colourGreen() {
+        let element = document.body;
+        element.classList.remove("red");
+        element.classList.add("green");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "green");
+    }
+    </script>
+</body>
