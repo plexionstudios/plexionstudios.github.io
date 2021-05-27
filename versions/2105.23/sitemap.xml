@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+      <loc>https://plexion.dev</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://plexion.dev/videos</loc>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://plexion.dev/accounts</loc>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://plexion.dev/beta</loc>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://plexion.dev/versions</loc>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://plexion.dev/versions/before-project-guided</loc>
+   </url>
+</urlset>
