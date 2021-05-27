@@ -285,6 +285,7 @@ body {
     background: var(--secondary-background);
     color: var(--main-text);
     font-size: 16px;
+    text-rendering: optimizeLegibility;
 }
 a {
     text-decoration: none;
@@ -467,7 +468,7 @@ h4, .h4 {
     font-family: var(--main-font);
     color: var(--header-text);
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0;
     padding: 0;
     transition: 0.2s ease-in-out; 
@@ -578,13 +579,6 @@ h1 .exi {
 .secondary-text {
     color: var(--secondary-text);
 }
-.new {
-    padding: 2px 4px;
-    background: var(--optional);
-    color: var(--white-text);
-    border-radius: 3px;
-    transition: 0.2s ease-in-out;
-}
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -655,17 +649,28 @@ h1 .exi {
 .tag {
     font-family: var(--main-font);
     font-weight: 600;
-    font-size: 13px;
     padding: 4px 8px;
-    background: var(--raised-background);
+    border: 1px solid var(--button-border);
     color: var(--main-text);
     border-radius: 5px;
     transition: 0.2s ease-in-out;
     margin: 5px;
     cursor: default;
 }
+.new {
+    padding: 2px 4px;
+    background: var(--optional);
+    border: 1px solid var(--optional);
+    color: var(--white-text);
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+}
+.info-tile h2 {
+    margin-top: 5px;
+}
 .project-updated {
-    background: var(--brand-colour);
+    background: var(--main-blue);
+    border: 1px solid var(--main-blue);
     color: var(--white-text);
 }
 .experimental {
@@ -1347,6 +1352,7 @@ footer .small-tiles, .app-bar .small-tiles {
     max-width: 950px;
 }
 .small-tile {
+    border: 1px solid var(--button-border);
     background: var(--main-background);
     padding: 10px;
     border-radius: 10px;
@@ -1371,8 +1377,7 @@ footer .small-tiles, .app-bar .small-tiles {
     right: 10px;
 }
 .small-tile:hover, .small-tile:focus {
-    background: var(--background-blue);
-    border: none;
+    box-shadow: var(--dp1);
     outline: none;
 }
 .tile-icon {
@@ -1481,12 +1486,14 @@ footer .small-tiles, .app-bar .small-tiles {
     background: transparent;
 }
 .card-info {
-    height: 100px;
+    height: 120px;
     padding-bottom: 0;
     overflow: hidden;
 }
 .info-tile:hover, .info-tile:focus, .info-tile:focus-within {
     position: relative;
+    bottom: 3px;
+    box-shadow: var(--dp2);
     cursor: pointer;
 }
 .info-tile:hover .button, .info-tile:focus .button, .info-tile:hover .icon-button, .info-tile:focus .icon-button, .info-tile:focus-within .button, .info-tile:focus-within .icon-button {
@@ -1528,10 +1535,15 @@ footer .small-tiles, .app-bar .small-tiles {
     align-items: center;
     justify-items: center;
     border-bottom: 1px solid var(--button-border);
+    background: var(--main-background);
     transition: 0.2s ease-in-out;
+    max-height: 450px;
 }
 .tile-image img {
     width: 100%;
+}
+.dark-mode .tile-image img, .dark-mode .project-spotlight {
+    filter: brightness(.7) contrast(1.05);
 }
 .white-text, .col-white {
     color: var(--white-text);;
@@ -1749,7 +1761,7 @@ input:focus::placeholder {
     padding: 10px 22px;
     margin: 10px 5px;
     background: transparent;
-    color: var(--bright-blue);
+    color: var(--main-blue);
     text-decoration: none;
     font-family: var(--main-font);
     font-size: 17px;
@@ -1765,7 +1777,7 @@ input:focus::placeholder {
     padding: 6px 26px;
 }
 .button:hover, .button:focus, .button:focus-within, .dark-mode .button:hover, .dark-mode .button:focus, .dark-mode .button:focus-within {
-    color: var(--bright-blue);
+    color: var(--main-blue);
     background: var(--background-blue);
     text-decoration: none;
     outline: none;
@@ -2201,12 +2213,11 @@ span.ripple {
 .important {
     background: var(--bright-blue);
     color: var(--white-text);
-    font-weight: 500;
+    font-weight: 600;
     box-shadow: none;
 }
 .important:hover, .important:focus, .important:focus-within, .dark-mode .important:hover, .dark-mode .important:focus, .dark-mode .important:focus-within {
-    background: var(--bright-blue);
-    opacity: 0.7;
+    background: var(--raised-blue);
     color: var(--white-text);
     box-shadow: var(--dp2);
     position: relative;
@@ -2775,7 +2786,8 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
 }
 .navigation .active {
     color: var(--main-blue);
-    font-weight: 500;
+    font-weight: 700;
+    border-bottom: 2px solid var(--raised-background-blue);
     opacity: 1.0;
 }
 .navigation .active:hover, .navigation .active:focus {
@@ -3792,7 +3804,7 @@ footer .brand {
         padding: 16px 16px 200px 16px;
     }
     .under-header {
-        bottom: 100px;
+        bottom: 0;
     }
     body {
         margin: 0;
@@ -3802,12 +3814,6 @@ footer .brand {
     }
     h2 {
         font-size: 24px;
-    }
-    .desc0 {
-        font-size: 17px;
-    }
-    .desc3 {
-        font-size: 16px;
     }
     .tiles {
         padding: 15px 0;
