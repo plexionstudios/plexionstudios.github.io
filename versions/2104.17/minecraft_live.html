@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+    <title>MINECRAFT LIVE</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+	body {
+		background-color: black;
+		background: url("MineconLiveBlur.png");
+		background-repeat: no-repeat, repeat;
+		background-size: cover;
+		background-position: center;
+		color: white;
+		text-shadow: 2px 2px 4px #000000;
+	}
+	#button {
+		text-shadow: none;
+		color: #F41C6E;
+	}
+	header {
+		background: transparent;
+	}
+	.header-mobile {
+		background: transparent;
+	}
+	.header-mobile a {
+		color: white;
+	}
+	header a {
+		color: white;
+	}
+	#big2 {
+		position: relative;
+		top: 50px;
+	}
+	.hamburger a {
+		color: white;
+	}
+</style>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("October 3, 2020 17:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+	// Get today's date and time
+	var now = new Date().getTime();
+
+	// Find the distance between now and the count down date
+	var distance = countDownDate - now;
+
+	// Time calculations for days, hours, minutes and seconds
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	// Display the result in the element with id="demo"
+	document.getElementById("demo").innerHTML = minutes + ":" + seconds;
+
+	// If the count down is finished, write some text
+	if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("demo").innerHTML = "NOW";
+	}
+}, 1000);
+</script>
+<body>
+    <header>
+        <a href="https://youtube.com/plexion" id="logo">plexion</a>
+        <a href="/" id="nav" class="home">home</a>
+        <a href="https://scratch.mit.edu/users/PushToTheLimit/" target="_blank" id="nav" class="scratch">scratch <i class="fas fa-external-link-alt"></i></a>
+        <a href="https://osu.ppy.sh/users/15364179" target="_blank" id="nav" class="osu">osu! <i class="fas fa-external-link-alt"></i></a>
+        <a href="https://youtube.com/plexion" target="_blank" id="nav" class="youtube">youtube <i class="fas fa-external-link-alt"></i></a>
+    </header>
+    <div class=header-mobile>
+        <center>
+        <a href="https://youtube.com/plexion" id="logo">plexion</a><a href="javascript:void(0);" onclick="hamburger()"><i class="fas fa-angle-down" title="Open hamburger.."></i></a>
+    </div>
+    <div class="hamburger" id="hamburger">
+        <ul>
+            <li><a href="/" id="nav" class="home">home</a></li>
+            <li><a href="https://scratch.mit.edu/users/PushToTheLimit/" target="_blank" id="nav" class="scratch">scratch <i class="fas fa-external-link-alt"></i></a></li>
+            <li><a href="https://osu.ppy.sh/users/15364179" target="_blank" id="nav" class="osu">osu! <i class="fas fa-external-link-alt"></i></a></li>
+            <li><a href="https://youtube.com/plexion" target="_blank" id="nav" class="youtube">youtube <i class="fas fa-external-link-alt"></i></a></li>
+        </ul>
+    </div>
+    <div class="event">
+        <center>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<p id="big2">MINECRAFT LIVE HAS FINISHED</p>
+		<br/><br/><br/><br/>
+		<a id="button" class="youtube" target="_blank" href="https://youtube.com/minecraft/live">Watch the Event<i class="fab fa-youtube"></i></a>
+		<a id="button" class="youtube" target="_blank" href="https://youtube.com/plexion/live">Watch my Reaction<i class="fab fa-youtube"></i></a>
+        <br/>
+    </div>
+    <footer>
+        <center>
+		<hr />
+        <p>plexion.online 11.10.2020</p>
+	</footer>
+	<script>
+        function hamburger() {
+            var x = document.getElementById("hamburger");
+            if (x.style.display === "inherit") {
+            x.style.display = "none";
+            } else {
+            x.style.display = "inherit";
+            }
+        }
+    </script>
+</html>

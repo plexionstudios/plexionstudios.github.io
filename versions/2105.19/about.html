@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<head>
+    <title>About Me — plexion.dev</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+    <link rel="stylesheet" href="twemoji-awesome.css">
+    <link rel="stylesheet" href="projects/stylesheet.css">
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <!--<script src="medium.js"></script>-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <meta name="title" content="About @plexion">
+    <meta name="description" content="Everything you would want to know about plexion, the world's greatest youtuber ever (true)">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/about">
+    <meta property="og:title" content="About @plexion">
+    <meta property="og:description" content="Everything you would want to know about plexion, the world's greatest youtuber ever (true)">
+    <meta property="og:image" content="https://plexion.dev/tiles/LetsTalk.png">
+    <meta name="theme-color" content="#003AF8">
+</head>
+<body>
+    <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
+    <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
+    <header class="transparent-background">
+        <span class="header-brand">
+            <span class="brand">plexion.dev</span>
+        </span>
+        <span class="navigation">
+            <span class="header-links">
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons-outlined">emoji_events</i><i class="navi">Events</i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons-outlined">play_circle</i><i class="navi">Content</i></a>
+                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons-outlined">settings</i><i class="navi">Settings</i></a>
+            </span>
+        </span>
+        <span class="header-space">
+            <span class="h-dropdown account-dropdown">
+                <a class="navlink navlink-nohide navlink-icon" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
+                <div class="h-dropdown-content" id="account-dropdown-content">
+                    <ul>
+                        <li>
+                            <div class="card-padding">
+                                <h4>Page Settings</h4>
+                                <p class="descsmall">These settings are saved locally across the page.</p>
+                            </div>
+                        </li>
+                        <div class="channel-divider"></div>
+                        <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
+                        <div class="channel-divider"></div>
+                        <textarea class="hide-textarea" id="current-page-link2"></textarea>
+                        <script>document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
+                        <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
+                        <li><a href="javascript:void(0);" onclick="copyURL()" title="Share the link to this page" class="dropdown-with-icon"><i class="material-icons">link</i>Copy page link</a></li>
+                        <li><a href="javascript:void(0);" title="Share this page natively" class="share-os dropdown-with-icon"><i class="material-icons">share</i>Share via OS</a></li>
+                        <script>const shareButton = document.querySelector('.share-os');shareButton.addEventListener('click', event => {if (navigator.share) { navigator.share({title: encodeURIComponent(document.title),url: encodeURIComponent(document.URL)}).then(() => {console.log('Opened Web Share API dialog!');}).catch(console.error);} else {console.log('Web Share API unsupported in browser or operating system.');}});</script>
+                        <script>var modal = document.getElementById("share");var btn = document.getElementById("share-page");var span = document.getElementsByClassName("share-close")[0];btn.onclick = function() {modal.style.display = "flex";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}}</script>
+                        <div class="channel-divider"></div>
+                        <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
+                    </ul>
+                </div>
+            </span>
+        </span>
+    </header>
+    <div class="section big-section brand-colour align-left limited-section-padding under-header">
+        <h1 class="h7">HELLOOO</h1>
+        <p class="desc0 desc-margin">It is me, the man, the myth, the legend; plexion. On this page you can learn all about me, or not - whatever suits you. I think now's the time I'm supposed to go 𝓺𝓾𝓲𝓻𝓴𝔂 𝓽𝔀𝓲𝓽𝓽𝓮𝓻 𝓰𝓲𝓻𝓵 mode for my 𝓬𝓪𝓻𝓻𝓭 but oh well.</p>
+        <h4>Take a look at this very awesome selfie to compensate:</h4>
+            <div class="images">
+                <span class="imgcontainer">
+                    <img src="https://pbs.twimg.com/media/Eu126uKWYAAE7D0?format=jpg&name=large"></img>
+                    <p class="image-caption">(serious /srs /j /gen /dababy)</p>
+                </span>
+            </div>
+    </div>
+    <div class="paragraph">
+        <p class="desc0 desc-margin">Anyways, you probably want to know a bit about me, so here we go:</p>
+    </div>
+    <div class="paragraph">
+        <div id="bio">
+            <h4>General waffle to make the Twitter Girls happy™:</h4>
+            <ul>
+                <li><i class="material-icons margin-right">person</i><span class="desc0">Name: <strong>Cobain</strong></span></li>
+                <li><i class="material-icons margin-right">label</i><span class="desc0">Pronouns: <strong>he/him</strong> ✨✨✨🥺🥺</span></li>
+                <li><i class="material-icons margin-right">fact_check</i><span class="desc0">Age: <strong>Minor</strong></span></li>
+                <li><i class="material-icons margin-right">cake</i><span class="desc0">Birthday: <strong>16th December</strong></span></li>
+                <li><i class="material-icons margin-right">tips_and_updates</i><span class="desc0">Built: <strong>Different</strong> 💪</span></li>
+            </ul>
+        </div>
+        <div id="interests">
+            <br>
+            <div class="channel-divider"></div>
+            <label class="overline">INTERESTS</label>
+            <br>
+            <br>
+            <h4>Favourite Artists + Music</h4>
+            <ul>
+                <label class="overline margin-left">HYPERPOP</label>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/ab67616100005174e69dfc8140b3d23716dbf36c" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/channel/UCgVCTlNEvc7at5cAkTsKWCA">glaive</a> - <a href="https://youtu.be/gd-7Ye_vX1k">astrid</a></span></li>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/7a5af4d377e72f6bb8ba398582601e3683562510" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/miraie">miraie</a> - <a href="https://youtu.be/5Bd8rscNuEc">facade</a></span></li>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/2d33ff45cc5150f8e2918865f25c56d7dace74e7" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://open.spotify.com/artist/2QpNu8tDPv9n7oY34J1TtN?si=2jatz2GtTyuryUzGJ_ZjHw">p4rkr</a> - <a href="https://youtu.be/9KljsSMNy5g">ok im cool</a></span></li>
+                <label class="overline margin-left">OTHERS  </label>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/ab6761610000517441d8564976cf9fa475dcd768" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/channel/UCcgdJABWFq6cyoyzOE9NWiA">MC Virgins</a> - <a href="https://youtu.be/08fjqkLnBwM">Forever Virgins</a></span></li>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/6a16d67e33f8a58dc9af12dfa11c83be7c71d27a" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/channel/UCH-yX2TEpxmqr8-jRdfRgNQ">khai dreams</a> - <a href="https://youtu.be/uPp1ZVeG2Eg">All I Need</a></span></li>
+                <li><img class="pfp margin-right" src="https://i.scdn.co/image/ab67616d00001e024d45507688e64ea6bfb98068" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/channel/UC3S-tYM-oNvzuCQHD8cUvqg">Lovejoy</a> - <a href="https://youtu.be/WXqbR-h5VMY">One Day</a></span></li>
+            </ul>
+            <h4>Favourite Content Creators</h4>
+            <p class="descsmall">gogy 🥺🥺🥺</p>
+            <ul>
+                <li><img class="pfp margin-right" src="https://yt3.ggpht.com/QLzrjAFif3FSfySZFnzP2ApaiFPHU6dF7WwGciKNQx0Z9-iaeH0nPlUJUtrzNO8slYGtno0Evw0=s88-c-k-c0x00ffffff-no-rj" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/miraie">Miraie<i class="material-icons check">check_circle</i></a></li>
+                <li><img class="pfp margin-right" src="https://yt3.ggpht.com/ytc/AAUvwniq8sHi0_Abe7nCjLnWd2D1mfisF0Z5QtLwbWBHcQ=s88-c-k-c0x00ffffff-no-rj" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/binfy">Binfy<i class="material-icons check">check_circle</i></a></li>
+                <li><img class="pfp margin-right" src="https://yt3.ggpht.com/ytc/AAUvwngsxo2_bbEd8Ad62V4gyda5K-iXDnizxFWY-JWP=s88-c-k-c0x00ffffff-no-rj" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/jschlattLIVE">jschlattLIVE<i class="material-icons check">check_circle</i></a></li>
+                <li><img class="pfp margin-right" src="https://yt3.ggpht.com/ytc/AAUvwniqcr5z0qK4eW1pqA_KGp3kiODMVG0wLs-zzsjXuw=s88-c-k-c0x00ffffff-no-rj" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/tommyinnit">TommyInnit<i class="material-icons check">check_circle</i></a></li>
+                <li><img class="pfp margin-right" src="https://yt3.ggpht.com/sMq-6E9hyHkXjWCG7KKLoIm1Z-GnghDCF6FfLMLGCcI9RLeSmsuP3WSuANbtkfk_EzB9XyWhTg=s88-c-k-c0x00ffffff-no-rj" style="width: 32px; height: 32px; position: relative; bottom: 3px;"><span class="desc0"><a href="https://youtube.com/plexion">Diana pp</a> YEP</li>
+            </ul>
+        </div>
+        <div id="socials">
+            <br>
+            <div class="channel-divider"></div>
+            <label class="overline">FIND ME</label>
+            <br>
+            <br>
+            <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+            <h4>Socials</h4>
+            <ul>
+                <li><i class="fab fa-youtube margin-right col-yt" style="font-size: 24px;"></i><span class="desc0">YouTube: <a href="https://youtube.com/plexion">plexion</a></span></li>
+                <li><i class="fab fa-twitter margin-right col-tw" style="font-size: 24px;"></i><span class="desc0">Twitter: <a href="https://twitter.com/plexionlive">@plexionlive</a></span></li>
+                <li><i class="fab fa-spotify margin-right col-sp" style="font-size: 24px;"></i><span class="desc0">Spotify: <a href="https://open.spotify.com/user/musicalpika?si=c86c6e10b72b4d4c">cobainn</a></span></li>
+                <li><i class="material-icons margin-right">code</i><span class="desc0">DEV Twitter: <a href="https://twitter.com/plexionDev">@plexionDev</a></span></li>
+                <li><i class="fab fa-twitch margin-right col-twc" style="font-size: 24px;"></i><span class="desc0">Twitch: <a href="https://twitch.tv/plexionLIVE">plexionLIVE</a></span></li>
+                <li><img class="pfp margin-right" src="pfp/PMC.png" style="width: 24px; height: 24px; border: 0; position: relative; bottom: 3px;"><span class="desc0">PMC: <a href="https://planetminecraft.com/member/plexiondev">plexionDev</a></span></li>
+                <li><i class="fab fa-github margin-right" style="font-size: 24px;"></i><span class="desc0">Github: <a href="https://github.com/plexionstudios">plexionstudios</a></span></li>
+                <li><img class="pfp margin-right" src="https://i.ppy.sh/013ed2c11b34720790e74035d9f49078d5e9aa64/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f4272616e645f6964656e746974795f67756964656c696e65732f696d672f75736167652d66756c6c2d636f6c6f75722e706e67" style="width: 24px; height: 24px; border: 0; position: relative; bottom: 3px; border-radius: 0; border: 0;"><span class="desc0">osu!: <a href="https://osu.ppy.sh/u/plexion">plexion</a></span></li>
+            </ul>
+            <h4><i class="material-icons">lock</i> Private Socials + Contact</h4>
+            <p class="descsmall">Only add me if you know me IRL (or i won't accept)</p>
+            <ul>
+                <li><i class="fab fa-twitter margin-right col-tw" style="font-size: 24px;"></i><span class="desc0">Private Twitter: <a href="https://twitter.com/dothebingbong">@dothebingbong</a></span></li>
+                <li><i class="fab fa-instagram margin-right col-in" style="font-size: 24px;"></i><span class="desc0">Private Instagram: <a href="https://instagram.com/cobain4k">@cobain4k</a></span></li>
+                <li><img class="pfp margin-right" src="https://discord.com/assets/3437c10597c1526c3dbd98c737c2bcae.svg" style="width: 24px; height: 24px; border: 0; position: relative; bottom: 3px; border-radius: 0; border: 0;"><span class="desc0">Private Discord: <a href="javascript:void(0)">plexion#2021</a></span></li>
+            </ul>
+            <h4>Contact me</h4>
+            <ul>
+                <li><i class="fab fa-twitter margin-right col-tw" style="font-size: 24px;"></i><span class="desc0">Twitter DMs: <a href="https://twitter.com/plexionlive">@plexionlive</a></span></li>
+                <li><i class="material-icons margin-right">email</i><span class="desc0">Business Email: <a href="mailto:plexionbusiness@gmail.com">plexionbusiness@gmail.com</a></span></li>
+                <li><i class="material-icons margin-right">email</i><span class="desc0">Extra Business Email: <a href="mailto:plexionnet@gmail.com">plexionnet@gmail.com</a></span></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <span class="desc0">Home</span><i class="material-icons navnext">navigate_next</i><strong class="desc0">About Me</strong>
+        <p class="desc2">Last modified on 18/05/2021</p>
+        <br>
+        <div class="footer-extras">
+            <div class="footer-links">
+                <span class="footer-link">
+                    <h4>Explore</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="/" class="quick-link small-link icon-all"><i class="material-icons">grid_view</i>Projects</a></li>
+                        <li><a target="_blank" href="/events" class="quick-link small-link icon-events"><i class="material-icons">emoji_events</i>Events</a></li>
+                        <li><a target="_blank" href="/videos" class="quick-link small-link icon-content"><i class="material-icons">play_circle</i>Content</a></li>
+                        <li><a target="_blank" href="/accounts" class="quick-link small-link icon-accounts"><i class="material-icons">switch_account</i>Accounts</a></li>
+                        <li><a target="_blank" href="/medium" class="quick-link small-link icon-medium"><i class="material-icons">article</i>Medium</a></li>
+                        <li><a target="_blank" href="/support" class="quick-link small-link icon-support"><i class="material-icons">help_outline</i>Support</a></li>
+                        <li><a target="_blank" href="/about" class="quick-link small-link icon-support"><i class="material-icons">info_outline</i>About Me</a></li>
+                    </ul>
+                    <br>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="/datapacks" class="quick-link small-link icon-datapack"><i class="material-icons">code</i>Datapacks</a></li>
+                        <li><a target="_blank" href="/resourcepacks" class="quick-link small-link icon-resourcepack"><i class="material-icons">invert_colors</i>Resourcepacks</a></li>
+                        <li><a target="_blank" href="/maps" class="quick-link small-link icon-map"><i class="material-icons">public</i>Maps</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>Socials</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                        <li><a target="_blank" href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                        <li><a target="_blank" href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                        <li><a target="_blank" href="https://osu.ppy.sh/users/15364179" class="quick-link small-link">osu! profile</a></li>
+                        <li><a target="_blank" href="https://planetminecraft.com/member/plexiondev/" class="quick-link small-link">PMC profile</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>Channels</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://youtube.com/plexion" class="quick-link small-link">plexion</a></li>
+                        <li><a target="_blank" href="/gold" class="quick-link small-link">plexionGOLD</a></li>
+                        <li><a target="_blank" href="/osuplexion" class="quick-link small-link">osu!plexion</a></li>
+                        <li><a target="_blank" href="/vods" class="quick-link small-link">plexionVODS</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCa_Athc7tNM5qGYoV4bkJXg" class="quick-link small-link">Let's Talk</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCzLpMY-4wJDLKv9SjQhOkAw" class="quick-link small-link">plexionDev</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UC0NYCYnD-knNSzu_S7mklWg" class="quick-link small-link">plexionSHORTS</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCj8niB3t9HEZOLY3PQcB2jw" class="quick-link small-link">plexionMUSIC</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCr1k0PAb2BaBdW3jf7lSQDg" class="quick-link small-link">plextra</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>plexion.dev</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
+                        <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/commits/master" class="quick-link small-link">View github archives</a></li>
+                        <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
+                    </ul>
+                </span>
+            </div>
+            <br>
+            <div class="channel-divider"></div>
+            <br>
+            <span class="footer-end">
+                <p class="secondary-text desc2">Build 2105.18</p>
+                <a href="mailto:plexionbusiness@gmail.com" class="desc2 secondary-text">Send an email</a>                
+            </span>
+            <div class="debug-info">
+                <br>
+                <br>
+                <p class="overline secondary-text">Debug Information<i class="overline new margin-left">Experimental</i></p>
+                <br>
+                <label class="overline margin-right">theme</label><code id="theme"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">embed</label><code id="embed"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">guided</label><code id="guided"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">scratch</label><code id="scratch"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">animations</label><code id="animations"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">experience</label><code id="experience"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">colour</label><code id="colour"></code>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-bg-header");
+            } else {
+                $("header").removeClass("scrolled-bg-header");
+            }
+        });
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+
+        let theme = localStorage.getItem("theme");
+        if (theme && theme === "dark-mode") {
+            localStorage.setItem("theme", "");
+        } else {
+            localStorage.setItem("theme", "dark-mode");
+        }
+
+        document.getElementById("theme").textContent = localStorage.getItem("theme");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("embed") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("embed").textContent =
+        localStorage.getItem("embed") || "light";
+    })();
+
+    function disableEmbeds() {
+        let element = document.body;
+        element.classList.toggle("disable-embeds");
+
+        let embed = localStorage.getItem("embed");
+        if (embed && embed === "disable-embeds") {
+            localStorage.setItem("embed", "");
+        } else {
+            localStorage.setItem("embed", "disable-embeds");
+        }
+
+        document.getElementById("embed").textContent = localStorage.getItem("embed");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("guided") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("guided").textContent =
+        localStorage.getItem("guided") || "light";
+    })();
+
+    function disableGuided() {
+        let element = document.body;
+        element.classList.toggle("disable-guided");
+
+        let embed = localStorage.getItem("guided");
+        if (embed && embed === "disable-guided") {
+            localStorage.setItem("guided", "");
+        } else {
+            localStorage.setItem("guided", "disable-guided");
+        }
+
+        document.getElementById("guided").textContent = localStorage.getItem("guided");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("scratch") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("scratch").textContent =
+        localStorage.getItem("scratch") || "light";
+    })();
+
+    function enableScratch() {
+        let element = document.body;
+        element.classList.toggle("show-scratch");
+
+        let embed = localStorage.getItem("scratch");
+        if (embed && embed === "show-scratch") {
+            localStorage.setItem("scratch", "");
+        } else {
+            localStorage.setItem("scratch", "show-scratch");
+        }
+
+        document.getElementById("scratch").textContent = localStorage.getItem("scratch");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("animations") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("animations").textContent =
+        localStorage.getItem("animations") || "light";
+    })();
+
+    function removeAnimations() {
+        let element = document.body;
+        element.classList.toggle("disable-animations");
+
+        let embed = localStorage.getItem("animations");
+        if (embed && embed === "disable-animations") {
+            localStorage.setItem("animations", "");
+        } else {
+            localStorage.setItem("animations", "disable-animations");
+        }
+
+        document.getElementById("animations").textContent = localStorage.getItem("animations");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("experience") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("experience").textContent =
+        localStorage.getItem("experience") || "light";
+    })();
+
+    function experienceToggle() {
+        let element = document.body;
+        element.classList.toggle("minimal");
+
+        let embed = localStorage.getItem("experience");
+        if (embed && embed === "minimal") {
+            localStorage.setItem("experience", "");
+        } else {
+            localStorage.setItem("experience", "minimal");
+        }
+
+        document.getElementById("experience").textContent = localStorage.getItem("experience");
+    }
+    function experienceDefault() {
+        let element = document.body;
+        element.classList.remove("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "");
+    }
+    function experienceMinimal() {
+        let element = document.body;
+        element.classList.add("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "minimal");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("colour") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("colour").textContent =
+        localStorage.getItem("colour") || "light";
+    })();
+
+    function colourBlue() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.remove("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "");
+    }
+    function colourRed() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.add("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "red");
+    }
+    function colourGreen() {
+        let element = document.body;
+        element.classList.remove("red");
+        element.classList.add("green");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "green");
+    }
+    </script>
+    <!--<script>
+        function createRipple(event) {
+            const button = event.currentTarget;
+        
+            const circle = document.createElement("span");
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const radius = diameter / 2;
+        
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+            circle.classList.add("ripple");
+        
+            const ripple = button.getElementsByClassName("ripple")[0];
+        
+            if (ripple) {
+                ripple.remove();
+            }
+        
+            button.appendChild(circle);
+        }
+        
+        const buttons = document.getElementsByClassName("button");
+        for (const button of buttons) {
+            button.addEventListener("click", createRipple);
+        }
+    </script>-->
+</body>

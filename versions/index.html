@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>The Archives — plexion.dev</title>
+    <title>The Archives — PLEXION</title>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
@@ -10,8 +10,7 @@
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://plexion.dev/versions">
     <meta property="og:title" content="The Archives">
@@ -79,11 +78,10 @@
         </span>
         <span class="navigation">
             <span class="header-links">
-                <a href="/" class="navlink" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
-                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">emoji_events</i><i class="navi">Events</i></a>
-                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">play_circle</i><i class="navi">Content</i></a>
-                <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">switch_account</i><i class="navi">Accounts</i></a>
-                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons">settings</i><i class="navi">Settings</i></a>
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons-outlined">emoji_events</i><i class="navi">Events</i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons-outlined">play_circle</i><i class="navi">Content</i></a>
+                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons-outlined">settings</i><i class="navi">Settings</i></a>
             </span>
         </span>
         <span class="header-space">
@@ -100,8 +98,14 @@
                         <div class="channel-divider"></div>
                         <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
                         <div class="channel-divider"></div>
-                        <li><a href="javascript:void(0);" onclick="sharePage()" title="Share the link to this page" class="dropdown-with-icon" id="share-page"><i class="material-icons">share</i>Share</a></li>
+                        <textarea class="hide-textarea" id="current-page-link2"></textarea>
+                        <script>document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
+                        <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
+                        <li><a href="javascript:void(0);" onclick="copyURL()" title="Share the link to this page" class="dropdown-with-icon"><i class="material-icons">link</i>Copy page link</a></li>
+                        <li><a href="javascript:void(0);" title="Share this page natively" class="share-os dropdown-with-icon"><i class="material-icons">share</i>Share via OS</a></li>
+                        <script>const shareButton = document.querySelector('.share-os');shareButton.addEventListener('click', event => {if (navigator.share) { navigator.share({title: encodeURIComponent(document.title),url: encodeURIComponent(document.URL)}).then(() => {console.log('Opened Web Share API dialog!');}).catch(console.error);} else {console.log('Web Share API unsupported in browser or operating system.');}});</script>
                         <script>var modal = document.getElementById("share");var btn = document.getElementById("share-page");var span = document.getElementsByClassName("share-close")[0];btn.onclick = function() {modal.style.display = "flex";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}}</script>
+                        <div class="channel-divider"></div>
                         <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
                         <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
                     </ul>
@@ -109,44 +113,329 @@
             </span>
         </span>
     </header>
-    <div class="introduction" id="start">
-        <h1>Welcome to The Archives</h1>
-        <p class="desc0">Backups from 2019 to 2021 have been saved and are stored here.</p>
+    <div class="app-bar">
+        <h1>The Archives</h1>
+        <p class="desc0">Backups from 2019 to 2021 have been saved and are stored here. If you're looking for a specific build and it's not here, check the <a href="https://github.com/plexionstudios/plexionstudios.github.io/commits/master">Github archives</a> - it's probably there.</p>
     </div>
     <div class="section">
-        <p class="big2">2021</p>
-        <div class="dropdown">
-            <a class="button important drop-button" href="javascript:void(0);" title="View backups from 2021">View 2021</a>
-            <div class="dropdown-content">
-                <ul>
-                    <li><a href="2103.9/" title="View plexion.dev 2103.9">2103.9</a></li>
-                    <li><a href="2102.25/" title="View plexion.dev 2102.25">2102.25</a></li>
-                    <li><a href="2102.8/" title="View plexion.dev 2102.8">2102.8</a></li>
-                    <li><a href="Feb3-2021/" title="View plexion.dev as of 03/02/2021">03/02/2021</a></li>
-                    <li><a href="Jan21-2021/" title="View plexion.dev as of 21/01/2021">21/01/2021</a></li>
-                    <li><a href="Jan18-2021/" title="View plexion.dev as of 18/01/2021">18/01/2021</a></li>
-                </ul>
+        <h1>PLEXION.DEV IN 2021</h1>
+    </div>
+    <div class="tiles">
+        <span class="info-tile main-background" onclick="location.href='2105.26/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2105.26/cover.png" alt="Cover image" onerror="this.src='../error.png'">
             </div>
-        </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">26/05/2021</label>
+                <h2 class="h9">2105.26</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2105.26/">View</a>
+                <a class="tile-browse button option" title="Download this project" href="https://github.com/plexionstudios/plexionstudios.github.io/commit/7d800985895d45131ed1eddc27c7d4cc074a790a">Browse on Github</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2105.23/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2105.23/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">23/05/2021</label>
+                <h2 class="h9">2105.23</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2105.23/">View</a>
+                <a class="tile-browse button option" title="Download this project" href="https://github.com/plexionstudios/plexionstudios.github.io/commit/e59488488d58de619292279d6e23f6dca5c74300">Browse on Github</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2105.20/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2105.20/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">20/05/2021</label>
+                <h2 class="h9">2105.20</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2105.20/">View</a>
+                <a class="tile-browse button option" title="Download this project" href="https://github.com/plexionstudios/plexionstudios.github.io/commit/94cd3e8df3d73c5750c354d364f94a6ae3d8d0ac">Browse on Github</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2105.19/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2105.19/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">19/05/2021</label>
+                <h2 class="h9">2105.19</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2105.19/">View</a>
+                <a class="tile-browse button option" title="Download this project" href="https://github.com/plexionstudios/plexionstudios.github.io/commit/8254800191ff40fb23b68db4d5e0d591c0ffff61">Browse on Github</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2105.8/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2105.8/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">08/05/2021</label>
+                <h2 class="h9">2105.8</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2105.8/">View</a>
+                <a class="tile-browse button option" title="Download this project" href="https://github.com/plexionstudios/plexionstudios.github.io/commit/a1e91a4fb8a7d4e93503616e4e451573f5a703ee">Browse on Github</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2104.17/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2104.17/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">17/04/2021</label>
+                <h2 class="h9">2104.17</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2104.17/">View</a>
+                <a class="tile-browse button option" title="Download this project" href="https://github.com/plexionstudios/plexionstudios.github.io/commit/03737a62a00573c901eb482d8286e6215cf9f4e2">Browse on Github</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2104.11/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2104.11/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">11/04/2021</label>
+                <h2 class="h9">2104.11</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2104.11/">View</a>
+                <a class="tile-browse button option" title="Download this project" href="https://github.com/plexionstudios/plexionstudios.github.io/commit/c1862244353135eaa7fdd950325dafeb94ff15e1">Browse on Github</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2104.9/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2104.9/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">09/04/2021</label>
+                <h2 class="h9">2104.9</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2104.9/">View</a>
+                <a class="tile-browse button option" title="Download this project" href="https://github.com/plexionstudios/plexionstudios.github.io/commit/c1d7418e47ce76d090546f6816e94018cf7f17fc">Browse on Github</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2104.5/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2104.5/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">05/04/2021</label>
+                <h2 class="h9">2104.5</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2104.5/">View</a>
+                <a class="tile-browse button option" title="Download this project" href="https://github.com/plexionstudios/plexionstudios.github.io/commit/f654787193ae8ff0dc186a815dbe21d697e4a4b3">Browse on Github</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2103.28/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2103.28/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">28/03/2021</label>
+                <h2 class="h9">2103.28</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2103.28/">View</a>
+                <a class="tile-browse button option" title="Download this project" href="https://github.com/plexionstudios/plexionstudios.github.io/commit/ffdb741eff0ac8708039c395622bf2d8457d4853">Browse on Github</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2103.9/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2103.9/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">09/03/2021</label>
+                <h2 class="h9">2103.9</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2103.9/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2102.25/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2102.25/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">25/02/2021</label>
+                <h2 class="h9">2102.25</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2102.25/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2102.8/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2102.8/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">08/02/2021</label>
+                <h2 class="h9">2102.8</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2102.8/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='Feb3-2021/';">
+            <div class="tile-image tile-smallimage">
+                <img src="Feb3-2021/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">03/02/2021</label>
+                <h2 class="h9">Feb3-2021</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="Feb3-2021/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='Jan21-2021/';">
+            <div class="tile-image tile-smallimage">
+                <img src="Jan21-2021/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">21/01/2021</label>
+                <h2 class="h9">Jan21-2021</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="Jan21-2021/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='Jan18-2021/';">
+            <div class="tile-image tile-smallimage">
+                <img src="Jan18-2021/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">18/01/2021</label>
+                <h2 class="h9">Jan18-2021</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="Jan18-2021/">View</a>
+            </div>
+        </span>
     </div>
     <div class="section">
-        <p class="big2">2020</p>
-        <div class="dropdown">
-            <a class="button important drop-button" href="javascript:void(0);" title="View backups from 2020">View 2020</a>
-            <div class="dropdown-content">
-                <ul>
-                    <li><a href="Nov27-2020/" title="View Page as of 27/11/2020">27/11/2020</a></li>
-                    <li><a href="/v1/" title="View Page as of 22/11/2020">22/11/2020</a></li>
-                    <li><a href="Nov11-2020/" title="View Page as of 11/11/2020">11/11/2020</a></li>
-                    <li><a href="Nov3-2020/" title="View Page as of 03/11/2020">03/11/2020</a></li>
-                    <li><a href="Nov2-2020/" title="View Page as of 02/11/2020">02/11/2020</a></li>
-                    <li><a href="plexion.online/" title="View Page as of 01/11/2020">01/11/2020 (plexion.online)</a></li>
-                    <li><a href="2020light/" title="View Page as of 26/06/2020">26/06/2020 (light theme)</a></li>
-                    <li><a href="2020dark/" title="View Page as of 11/04/2020">11/04/2020 (dark theme)</a></li>
-                    <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/tree/master/versions/backups" title="View extra pages">Extra items</a></li>
-                </ul>
+        <h1>PLEXION.ONLINE IN 2020</h1>
+    </div>
+    <div class="tiles">
+        <span class="info-tile main-background" onclick="location.href='Nov27-2020/';">
+            <div class="tile-image tile-smallimage">
+                <img src="Nov27-2020/cover.png" alt="Cover image" onerror="this.src='../error.png'">
             </div>
-        </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">27/11/2020</label>
+                <h2 class="h9">Nov27-2020</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="Nov27-2020/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='/v1/';">
+            <div class="tile-image tile-smallimage">
+                <img src="/v1/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">22/11/2020</label>
+                <h2 class="h9">Nov22-2020</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="/v1/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='Nov11-2020/';">
+            <div class="tile-image tile-smallimage">
+                <img src="Nov11-2020/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">11/11/2020</label>
+                <h2 class="h9">Nov11-2020</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="Nov11-2020/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='Nov3-2020/';">
+            <div class="tile-image tile-smallimage">
+                <img src="Nov3-2020/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">03/11/2020</label>
+                <h2 class="h9">Nov3-2020</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="Nov3-2020/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='Nov2-2020/';">
+            <div class="tile-image tile-smallimage">
+                <img src="Nov2-2020/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">02/11/2020</label>
+                <h2 class="h9">Nov2-2020</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="Nov2-2020/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='plexion.online/';">
+            <div class="tile-image tile-smallimage">
+                <img src="plexion.online/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">01/11/2020</label>
+                <h2 class="h9">plexion.online</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="plexion.online/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2020light/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2020light/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">26/06/2020</label>
+                <h2 class="h9">2020light</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2020light/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='2020dark/';">
+            <div class="tile-image tile-smallimage">
+                <img src="2020dark/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline last-updated">11/04/2020</label>
+                <h2 class="h9">2020dark</h2>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="2020dark/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='https://github.com/plexionstudios/plexionstudios.github.io/tree/master/versions/backups/';">
+            <div class="tile-image tile-smallimage">
+                <img src="unknown/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <h2 class="h9">Extra items</h2>
+                <p class="desc3">Browse through any extra leftovers from plexion.online</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="https://github.com/plexionstudios/plexionstudios.github.io/tree/master/versions/backups">View on Github</a>
+            </div>
+        </span>
     </div>
     <div class="section">
         <p class="big2">2019</p>
@@ -161,73 +450,73 @@
     </div>
     <div class="page-full"></div>
     <footer>
-        <h1>plexion.dev</h1>
-        <p class="desc0">Last updated: 16/04/2021</p>
+        <span class="desc0">Home</span><i class="material-icons navnext">navigate_next</i><strong class="desc0">The Archives</strong>
+        <p class="desc2">Last modified on 27/05/2021</p>
+        <br>
         <div class="footer-extras">
-            <br>
-            <div class="footer-pages">
-                <h4>Explore</h4>
-                <div class="small-tiles">
-                    <a class="small-tile" href="/">
-                        <div class="tile-icon icon-all">
-                            <i class="material-icons">grid_view</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Projects</h4>
-                        </div>
-                    </a>
-                    <a class="small-tile" href="/events">
-                        <div class="tile-icon icon-events">
-                            <i class="material-icons">emoji_events</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Events</h4>
-                        </div>
-                    </a>
-                    <a class="small-tile" href="/videos">
-                        <div class="tile-icon icon-content">
-                            <i class="material-icons">play_circle</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Content</h4>
-                        </div>
-                    </a>
-                    <a class="small-tile" href="/accounts">
-                        <div class="tile-icon icon-share">
-                            <i class="material-icons">switch_account</i>
-                        </div>
-                        <div class="tile-text">
-                            <h4>Accounts</h4>
-                        </div>
-                    </a>
-                </div>
-            </div>
             <div class="footer-links">
                 <span class="footer-link">
-                    <p class="overline secondary-text">Follow me</p>
+                    <h4>Explore</h4>
                     <ul class="quick-links">
-                        <li><a href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
-                        <li><a href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
-                        <li><a href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
-                        <li><a href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                        <li><a target="_blank" href="/" class="quick-link small-link icon-all"><i class="material-icons">grid_view</i>Projects</a></li>
+                        <li><a target="_blank" href="/events" class="quick-link small-link icon-events"><i class="material-icons">emoji_events</i>Events</a></li>
+                        <li><a target="_blank" href="/videos" class="quick-link small-link icon-content"><i class="material-icons">play_circle</i>Content</a></li>
+                        <li><a target="_blank" href="/accounts" class="quick-link small-link icon-accounts"><i class="material-icons">switch_account</i>Accounts</a></li>
+                        <li><a target="_blank" href="/brand" class="quick-link small-link"><i class="material-icons col-brand">verified</i>My Brand</a></li>
+                        <li><a target="_blank" href="/medium" class="quick-link small-link icon-medium"><i class="material-icons">article</i>Medium</a></li>
+                        <li><a target="_blank" href="/support" class="quick-link small-link icon-support"><i class="material-icons">help_outline</i>Support</a></li>
+                        <li><a target="_blank" href="/about" class="quick-link small-link icon-support"><i class="material-icons">info_outline</i>About Me</a></li>
+                    </ul>
+                    <br>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="/datapacks" class="quick-link small-link icon-datapack"><i class="material-icons">code</i>Datapacks</a></li>
+                        <li><a target="_blank" href="/resourcepacks" class="quick-link small-link icon-resourcepack"><i class="material-icons">invert_colors</i>Resourcepacks</a></li>
+                        <li><a target="_blank" href="/maps" class="quick-link small-link icon-map"><i class="material-icons">public</i>Maps</a></li>
                     </ul>
                 </span>
                 <span class="footer-link">
-                    <p class="overline secondary-text">Build Info</p>
+                    <h4>Socials</h4>
                     <ul class="quick-links">
-                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
-                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
+                        <li><a target="_blank" href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                        <li><a target="_blank" href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                        <li><a target="_blank" href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                        <li><a target="_blank" href="https://osu.ppy.sh/users/15364179" class="quick-link small-link">osu! profile</a></li>
+                        <li><a target="_blank" href="https://planetminecraft.com/member/plexiondev/" class="quick-link small-link">PMC profile</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>Channels</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://youtube.com/plexion" class="quick-link small-link">plexion</a></li>
+                        <li><a target="_blank" href="/gold" class="quick-link small-link">plexionGOLD</a></li>
+                        <li><a target="_blank" href="/osuplexion" class="quick-link small-link">osu!plexion</a></li>
+                        <li><a target="_blank" href="/vods" class="quick-link small-link">plexionVODS</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCa_Athc7tNM5qGYoV4bkJXg" class="quick-link small-link">Let's Talk</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCzLpMY-4wJDLKv9SjQhOkAw" class="quick-link small-link">plexionDev</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UC0NYCYnD-knNSzu_S7mklWg" class="quick-link small-link">plexionSHORTS</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCj8niB3t9HEZOLY3PQcB2jw" class="quick-link small-link">plexionMUSIC</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCr1k0PAb2BaBdW3jf7lSQDg" class="quick-link small-link">plextra</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>plexion.dev</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
                         <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/commits/master" class="quick-link small-link">View github archives</a></li>
                         <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
                     </ul>
                 </span>
             </div>
             <br>
-            <p class="overline header-text">Have any questions?</p>
-            <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
+            <div class="channel-divider"></div>
             <br>
-            <br>
-            <p class="overline secondary-text">plexion.dev Build 2104.16</p>
+            <span class="footer-end">
+                <p class="secondary-text desc2">Build 2105.27</p>
+                <a href="mailto:plexionbusiness@gmail.com" class="desc2 secondary-text">Send an email</a>                
+            </span>
             <div class="debug-info">
                 <br>
                 <br>
@@ -337,6 +626,29 @@
     </script>
     <script>
         (function() {
+    let onpageLoad = localStorage.getItem("scratch") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("scratch").textContent =
+        localStorage.getItem("scratch") || "light";
+    })();
+
+    function enableScratch() {
+        let element = document.body;
+        element.classList.toggle("show-scratch");
+
+        let embed = localStorage.getItem("scratch");
+        if (embed && embed === "show-scratch") {
+            localStorage.setItem("scratch", "");
+        } else {
+            localStorage.setItem("scratch", "show-scratch");
+        }
+
+        document.getElementById("scratch").textContent = localStorage.getItem("scratch");
+    }
+    </script>
+    <script>
+        (function() {
     let onpageLoad = localStorage.getItem("animations") || "";
     let element = document.body;
     element.classList.add(onpageLoad);
@@ -428,5 +740,4 @@
         let embed = localStorage.getItem("colour");
         localStorage.setItem("colour", "green");
     }
-    </script>
 </body>

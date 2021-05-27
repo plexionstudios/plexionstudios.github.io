@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<head>
+    <title>Resourcepacks — plexion.dev</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
+    <link rel="stylesheet" href="../stylesheet.css">
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <meta name="title" content="plexion.dev">
+    <meta name="description" content="The easiest and simplest way to try out all Minecraft datapacks featured on plexion for yourself.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/">
+    <meta property="og:title" content="plexion.dev">
+    <meta property="og:description" content="The easiest and simplest way to try out all Minecraft datapacks featured on plexion for yourself on plexion.dev">
+    <meta property="og:image" content="https://plexion.dev/tiles/LetsTalk.png">
+    <meta name="theme-color" content="#003AF8">
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <div class="popup-bg" id="share">
+        <div class="share-dialog">
+            <div class="card-padding share-header with-icon">
+                <h2>Share this page</h2>
+                <a class="icon-button icon-button-s share-close"><i class="material-icons">close</i></a>
+            </div>
+            <div class="channel-divider"></div>
+            <div class="card-padding share-info">
+                <div class="share-places">
+                    <p class="desc0">Choose an option below to share wherever you choose:</p>
+                    <div class="tooltip">
+                        <a class="icon-button share-twitter tile-browse fas-icon-button" id="share-twitter" href="https://twitter.com/intent/tweet?" target="_blank" onclick="window.open('https://twitter.com/intent/tweet?text=gaming%20at%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Twitter</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-facebook tile-browse fas-icon-button" href="https://www.facebook.com/sharer/sharer.php?u=&t=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Facebook</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-reddit tile-browse fas-icon-button" href="http://www.reddit.com/submit?url=&title=" target="_blank" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i class="fab fa-reddit" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Reddit</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-linkedin tile-browse fas-icon-button" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i class="fab fa-linkedin" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">LinkedIn</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-email"><i class="material-icons" href="mailto:?subject=&body=:%20" target="_blank" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(document.URL)); return false;">email</i></a>
+                        <span class="tooltip-text">Email</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-os"><i class="material-icons">open_in_new</i></a>
+                        <span class="tooltip-text">Native share</span>
+                    </div>
+                    <script>const shareButton = document.querySelector('.share-os');shareButton.addEventListener('click', event => {if (navigator.share) { navigator.share({title: encodeURIComponent(document.title),url: encodeURIComponent(document.URL)}).then(() => {console.log('Opened Web Share API dialog!');}).catch(console.error);} else {console.log('Web Share API unsupported in browser or operating system.');}});</script>
+                </div>
+                <br>
+                <div class="channel-divider"></div>
+                <br>
+                <div class="share-other">
+                    <p class="desc0">Alternatively, you can just copy the link:</p>
+                    <code class="share-https big-code" id="current-page-link"></code>
+                    <textarea class="hide-textarea" id="current-page-link2"></textarea>
+                    <script>document.getElementById("current-page-link").innerHTML =window.location.href;document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
+                    <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
+                    <br>
+                    <a class="button tile-browse share-copy" href="javascript:void(0);" onclick="copyURL()">Copy Page Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
+    <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
+    <header>
+        <span class="header-brand">
+            <span class="brand">plexion.dev</span>
+        </span>
+        <span class="navigation">
+            <span class="header-links">
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">grid_view</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">emoji_events</i><i class="navi">Events</i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">play_circle</i><i class="navi">Content</i></a>
+                <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">switch_account</i><i class="navi">Accounts</i></a>
+                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons">settings</i><i class="navi">Settings</i></a>
+            </span>
+        </span>
+        <span class="header-space">
+            <span class="h-dropdown account-dropdown">
+                <a class="navlink navlink-nohide navlink-icon" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
+                <div class="h-dropdown-content" id="account-dropdown-content">
+                    <ul>
+                        <li>
+                            <div class="card-padding">
+                                <h4>Page Settings</h4>
+                                <p class="descsmall">These settings are saved locally across the page.</p>
+                            </div>
+                        </li>
+                        <div class="channel-divider"></div>
+                        <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
+                        <div class="channel-divider"></div>
+                        <li><a href="javascript:void(0);" onclick="sharePage()" title="Share the link to this page" class="dropdown-with-icon" id="share-page"><i class="material-icons">share</i>Share</a></li>
+                        <script>var modal = document.getElementById("share");var btn = document.getElementById("share-page");var span = document.getElementsByClassName("share-close")[0];btn.onclick = function() {modal.style.display = "flex";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}}</script>
+                        <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
+                    </ul>
+                </div>
+            </span>
+        </span>
+    </header>
+    <div class="app-bar">
+        <div class="description desc-left">
+            <span class="description-badge">
+                <i class="material-icons icon-resourcepack">invert_colors</i>
+            </span>
+            <span class="description-text">
+                <span>
+                    <h1>Resourcepacks</h1>
+                </span>
+            </span>
+        </div>
+    </div>
+    <div class="section"></div>
+    <div class="tiles">
+        <span class="info-tile main-background" onclick="location.href='projects/simple-dark';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/simple-dark.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">09/03/2021</label>
+                <h2>Simple Dark</h2>
+                <p class="desc0">A sleek and modern dark-themed GUI resource pack for Minecraft.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option con" href="projects/simple-dark">View</a>
+                <a class="tile-browse button option dow" href="downloads/simple-dark9321.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='https://www.planetminecraft.com/texture-pack/1-17-backport/';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/117backport.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">18/02/2021</label>
+                <h2>1.17 Backport</h2>
+                <p class="desc0">A very simple backport of all new 1.17 textures in 1.16.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option ext" href="https://www.planetminecraft.com/texture-pack/1-17-backport/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/spyglass';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/spyglass.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">08/11/2020</label>
+                <h2>Spyglass HUD Remover</h2>
+                <p class="desc0">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option con" href="projects/spyglass">View</a>
+                <a class="tile-browse button option dow" href="downloads/spyglass81120.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/metrodark';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/darktheme.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">19/08/2020</label>
+                <h2>Metro Dark</h2>
+                <p class="desc0">A GUI re-skin that helps your eyes late at night. Predecessor to Simple Dark.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option con" href="projects/metrodark">View</a>
+                <a class="tile-browse button option dow" href="downloads/metropitchblack.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/corruption.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">11/02/2020</label>
+                <h2>Minecraft Corruption</h2>
+                <p class="desc0">Changes the colour scheme of the Warped Forest to match the Corruption from Terraria.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option ext" href="https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/">View</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/mc4k.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">04/01/2020</label>
+                <h2>Minecraft 4k</h2>
+                <p class="desc0">It's not actually 4k resolution. A compilation of the textures in Minecraft 4k added into the latest version.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option ext" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/">View</a>
+            </div>
+        </span>
+    </div>
+    <footer>
+        <h1>plexion.dev</h1>
+        <p class="desc0">Last updated: 16/04/2021</p>
+        <div class="footer-extras">
+            <br>
+            <div class="footer-pages">
+                <h4>Explore</h4>
+                <div class="small-tiles">
+                    <a class="small-tile" href="/">
+                        <div class="tile-icon icon-all">
+                            <i class="material-icons">grid_view</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Projects</h4>
+                        </div>
+                    </a>
+                    <a class="small-tile" href="/events">
+                        <div class="tile-icon icon-events">
+                            <i class="material-icons">emoji_events</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Events</h4>
+                        </div>
+                    </a>
+                    <a class="small-tile" href="/videos">
+                        <div class="tile-icon icon-content">
+                            <i class="material-icons">play_circle</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Content</h4>
+                        </div>
+                    </a>
+                    <a class="small-tile" href="/accounts">
+                        <div class="tile-icon icon-share">
+                            <i class="material-icons">switch_account</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Accounts</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <span class="footer-link">
+                    <p class="overline">Drop a follow</p>
+                    <ul class="quick-links">
+                        <li><a href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                        <li><a href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                        <li><a href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                        <li><a href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <p class="overline secondary-text">Build Info</p>
+                    <ul class="quick-links">
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
+                        <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
+                        <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
+                    </ul>
+                </span>
+            </div>
+            <br>
+            <h4>Have any questions?</h4>
+            <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
+            <br>
+            <br>
+            <p class="overline secondary-text">plexion.dev Build 2104.16</p>
+            <div class="debug-info">
+                <br>
+                <br>
+                <p class="overline secondary-text">Debug Information<i class="overline new margin-left">Experimental</i></p>
+                <br>
+                <label class="overline margin-right">theme</label><code id="theme"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">embed</label><code id="embed"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">guided</label><code id="guided"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">scratch</label><code id="scratch"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">animations</label><code id="animations"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">experience</label><code id="experience"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">colour</label><code id="colour"></code>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-header");
+            } else {
+                $("header").removeClass("scrolled-header");
+            }
+        });
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+
+        let theme = localStorage.getItem("theme");
+        if (theme && theme === "dark-mode") {
+            localStorage.setItem("theme", "");
+        } else {
+            localStorage.setItem("theme", "dark-mode");
+        }
+
+        document.getElementById("theme").textContent = localStorage.getItem("theme");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("embed") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("embed").textContent =
+        localStorage.getItem("embed") || "light";
+    })();
+
+    function disableEmbeds() {
+        let element = document.body;
+        element.classList.toggle("disable-embeds");
+
+        let embed = localStorage.getItem("embed");
+        if (embed && embed === "disable-embeds") {
+            localStorage.setItem("embed", "");
+        } else {
+            localStorage.setItem("embed", "disable-embeds");
+        }
+
+        document.getElementById("embed").textContent = localStorage.getItem("embed");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("guided") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("guided").textContent =
+        localStorage.getItem("guided") || "light";
+    })();
+
+    function disableGuided() {
+        let element = document.body;
+        element.classList.toggle("disable-guided");
+
+        let embed = localStorage.getItem("guided");
+        if (embed && embed === "disable-guided") {
+            localStorage.setItem("guided", "");
+        } else {
+            localStorage.setItem("guided", "disable-guided");
+        }
+
+        document.getElementById("guided").textContent = localStorage.getItem("guided");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("animations") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("animations").textContent =
+        localStorage.getItem("animations") || "light";
+    })();
+
+    function removeAnimations() {
+        let element = document.body;
+        element.classList.toggle("disable-animations");
+
+        let embed = localStorage.getItem("animations");
+        if (embed && embed === "disable-animations") {
+            localStorage.setItem("animations", "");
+        } else {
+            localStorage.setItem("animations", "disable-animations");
+        }
+
+        document.getElementById("animations").textContent = localStorage.getItem("animations");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("experience") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("experience").textContent =
+        localStorage.getItem("experience") || "light";
+    })();
+
+    function experienceToggle() {
+        let element = document.body;
+        element.classList.toggle("minimal");
+
+        let embed = localStorage.getItem("experience");
+        if (embed && embed === "minimal") {
+            localStorage.setItem("experience", "");
+        } else {
+            localStorage.setItem("experience", "minimal");
+        }
+
+        document.getElementById("experience").textContent = localStorage.getItem("experience");
+    }
+    function experienceDefault() {
+        let element = document.body;
+        element.classList.remove("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "");
+    }
+    function experienceMinimal() {
+        let element = document.body;
+        element.classList.add("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "minimal");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("colour") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("colour").textContent =
+        localStorage.getItem("colour") || "light";
+    })();
+
+    function colourBlue() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.remove("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "");
+    }
+    function colourRed() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.add("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "red");
+    }
+    function colourGreen() {
+        let element = document.body;
+        element.classList.remove("red");
+        element.classList.add("green");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "green");
+    }
+    </script>
+</body>

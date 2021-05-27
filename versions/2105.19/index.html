@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<head>
+    <title>plexion.dev</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <!--<script src="medium.js"></script>-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <meta name="title" content="plexion.dev">
+    <meta name="description" content="The easiest and simplest way to try out all Minecraft datapacks featured on plexion for yourself.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/">
+    <meta property="og:title" content="plexion.dev">
+    <meta property="og:description" content="The easiest and simplest way to try out all Minecraft datapacks featured on plexion for yourself on plexion.dev">
+    <meta property="og:image" content="https://plexion.dev/tiles/LetsTalk.png">
+    <meta name="theme-color" content="#003AF8">
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <div class="popup-bg" id="share">
+        <div class="share-dialog">
+            <div class="card-padding share-header with-icon">
+                <h2>Share this page</h2>
+                <a class="icon-button icon-button-s share-close"><i class="material-icons">close</i></a>
+            </div>
+            <div class="channel-divider"></div>
+            <div class="card-padding share-info">
+                <div class="share-places">
+                    <p class="desc3">Choose an option below to share wherever you choose:</p>
+                    <div class="tooltip">
+                        <a class="icon-button share-twitter tile-browse fas-icon-button" id="share-twitter" href="https://twitter.com/intent/tweet?" target="_blank" onclick="window.open('https://twitter.com/intent/tweet?text=gaming%20at%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Twitter</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-facebook tile-browse fas-icon-button" href="https://www.facebook.com/sharer/sharer.php?u=&t=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Facebook</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-reddit tile-browse fas-icon-button" href="http://www.reddit.com/submit?url=&title=" target="_blank" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i class="fab fa-reddit" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Reddit</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-linkedin tile-browse fas-icon-button" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i class="fab fa-linkedin" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">LinkedIn</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-email"><i class="material-icons" href="mailto:?subject=&body=:%20" target="_blank" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(document.URL)); return false;">email</i></a>
+                        <span class="tooltip-text">Email</span>
+                    </div>
+                </div>
+                <br>
+                <div class="channel-divider"></div>
+                <br>
+                <div class="share-other">
+                    <p class="desc3">Alternatively, you can just copy the link:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
+    <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
+    <header class="transparent-background">
+        <span class="header-brand">
+            <span class="brand">plexion.dev</span>
+        </span>
+        <span class="navigation">
+            <span class="header-links">
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons-outlined">emoji_events</i><i class="navi">Events</i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons-outlined">play_circle</i><i class="navi">Content</i></a>
+                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons-outlined">settings</i><i class="navi">Settings</i></a>
+            </span>
+        </span>
+        <span class="header-space">
+            <span class="h-dropdown account-dropdown">
+                <a class="navlink navlink-nohide navlink-icon" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
+                <div class="h-dropdown-content" id="account-dropdown-content">
+                    <ul>
+                        <li>
+                            <div class="card-padding">
+                                <h4>Page Settings</h4>
+                                <p class="descsmall">These settings are saved locally across the page.</p>
+                            </div>
+                        </li>
+                        <div class="channel-divider"></div>
+                        <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
+                        <div class="channel-divider"></div>
+                        <textarea class="hide-textarea" id="current-page-link2"></textarea>
+                        <script>document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
+                        <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
+                        <li><a href="javascript:void(0);" onclick="copyURL()" title="Share the link to this page" class="dropdown-with-icon"><i class="material-icons">link</i>Copy page link</a></li>
+                        <li><a href="javascript:void(0);" title="Share this page natively" class="share-os dropdown-with-icon"><i class="material-icons">share</i>Share via OS</a></li>
+                        <script>const shareButton = document.querySelector('.share-os');shareButton.addEventListener('click', event => {if (navigator.share) { navigator.share({title: encodeURIComponent(document.title),url: encodeURIComponent(document.URL)}).then(() => {console.log('Opened Web Share API dialog!');}).catch(console.error);} else {console.log('Web Share API unsupported in browser or operating system.');}});</script>
+                        <script>var modal = document.getElementById("share");var btn = document.getElementById("share-page");var span = document.getElementsByClassName("share-close")[0];btn.onclick = function() {modal.style.display = "flex";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}}</script>
+                        <div class="channel-divider"></div>
+                        <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
+                    </ul>
+                </div>
+            </span>
+        </span>
+    </header>
+    <!--<div class="table-of-contents guided-introduction">
+        <span class="text">
+            <h1>Welcome Back.</h1>
+            <p class="desc1">Here are some quick links to get you started:</p>
+            <br>
+            <ul class="quick-links">
+                <li><a class="quick-link" href="projects/simple-dark" title="View Simple Dark resource pack">Simple Dark</a></li>
+                <li><a class="quick-link" href="projects/uhc" title="View UHC Datapack">UHC Datapack</a></li>
+                <li><a class="quick-link" href="projects/voidrising" title="View Void Rising Datapack">Void Rising Datapack</a></li>
+            </ul>
+            <br>
+            <br>
+            <label class="overline secondary-text">More links</label>
+            <ul class="quick-links">
+                <li><a class="quick-link" href="accounts" title="View my social accounts">Social accounts</a></li>
+                <li><a class="quick-link" href="versions/before-project-guided" title="View all">View all projects</a></li>
+            </ul>
+        </span>
+    </div>-->
+    <div class="section big-section plexbg2 large-section spotlight-section align-left margin-bottom under-header" style="background-image: url(thumbnails/ELECTION.png);">
+        <h1 class="white-text shadow-text">The Election</h1>
+        <p class="desc0 white-text shadow-text">Watch now on YouTube</p>
+        <br>
+        <a class="button important tile-browse" target="_blank" href="https://youtu.be/RbjH16xr1Is">Watch</a>
+    </div>
+    <div class="section big-section plexbg2 large-section spotlight-section">
+        <h1>Watch the Minecraft Events</h1>
+        <p class="desc0">New videos released every<i class="exi">1</i> month.</p>
+        <br>
+        <a class="button" href="/events">Events Homepage</a>
+        <a class="button important" target="_blank" href="https://youtube.com/playlist?list=PLbaASKiZWzbpxBMr1gvlwFXrVcOVswVjv">Watch on YouTube</a>
+    </div>
+    <!--<div class="section">
+        <a class="button important" href="#">Important Button</a>
+        <a class="button" href="#">Button</a>
+        <a class="button important" href="#">this is just a really really really big button used for ripple testing</a>
+        <div class="dropdown">
+            <a class="button drop-button" href="javascript:void(0);" onclick="category()" title="View page categories">Dropdown</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#minecraft" title="Browse Minecraft">Minecraft</a></li>
+                    <li><a href="#scratch" title="Browse Scratch">Scratch</a></li>
+                    <li><a href="#channels" title="Browse Channels">Channels</a></li>
+                    <li><a href="#extras" title="Browse the Extras">Extras</a></li>
+                    <li><a href="#timeline" title="Browse the Timeline">Timeline</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tooltip">
+            <a class="button" href="#">Tooltip Button</a>
+            <span class="tooltip-text">This is a tooltip</span>
+        </div>
+        <div class="tooltip">
+            <a class="button important" href="#">LARGE TOOLTIP BUTTON LARGE TOOLTIP BUTTON LARGE TOOLTIP BUTTON </a>
+            <div class="tooltip-text">This is a tooltip</div>
+        </div>
+        <a class="icon-button" href="#"><i class="material-icons">add_reaction</i></a>
+        <a class="icon-button subscribe2" href="#"><i class="material-icons">add_reaction</i></a>
+        <br>
+        <input type="text" placeholder="Username">
+        <br>
+        <input type="email" placeholder="Email address">
+        <br>
+        <input type="password" placeholder="Password">
+        <br>
+        <button>this is a normal button</button>
+        <button class="button">this is a styled button</button>
+        <button class="button important">this is a styled button</button>
+        <br>
+        <span class="options">
+            <div class="tooltip">
+                <a class="button view ext" target="_blank" href="https://www.planetminecraft.com/data-pack/simple-uhc/">More info</a>
+                <span class="tooltip-text">View on PMC</span>
+            </div>
+            <div class="dropdown">
+                <a class="button download important drop-button" title="View all download options" href="javascript:void(0);">Download</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="dropdown-header">SIDE BRANCH</li>
+                        <li><a href="../downloads/plexionuhc21221BUILD2.zip" title="Download 1.0.4 (published 21/02/2021)">Version 1.0.4</a></li>
+                        <li class="dropdown-header">MAIN BRANCH</li>
+                        <li><a href="../downloads/plexionuhc17221.zip" title="Download 1.0.3 (published 17/02/2021)">Version 1.0.3</a></li>
+                        <li><a href="../downloads/plexionuhc15221.zip" title="Download 1.0.2 (published 15/02/2021)">Version 1.0.2</a></li>
+                        <li><a href="../downloads/plexionuhc14221BUILD2.zip" title="Download 1.0.1 (published 14/02/2021)">Version 1.0.1</a></li>
+                        <li><a href="../downloads/plexionuhc14221.zip" title="Download 1.0 (published 14/02/2021)">Version 1.0</a></li>
+                    </ul>
+                </div>
+            </div>
+        </span>
+    </div>-->
+    <!--<div class="text guided-introduction" id="choose-a-video">
+        <h2>Have a video on your mind?</h2>
+        <p class="desc0">Choose the thumbnail you're looking for and you'll be brought right to the project.</p>
+    </div>
+    <div class="videofeed guided-introduction">
+        <div class="tooltip videofeed-tooltip">
+            <span class="video" onclick="location.href='projects/uhc';">
+                <img src="thumbnails/this-uhc-was-insane.png" alt="Thumbnail for my UHC video">
+            </span>
+            <a href="https://youtu.be/sQ-S6D6R85o" class="white-text tooltip-text">This Minecraft UHC was INSANE.</a>
+        </div>
+        <div class="tooltip videofeed-tooltip">
+            <span class="video" onclick="location.href='projects/voidrising';">
+                <img src="thumbnails/void-rising.png" alt="Thumbnail for my Void Rising video">
+            </span>
+            <a href="https://youtu.be/sQ-S6D6R85o" class="white-text tooltip-text">Minecraft but the VOID RISES</a>
+        </div>
+    </div>-->
+    <!--<div class="section" id="search">
+        <h3>Or optionally, search:</h3>
+    </div>
+    <div class="google-search">
+        <script async src="https://cse.google.com/cse.js?cx=d524565e2ee307fc6"></script>
+        <div class="gcse-searchbox"></div>
+        <div class="gcse-searchresults"></div>
+    </div>-->
+    <!--<div class="introduction updated" id="recently-updated">
+        <h2 class="black-text">Recently updated</h2>
+        <p class="desc0 black-text">Projects that have recieved patches and feature updates recently.</p>
+    </div>
+    <div class="tiles updated-background">
+        <span class="info-tile card-padding" id="simple-dark" onclick="location.href='projects/simple-dark';">
+            <h2 class="tile-head white-text shadow-text">Simple Dark</p>
+            <p class="tile-desc white-text shadow-text">A sleek and modern dark-themed GUI resource pack for Minecraft.</p>
+            <p class="tile-date overline white-text shadow-text">2103.9</p>
+            <br>
+            <br>
+            <a class="tile-browse button important tile-download con" href="projects/simple-dark">View</a>
+        </span>
+        <span class="info-tile card-padding" id="uhc" onclick="location.href='projects/uhc';">
+            <h2 class="tile-head white-text shadow-text">UHC</p>
+            <p class="tile-desc white-text shadow-text">A simple UHC Datapack featuring many standards from the genre compatiable with the latest versions of Minecraft.</p>
+            <p class="tile-date overline white-text shadow-text">2102.20</p>
+            <br>
+            <a class="tile-browse button important tile-download con" href="projects/uhc">View</a>
+        </span>
+    </div>-->
+    <div class="app-bar" id="minecraft">
+        <h2>All of Minecraft</h2>
+        <p class="desc0">A selection of my Minecraft datapacks, resourcepacks and custom maps. Find more on my <a href="https://planetminecraft.com/member/plexionlive" title="@plexionlive on PMC">PMC profile</a></p>
+        <br>
+        <h4>Optionally, sort by one type:</h4>
+        <ul class="quick-links">
+            <li><a target="_blank" href="/datapacks" class="quick-link small-link icon-datapack"><i class="material-icons">code</i>Datapacks</a></li>
+            <li><a target="_blank" href="/resourcepacks" class="quick-link small-link icon-resourcepack"><i class="material-icons">invert_colors</i>Resourcepacks</a></li>
+            <li><a target="_blank" href="/maps" class="quick-link small-link icon-map"><i class="material-icons">public</i>Maps</a></li>
+        </ul>
+        <!--<br>
+        <div class="channel-divider"></div>
+        <br>
+        <div class="sort-config">
+            <label class="overline dropd">Sort by</label>
+        </div>
+        <div class="description desc-left sort-options">
+            <span class="description-text settings-title">
+                <h4 class="main-title">Sort by</h4>
+            </span>
+            <span class="description-text settings-text">
+                <li class="toggles">
+                    <ul>
+                        <a onclick="toggleDatapack()" href="javascript:void(0)" class="toggle-box tile-browse sort-0"><span class="toggle-check"><i class="material-icons sort-0-check">check</i></span></a>
+                        <span class="desc2 header-bold main-text">Datapack</span>
+                    </ul>
+                    <ul>
+                        <a onclick="toggleResourcepack()" href="javascript:void(0)" class="toggle-box tile-browse sort-1"><span class="toggle-check"><i class="material-icons sort-1-check">check</i></span></a>
+                        <span class="desc2 header-bold main-text">Resourcepack</span>
+                    </ul>
+                    <ul>
+                        <a onclick="toggleMap()" href="javascript:void(0)" class="toggle-box tile-browse sort-2"><span class="toggle-check"><i class="material-icons sort-2-check">check</i></span></a>
+                        <span class="desc2 header-bold main-text">Map</span>
+                    </ul>
+                </li>
+            </span>
+        </div>-->
+    </div>
+    <div class="tiles">
+        <span class="info-tile main-background" onclick="location.href='projects/lavarising';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/lavarising.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left datapack">Datapack</label>
+                <label class="overline tag project-updated">19/04/2021</label>
+                <h2>Lava Rising</h2>
+                <p class="desc0">A lightweight and easy-to-use datapack that makes the lava rise from the bottom of the world to the top.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/lavarising">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/lavarising15421.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/racetotheend';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/racetotheend.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left datapack">Datapack</label>
+                <label class="overline">28/03/2021</label>
+                <h2>Race To The End</h2>
+                <p class="desc0">A simple, yet challenging datapack that tasks teams of 3 to beat Minecraft.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/racetotheend">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/racetotheend20321.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/simple-dark';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/simple-dark.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">09/03/2021</label>
+                <h2>Simple Dark</h2>
+                <p class="desc0">A sleek and modern dark-themed GUI resource pack for Minecraft.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/simple-dark">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/simple-dark9321.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/uhc';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/uhc.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left datapack">Datapack</label>
+                <label class="overline">20/02/2021</label>
+                <h2>UHC</h2>
+                <p class="desc0">A simple UHC Datapack featuring many standards from the genre compatiable with the latest versions of Minecraft.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/uhc">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/plexionuhc21221BUILD2.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='https://www.planetminecraft.com/texture-pack/1-17-backport/';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/117backport.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">18/02/2021</label>
+                <h2>1.17 Backport</h2>
+                <p class="desc0">A very simple backport of all new 1.17 textures in 1.16.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="https://www.planetminecraft.com/texture-pack/1-17-backport/">View on PMC</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/voidrising';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/voidrising.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left datapack">Datapack</label>
+                <label class="overline">18/01/2021</label>
+                <h2>Void Rising</h2>
+                <p class="desc0">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/voidrising">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/voidrising18121.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/spyglass';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/spyglass.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">08/11/2020</label>
+                <h2>Spyglass HUD Remover</h2>
+                <p class="desc0">A simple pack designed for version 20w45a+ of 1.17 that removes the circular border you see when scoping with the Spyglass.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/spyglass">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/spyglass81120.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/hauntinghunters';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/hideandseek.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left map">Map</label>
+                <label class="overline">10/06/2020</label>
+                <h2>Haunting Hunters</h2>
+                <p class="desc0">A classic game of hide and seek set inside a haunted mansion with cool powerups purchasable.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/hauntinghunters">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/hauntinghunters10620.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='projects/metrodark';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/darktheme.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">19/08/2020</label>
+                <h2>Metro Dark</h2>
+                <p class="desc0">A GUI re-skin that helps your eyes late at night. Predecessor to Simple Dark.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="projects/metrodark">View</a>
+                <a class="tile-browse button option" title="Download this project" href="downloads/metropitchblack.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/corruption.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">11/02/2020</label>
+                <h2>Minecraft Corruption</h2>
+                <p class="desc0">Changes the colour scheme of the Warped Forest to match the Corruption from Terraria.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="https://www.planetminecraft.com/texture-pack/corruption-in-minecraft/">View on PMC</a>
+            </div>
+        </span>
+        <span class="info-tile main-background" onclick="location.href='https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/';">
+            <div class="tile-image tile-smallimage">
+                <img src="tiles/mc4k.png" alt="Cover image" onerror="this.src='error.png'">
+            </div>
+            <div class="card-padding card-info">
+                <label class="overline tag no-margin-left resourcepack">Resourcepack</label>
+                <label class="overline">04/01/2020</label>
+                <h2>Minecraft 4k</h2>
+                <p class="desc0">It's not actually 4k resolution. A compilation of the textures in Minecraft 4k added into the latest version.</p>
+            </div>
+            <div class="card-options card-nobg">
+                <a class="tile-browse button option" title="View this project" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/">View on PMC</a>
+            </div>
+        </span>
+    </div>
+    <div class="section scratch" id="scratch">
+        <h2>Scratch Projects</h2>
+        <p class="desc0">All of my Scratch projects i've created over the past few years.</p>
+    </div>
+    <div class="tiles scratch">
+        <span class="info-tile" id="plexfonts" onclick="location.href='https://scratch.mit.edu/projects/448813989/';">
+            <div class="card-padding card-info">
+                <h2 class="tile-head white-text shadow-text">PlexFonts</h2>
+                <p class="tile-desc white-text shadow-text">A font renderer for Scratch, built from the ground up.</p>
+            </div>
+            <div class="card-options">
+                <a class="tile-browse button important tile-download ext" href="https://scratch.mit.edu/projects/448813989/">View</a>
+            </div>
+        </span>
+        <span class="info-tile" id="vortexos" onclick="location.href='https://scratch.mit.edu/projects/405720977/';">
+            <div class="card-padding card-info">
+                <h2 class="tile-head white-text shadow-text">VortexOS</h2>
+                <p class="tile-desc white-text shadow-text">An 'operating system' created all in Scratch. Rework is scheduled at some point.</p>
+            </div>
+            <div class="card-options">
+                <a class="tile-browse button important tile-download ext" href="https://scratch.mit.edu/projects/405720977/">View</a>
+            </div>
+        </span>
+        <span class="info-tile" id="osuscratch" onclick="location.href='https://scratch.mit.edu/projects/412027544/';">
+            <div class="card-padding card-info">
+                <h2 class="tile-head white-text shadow-text">osu!scratch</h2>
+                <p class="tile-desc white-text shadow-text">A re-creation of osu! in Scratch under heavy development.</p>
+            </div>
+            <div class="card-options">
+                <a class="tile-browse button important tile-download ext" href="https://scratch.mit.edu/projects/412027544/">View</a>
+            </div>
+        </span>
+        <span class="info-tile" id="antivirus" onclick="location.href='https://scratch.mit.edu/projects/360638558/';">
+            <div class="card-padding card-info">
+                <h2 class="tile-head white-text shadow-text">Antivirus</h2>
+                <p class="tile-desc white-text shadow-text">A take on classic arcade shooter games all made in Scratch.</p>
+            </div>
+            <div class="card-options">
+                <a class="tile-browse button important tile-download ext" href="https://scratch.mit.edu/projects/360638558/">View</a>
+            </div>
+        </span>
+        <span class="info-tile" id="aoth" onclick="location.href='https://scratch.mit.edu/projects/360638558/';">
+            <div class="card-padding card-info">
+                <h2 class="tile-head white-text shadow-text">Adventures of the Hero</h2>
+                <p class="tile-desc white-text shadow-text">Original title; I know. AOTH is a small series of boss fights you can work your way through.</p>
+            </div>
+            <div class="card-options">
+                <a class="tile-browse button important tile-download ext" href="https://scratch.mit.edu/projects/301016807/">View</a>
+            </div>
+        </span>
+        <span class="info-tile" id="towermage" onclick="location.href='https://scratch.mit.edu/projects/301016807/';">
+            <div class="card-padding card-info">
+                <h2 class="tile-head white-text shadow-text">Tower Mage</h2>
+                <p class="tile-desc white-text shadow-text">A heavy work-in-progress game that features the character in a blue cave-like enviroment.</p>
+            </div>
+            <div class="card-options">
+                <a class="tile-browse button important tile-download ext" href="https://scratch.mit.edu/projects/412027544/">View</a>
+            </div>
+        </span>
+    </div>
+    <div class="introduction big-intro" id="timeline">
+        <h1>How it begun</h1>
+        <p class="desc0">My channel has come a long way since 2018 and there were some very crucial moments that led up to where I am today.</p>
+    </div>
+    <div class="channel-timeline">
+        <div class="container left">
+          <div class="info-tile">
+            <div class="tooltip videofeed-tooltip">
+                <span class="video">
+                    <img src="thumbnails/scratch-tutorial.jpg" alt="Thumbnail for my Scratch Tutorial video">
+                </span>
+                <a href="https://youtu.be/3AfvqPD9guI" class="white-text tooltip-text">Scratch Tutorial - Simple Top Down Scrolling</a>
+            </div>
+            <div class="card-padding">
+                <p class="overline">October 2018</p>
+                <h2>Where it all started.</h2>
+                <p class="desc0">Surprisingly enough, I didn't start my channel solely based on Minecraft. My first video I ever uploaded to YouTube was a tutorial for <a href="https://scratch.mit.edu">Scratch</a>. This became my most viewed video for way too long.</p>
+                <br>
+                <p class="descsmall">Image source: Scratch Tutorial - Simple Top Down Scrolling</p>
+            </div>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="info-tile">
+            <div class="tooltip videofeed-tooltip">
+                <span class="video">
+                    <img src="thumbnails/diamond-sword.jpg" alt="Thumbnail for my Diamond Sword video">
+                </span>
+                <a href="https://youtu.be/Mj0KvcPl5QI" class="white-text tooltip-text">How to make a 256x Diamond Sword</a>
+            </div>
+            <div class="card-padding">
+                <p class="overline">October 2018</p>
+                <h2>And it continued..</h2>
+                <p class="desc0">After that incredible Scratch video I decided to switch up the content (after only one upload). For some reason the I "taught" people how to draw a 256x Diamond Sword. To this day, scientists can still not uncover what ancient techniques are being taught here.</p>
+                <br>
+                <p class="descsmall">Image source: How to make a 256x Diamond Sword</p>
+            </div>
+          </div>
+        </div>
+        <div class="container left">
+            <div class="info-tile">
+                <div class="tooltip videofeed-tooltip">
+                    <span class="video">
+                        <img src="thumbnails/pewdiepie-congratulations.jpg" alt="Thumbnail for my PewDiePie Congratulations video">
+                    </span>
+                    <a href="https://youtu.be/zHFxnI2Wf2w" class="white-text tooltip-text">PewDiePie Congratulations: 8-Bit Mix</a>
+                </div>
+                <div class="card-padding">
+                    <p class="overline">April 2019</p>
+                    <h2>200 VIEWS!</h2>
+                    <p class="desc0">In April 2019, I published a video called 'PewDiePie Congratulations - 8 Bit Mix' featuring a mix of an 8-bit congratulations remix and the official vocals. At one point, the video reached the #2 spot on my channel's most viewed shelf until being overtaken later on.</p>
+                    <br>
+                    <p class="descsmall">Image source: PewDiePie Congratulations: 8-Bit Mix</p>
+                </div>   
+            </div>
+          </div>
+          <div class="container right">
+            <div class="info-tile">
+                <div class="tooltip videofeed-tooltip">
+                    <span class="video">
+                        <img src="thumbnails/plexmas-1.jpg" alt="Thumbnail for my first Plexmas video">
+                    </span>
+                    <a href="https://youtu.be/hEkw6GjZBcM" class="white-text tooltip-text">Plexmas #1: Using SNOWBALLS as a Weapon in Skywars?</a>
+                </div>
+                <div class="card-padding">
+                    <p class="overline">December 2019</p>
+                    <h2>Plexmas 2019.</h2>
+                    <p class="desc0">Walking to school one day I came up with this idea, "How about I make a special series for Christmas this year, it won't be that bad". I then created it and ran it from the 13th of December to, what was going to be the 25th but was eventually cancelled on the 17th. I really didn't think that through.</p>
+                    <br>
+                    <p class="descsmall">Image source: Plexmas #1: Using SNOWBALLS as a Weapon in Skywars?</p>
+                </div>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="info-tile">
+                <div class="tooltip videofeed-tooltip">
+                    <span class="video">
+                        <img src="thumbnails/playing-karlson-by-dani.png" alt="Thumbnail for my Karlson 3D video">
+                    </span>
+                    <a href="https://youtu.be/tU0UwEGgTWU" class="white-text tooltip-text">Playing KARLSON by Dani! (karlson 3d)</a>
+                </div>
+                <div class="card-padding">
+                    <p class="overline">January 2020</p>
+                    <h2>KARLSON</h2>
+                    <p class="desc0">After school on a Friday, I recorded a video on a new game made by a YouTuber I watch, DaniDev! I downloaded the game and played it while recording. I edited it and uploaded it, not expecting much attention on the video. The day after, I wake up to have a notification feed flooded with subscriber and comment notifications. It was surreal to see and I thank you all so much!</p>   
+                    <br>
+                    <p class="descsmall">Image source: Playing KARLSON by Dani! (karlson 3d)</p>
+                </div>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="info-tile">
+                <div class="tooltip videofeed-tooltip">
+                    <span class="video">
+                        <img src="thumbnails/100.png" alt="Thumbnail for my 100 Sub Special video">
+                    </span>
+                    <a href="https://youtu.be/4RLahHkq17w" class="white-text tooltip-text">THE 100 SUB SPECIAL</a>
+                </div>
+                <div class="card-padding">
+                    <p class="overline">April 2020</p>
+                    <h2>The Grand Milestone</h2>
+                    <p class="desc0">On the 11th of April 2020, I reached the milestone of 100 SUBS! This then lead to a grand 100 sub special video featuring a compilation of my favourite videos and you boys!</p>
+                    <br>
+                    <p class="descsmall">Image source: THE 100 SUB SPECIAL</p>
+                </div>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="info-tile">
+                <div class="tooltip videofeed-tooltip">
+                    <span class="video">
+                        <img src="thumbnails/minecraft-manhunt.png" alt="Thumbnail for my first Manhunt video">
+                    </span>
+                    <a href="https://youtu.be/lrMCqNwL-VE" class="white-text tooltip-text">The Minecraft MANHUNT.</a>
+                </div>
+                <div class="card-padding">
+                    <p class="overline">August 2020</p>
+                    <h2>Shift in Content Quality</h2>
+                    <p class="desc0">In August, I made a big change to the quality of my content & thumbnails that still continues to be worked on to this day. It was at this point that the thumbnails began to be more refined and the videos became more unique and structured.</p>     
+                    <br>
+                <p class="descsmall">Image source: The Minecraft MANHUNT.</p>
+                </div>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="info-tile">
+                <div class="tooltip videofeed-tooltip">
+                    <span class="video">
+                        <img src="thumbnails/plexion2020-rewind.png" alt="Thumbnail for my 2020 Rewind video">
+                    </span>
+                    <a href="https://youtu.be/lrMCqNwL-VE" class="white-text tooltip-text">The #PLEXION2020 Rewind.</a>
+                </div>
+                <div class="card-padding">
+                    <p class="overline">November 2020</p>
+                    <h2>AGAIN?!</h2>
+                    <p class="desc0">After the already incredible milestone earlier this year, on the 19th of November 2020 I reached 200 SUBSCRIBERS. WHAT.</p>     
+                    <br>
+                    <p class="descsmall">Image source: The #PLEXION2020 Rewind.</p>
+                </div>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="info-tile">
+                <div class="tooltip videofeed-tooltip">
+                    <span class="video">
+                        <img src="thumbnails/void-rising.png" alt="Thumbnail for my Void Rising video">
+                    </span>
+                    <a href="https://youtu.be/sQ-S6D6R85o" class="white-text tooltip-text">Minecraft but the VOID RISES</a>
+                </div>
+                <div class="card-padding">
+                    <p class="overline">January 2021</p>
+                    <h2>100 in a day</h2>
+                    <p class="desc0">To start of #PLEXION2021 with a bang, the saga of Minecraft Tournament videos started. The first one being Void Rising. It took just over a day for the video to reach 100 views. WHAT. You boys are genuinely insane and I can't thank you enough.</p>
+                    <br>
+                    <p class="descsmall">Image source: Minecraft but the VOID RISES</p>
+                </div>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="info-tile">
+                <div class="watch2"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UUwQXJpqlQXT07YBLpKF6RSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="card-padding">
+                    <p class="overline">Present Day</p>
+                    <h2>The Aftermath</h2>
+                    <p class="desc0">I'm quite happy with the content I'm pushing out to my channel these days. A lot more time and effort is put into each video so I would appreciate it if you could subscribe!</p>   
+                    <br>
+                    <p class="descsmall">Video source: Uploads from plexion</p>
+                </div>
+            </div>
+          </div>
+      </div> 
+    <!--<div class="section" id="medium">
+        <h2>MEDIUM</h2>
+    </div>
+    <div class="channel-embed">
+        <span class="channel-pfp" id="medium-icon">
+        </span>
+        <span class="channel-info">
+            <p class="channel-name">@plexion</p>
+            <p class="channel-desc">an astrophyiscisisisit degree and just pure genius all put into one medium account</p>
+        </span>
+        <div class="line-break"></div>
+        <div class="channel-buttons">
+            <a class="button important" href="https://plexion.medium.com">View all posts</a>
+        </div>   
+    </div>
+    <div class="medium-feed">
+        <div class="tiles" id="jsonContent"></div>
+    </div>-->
+    <footer>
+        <p class="descsmall"><i class="exi">1</i>Hopefully.</p>
+        <br>
+        <div class="channel-divider"></div>
+        <br>
+        <strong class="desc0">Home</strong><i class="material-icons navnext" style="opacity: 0.0;">navigate_next</i>
+        <p class="desc2">Last modified on 23/04/2021</p>
+        <br>
+        <div class="footer-extras">
+            <div class="footer-links">
+                <span class="footer-link">
+                    <h4>Explore</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="/" class="quick-link small-link icon-all"><i class="material-icons">grid_view</i>Projects</a></li>
+                        <li><a target="_blank" href="/events" class="quick-link small-link icon-events"><i class="material-icons">emoji_events</i>Events</a></li>
+                        <li><a target="_blank" href="/videos" class="quick-link small-link icon-content"><i class="material-icons">play_circle</i>Content</a></li>
+                        <li><a target="_blank" href="/accounts" class="quick-link small-link icon-accounts"><i class="material-icons">switch_account</i>Accounts</a></li>
+                        <li><a target="_blank" href="/medium" class="quick-link small-link icon-medium"><i class="material-icons">article</i>Medium</a></li>
+                        <li><a target="_blank" href="/support" class="quick-link small-link icon-support"><i class="material-icons">help_outline</i>Support</a></li>
+                        <li><a target="_blank" href="/about" class="quick-link small-link icon-support"><i class="material-icons">info_outline</i>About Me</a></li>
+                    </ul>
+                    <br>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="/datapacks" class="quick-link small-link icon-datapack"><i class="material-icons">code</i>Datapacks</a></li>
+                        <li><a target="_blank" href="/resourcepacks" class="quick-link small-link icon-resourcepack"><i class="material-icons">invert_colors</i>Resourcepacks</a></li>
+                        <li><a target="_blank" href="/maps" class="quick-link small-link icon-map"><i class="material-icons">public</i>Maps</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>Socials</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                        <li><a target="_blank" href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                        <li><a target="_blank" href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                        <li><a target="_blank" href="https://osu.ppy.sh/users/15364179" class="quick-link small-link">osu! profile</a></li>
+                        <li><a target="_blank" href="https://planetminecraft.com/member/plexiondev/" class="quick-link small-link">PMC profile</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>Channels</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://youtube.com/plexion" class="quick-link small-link">plexion</a></li>
+                        <li><a target="_blank" href="/gold" class="quick-link small-link">plexionGOLD</a></li>
+                        <li><a target="_blank" href="/osuplexion" class="quick-link small-link">osu!plexion</a></li>
+                        <li><a target="_blank" href="/vods" class="quick-link small-link">plexionVODS</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCa_Athc7tNM5qGYoV4bkJXg" class="quick-link small-link">Let's Talk</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCzLpMY-4wJDLKv9SjQhOkAw" class="quick-link small-link">plexionDev</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UC0NYCYnD-knNSzu_S7mklWg" class="quick-link small-link">plexionSHORTS</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCj8niB3t9HEZOLY3PQcB2jw" class="quick-link small-link">plexionMUSIC</a></li>
+                        <li><a target="_blank" href="https://youtube.com/channel/UCr1k0PAb2BaBdW3jf7lSQDg" class="quick-link small-link">plextra</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <h4>plexion.dev</h4>
+                    <ul class="quick-links">
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
+                        <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
+                        <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/commits/master" class="quick-link small-link">View github archives</a></li>
+                        <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
+                    </ul>
+                </span>
+            </div>
+            <br>
+            <div class="channel-divider"></div>
+            <br>
+            <span class="footer-end">
+                <p class="secondary-text desc2">Build 2104.23</p>
+                <a href="mailto:plexionbusiness@gmail.com" class="desc2 secondary-text">Send an email</a>                
+            </span>
+            <div class="debug-info">
+                <br>
+                <br>
+                <p class="overline secondary-text">Debug Information<i class="overline new margin-left">Experimental</i></p>
+                <br>
+                <label class="overline margin-right">theme</label><code id="theme"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">embed</label><code id="embed"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">guided</label><code id="guided"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">scratch</label><code id="scratch"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">animations</label><code id="animations"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">experience</label><code id="experience"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">colour</label><code id="colour"></code>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-bg-header");
+            } else {
+                $("header").removeClass("scrolled-bg-header");
+            }
+        });
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+
+        let theme = localStorage.getItem("theme");
+        if (theme && theme === "dark-mode") {
+            localStorage.setItem("theme", "");
+        } else {
+            localStorage.setItem("theme", "dark-mode");
+        }
+
+        document.getElementById("theme").textContent = localStorage.getItem("theme");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("embed") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("embed").textContent =
+        localStorage.getItem("embed") || "light";
+    })();
+
+    function disableEmbeds() {
+        let element = document.body;
+        element.classList.toggle("disable-embeds");
+
+        let embed = localStorage.getItem("embed");
+        if (embed && embed === "disable-embeds") {
+            localStorage.setItem("embed", "");
+        } else {
+            localStorage.setItem("embed", "disable-embeds");
+        }
+
+        document.getElementById("embed").textContent = localStorage.getItem("embed");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("guided") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("guided").textContent =
+        localStorage.getItem("guided") || "light";
+    })();
+
+    function disableGuided() {
+        let element = document.body;
+        element.classList.toggle("disable-guided");
+
+        let embed = localStorage.getItem("guided");
+        if (embed && embed === "disable-guided") {
+            localStorage.setItem("guided", "");
+        } else {
+            localStorage.setItem("guided", "disable-guided");
+        }
+
+        document.getElementById("guided").textContent = localStorage.getItem("guided");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("scratch") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("scratch").textContent =
+        localStorage.getItem("scratch") || "light";
+    })();
+
+    function enableScratch() {
+        let element = document.body;
+        element.classList.toggle("show-scratch");
+
+        let embed = localStorage.getItem("scratch");
+        if (embed && embed === "show-scratch") {
+            localStorage.setItem("scratch", "");
+        } else {
+            localStorage.setItem("scratch", "show-scratch");
+        }
+
+        document.getElementById("scratch").textContent = localStorage.getItem("scratch");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("animations") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("animations").textContent =
+        localStorage.getItem("animations") || "light";
+    })();
+
+    function removeAnimations() {
+        let element = document.body;
+        element.classList.toggle("disable-animations");
+
+        let embed = localStorage.getItem("animations");
+        if (embed && embed === "disable-animations") {
+            localStorage.setItem("animations", "");
+        } else {
+            localStorage.setItem("animations", "disable-animations");
+        }
+
+        document.getElementById("animations").textContent = localStorage.getItem("animations");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("experience") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("experience").textContent =
+        localStorage.getItem("experience") || "light";
+    })();
+
+    function experienceToggle() {
+        let element = document.body;
+        element.classList.toggle("minimal");
+
+        let embed = localStorage.getItem("experience");
+        if (embed && embed === "minimal") {
+            localStorage.setItem("experience", "");
+        } else {
+            localStorage.setItem("experience", "minimal");
+        }
+
+        document.getElementById("experience").textContent = localStorage.getItem("experience");
+    }
+    function experienceDefault() {
+        let element = document.body;
+        element.classList.remove("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "");
+    }
+    function experienceMinimal() {
+        let element = document.body;
+        element.classList.add("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "minimal");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("colour") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("colour").textContent =
+        localStorage.getItem("colour") || "light";
+    })();
+
+    function colourBlue() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.remove("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "");
+    }
+    function colourRed() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.add("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "red");
+    }
+    function colourGreen() {
+        let element = document.body;
+        element.classList.remove("red");
+        element.classList.add("green");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "green");
+    }
+    </script>
+    <!--<script>
+        function createRipple(event) {
+            const button = event.currentTarget;
+        
+            const circle = document.createElement("span");
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const radius = diameter / 2;
+        
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+            circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+            circle.classList.add("ripple");
+        
+            const ripple = button.getElementsByClassName("ripple")[0];
+        
+            if (ripple) {
+                ripple.remove();
+            }
+        
+            button.appendChild(circle);
+        }
+        
+        const buttons = document.getElementsByClassName("button");
+        for (const button of buttons) {
+            button.addEventListener("click", createRipple);
+        }
+    </script>-->
+</body>

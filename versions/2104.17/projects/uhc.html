@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<head>
+    <title>UHC Datapack — plexion.dev</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
+    <link rel="stylesheet" href="../stylesheet.css">
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <meta property="title" content="UHC">
+    <meta property="description" content="The plexion UHC datapack makes hosting a UHC in the latest versions of Minecraft simple and easy."
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/projects/uhc">
+    <meta property="og:title" content="UHC">
+    <meta property="og:description" content="The plexion UHC datapack makes hosting a UHC in the latest versions of Minecraft simple and easy.">
+    <meta property="og:image" content="https://plexion.dev/thumbnails/uhc.png">
+    <meta name="theme-color" content="#003AF8">
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <div class="popup-bg" id="share">
+        <div class="share-dialog">
+            <div class="card-padding share-header with-icon">
+                <h2>Share this page</h2>
+                <a class="icon-button icon-button-s share-close"><i class="material-icons">close</i></a>
+            </div>
+            <div class="channel-divider"></div>
+            <div class="card-padding share-info">
+                <div class="share-places">
+                    <p class="desc0">Choose an option below to share wherever you choose:</p>
+                    <div class="tooltip">
+                        <a class="icon-button share-twitter tile-browse fas-icon-button" id="share-twitter" href="https://twitter.com/intent/tweet?" target="_blank" onclick="window.open('https://twitter.com/intent/tweet?text=gaming%20at%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Twitter</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-facebook tile-browse fas-icon-button" href="https://www.facebook.com/sharer/sharer.php?u=&t=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Facebook</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-reddit tile-browse fas-icon-button" href="http://www.reddit.com/submit?url=&title=" target="_blank" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i class="fab fa-reddit" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">Reddit</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-linkedin tile-browse fas-icon-button" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;"><i class="fab fa-linkedin" style="font-size: 24px;"></i></a>
+                        <span class="tooltip-text">LinkedIn</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-email"><i class="material-icons" href="mailto:?subject=&body=:%20" target="_blank" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(document.URL)); return false;">email</i></a>
+                        <span class="tooltip-text">Email</span>
+                    </div>
+                    <div class="tooltip">
+                        <a class="icon-button share-os"><i class="material-icons">open_in_new</i></a>
+                        <span class="tooltip-text">Native share</span>
+                    </div>
+                    <script>const shareButton = document.querySelector('.share-os');shareButton.addEventListener('click', event => {if (navigator.share) { navigator.share({title: encodeURIComponent(document.title),url: encodeURIComponent(document.URL)}).then(() => {console.log('Opened Web Share API dialog!');}).catch(console.error);} else {console.log('Web Share API unsupported in browser or operating system.');}});</script>
+                </div>
+                <br>
+                <div class="channel-divider"></div>
+                <br>
+                <div class="share-other">
+                    <p class="desc0">Alternatively, you can just copy the link:</p>
+                    <code class="share-https big-code" id="current-page-link"></code>
+                    <textarea class="hide-textarea" id="current-page-link2"></textarea>
+                    <script>document.getElementById("current-page-link").innerHTML =window.location.href;document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
+                    <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
+                    <br>
+                    <a class="button tile-browse share-copy" href="javascript:void(0);" onclick="copyURL()">Copy Page Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
+    <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
+    <header>
+        <span class="header-brand">
+            <span class="brand">plexion.dev</span>
+        </span>
+        <span class="navigation">
+            <span class="header-links">
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">grid_view</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">emoji_events</i><i class="navi">Events</i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">play_circle</i><i class="navi">Content</i></a>
+                <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">switch_account</i><i class="navi">Accounts</i></a>
+                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons">settings</i><i class="navi">Settings</i></a>
+            </span>
+        </span>
+        <span class="header-space">
+            <span class="h-dropdown account-dropdown">
+                <a class="navlink navlink-nohide navlink-icon" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
+                <div class="h-dropdown-content" id="account-dropdown-content">
+                    <ul>
+                        <li>
+                            <div class="card-padding">
+                                <h4>Page Settings</h4>
+                                <p class="descsmall">These settings are saved locally across the page.</p>
+                            </div>
+                        </li>
+                        <div class="channel-divider"></div>
+                        <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
+                        <div class="channel-divider"></div>
+                        <li><a href="javascript:void(0);" onclick="sharePage()" title="Share the link to this page" class="dropdown-with-icon" id="share-page"><i class="material-icons">share</i>Share</a></li>
+                        <script>var modal = document.getElementById("share");var btn = document.getElementById("share-page");var span = document.getElementsByClassName("share-close")[0];btn.onclick = function() {modal.style.display = "flex";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}}</script>
+                        <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
+                    </ul>
+                </div>
+            </span>
+        </span>
+    </header>
+    <div class="project-spotlight project-video" id="uhc">
+        <div class="watch2">
+            <iframe src="https://www.youtube-nocookie.com/embed/5HILNKwRwzs?controls=0&autoplay=1&mute=1&start=729&rel=0&loop=1&playlist=5HILNKwRwzs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="info" id="options">
+        <div class="project-options">
+            <span class="date">
+                <h2>UHC</h2>
+                <p class="desc0">A simple UHC Datapack designed for the latest versions of Minecraft.</p>
+                <div class="tags">
+                    <span class="tag overline tile-browse multiplayer">Multiplayer</span>
+                    <span class="tag overline challenge">Challenge</span>
+                    <span class="tag overline pvp">PvP</span>
+                </div>
+            </span>
+            <span class="options">
+                <a class="button download tile-browse wat" title="Watch the featured video" target="_blank" href="https://youtu.be/5HILNKwRwzs">Watch</a>
+                <a class="button download important project-download tile-browse dow" title="Download latest release" href="../downloads/plexionuhc21221BUILD2.zip">Download</a>
+                <script>function moreoptionsdropdown() {var x = document.getElementById("moreoptions-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
+                <div class="h-dropdown account-dropdown">
+                    <a class="icon-button tile-browse project-more" href="javascript:void(0);" onclick="moreoptionsdropdown()"><i class="material-icons">more_vert</i></a>
+                    <div class="h-dropdown-content icon-button-dropdown" id="moreoptions-dropdown-content">
+                        <ul>
+                            <li class="dropdown-header overline">This Project</li>
+                            <li><a target="_blank" href="https://www.planetminecraft.com/data-pack/simple-uhc/" title="View more on Planet Minecraft" class="dropdown-with-icon"><i class="material-icons">open_in_new</i>View on PMC</a></li>
+                            <li><a target="_blank" href="https://youtu.be/5HILNKwRwzs" title="Watch the featured video" class="dropdown-with-icon"><i class="material-icons">play_circle_filled</i>Watch featured video</a></li>
+                            <li class="dropdown-header overline">More Downloads</li>
+                            <li><a href="../downloads/plexionuhc21221BUILD2.zip" title="Download 1.0.4 (published 21/02/2021)">Version 1.0.4</a></li>
+                            <li><a href="../downloads/plexionuhc17221.zip" title="Download 1.0.3 (published 17/02/2021)">Version 1.0.3</a></li>
+                            <li><a href="../downloads/plexionuhc15221.zip" title="Download 1.0.2 (published 15/02/2021)">Version 1.0.2</a></li>
+                            <li><a href="../downloads/plexionuhc14221BUILD2.zip" title="Download 1.0.1 (published 14/02/2021)">Version 1.0.1</a></li>
+                            <li><a href="../downloads/plexionuhc14221.zip" title="Download 1.0 (published 14/02/2021)">Version 1.0</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </span>
+        </div>
+        <div class="project-stats">
+            <span>
+                <label class="overline">Type</label>
+                <br>
+                <a class="desc0 datapack" href="https://minecraft.fandom.com/wiki/Data_Pack">Datapack</a>
+            </span>
+            <span>
+                <label class="overline">Supports</label>
+                <br>
+                <div class="tooltip">
+                    <p class="desc0">1.13-1.16*</p>
+                    <span class="tooltip-text">* As tested, may support other versions.</span>
+                </div>
+            </span>
+            <span class="first-release">
+                <label class="overline">First release</label>
+                <p class="desc0">14/02/2021</p>
+            </span>
+            <span>
+                <label class="overline">Last updated</label>
+                <p class="desc0">21/02/2021</p>
+            </span>
+        </div>
+    </div>
+    <!--<div class="info more-info" id="more-info">
+        <div class="latest-release">Last updated: 20/02/2021</div>
+    </div>-->
+    <div class="parhead" id="description">
+        <label class="overline">Overview</label>
+    </div>
+    <div class="paragraph">
+        <p class="desc0">A simple, lightweight and easy-to-use UHC datapack designed for 1.16.5 (may backport to older versions). Featuring popular UHC standard additions like Cut Clean and Speed UHC, this is the easiest and simplest way to hold a UHC in latest version on platforms like Minecraft Realms.</p>
+    </div>
+    <div class="parhead" id="features">
+        <label class="overline">Features</label>
+    </div>
+    <div class="project-tiles">
+        <span class="small-tile">
+            <span class="tile-icon">
+                <i class="material-icons">update</i>
+            </span>
+            <span class="tile-text">
+                <h4>Customisable timings</h4>
+                <p class="desc2">Using scoreboards you can configure event timings to make the event as slow or fast as you want!</p>
+            </span>
+        </span>
+        <span class="small-tile">
+            <span class="tile-icon">
+                <i class="material-icons">more_time</i>
+            </span>
+            <span class="tile-text">
+                <h4>Cut Clean</h4>
+                <p class="desc2">When iron ore and gold ore is mined or animals are killed, the item drops are instantly smelted and ready-to-go.</p>
+            </span>
+        </span>
+        <span class="small-tile">
+            <span class="tile-icon">
+                <i class="material-icons">filter_alt</i>
+            </span>
+            <span class="tile-text">
+                <h4>Sectioned game</h4>
+                <p class="desc2">The UHC is split into 3 main sections; the starter period, grace period and main game. More information <a href="https://i.imgur.com/kcz39F6.png">here</a>.</p>
+            </span>
+        </span>
+        <span class="small-tile">
+            <span class="tile-icon">
+                <i class="material-icons">speed</i>
+            </span>
+            <span class="tile-text">
+                <h4>Speed UHC</h4>
+                <p class="desc2">Any tool you hold will automatically be enchanted with Efficiency 2 to speed up mining.</p>
+            </span>
+        </span>
+        <span class="small-tile">
+            <span class="tile-icon">
+                <i class="material-icons">no_accounts</i>
+            </span>
+            <span class="tile-text">
+                <h4>Dead spectators</h4>
+                <p class="desc2">When the grace period has ended, dead players are automatically moved into spectator mode to prevent interference.</p>
+            </span>
+        </span>
+        <span class="small-tile">
+            <span class="tile-icon">
+                <i class="material-icons">group</i>
+            </span>
+            <span class="tile-text">
+                <label class="overline">*Green Team (<code>team3</code>) added in 1.0.4</label>
+                <h4>Simple teams</h4>
+                <p class="desc2">Players can easily be assigned either Red or Blue team (<code>team1</code> and <code>team2</code>) to make the game more competitive.</p>
+            </span>
+        </span>
+        <span class="small-tile">
+            <span class="tile-icon">
+                <i class="material-icons">accessibility_new</i>
+            </span>
+            <span class="tile-text">
+                <h4>Easy to use</h4>
+                <p class="desc2">All events in the UHC can be easily configured and changed to your liking using the <code>global</code> scoreboard.</p>
+            </span>
+        </span>
+        <span class="small-tile">
+            <span class="tile-icon">
+                <i class="material-icons">favorite</i>
+            </span>
+            <span class="tile-text">
+                <label class="overline">*Removed in 1.0.4</label>
+                <h4>Natural healing </h4>
+                <p class="desc2">After the grace period has ended, <code>naturalRegeneration</code> is disabled meaning you can only heal health with golden apples & potions.</p>
+            </span>
+        </span>
+    </div>
+    <div class="parhead" id="screenshots">
+        <label class="overline">Gallery</label>
+    </div>
+    <div class="images">
+        <span class="imgcontainer">
+            <div class="watch2">
+                <iframe src="https://www.youtube-nocookie.com/embed/5HILNKwRwzs?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="image-caption">Featured video</p>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc0.png"></img>
+            <p class="image-caption">Starter period</p>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc1.png"></img>
+            <p class="image-caption">Grace period</p>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc2.png"></img>
+            <p class="image-caption">Main period</p>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc3.png"></img>
+            <p class="image-caption">Mining an iron ore</p>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc5.png"></img>
+            <p class="image-caption">Cut Clean in action</p>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc6.png"></img>
+            <p class="image-caption">Victory screen</p>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc7.png"></img>
+            <p class="image-caption">Red Team example</p>
+        </span>
+        <span class="imgcontainer">
+            <img src="uhc8.png"></img>
+            <p class="image-caption">Blue team example</p>
+        </span>
+    </div>
+    <div class="parhead" id="installation">
+        <label class="overline">Installation & Setup</label>
+    </div>
+    <div class="paragraph">
+        <p class="desc0">As with every datapack, there is a very simple installation process.</p>
+        <ol>
+            <li>Click the download button above then save it in your <code class="dir">Downloads</code> folder.</li>
+            <li>Open your singleplayer menu, press <code class="mc-button">Create New World</code> then <code class="mc-button">Data Packs</code></li>
+            <li>Drag the <code class="zip">Datapack.zip</code> file from your <code class="dir">Downloads</code> into the available space on the left.</li>
+            <li>Hover over the datapack, then click the <code class="mc-button"><i class="material-icons">play_arrow</i></code> button (ignore any version errors - it works fine)</li>
+        </ol>
+        <br>
+        <p class="desc0">Once the datapack is installed, you can start the game easily.</p>
+        <ol>
+            <li>If you have any options you want to tweak, edit them now through the <code>global</code> scoreboard</li>
+            <li>When everything is ready, you can run <code>function uhc:start</code> and let the games begin!</li>
+        </ol>
+        <p>If you want to pause (or stop) the events temporarily, you can set the <code>timer_enabled</code> score in the <code>global</code> scoreboard to 0.</p>
+    </div>
+    <div class="parhead" id="updates">
+        <label class="overline">Updates</label>
+    </div>
+    <div class="paragraph tiles-paragraph tiles">
+        <span class="info-tile">
+            <div class="card-padding">
+                <label class="overline">Published 21/02/2021</label>
+                <h3>Version 1.0.4</h3>
+                <p class="desc0">This update is an optional side-branch to 1.0.3; updating is not necessary</p>
+                <ul>
+                    <li>There are now 3 teams, red, blue and green</li>
+                    <li>The world border will now shrink considerably less</li>
+                    <li><code>naturalRegeneration</code> is now enabled throughout the game</li>
+                    <li>The difficulty is now set to peaceful in pre-game then set to normal going forward</li>
+                    <li>If a player gets a kill, they will be given a gapple as a reward</li>
+                    <li>Apple spawn rates have been reduced</li>
+                    <li>Team victories are now more specified in the code</li>
+                </ul>
+            </div>
+            <div class="card-options card-nobg no-padding-top">
+                <a class="tile-browse button option dow" href="../downloads/plexionuhc21221BUILD2.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile">
+            <div class="card-padding">
+                <label class="overline">Published 17/02/2021</label>
+                <h3>Version 1.0.3</h3>
+                <p class="desc0">This update enforces gamemode & effects onto all new players joining</p>
+                <ul>
+                    <li>Pre-game is now set as <code>period</code> -1</li>
+                    <li>Victory splash screens are now set as <code>period</code> 3</li>
+                    <li>Victory splash screens are now split into 3 functions, <code>solos_victory</code>, <code>red_victory</code> and <code>blue_victory</code></li>
+                    <li>Players now have a <code>lastlogin</code> scoreboard entry displaying the last period they were logged on for</li>
+                </ul>
+            </div>
+            <div class="card-options card-nobg no-padding-top">
+                <a class="tile-browse button option dow" href="../downloads/plexionuhc17221.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile">
+            <div class="card-padding">
+                <label class="overline">Published 15/02/2021</label>
+                <h3>Version 1.0.2</h3>
+                <p class="desc0">This update brings a crucial gamerule change & some teams additions:</p>
+                <ul>
+                    <li><code>naturalRegeneration</code> is now enabled for the first 2 phases, but disabled for the rest of the game</li>
+                    <li>Loot tables for apples mined from Oak Leaves have been boosted</li>
+                    <li>Teams mode is now an option in the <code>global</code> scoreboard, listed as <code>enable_teams</code></li>
+                    <li>In teams mode, if the other team is fully eliminated the last remaining team will win</li>
+                    <li>In solos mode, the last player standing will win the game</li>
+                </ul>
+            </div>
+            <div class="card-options card-nobg no-padding-top">
+                <a class="tile-browse button option dow" href="../downloads/plexionuhc15221.zip">Download</a>
+            </div>
+        </span>
+        <span class="info-tile">
+            <div class="card-padding">
+                <label class="overline">Published 14/02/2021</label>
+                <h3>Version 1.0.1</h3>
+                <p class="desc0">This update brings along one addition with Cut Clean and a tweak to the border:</p>
+                <ul>
+                    <li>All animal food drops are instantly smelted</li>
+                    <li>The world border will now close in to 50 blocks in the main game period</li>
+                </ul>
+            </div>
+            <div class="card-options card-nobg no-padding-top">
+                <a class="tile-browse button option dow" href="../downloads/plexionuhc14221.zip">Download</a>
+            </div>
+        </span>
+    </div>
+    <footer>
+        <h1>plexion.dev</h1>
+        <p class="desc0">Last updated: 16/04/2021</p>
+        <div class="footer-extras">
+            <br>
+            <div class="footer-pages">
+                <h4>Explore</h4>
+                <div class="small-tiles">
+                    <a class="small-tile" href="/">
+                        <div class="tile-icon icon-all">
+                            <i class="material-icons">grid_view</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Projects</h4>
+                        </div>
+                    </a>
+                    <a class="small-tile" href="/events">
+                        <div class="tile-icon icon-events">
+                            <i class="material-icons">emoji_events</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Events</h4>
+                        </div>
+                    </a>
+                    <a class="small-tile" href="/videos">
+                        <div class="tile-icon icon-content">
+                            <i class="material-icons">play_circle</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Content</h4>
+                        </div>
+                    </a>
+                    <a class="small-tile" href="/accounts">
+                        <div class="tile-icon icon-share">
+                            <i class="material-icons">switch_account</i>
+                        </div>
+                        <div class="tile-text">
+                            <h4>Accounts</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <span class="footer-link">
+                    <p class="overline">Drop a follow</p>
+                    <ul class="quick-links">
+                        <li><a href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                        <li><a href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                        <li><a href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                        <li><a href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <p class="overline secondary-text">Build Info</p>
+                    <ul class="quick-links">
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
+                        <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
+                        <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
+                    </ul>
+                </span>
+            </div>
+            <br>
+            <h4>Have any questions?</h4>
+            <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
+            <br>
+            <br>
+            <p class="overline secondary-text">plexion.dev Build 2104.16</p>
+            <div class="debug-info">
+                <br>
+                <br>
+                <p class="overline secondary-text">Debug Information<i class="overline new margin-left">Experimental</i></p>
+                <br>
+                <label class="overline margin-right">theme</label><code id="theme"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">embed</label><code id="embed"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">guided</label><code id="guided"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">scratch</label><code id="scratch"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">animations</label><code id="animations"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">experience</label><code id="experience"></code>
+                <br>
+                <br>
+                <label class="overline margin-right">colour</label><code id="colour"></code>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-header");
+            } else {
+                $("header").removeClass("scrolled-header");
+            }
+        });
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+
+        let theme = localStorage.getItem("theme");
+        if (theme && theme === "dark-mode") {
+            localStorage.setItem("theme", "");
+        } else {
+            localStorage.setItem("theme", "dark-mode");
+        }
+
+        document.getElementById("theme").textContent = localStorage.getItem("theme");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("embed") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("embed").textContent =
+        localStorage.getItem("embed") || "light";
+    })();
+
+    function disableEmbeds() {
+        let element = document.body;
+        element.classList.toggle("disable-embeds");
+
+        let embed = localStorage.getItem("embed");
+        if (embed && embed === "disable-embeds") {
+            localStorage.setItem("embed", "");
+        } else {
+            localStorage.setItem("embed", "disable-embeds");
+        }
+
+        document.getElementById("embed").textContent = localStorage.getItem("embed");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("guided") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("guided").textContent =
+        localStorage.getItem("guided") || "light";
+    })();
+
+    function disableGuided() {
+        let element = document.body;
+        element.classList.toggle("disable-guided");
+
+        let embed = localStorage.getItem("guided");
+        if (embed && embed === "disable-guided") {
+            localStorage.setItem("guided", "");
+        } else {
+            localStorage.setItem("guided", "disable-guided");
+        }
+
+        document.getElementById("guided").textContent = localStorage.getItem("guided");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("animations") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("animations").textContent =
+        localStorage.getItem("animations") || "light";
+    })();
+
+    function removeAnimations() {
+        let element = document.body;
+        element.classList.toggle("disable-animations");
+
+        let embed = localStorage.getItem("animations");
+        if (embed && embed === "disable-animations") {
+            localStorage.setItem("animations", "");
+        } else {
+            localStorage.setItem("animations", "disable-animations");
+        }
+
+        document.getElementById("animations").textContent = localStorage.getItem("animations");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("experience") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("experience").textContent =
+        localStorage.getItem("experience") || "light";
+    })();
+
+    function experienceToggle() {
+        let element = document.body;
+        element.classList.toggle("minimal");
+
+        let embed = localStorage.getItem("experience");
+        if (embed && embed === "minimal") {
+            localStorage.setItem("experience", "");
+        } else {
+            localStorage.setItem("experience", "minimal");
+        }
+
+        document.getElementById("experience").textContent = localStorage.getItem("experience");
+    }
+    function experienceDefault() {
+        let element = document.body;
+        element.classList.remove("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "");
+    }
+    function experienceMinimal() {
+        let element = document.body;
+        element.classList.add("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "minimal");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("colour") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("colour").textContent =
+        localStorage.getItem("colour") || "light";
+    })();
+
+    function colourBlue() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.remove("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "");
+    }
+    function colourRed() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.add("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "red");
+    }
+    function colourGreen() {
+        let element = document.body;
+        element.classList.remove("red");
+        element.classList.add("green");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "green");
+    }
+    </script>
+</body>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<head>
+    <title>Void Rising Datapack (plexion.dev)</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
+    <link rel="stylesheet" href="../stylesheet.css">
+	<link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jquery -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/projects/voidrising">
+    <meta property="og:title" content="Void Rising Datapack">
+    <meta property="og:description" content="View and Download my Void Rising Datapack on Minecraft.">
+    <meta property="og:image" content="https://plexion.dev/thumbnails/void-rising.png">
+    <meta name="theme-color" content="#003AF8">
+</head>
+<body>
+    <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
+    <header>
+        <span class="header-brand">
+            <span class="brand">plexion.dev</span>
+        </span>
+        <span class="navigation">
+            <span class="header-links">
+                <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
+                <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons">event</i><i class="navi">Events<i class="new margin-left">BETA</i></i></a>
+                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons">movie_creation</i><i class="navi">Videos</i></a>
+                <a href="/accounts" class="navlink" title="My Accounts"><i class="material-icons">people_alt</i><i class="navi">Accounts</i></a>
+            </span>
+        </span>
+        <span class="header-space">
+            <span class="h-dropdown account-dropdown">
+                <a class="navlink navlink-nohide" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
+                <div class="h-dropdown-content" id="account-dropdown-content">
+                    <ul>
+                        <li>
+                            <div class="card-padding secondary-background">
+                                <h4>Page Settings</h4>
+                                <p class="descsmall">These settings are saved locally across the page.</p>
+                            </div>
+                        </li>
+                        <div class="channel-divider"></div>
+                        <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
+                        <div class="channel-divider"></div>
+                        <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
+                    </ul>
+                </div>
+            </span>
+        </span>
+    </header>
+    <div class="social-banner" id="voidrising"></div>
+    <div class="info" id="options">
+        <span class="date">
+            <h2>Void Rising Datapack</h2>
+            <p class="desc0">Supporting 1.13-1.16, this datapack makes the void rise from y=0 to y=245, making the game more of a challenge.</p>
+        </span>
+        <span class="options">
+            <a class="button view ext" target="_blank" href="https://www.planetminecraft.com/data-pack/void-rising-datapack/">More info</a>
+            <div class="dropdown">
+                <a class="button download important drop-button" title="View all download options" href="javascript:void(0);">Download</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="../downloads/voidrising18121.zip" title="Download v2.1 (published 18/01/2021)">Version 2.1</a></li>
+                        <li><a href="../downloads/voidrising17121.zip" title="Download v2.0 (published 17/01/2021)">Version 2.0</a></li>
+                        <li><a href="../downloads/voidrising121220.zip" title="Download v1.0 (published 12/12/2020)">Version 1.0</a></li>
+                    </ul>
+                </div>
+            </div>
+        </span>
+    </div>
+    <div class="parhead" id="description">
+        <a href="#description">Description</a>
+    </div>
+    <div class="paragraph">
+        <p class="desc0">A lightweight data-pack for Minecraft Java Edition 1.16 that well, makes the void rise. Everything is controlled within the single datapack with customisable variables for timings if needed. Lag is handled well with falling blocks being killed to avoid sand blocks causing lag upon rising. Upon dying, you are automatically placed into spectator mode to allow you to watch the game in progress without interference.</p>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="features">
+        <a href="#features">Features</a>
+    </div>
+    <div class="project-tiles">
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">update</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Customisable timings</p>
+                <p class="desc0">Using scoreboards you can configure event timings to make the event as slow or fast as you want!</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">vertical_align_top</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Height limiting</p>
+                <p class="desc0">Once the void reaches y245, it automatically stops going any further - stopping chaos.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">no_accounts</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Dead spectators</p>
+                <p class="desc0">Upon death, you are automatically placed into spectator mode to stop interference with the game.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">accessibility_new</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Easy to use</p>
+                <p class="desc0">All events related to the void rising can be easily paused and reset in a new location if needed.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">warning</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Handled lag</p>
+                <p class="desc0">Falling blocks are automatically removed to stop any lag from sand and gravel when rising.</p>
+            </span>
+        </span>
+        <span class="project-tile">
+            <span class="project-tilebadge">
+                <i class="material-icons">volume_up</i>
+            </span>
+            <span class="project-tileinfo">
+                <p class="project-tilehead">Clutter-free</p>
+                <p class="desc0">Status messages can be swapped between bossbar, actionbar or just disabled along with all sound effects.</p>
+            </span>
+        </span>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="screenshots">
+        <a href="#screenshots">Gallery</a>
+    </div>
+    <div class="images">
+        <span class="imgcontainer">
+            <div class="watch2">
+                <iframe src="https://www.youtube-nocookie.com/embed/sQ-S6D6R85o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
+        </span>
+        <span class="imgcontainer">
+            <img src="voidrising3.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="voidrising4.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="voidrising5.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="voidrising6.png"></img>
+        </span>
+        <span class="imgcontainer">
+            <img src="voidrising7.png"></img>
+        </span>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="installation">
+        <a href="#installation">Installation</a>
+    </div>
+    <div class="paragraph">
+        <p class="desc0">As with every datapack, there is a very simple installation process.</p>
+        <ol>
+            <li>Click the download button above then save it in your Downloads.</li>
+            <li>Open your singleplayer menu, press <code class="mc-button">Create New World</code> then <code class="mc-button">Data Packs</code></li>
+            <li>Drag the .zip file from your Downloads into the available space on the left.</li>
+            <li>Click the right arrow button and move it over (ignore any version errors - it works fine)</li>
+        </ol>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="setup">
+        <a href="#setup">Setup</a>
+    </div>
+    <div class="paragraph">
+        <p class="desc0">Once the datapack is installed, you can start the void rising with some simple set-up.</p>
+        <ol>
+            <li>Teleport to <code>0 0</code> (x and z) in your world.</li>
+            <li>When you want the void to begin rising, type <code>function voidrising:start</code></li>
+            <li>If you want to pause (or stop) the void rising, you can set the <code>enabled</code> score in the <code>global</code> scoreboard to 0.</li>
+        </ol>
+        <p>You can also configure timings for the warning in <code>warning_time</code> and the actual rising itself in <code>rising_time</code> (measured in ticks - 20 ticks = 1 second)</p>
+    </div>
+    <div class="pardivider"><hr></div>
+    <div class="parhead" id="updates">
+        <a href="#updates">Updates</a>
+    </div>
+    <div class="paragraph">
+        <span class="version">Version 2.1<i class="tooltip">Published 18/01/2021</i></span>
+        <p class="desc0">With this update you can now disable some of the pre-built features and enable some new ones.</p>
+        <ul>
+            <li>Automatic spectator mode upon death is now an option you can disable with the <code>spectator_death</code> score in the <code>global</code> scoreboard.</li>
+            <li>Automatic stopping of rising upon y245 is now an option you can disable with the <code>height_limit</code> score in the <code>global</code> scoreboard.</li>
+            <li>You can now disable all sound effects with the <code>sound_effects</code> score in the <code>global</code> scoreboard.</li>
+            <li>The actionbar messages (The void has risen etc.) can now be disabled with the <code>rising_status</code> score in the <code>global</code> scoreboard.</li>
+            <li>You can replace the actionbar with a new bossbar that displays the progress until the void rises by changing the <code>bossbar_status</code> score in the <code>global</code> scoreboard.</li>
+        </ul>
+        <span class="version">Version 2.0<i class="tooltip">Published 17/01/2021</i></span>
+        <p class="desc0">This update fixes a few issues and adds some quality of life changes. Here we go:</p>
+        <ul>
+            <li>The void now stops rising at y245 (can be changed inside the datapack)</li>
+            <li>Timings for the warning & rising event have been sped up</li>
+            <li>The variables names have been changed from time1 and time2 to warning_time and rising_time</li>
+            <li>When the void rises, the actionbar now displays it's current y level</li>
+        </ul>
+    </div>
+    <footer>
+        <h1>plexion.dev</h1>
+        <p class="desc0">Build: 2103.28</p>
+        <div class="footer-extras">
+            <br>
+            <div class="footer-links">
+                <span class="footer-link">
+                    <p class="overline secondary-text">Cool pages</p>
+                    <ul class="quick-links">
+                        <li><a href="/videos" class="quick-link small-link">Content</a></li>
+                        <li><a href="/accounts" class="quick-link small-link">Accounts</a></li>
+                        <li><a href="/versions/before-project-guided" class="quick-link small-link">View all</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <p class="overline secondary-text">Follow me</p>
+                    <ul class="quick-links">
+                        <li><a href="https://youtube.com/plexion" class="quick-link small-link">YouTube</a></li>
+                        <li><a href="https://twitter.com/plexionlive" class="quick-link small-link">Twitter</a></li>
+                        <li><a href="https://twitch.tv/plexionLIVE" class="quick-link small-link">Twitch</a></li>
+                        <li><a href="https://github.com/plexionstudios" class="quick-link small-link">Github</a></li>
+                    </ul>
+                </span>
+                <span class="footer-link">
+                    <p class="overline secondary-text">Build Info</p>
+                    <ul class="quick-links">
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io" class="quick-link small-link">View on Github</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
+                        <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
+                        <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
+                    </ul>
+                </span>
+            </div>
+            <br>
+            <p class="overline secondary-text">Have any questions?</p>
+            <p class="desc0">Feel free to drop me an email, <a href="mailto:plexionbusiness@gmail.com" title="Drop an email">plexionbusiness@gmail.com</a></p>
+        </div>
+    </footer>
+    <script>
+        $(window).scroll(function() {    
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 30) {
+                $("header").addClass("scrolled-header");
+            } else {
+                $("header").removeClass("scrolled-header");
+            }
+        });
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+
+    function themeToggle() {
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+
+        let theme = localStorage.getItem("theme");
+        if (theme && theme === "dark-mode") {
+            localStorage.setItem("theme", "");
+        } else {
+            localStorage.setItem("theme", "dark-mode");
+        }
+
+        document.getElementById("theme").textContent = localStorage.getItem("theme");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("embed") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("embed").textContent =
+        localStorage.getItem("embed") || "light";
+    })();
+
+    function disableEmbeds() {
+        let element = document.body;
+        element.classList.toggle("disable-embeds");
+
+        let embed = localStorage.getItem("embed");
+        if (embed && embed === "disable-embeds") {
+            localStorage.setItem("embed", "");
+        } else {
+            localStorage.setItem("embed", "disable-embeds");
+        }
+
+        document.getElementById("embed").textContent = localStorage.getItem("embed");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("guided") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("guided").textContent =
+        localStorage.getItem("guided") || "light";
+    })();
+
+    function disableGuided() {
+        let element = document.body;
+        element.classList.toggle("disable-guided");
+
+        let embed = localStorage.getItem("guided");
+        if (embed && embed === "disable-guided") {
+            localStorage.setItem("guided", "");
+        } else {
+            localStorage.setItem("guided", "disable-guided");
+        }
+
+        document.getElementById("guided").textContent = localStorage.getItem("guided");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("animations") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("animations").textContent =
+        localStorage.getItem("animations") || "light";
+    })();
+
+    function removeAnimations() {
+        let element = document.body;
+        element.classList.toggle("disable-animations");
+
+        let embed = localStorage.getItem("animations");
+        if (embed && embed === "disable-animations") {
+            localStorage.setItem("animations", "");
+        } else {
+            localStorage.setItem("animations", "disable-animations");
+        }
+
+        document.getElementById("animations").textContent = localStorage.getItem("animations");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("experience") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("experience").textContent =
+        localStorage.getItem("experience") || "light";
+    })();
+
+    function experienceToggle() {
+        let element = document.body;
+        element.classList.toggle("minimal");
+
+        let embed = localStorage.getItem("experience");
+        if (embed && embed === "minimal") {
+            localStorage.setItem("experience", "");
+        } else {
+            localStorage.setItem("experience", "minimal");
+        }
+
+        document.getElementById("experience").textContent = localStorage.getItem("experience");
+    }
+    function experienceDefault() {
+        let element = document.body;
+        element.classList.remove("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "");
+    }
+    function experienceMinimal() {
+        let element = document.body;
+        element.classList.add("minimal");
+
+        let embed = localStorage.getItem("experience");
+        localStorage.setItem("experience", "minimal");
+    }
+    </script>
+    <script>
+        (function() {
+    let onpageLoad = localStorage.getItem("colour") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    document.getElementById("colour").textContent =
+        localStorage.getItem("colour") || "light";
+    })();
+
+    function colourBlue() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.remove("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "");
+    }
+    function colourRed() {
+        let element = document.body;
+        element.classList.remove("green");
+        element.classList.add("red");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "red");
+    }
+    function colourGreen() {
+        let element = document.body;
+        element.classList.remove("red");
+        element.classList.add("green");
+
+        let embed = localStorage.getItem("colour");
+        localStorage.setItem("colour", "green");
+    }
+    </script>
+</body>
