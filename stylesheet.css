@@ -77,7 +77,7 @@ table {
     --plexion-blue: #003BFF;
     --main-blue: #1646F4;
     --secondary-blue: #0033DA;
-    --raised-blue: #0088FF;
+    --raised-blue: #3b78fc;
     --target-colour: rgba(5,96,255,0.3);
     --background-blue: rgba(22,70,244,0.1); /* Default Button Backgrounds (uses main-blue) */
     --raised-background-blue: rgba(0,136,255,0.2); /* Selected Dropdowns (uses raised-blue) */
@@ -135,9 +135,9 @@ table {
     --secondary-text: rgba(255,255,255,0.6);
     --white-text: white;
     --main-blue: #1c92f3;
-    --raised-blue: #11a8ff;
+    --raised-blue: #1180ff;
     --target-colour: rgba(79,167,255,0.3);
-    --background-blue: rgba(45,140,255,0.15); /* Default Button Backgrounds (uses main-blue) */
+    --background-blue: rgba(45,140,255,0.2); /* Default Button Backgrounds (uses main-blue) */
     --raised-background-blue: rgba(79,167,255,0.25); /* Selected Dropdowns (uses raised-blue) */
     /*SHADOWS*/
     --dp1: 0px 5px 5px 0px rgba(0,0,0,0.35);
@@ -2763,7 +2763,7 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
 }
 .navlink {
     text-decoration: none;
-    padding: 0;
+    padding: 2px 8px;
     margin: 0 30px;
     transition: 0.2s ease-in-out;
     font-family: var(--main-font);
@@ -2787,7 +2787,8 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
 .navigation .active {
     color: var(--main-blue);
     font-weight: 700;
-    border-bottom: 2px solid var(--raised-background-blue);
+    background: var(--raised-background-blue);
+    border-radius: 10px;
     opacity: 1.0;
 }
 .navigation .active:hover, .navigation .active:focus {
