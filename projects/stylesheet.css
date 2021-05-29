@@ -39,7 +39,7 @@
 .info {
     padding: 30px;
     margin: 0 200px;
-    background: var(--main-background);
+    background: var(--secondary-background);
     border: 1px solid var(--button-border);
     margin-bottom: 20px;
     transition: 0.2s ease-in-out;
@@ -47,6 +47,9 @@
     bottom: 100px;
     box-shadow: var(--dp2);
     border-radius: 5px;
+}
+.dark-mode .info {
+    border: 1px solid transparent;
 }
 .project-options {
     display: flex;
@@ -168,7 +171,7 @@
     padding: 10px;
     border-radius: 10px;
     color: var(--main-text);
-    background: var(--main-background);
+    background: var(--secondary-background);
     transition: 0.2s ease-in-out;
     border: 1px solid var(--button-border);
     cursor: default;
@@ -187,7 +190,7 @@
 li img {
     margin: 5px 40px 5px 40px;
     border-radius: 5px;
-    border: 2px solid var(--main-background);
+    border: 2px solid var(--secondary-background);
     transition: 0.2s ease-in-out;
 }
 .pardivider {

@@ -61,9 +61,9 @@ table {
 
 :root {
     --brand-colour: #3359F2;
-    --main-background: white;
+    --secondary-background: white;
     --dark-background: #0f0f0f;
-    --secondary-background: #F5F5F5;
+    --background: #F5F5F5;
     --raised-background: rgba(204,204,204,0.4);
     --raised-shadow: 0.1;
     --header-text: rgba(0,0,0,1);
@@ -125,10 +125,11 @@ table {
     --pastel-grey: #1E1E1E;
 }
 .dark-mode {
-    --main-background: #000000;
-    --secondary-background: #0f0f0f;
+    --background: #16161C;
+    --secondary-background: #1C1C23;
+    --alt-background: #27272e;
     --raised-background: rgba(66,66,66,0.4);
-    --button-border: #383838;
+    --button-border: #37374e;
     --raised-shadow: 0.3;
     --header-text: rgba(255,255,255,1);
     --main-text: rgba(255,255,255,0.87);
@@ -161,8 +162,8 @@ table {
     --raised-blue: linear-gradient(0deg, rgba(0,112,217,1) 0%, rgba(0,112,217,1) 100%);
 }
 .old-dark {
-    --main-background: #0A0A0C;
-    --secondary-background: #08080A;
+    --secondary-background: #0A0A0C;
+    --background: #08080A;
     --highlight-background: #1C1C23; /* Old secondary background */
     --main-text: white;
     --secondary-text: #C9D1D1;
@@ -175,8 +176,8 @@ table {
     --button-border: #17171f;
 }
 .dark-mode2 {
-    --main-background: black;
-    --secondary-background: #060607;
+    --secondary-background: black;
+    --background: #060607;
     --main-text: white;
     --secondary-text: #C9D1D1;
     --white-text: white;
@@ -282,7 +283,7 @@ body {
     box-sizing: border-box;
     transition: 0.2s ease-in-out;
     font-family: var(--main-font);
-    background: var(--secondary-background);
+    background: var(--background);
     color: var(--main-text);
     font-size: 16px;
     text-rendering: optimizeLegibility;
@@ -370,7 +371,7 @@ code {
     font-family: var(--code-font);
     white-space: nowrap;
     display: inline-block;
-    background: var(--main-background);
+    background: var(--secondary-background);
     margin: 2px 0;
 }
 .big-code {
@@ -410,12 +411,11 @@ h6, .h6 {
     transition: 0.2s ease-in-out;
 }
 h1, .h1 {
-    font-family: var(--header-font);
+    font-family: var(--main-font);
     color: var(--header-text);
     font-size: 36px;
-    font-weight: 900;
-    text-transform: uppercase;
-    padding: 10px 0;
+    font-weight: 700;
+    padding: 5px 0;
     margin: 0;
     transition: 0.2s ease-in-out;
 }
@@ -507,7 +507,7 @@ a.h4 {
     transition: 0.2s ease-in-out;
 }
 .desc3 {
-    font-size: 18px;
+    font-size: 17px;
     font-family: var(--main-font);
     margin-bottom: 10px;
     color: var(--main-text);
@@ -558,10 +558,10 @@ h1 .exi {
     text-align: center;
 }
 .main-background {
-    background: var(--main-background);
+    background: var(--secondary-background);
 }
 .secondary-background {
-    background: var(--secondary-background);
+    background: var(--background);
     transition: 0.2s ease-in-out;
 }
 .button-border {
@@ -852,7 +852,7 @@ h1 .exi {
     vertical-align: middle;
 }
 .preview {
-    background: var(--main-background);
+    background: var(--secondary-background);
     border: 1px solid var(--button-border);
     padding: 20px;
     margin-top: 30px;
@@ -881,10 +881,10 @@ h1 .exi {
     transition: 0.2s ease-in-out;
 }
 .parhead .description-badge {
-    background: var(--main-background);
+    background: var(--secondary-background);
 }
 .app-bar .description-badge {
-    background: var(--secondary-background);
+    background: var(--background);
 }
 .parhead .description-badge, .app-bar .description-badge {
     margin-left: 0;
@@ -1244,7 +1244,7 @@ h1 .exi {
 .share-dialog {
     border: 1px solid var(--button-border);
     border-radius: 5px;
-    background: var(--main-background);
+    background: var(--secondary-background);
     width: 800px;
     height: 450px;
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
@@ -1278,7 +1278,7 @@ h1 .exi {
 
 .tiles {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 15px;
     transition: 0.2s ease-in-out;
     padding: 15px;
@@ -1291,12 +1291,16 @@ h1 .exi {
     padding: 10px 200px;
 }
 .spotlight-tile {
-    background: var(--main-background);
+    background: var(--secondary-background);
     padding: 30px 30px 200px 30px;
     border-radius: 10px;
     cursor: default;
     transition: 0.2s ease-in-out;
     position: relative;
+    border: 1px solid var(--button-border);
+}
+.dark-mode .spotlight-tile {
+    border: 1px solid transparent;
 }
 .spotlight-tile .icon {
     transition: 0.2s ease-in-out;
@@ -1325,7 +1329,7 @@ h1 .exi {
 .video-tile-info {
     display: flex;
     width: 1200px;
-    background: var(--main-background);
+    background: var(--secondary-background);
     transition: 0.2s ease-in-out;
     padding: 30px;
     border-radius: 20px;
@@ -1353,15 +1357,18 @@ footer .small-tiles, .app-bar .small-tiles {
 }
 .small-tile {
     border: 1px solid var(--button-border);
-    background: var(--main-background);
+    background: var(--secondary-background);
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
     position: relative;
 }
+.dark-mode .small-tile {
+    border: 1px solid transparent;
+}
 .colour-tile {
-    background: var(--main-background);
+    background: var(--secondary-background);
     padding: 10px;
     border-radius: 10px;
     border: 2px solid var(--button-border);
@@ -1456,8 +1463,11 @@ footer .small-tiles, .app-bar .small-tiles {
     bottom: 0;
     display: block;
     overflow: hidden;
-    background: var(--main-background);
+    background: var(--secondary-background);
     text-align: left;
+}
+.dark-mode .info-tile {
+    border: 1px solid transparent;
 }
 .card-cover {
     height: 50px;
@@ -1476,8 +1486,15 @@ footer .small-tiles, .app-bar .small-tiles {
 .card-options {
     padding: 10px 20px;
     transition: 0.3s ease-in-out;
-    background: var(--main-background);
+    background: var(--secondary-background);
     border-radius: none;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex: 1;
+}
+.card-options .button {
+    flex: 1;
 }
 .info-tile:hover .card-options, .info-tile:focus .card-options, .info-tile:focus-within .card-options {
     bottom: 0;
@@ -1486,14 +1503,15 @@ footer .small-tiles, .app-bar .small-tiles {
     background: transparent;
 }
 .card-info {
-    height: 120px;
+    height: 130px;
     padding-bottom: 0;
     overflow: hidden;
 }
 .info-tile:hover, .info-tile:focus, .info-tile:focus-within {
     position: relative;
-    bottom: 3px;
-    box-shadow: var(--dp2);
+    bottom: 5px;
+    box-shadow: var(--dp1);
+    transform: scale(1.02);
     cursor: pointer;
 }
 .info-tile:hover .button, .info-tile:focus .button, .info-tile:hover .icon-button, .info-tile:focus .icon-button, .info-tile:focus-within .button, .info-tile:focus-within .icon-button {
@@ -1535,7 +1553,7 @@ footer .small-tiles, .app-bar .small-tiles {
     align-items: center;
     justify-items: center;
     border-bottom: 1px solid var(--button-border);
-    background: var(--main-background);
+    background: var(--secondary-background);
     transition: 0.2s ease-in-out;
     max-height: 450px;
 }
@@ -1561,13 +1579,13 @@ footer .small-tiles, .app-bar .small-tiles {
 /* Cards */
 
 .card {
-    background: var(--secondary-background);
+    background: var(--background);
 }
 
 /* Buttons */
 
 input {
-    background: var(--main-background);
+    background: var(--secondary-background);
     border: 1px solid var(--button-border);
     border-radius: 5px;
     padding: 10px 12px;
@@ -1931,7 +1949,7 @@ input[type=checkbox]:checked .check-status {
     background: var(--main-text);
 }
 .sort-datapack .sort-0-check, .sort-resourcepack .sort-1-check, .sort-map .sort-2-check {
-    color: var(--main-background);
+    color: var(--secondary-background);
     opacity: 1.0;
 }
 .toggle:hover, .toggle:focus {
@@ -2086,7 +2104,7 @@ span.ripple {
     color: var(--white-text);
 }
 .url {
-    background: var(--main-background);
+    background: var(--secondary-background);
     font-family: 'Roboto Mono', Consolas, var(--main-font);
     font-size: 15px;
     font-weight: 400;
@@ -2130,7 +2148,7 @@ span.ripple {
     transition: 0.2s ease-in-out;
     left: -50%;
     backdrop-filter: saturate(180%) blur(10px);
-    color: var(--main-background);
+    color: var(--secondary-background);
 }
 .tooltip:hover .tooltip-text {
     visibility: visible;
@@ -2186,7 +2204,7 @@ span.ripple {
     list-style: none;
     padding: 0;
     margin: 0;
-    background: var(--main-background);
+    background: var(--secondary-background);
     color: var(--main-text);
     transition: 0.2s ease-in-out;
     border-radius: 0;
@@ -2320,7 +2338,7 @@ span.ripple {
     text-align: left;
     padding: 6px;
     color: var(--secondary-text);
-    background: var(--main-background);
+    background: var(--secondary-background);
     border-top: solid 1px var(--button-border);
     cursor: default;
 }
@@ -2357,7 +2375,7 @@ span.ripple {
     color: #E01818;
 }
 .channel-embed {
-    background: var(--main-background);
+    background: var(--secondary-background);
     display: flex;
     padding: 20px;
     transition: 0.2s ease-in-out;
@@ -2380,7 +2398,7 @@ span.ripple {
 .channel-pfp img {
     width: 128px;
     border-radius: 50%;
-    background-color: var(--main-background);
+    background-color: var(--secondary-background);
     transition: 0.2s ease-in-out;
 }
 .channel-section {
@@ -2503,13 +2521,13 @@ span.ripple {
     background-position: center;
 }
 .plexbg2 {
-    background: url("tiles/videost.png"),var(--main-background);
+    background: url("tiles/videost.png"),var(--secondary-background);
     background-repeat: no-repeat, repeat;
 	background-size: 100%;
     background-position: center;
 }
 .support {
-    background: url("tiles/support.png"),var(--main-background);
+    background: url("tiles/support.png"),var(--secondary-background);
     background-repeat: no-repeat, repeat;
 	background-size: 100%;
     background-position: center;
@@ -2563,7 +2581,7 @@ span.ripple {
     color: var(--white-text);
 }
 header {
-    background: var(--main-background);
+    background: var(--secondary-background);
     color: var(--main-text);
     font-family: var(--header-font);
     transition: 0.2s ease-in-out;
@@ -2576,7 +2594,7 @@ header {
     border-bottom: 1px solid transparent;
 }
 header:hover, header:focus, header:focus-within {
-    background: var(--main-background);
+    background: var(--secondary-background);
     color: var(--main-text);
 }
 .scrolled-header {
@@ -2656,7 +2674,7 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
     list-style: none;
     margin: 0 10px 0 10px;
     padding: 0;
-    background: var(--main-background);
+    background: var(--secondary-background);
     color: var(--main-text);
     transition: 0.2s ease-in-out;
     border: 1px solid var(--button-border);
@@ -2704,7 +2722,7 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
 }
 .h-dropdown-content li a {
     margin: 0;
-    padding: 10px 15px 10px 15px;
+    padding: 6px 15px;
 }
 .h-dropdown-content a:hover, .h-dropdown-content a:focus {
     outline: none;
@@ -2775,7 +2793,18 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
     /*mix-blend-mode: overlay;*/
 }
 .navlink-icon {
-    padding: 15px;
+    padding: 5px;
+    position: relative;
+    top: 2px;
+    border-radius: 5px;
+}
+.navlink-icon:hover, .navlink-icon:focus, .navlink-icon:focus-within {
+    transform: scale(1.1);
+}
+.navlink-icon i {
+    padding-bottom: 0;
+    position: relative;
+    bottom: 2px;
 }
 .navlink:hover, .navlink:focus {
     background: transparent;
@@ -2814,7 +2843,7 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
     transition: 0.2s ease-in-out;
 }
 .page-nav {
-    background: var(--secondary-background);
+    background: var(--background);
     padding: 10px 0;
     height: 100%;
     transition: 0.2s ease-in-out;
@@ -2865,7 +2894,7 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
     border-bottom: none;
 }
 .scrolled-bg-header {
-    background: var(--main-background);
+    background: var(--secondary-background);
     color: var(--main-text);
 }
 .scrolled-bg-header .navlink, .scrolled-bg-header .brand, .scrolled-bg-header .material-icons, .scrolled-bg-header .material-icons-outlined {
@@ -2890,6 +2919,8 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
 .dropdown-with-icon .material-icons {
     margin-right: 14px;
     opacity: 0.8;
+    bottom: 0;
+    padding-bottom: 2px;
     color: var(--main-text);
     transition: 0.2s ease-in-out;
     text-shadow: none;
@@ -2912,7 +2943,7 @@ header:hover .active .material-icons, header:focus .active .material-icons, head
 
 .app-bar {
     padding: 50px 200px;
-    background: var(--main-background);
+    background: var(--secondary-background);
     transition: 0.2s ease-in-out;
 }
 .blue-bg {
@@ -2950,7 +2981,7 @@ footer {
     transition: 0.2s ease-in-out;
     margin-top: 50px;
     border-top: 1px solid var(--button-border);
-    background: var(--main-background);
+    background: var(--secondary-background);
 }
 footer i {
     margin-right: 5px;
@@ -2981,7 +3012,7 @@ footer .brand {
     margin: 10px;
 }
 .moment {
-    background: var(--secondary-background);
+    background: var(--background);
     color: var(--main-text);
     padding: 30px;
     border-radius: 10px;
@@ -3015,7 +3046,7 @@ footer .brand {
     margin: 10px;
 }
 .video {
-    background: var(--secondary-background);
+    background: var(--background);
     color: var(--main-text);
     padding: 0;
     border-radius: 0;
@@ -3088,7 +3119,7 @@ footer .brand {
     border-radius: 50%;
 }
 .ie-alert {
-    background: var(--secondary-background);
+    background: var(--background);
     padding: 10px;
     border-radius: 10px;
     color: black;
@@ -3357,12 +3388,12 @@ footer .brand {
     background-position: center;
 }
 #a {
-    background: var(--main-background);
+    background: var(--secondary-background);
     color: #B00020;
     border: 3px solid currentColor;
 }
 .a {
-    background: var(--main-background);
+    background: var(--secondary-background);
     color: #B00020;
     border: 3px solid currentColor;
 }
@@ -3910,7 +3941,7 @@ footer .brand {
         bottom: 0;
         box-shadow: none;
         border: none;
-        background: var(--main-background);
+        background: var(--secondary-background);
         width: 100%;
         padding: 0;
     }
