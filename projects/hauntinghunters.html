@@ -66,7 +66,7 @@
                     <script>document.getElementById("current-page-link").innerHTML =window.location.href;document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
                     <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
                     <br>
-                    <a class="button tile-browse share-copy" href="javascript:void(0);" onclick="copyURL()">Copy Page Link</a>
+                    <a role="button" class="button tile-browse share-copy" href="javascript:void(0);" onclick="copyURL()">Copy Page Link</a>
                 </div>
             </div>
         </div>
@@ -141,8 +141,8 @@
                 </div>
             </span>
             <span class="options">
-                <a class="button tile-browse" title="Watch the featured video" target="_blank" href="https://youtu.be/KDY_zZZVCA0">Watch</a>
-                <a class="button important tile-browse" title="Download latest release" href="../downloads/hauntinghunters10620.zip">Download</a>
+                <a role="button" class="button tile-browse" title="Watch the featured video" target="_blank" href="https://youtu.be/KDY_zZZVCA0">Watch</a>
+                <a role="button" class="button important tile-browse" title="Download latest release" href="../downloads/hauntinghunters10620.zip">Download</a>
                 <script>function moreoptionsdropdown() {var x = document.getElementById("moreoptions-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
                 <div class="h-dropdown account-dropdown">
                     <a class="icon-button tile-browse project-more" href="javascript:void(0);" onclick="moreoptionsdropdown()"><i class="material-icons">expand_more</i></a>
@@ -160,7 +160,7 @@
             <span>
                 <label class="overline">Type</label>
                 <br>
-                <a class="desc3 map" href="https://minecraft.fandom.com/wiki/Minigames">Map</a>
+                <p class="desc3 circle-tag col-map">Map</p>
             </span>
             <span>
                 <label class="overline">Supports</label>

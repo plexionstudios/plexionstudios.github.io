@@ -66,7 +66,7 @@
                     <script>document.getElementById("current-page-link").innerHTML =window.location.href;document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
                     <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
                     <br>
-                    <a class="button tile-browse share-copy" href="javascript:void(0);" onclick="copyURL()">Copy Page Link</a>
+                    <a role="button" class="button tile-browse share-copy" href="javascript:void(0);" onclick="copyURL()">Copy Page Link</a>
                 </div>
             </div>
         </div>
@@ -153,11 +153,11 @@
                         <span class="desc3">D3</span>
                         <br>
                         <br>
-                        <a class="button tile-browse">Button</a>
-                        <a class="button important">Button</a>
-                        <a class="button disabled">Button</a>
+                        <a role="button" class="button tile-browse">Button</a>
+                        <a role="button" class="button important">Button</a>
+                        <a role="button" class="button disabled">Button</a>
                         <div class="dropdown">
-                            <a class="button drop-button">Dropdown</a>
+                            <a role="button" class="button drop-button">Dropdown</a>
                             <div class="dropdown-content">
                                 <ul>
                                     <li><a href="javascript:void(0)" title="Browse Minecraft">Link</a></li>

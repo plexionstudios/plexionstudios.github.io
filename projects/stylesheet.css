@@ -40,16 +40,13 @@
     padding: 30px;
     margin: 0 200px;
     background: var(--secondary-background);
-    border: 1px solid var(--button-border);
+    border: 2px solid var(--button-border);
     margin-bottom: 20px;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
     position: relative;
     bottom: 100px;
     box-shadow: var(--dp2);
     border-radius: 5px;
-}
-.dark-mode .info {
-    border: 1px solid transparent;
 }
 .project-options {
     display: flex;
@@ -57,7 +54,7 @@
 .project-creator {
     display: flex;
     margin: 5px 0;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .creator-pfp {
     margin-right: 10px;
@@ -99,15 +96,15 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 15px;
     justify-items: middle;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .imgcontainer {
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .images .imgcontainer {
     margin: 0;
     padding: 0;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .imgcontainer img {
     width: 100%;
@@ -118,7 +115,7 @@
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .imgcontainer.def-size img {
     width: auto;
@@ -135,27 +132,31 @@
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,var(--raised-shadow));
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .imgcontainer .watch2 {
     margin-bottom: 4px;
 }
 .project-spotlight {
     padding-top: 450px;
-    transition: 0.2s ease-in-out;
-    border-bottom: 1px solid var(--button-border);
+    transition: 0.1s ease-in-out;
+    border-bottom: 2px solid var(--button-border);
 }
 .project-video {
     padding-top: 0;
     height: 450px;
     overflow: hidden;
     vertical-align: middle;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .project-video .watch2 {
+    opacity: 1.0;
     position: relative;
     bottom: 60%;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
+}
+.project-video iframe {
+    opacity: 1.0;
 }
 .project-tiles {
     padding: 10px 200px 10px 200px;
@@ -164,7 +165,7 @@
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-gap: 15px;
     justify-items: middle;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .project-tile {
     display: flex;
@@ -172,7 +173,7 @@
     border-radius: 10px;
     color: var(--main-text);
     background: var(--secondary-background);
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
     border: 1px solid var(--button-border);
     cursor: default;
 }
@@ -191,22 +192,22 @@ li img {
     margin: 5px 40px 5px 40px;
     border-radius: 5px;
     border: 2px solid var(--secondary-background);
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .pardivider {
     margin: 10px 200px;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .pardivider hr {
     border: solid 1px var(--button-border);
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .parhead {
     font-family: var(--header-font);
     font-size: 20px;
     padding: 0;
     color: var(--main-blue);
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
     margin: 15px 200px 0 200px;
 }
 .parhead .overline {
@@ -218,7 +219,7 @@ li img {
     border-radius: 5px;
     padding: 6px 10px;
     z-index: 1;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
     backdrop-filter: saturate(180%) blur(10px);
     color: var(--white-text);
     font-style: normal;
@@ -246,18 +247,18 @@ li img {
     color: var(--main-blue);
     position: relative;
     top: 8px;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .dark-mode .parhead hr {
     color: var(--white-text);
 }
 .paragraph {
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .paragraph p {
     margin: 0 0 10px 0;
     padding: 0;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .project-tilehead .project-tooltip {
     opacity: 0.0;
@@ -288,7 +289,7 @@ li img {
     font-weight: 600;
     margin: 10px 0 10px 0;
     color: var(--main-blue);
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
     cursor: default;
 }
 .optional-update {
@@ -299,7 +300,7 @@ li img {
     counter-reset: li;
     padding: 0;
     margin: 10px 0 10px 0;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .paragraph ol li::before {
     content: counter(li);
@@ -309,7 +310,7 @@ li img {
     color: var(--main-blue);
     font-family: var(--main-font);
     font-weight: 500;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .dark-mode .paragraph ol li::before {
     color: var(--white-text);
@@ -319,7 +320,7 @@ li img {
     margin-top: 10px;
     margin-bottom: 10px;
     color: var(--main-text);
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .paragraph ul li::before {
     content: "•";
@@ -330,7 +331,7 @@ li img {
     font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 22px;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .dark-mode .paragraph ul li::before {
     color: var(--white-text);
@@ -340,13 +341,13 @@ li img {
     margin-top: 2px;
     margin-bottom: 2px;
     color: var(--main-text);
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .paragraph ul {
     list-style: none;
     padding: 0;
     margin: 10px 0 10px 0;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 .paragraph li {
     font-size: 17px;

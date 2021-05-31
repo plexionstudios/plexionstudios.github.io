@@ -64,7 +64,7 @@
                     <script>document.getElementById("current-page-link").innerHTML =window.location.href;document.getElementById("current-page-link2").innerHTML =window.location.href;</script>
                     <script>function copyURL() {var copyText = document.getElementById("current-page-link2");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");}</script>
                     <br>
-                    <a class="button tile-browse share-copy" href="javascript:void(0);" onclick="copyURL()">Copy Page Link</a>
+                    <a role="button" class="button tile-browse share-copy" href="javascript:void(0);" onclick="copyURL()">Copy Page Link</a>
                 </div>
             </div>
         </div>
@@ -126,7 +126,8 @@
                 </div>
             </span>
             <span class="options">
-                <a class="button important tile-browse" title="Download latest release" href="../downloads/lavarising27421.zip">Download</a>
+                <a role="button" class="button tile-browse" title="Watch the featured video" target="_blank" href="https://youtu.be/yrCv6cWoLzg">Watch</a>
+                <a role="button" class="button important tile-browse" title="Download latest release" href="../downloads/lavarising27421.zip">Download</a>
                 <script>function moreoptionsdropdown() {var x = document.getElementById("moreoptions-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
                 <div class="h-dropdown account-dropdown">
                     <a class="icon-button tile-browse project-more" href="javascript:void(0);" onclick="moreoptionsdropdown()"><i class="material-icons">expand_more</i></a>
@@ -146,7 +147,7 @@
             <span>
                 <label class="overline">Type</label>
                 <br>
-                <a class="desc3 datapack" href="https://minecraft.fandom.com/wiki/Data_Pack">Datapack</a>
+                <p class="desc3 circle-tag col-datapack">Datapack</p>
             </span>
             <span>
                 <label class="overline">Supports</label>
@@ -282,7 +283,7 @@
                 </ul>
             </div>
             <div class="card-options card-nobg no-padding-top">
-                <a class="tile-browse button option" href="../downloads/lavarising27421.zip">Download</a>
+                <a role="button" class="tile-browse button important" href="../downloads/lavarising27421.zip">Download</a>
             </div>
         </span>
     </div>

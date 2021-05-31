@@ -23,7 +23,7 @@
 <body>
     <!--IE--><script>var ua = window.navigator.userAgent;var isIE = /MSIE|Trident/.test(ua);if ( isIE ) {document.location.href="iexplore.html"};</script>
     <script>function accountdropdown() {var x = document.getElementById("account-dropdown-content");if (x.style.display === "block") {x.style.display = "none";} else {x.style.display = "block";}}</script>
-    <header>
+    <header class="transparent-background">
         <span class="header-brand">
             <span class="brand">plexion.dev</span>
         </span>
@@ -259,9 +259,9 @@
             var scroll = $(window).scrollTop();
 
             if (scroll >= 30) {
-                $("header").addClass("scrolled-header");
+                $("header").addClass("scrolled-bg-header");
             } else {
-                $("header").removeClass("scrolled-header");
+                $("header").removeClass("scrolled-bg-header");
             }
         });
     </script>
