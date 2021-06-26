@@ -674,6 +674,26 @@ h1 .exi {
     position: relative;
     bottom: 1px;
 }
+.player-test-certify:before {
+    font-family: 'Material Icons';
+    content: "verified";
+    transition: 0.1s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;  /* Preferred icon size */
+    line-height: 0.5;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: relative;
+    bottom: 1px;
+    text-decoration: none;
+    color: var(--main-text);
+}
 .col-datapack:before {
     background: #ec9259;
 }
@@ -1492,6 +1512,9 @@ footer .small-tiles, .app-bar .small-tiles {
     background: var(--secondary-background);
     text-align: left;
 }
+.player-tested-tile {
+    border-color: var(--main-blue);
+}
 .card-cover {
     height: 50px;
     background: linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 20%);
@@ -2166,15 +2189,16 @@ span.ripple {
     border-radius: 5px;
     padding: 6px 10px;
     position: absolute;
-    max-width: 200px;
-    min-width: 100px;
+    width: 100%;
     z-index: 1;
     top: 100%;
     opacity: 0;
     transition: 0.1s ease-in-out;
-    left: -50%;
     backdrop-filter: saturate(180%) blur(10px);
     color: var(--secondary-background);
+}
+.project-stats span.tooltip-text {
+    margin-right: 0;
 }
 .tooltip:hover .tooltip-text {
     visibility: visible;

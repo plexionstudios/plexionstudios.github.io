@@ -304,16 +304,13 @@ li img {
 }
 .paragraph ol li::before {
     content: counter(li);
-    margin: 14px 10px;
-    padding: 5px;
+    margin: 14px 5px 14px 0;
+    padding: 5px 5px 5px 0;
     border-radius: 50%;
-    color: var(--main-blue);
+    color: var(--secondary-text);
     font-family: var(--main-font);
     font-weight: 500;
     transition: 0.1s ease-in-out;
-}
-.dark-mode .paragraph ol li::before {
-    color: var(--white-text);
 }
 .paragraph ol li {
     counter-increment: li;
@@ -324,17 +321,14 @@ li img {
 }
 .paragraph ul li::before {
     content: "•";
-    margin: 10px;
-    padding: 5px;
+    margin: 10px 5px 10px 0;
+    padding: 5px 5px 5px 0;
     border-radius: 50%;
-    color:var(--main-blue);
+    color: var(--secondary-text);
     font-family: 'Poppins', 'Noto Sans', 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 22px;
     transition: 0.1s ease-in-out;
-}
-.dark-mode .paragraph ul li::before {
-    color: var(--white-text);
 }
 .paragraph ul li {
     counter-increment: li;
@@ -504,6 +498,14 @@ li img {
     }
 }
 @media (max-width: 500px) {
+    .paragraph ul li::before {
+        margin: 10px 0;
+        padding: 5px;
+    }
+    .paragraph ol li::before {
+        margin: 14px 0;
+        padding: 5px;
+    }
     .imgcontainer.def-size img {
         max-width: 100%;
         max-height: 199px;
