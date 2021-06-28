@@ -1,0 +1,424 @@
+/* Import required fonts */
+/*  Main  */ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Define global colours (dark) */
+:root {
+	/* Backgrounds */
+    /*   Main body  */ --body: #000000;
+    /*   Sec body   */ --main: #0a0a0f;
+	/*    Footer    */ --ext: #060608;
+	--border: rgba(55,55,78,0.5);
+    --border-alt: rgba(55,55,78,0.8);
+	/* Global site padding */
+    --padding: 300px;
+    --card-padding: 450px;
+	/* Text + icons */
+    --icon: rgba(255,255,255,0.7);
+    --text-head: rgba(255,255,255,1);
+    --text-main: rgba(255,255,255,0.75);
+    --text-alt: rgba(255,255,255,0.6);
+    --font-main: Inter, Roboto, "Segoe UI", Arial, Helvetica, sans-serif;
+	/* Accent colours */
+    --accent: #3359F2;
+    --accent-raise: #4e70f8;
+    --target: rgba(78,112,248,0.7);
+}
+
+/* Define key elements */
+body {
+    background: var(--body);
+    font-family: var(--font-main);
+    color: var(--text-main);
+}
+/* Header 1 (attention-drawing headline) */
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--text-head);
+    padding: 16px 0;
+    line-height: 60px;
+}
+/* Header 2 (less-important headline) */
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text-head);
+    padding: 10px 0;
+}
+/* Header 3 */
+h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--text-head);
+    padding: 6px 0;
+}
+/* Header 4 (slightly bigger than default text) */
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-head);
+    padding: 3px 0;
+}
+/* Header 5 (same size as default text) */
+h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-head);
+}
+*:focus {
+    outline: 2px solid var(--target);
+}
+a {
+    color: var(--text-alt);
+    text-decoration: none;
+    transition: 0.2s;
+}
+a:hover {
+    color: var(--text-main);
+}
+i.i {
+    font-style: italic;
+    color: var(--text-alt);
+}
+
+/* Buttons */
+.button {
+    padding: 12px 28px;
+    margin: 10px;
+    box-shadow: inset 0px 0px 0px 2px var(--border);
+    display: inline-block;
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.2s;
+    text-align: center;
+}
+/* Button styling (upon hover) */
+.button:hover {
+    box-shadow: inset 0px 0px 0px 2px var(--border-alt);
+    color: var(--text-head);
+}
+/* Focus buttons (important) */
+.button.focus {
+    background: var(--text-head);
+    color: var(--body);
+    box-shadow: none;
+}
+.button.focus:hover {
+    box-shadow: none;
+}
+.button.focus.accent {
+    background: var(--main);
+}
+.button.focus.accent:hover {
+    background: var(--alt);
+}
+/* Icon buttons */
+.button.icon:after {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 0.5;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    vertical-align: middle;
+    position: relative;
+    bottom: 2px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+/* Buttons with external page links */
+.button.ext:after {
+    content: "open_in_new";
+}
+
+/* Sections */
+section {
+    --top: 60px;
+    --sides: 120px;
+    padding: var(--top) var(--sides);
+}
+section.center {
+    text-align: center;
+    padding: var(--top) var(--padding);
+}
+/* Section size variations */
+section.big {
+    --top: 150px;
+}
+section.xl {
+    --top: 220px;
+}
+/* Section left+right aligned */
+section.left, section.right {
+    --sides: var(--padding);
+}
+section.left {
+    text-align: left;
+}
+section.right {
+    text-align: right;
+}
+/* Custom sections */
+section.main {
+    background: var(--main);
+}
+section.alt {
+    background: var(--main);
+}
+section.accent {
+    background: var(--accent);
+}
+section.accent-raise {
+    background: var(--accent-raise);
+}
+.bg {
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Text styles */
+p {
+    padding: 10px 0;
+    line-height: 18px;
+}
+/* Alternate text sizes */
+.text-16 {
+    font-size: 16px;
+}
+.text-20 {
+    font-size: 20px;
+    line-height: 24px;
+}
+.text-24 {
+    font-size: 24px;
+}
+/* Text colouring */
+.col-accent {
+    color: var(--accent-raise);
+}
+/* Alternate text styles */
+.over {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-alt);
+    font-size: 14px;
+}
+
+/* MAIN */
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: black;
+	font-family: 'Inter', 'Roboto', sans-serif;
+	color: white;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+a {
+	text-decoration: none;
+	color: #003BFF;
+}
+ul {
+	list-style: none;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 15px;
+    transition: 0.2s;
+    padding: 15px;
+}
+.cards.pfp {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+/* Card */
+.card {
+    transition: 0.2s;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 0;
+    display: block;
+    overflow: hidden;
+    background: var(--main);
+    text-align: left;
+}
+.card:hover {
+    bottom: 5px;
+    box-shadow: var(--raise-1);
+}
+.card.hover {
+    cursor: pointer;
+}
+.card.hover:hover {
+    background: var(--alt);
+}
+/* Card cover image */
+.card .cover {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background: var(--highlight);
+    max-height: 450px;
+}
+.card .cover img {
+    border-radius: 10px;
+    width: 100%;
+}
+/* Card info section */
+.card .info {
+    height: 130px;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+/* Card button section */
+.card .options {
+    transition: 0.3s ease-in-out;
+    background: var(--secondary-background);
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.card .options .button {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background: var(--ext);
+    padding: 60px var(--padding);
+}
+/* Icon buttons */
+footer .socials {
+    margin-top: 30px;
+    display: flex;
+}
+footer .socials .social-icon {
+    margin-right: 10px;
+}
+/* Icon button */
+.social-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+/* Icon button images/icons */
+.social-icon img {
+    width: 28px;
+}
+.social-icon i {
+    font-size: 24px;
+	color: var(--text-alt);
+	transition: 0.2s;
+}
+.social-icon i:hover {
+	color: var(--text-main);
+}
+
+/* SECTIONS */
+
+.welcome {
+	padding: 80px 0px 20px 0px;
+	height: 320px;
+	transition: 0.3s;
+}
+td {
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+.description {
+	opacity: 0.8;
+}
+.contact img {
+	padding: 30px 0px 0px 0px;
+	margin: 0px;
+}
+.contact h1 {
+	padding: 0px 0px 5px 0px;
+	margin: 0px;
+}
+.contact {
+	height: 600px;
+}
+.header h3 {
+	transition: 0.3s;
+}
+.header h3:hover {
+	opacity: 0.8;
+}
+.video {
+	height: 660px;
+	color: white;
+}
+.sayori {
+	background: #F2F2F2;
+	padding: 10px 0px 20px 0px;
+	height: 200px;
+	margin-left: 200px;
+	margin-right: 200px;
+	transition: 0.3s;
+}
+.sayori img {
+	float: left;
+	padding-left: 200px;
+}
+.sayori h2 {
+	float: centre;
+}
+.sayori p {
+	float: centre;
+}
+
+/* EXTRAS */
+
+header {
+	display: flex;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: var(--body);
+	z-index: 100;
+}
+header a {
+	color: var(--text-alt);
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s;
+    font-size: 20px;
+    padding: 3px 0;
+}
+header a.focus {
+	border-bottom: 2px solid var(--text-alt);
+}
+header .icon {
+	width: 90px;
+}
+
+@media (max-width: 500px) {
+    .button {
+        display: block;
+        padding: 16px;
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<head>
+    <!-- Meta info -->
+    <title>Accessibility Page Settings — PLEXION</title>
+    <meta name="title" content="Welcome to the home of Event Datapacks">
+    <meta name="description" content="plexion.dev allows you to browse through a library of minecraft event datapacks and lets you choose one that interests you.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plexion.dev/">
+    <meta property="og:title" content="Welcome to the home of Event Datapacks">
+    <meta property="og:description" content="plexion.dev allows you to browse through a library of minecraft event datapacks and lets you choose one that interests you.">
+    <meta property="og:image" content="https://plexion.dev/img/brand.png">
+    <meta name="theme-color" content="#003AF8">
+    <!-- Display parameters -->
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="ico" href="favicon.ico"/>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Load JS -->
+    <script src="scroll.js"></script>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="dark join">
+        <span class="brand">
+            <h1 translate="no">plexion</h1>
+        </span>
+        <span class="links">
+            <a href="/" aria-label="Home"><i class="icon material-icons" translate="no">home</i><i class="text">Home</i></a>
+            <a href="/content" aria-label="Content"><i class="icon material-icons" translate="no">play_circle</i><i class="text">Content</i></a>
+            <a href="/events" aria-label="Events"><i class="icon material-icons" translate="no">emoji_events</i><i class="text">Events</i></a>
+            <a href="/socials" aria-label="Socials"><i class="icon material-icons" translate="no">account_circle</i><i class="text">Socials</i></a>
+        </span>
+    </header>
+    <section class="center big dark alt">
+        <h1 class="heavy-font text-72">Accessibility is key</h1>
+        <p class="text-20">The web should be accessible by everyone, that's why plexion.dev offers various options that can allow people to use the page in a way that's comfortable for them.</p>
+        <a class="button focus big" href="https://github.com/plexionstudios/plexionstudios.github.io/issues">Give feedback</a>
+        <p class="text-14">Feedback is greatly appreciated and will only help to make this page better!</p>
+    </section>
+    <section class="left settings">
+        <h2 class="heavy-font">Fonts</h2>
+        <div class="setting" id="dyslexic-font">
+            <span class="text">
+                <h4 class="dyslexic">Dyslexic font</h4>
+                <p class="text-18">Toggles an alternativate font designed by <a target="_blank" href="https://opendyslexic.org/">OpenDyslexic</a>.</p>
+            </span>
+            <span class="option">
+                <a role="toggle" onclick="toggleDyslexicFont()" class="toggle toggleDyslexicFont" href="javascript:void(0);">
+                    <i class="material-icons">check</i>
+                </a>
+            </span>
+        </div>
+        <div class="setting" id="heavy-alternative">
+            <span class="text">
+                <h4 class="heavy-font">Tone down the heavy fonts</h4>
+                <p class="text-18">Swaps out the heavy-bolded font for a less intense alternative.</p>
+            </span>
+            <span class="option">
+                <a role="toggle" onclick="toggleHeavyAlternative()" class="toggle toggleHeavyAlternative" href="javascript:void(0);">
+                    <i class="material-icons">check</i>
+                </a>
+            </span>
+        </div>
+        <div class="setting" id="serif">
+            <span class="text">
+                <h4 class="serif">Prefer serif fonts</h4>
+                <p class="text-18">Swaps out all sans-serif fonts with serif alternatives.</p>
+            </span>
+            <span class="option">
+                <a role="toggle" onclick="toggleSerifFonts()" class="toggle toggleSerifFonts" href="javascript:void(0);">
+                    <i class="material-icons">check</i>
+                </a>
+            </span>
+        </div>
+        <h2 class="heavy-font">Theming</h2>
+        <div class="setting" id="reduced-motion">
+            <span class="text">
+                <h4>Reduced motion</h4>
+                <p class="text-18">Disables all hover effects, transitions and animated backgrounds.</p>
+            </span>
+            <span class="option">
+                <a role="toggle" onclick="toggleReducedMotion()" class="toggle toggleReducedMotion" href="javascript:void(0);">
+                    <i class="material-icons">check</i>
+                </a>
+            </span>
+        </div>
+        <div class="setting" id="reduced-saturation">
+            <span class="text">
+                <h4>Reduced saturation</h4>
+                <p class="text-18">Decreases the saturation of all accent colours.</p>
+                <a class="button focus left" href="javascript:void(0);">Default</a>
+                <a class="button focus left reduced-saturation" href="javascript:void(0);">Reduced</a>
+            </span>
+            <span class="option">
+                <a role="toggle" onclick="toggleReducedSaturation()" class="toggle toggleReducedSaturation" href="javascript:void(0);">
+                    <i class="material-icons">check</i>
+                </a>
+            </span>
+        </div>
+    </section>
+    <footer class="dark">
+        <div class="flex">
+            <span class="brand">
+                <div class="main">
+                    <h1 class="brand-font">plexion</h1>
+                    <p>Powered by #PLEXION2021</p>
+                    <a role="button" onclick="toggleDyslexicFont()" href="javascript:void(0);" class="button left">Toggle Dyslexic Font</a>
+                </div>
+            </span>
+            <span class="links">
+                <span class="link">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/events">Events</a></li>
+                        <li><a href="/library">Library</a></li>
+                        <li><a href="/events-py">Events Bot</a></li>
+                        <li><a href="/brand">Branding</a></li>
+                        <li><a href="/socials">Socials</a></li>
+                    </ul>
+                </span>
+                <span class="link">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="/accessibility">Accessibility</a></li>
+                        <li><a href="/socials#contact">Contact</a></li>
+                    </ul>
+                </span>
+                <span class="link">
+                    <h4>Developing</h4>
+                    <ul>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io">View on Github</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/commits/master">Archived Releases</a></li>
+                    </ul>
+                </span>
+            </span>
+        </div>
+        <div class="padding">
+            <div class="socials">
+                <a class="social-icon" target="_blank" href="https://youtube.com/plexion" title="plexion on YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a class="social-icon" target="_blank" href="https://twitch.tv/plexionLIVE" title="@plexionLIVE on Twitch">
+                    <i class="fab fa-twitch"></i>
+                </a>
+                <a class="social-icon" target="_blank" href="https://twitter.com/plexionlive" title="@plexionlive on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="social-icon" target="_blank" href="https://open.spotify.com/user/musicalpika?si=c86c6e10b72b4d4c" title="@cobainn on Spotify">
+                    <i class="fab fa-spotify"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Final script importing (after page rendered) -->
+<script src="settings/dyslexic.js"></script>
+<script src="settings/heavy-alternative.js"></script>
+<script src="settings/serif-fonts.js"></script>
+<script src="settings/reduced-motion.js"></script>
+<script src="settings/reduced-saturation.js"></script>

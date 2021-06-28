@@ -1,6 +1,6 @@
 $(function () {
     var mediumPromise = new Promise(function (resolve) {
-    var $content = $('#jsonContent');
+    var $content = $('#medium');
     var data = {
         rss: 'https://medium.com/feed/@plexion'
     };
@@ -10,26 +10,26 @@ $(function () {
             var display = '';
             $.each(response.items, function (k, item) {
                 var src = item["thumbnail"]; // use thumbnail url
-                display += `<div class="info-tile medium-card" onclick="location.href='${item.link}';">`;
-                display += `<div class="tile-image" style="max-height: 400px;"><img src="${src}" alt="Cover image" onerror="this.src='error.png'"></div>`;
-                display += `<div class="card-padding card-info" style="height: 140px;">`;
-                display += `<p class="overline">Medium Post</p><h2 class="h9">${item.title}</h2>`;
+                display += `<a class="card hover" href="${item.link}">`;
+                display += `<div class="cover" style="max-height: 400px;"><img src="${src}" alt="Cover image" style="max-height: 400px;" onerror="this.src='library/error.png'"></div>`;
+                display += `<div class="info">`;
+                display += `<h3 class="text-28">${item.title}</h3>`;
                 var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
                 yourString = yourString.replace('h4', 'p');
                 yourString = yourString.replace('h3', 'p');
-                yourString = yourString.replace('<p>', '<p class="desc3">');
-                yourString = yourString.replace('<figcaption>', '<p class="desc3">');
-                yourString = yourString.replace('</figcaption>', '</p>');
-                var maxLength = 320; // maximum number of characters to extract
+                yourString = yourString.replace('\n', '');
+                yourString = yourString.replace('<img>', '');
+                yourString = yourString.replace('</a>', '</p>');
+                yourString = yourString.replace('</div>', '</p>');
+                var maxLength = 120; // maximum number of characters to extract
                 //trim the string to the maximum length
                 var trimmedString = yourString.substr(0, maxLength);
                 //re-trim if we are in the middle of a word
                 trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
-                display += `<p class="desc0">${trimmedString}...</p>`;
+                display += `<p>${trimmedString}...</p></div>`;
                 
-                display += `</div><div class="card-options card-nobg"><a href="${item.link}" target="_blank" class="tile-browse button option">Continue reading</a></div>`;
-                display += '</div>';
-                return k < 10;
+                display += '</a>';
+                return k < 3;
             });
 
             resolve($content.html(display));

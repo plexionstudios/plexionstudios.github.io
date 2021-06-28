@@ -1,124 +1,100 @@
 <!DOCTYPE html>
 <head>
-    <title>uh oh, that ain't good</title>
+    <!-- Meta info -->
+    <title>Page not found — PLEXION</title>
+    <!-- Display parameters -->
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/stylesheet.css">
+    <!-- Favicon -->
     <link rel="shortcut icon" type="ico" href="/favicon.ico"/>
-	<link rel="stylesheet" href="/stylesheet.css">
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Load JS -->
+    <script src="/scroll.js"></script>
+    <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-    :root {
-        --optional: #C4962D;
-        --warn: #B00020;
-    }
-    .error {
-        margin-top: 80px;
-    }
-    .error .big2 {
-        margin: 0;
-    }
-    .map {
-        border-radius: 5px;
-        border: 1px solid var(--button-border);
-    }
-    .errorcode {
-        text-align: center;
-        font-family: 'Roboto Mono', 'Consolas';
-        font-size: 20px;
-        color: var(--main-blue);
-    }
-    @media (max-width: 670px){
-        .map {
-            width: 95%;
-        }
-    }
-</style>
 <body>
-    <header>
-        <span class="header-brand">
-            <span class="brand">plexion.dev</span>
+    <header class="dark join">
+        <span class="brand">
+            <h1>plexion</h1>
         </span>
-        <span class="navigation">
-            <span class="header-links">
-                <a href="/" class="navlink" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
-            </span>
-        </span>
-        <span class="header-space">
-            <span class="h-dropdown account-dropdown">
-                <a class="navlink navlink-nohide navlink-icon" onclick="accountdropdown()" href="javascript:void(0)"><i class="material-icons">settings</i></a>
-                <div class="h-dropdown-content" id="account-dropdown-content">
-                    <ul>
-                        <li>
-                            <div class="card-padding">
-                                <h4>Page Settings</h4>
-                                <p class="descsmall">These settings are saved locally across the page. Settings on error pages are very limited.</p>
-                            </div>
-                        </li>
-                        <div class="channel-divider"></div>
-                        <li><a onclick="themeToggle()" href="javascript:void(0)" title="Switch between Light or Dark Theme" class="dropdown-with-icon"><i class="material-icons button-toggle"></i>Change theme</a></li>
-                        <div class="channel-divider"></div>
-                        <li><a href="/settings" title="Edit your options on a seperate page" class="dropdown-with-icon"><i class="material-icons">settings</i>Settings</a></li>
-                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/issues" title="Report an Issue on Github" class="dropdown-with-icon"><i class="material-icons">feedback</i>Report an Issue</a></li>
-                    </ul>
-                </div>
-            </span>
+        <span class="links">
+            <a href="/" class="focus"><i class="icon material-icons">error</i><i class="text">uh oh</i></a>
         </span>
     </header>
-    <div class="section large-section spotlight-section align-left limited-section-padding" style="padding-top: 240px;">
-        <h1 class="h8" style="padding: 0;">EH?</h1>
-        <p class="desc1">you need a map or what</p>
+    <section class="left big dark main header">
+        <h1 class="heavy text-100">404</h1>
+        <h3 class="col-main">You need a map or somethin?</h3>
         <br>
-        <div class="channel-divider"></div>
+        <p class="text-20">Anyways, you look lost. Check you haven't mistyped the url, or report this as a bug on Github.</p>
+        <a class="button focus left" href="/">Just get me back</a>
+        <a class="button" href="https://www.youtube.com/playlist?list=PLbaASKiZWzbpxBMr1gvlwFXrVcOVswVjv">This was my mistake, report on Github</a>
         <br>
-        <p class="desc0">Anyways, it seems you've encountered a <strong>404</strong>. Check you've entered the URL correctly or submit an <a href="https://github.com/plexionstudios/plexionstudios.github.io/issues">issue</a> if you think this is my doing.</p>
-        <a role="button" class="button important" href="/">Return Home</a>
-        <a role="button" class="button" href="/versions/">The Archives</a>
-    </div>
-    <script>
-        $(window).scroll(function() {    
-            var scroll = $(window).scrollTop();
-
-            if (scroll >= 30) {
-                $("header").addClass("scrolled-header");
-            } else {
-                $("header").removeClass("scrolled-header");
-            }
-        });
-    </script>
-    <script>
-        (function() {
-    let onpageLoad = localStorage.getItem("theme") || "";
-    let element = document.body;
-    element.classList.add(onpageLoad);
-    document.getElementById("theme").textContent =
-        localStorage.getItem("theme") || "light";
-    })();
-
-    function themeToggle() {
-        let element = document.body;
-        element.classList.toggle("dark-mode");
-
-        let theme = localStorage.getItem("theme");
-        if (theme && theme === "dark-mode") {
-            localStorage.setItem("theme", "");
-        } else {
-            localStorage.setItem("theme", "dark-mode");
-        }
-
-        document.getElementById("theme").textContent = localStorage.getItem("theme");
-    }
-    </script>
-    <script>
-        function accountdropdown() {
-            var x = document.getElementById("account-dropdown-content");
-            if (x.style.display === "block") {
-            x.style.display = "none";
-            } else {
-            x.style.display = "block";
-            }
-        }
-    </script>
+        <p class="text-14">Tip: If you're certain the page existed at some point, try replacing the start with <code>legacy.plexion.dev</code> or <code>old.plexion.dev</code></p>
+    </section>
+    <footer class="dark">
+        <div class="flex">
+            <span class="brand">
+                <div class="main">
+                    <h1 class="brand-font">plexion</h1>
+                    <p>Powered by #PLEXION2021</p>
+                    <a role="button" onclick="toggleDyslexicFont()" href="javascript:void(0);" class="button left">Toggle Dyslexic Font</a>
+                </div>
+            </span>
+            <span class="links">
+                <span class="link">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/events">Events</a></li>
+                        <li><a href="/library">Library</a></li>
+                        <li><a href="/events-py">Events Bot</a></li>
+                        <li><a href="/brand">Branding</a></li>
+                        <li><a href="/socials">Socials</a></li>
+                    </ul>
+                </span>
+                <span class="link">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="/accessibility">Accessibility</a></li>
+                        <li><a href="/socials#contact">Contact</a></li>
+                    </ul>
+                </span>
+                <span class="link">
+                    <h4>Developing</h4>
+                    <ul>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io">View on Github</a></li>
+                        <li><a href="https://github.com/plexionstudios/plexionstudios.github.io/commits/master">Archived Releases</a></li>
+                    </ul>
+                </span>
+            </span>
+        </div>
+        <div class="padding">
+            <div class="socials">
+                <a class="social-icon" target="_blank" href="https://youtube.com/plexion" title="plexion on YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a class="social-icon" target="_blank" href="https://twitch.tv/plexionLIVE" title="@plexionLIVE on Twitch">
+                    <i class="fab fa-twitch"></i>
+                </a>
+                <a class="social-icon" target="_blank" href="https://twitter.com/plexionlive" title="@plexionlive on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="social-icon" target="_blank" href="https://open.spotify.com/user/musicalpika?si=c86c6e10b72b4d4c" title="@cobainn on Spotify">
+                    <i class="fab fa-spotify"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
+<!-- Final script importing (after page rendered) -->
+<script src="/settings/dyslexic.js"></script>
+<script src="/settings/heavy-alternative.js"></script>
+<script src="/settings/serif-fonts.js"></script>
+<script src="/settings/reduced-motion.js"></script>
+<script src="/settings/reduced-saturation.js"></script>
