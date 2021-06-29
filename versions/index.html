@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="shortcut icon" type="ico" href="../favicon.ico"/>
-	<link rel="stylesheet" href="../stylesheet.css">
+    <link rel="shortcut icon" type="ico" href="old/favicon.ico"/>
+	<link rel="stylesheet" href="old/stylesheet.css">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -80,8 +80,9 @@
             <span class="header-links">
                 <a href="/" class="navlink active" title="Return Home"><i class="material-icons">home</i><i class="navi">Home</i></a>
                 <a href="/events" class="navlink" title="Minecraft Events"><i class="material-icons-outlined">emoji_events</i><i class="navi">Events</i></a>
-                <a href="/videos" class="navlink" title="Browse Content"><i class="material-icons-outlined">play_circle</i><i class="navi">Content</i></a>
-                <a href="/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons-outlined">settings</i><i class="navi">Settings</i></a>
+                <a href="/library" class="navlink" title="Browse Library"><i class="material-icons-outlined">bookmarks</i><i class="navi">Library</i></a>
+                <a href="/socials" class="navlink" title="Browse Socials"><i class="material-icons-outlined">switch_account</i><i class="navi">Socials</i></a>
+                <a href="old/settings" class="navlink mobile-only" title="Page Settings"><i class="material-icons-outlined">settings</i><i class="navi">Settings</i></a>
             </span>
         </span>
         <span class="header-space">
@@ -116,6 +117,11 @@
     <div class="app-bar">
         <h1>The Archives</h1>
         <p class="desc0">Backups from 2019 to 2021 have been saved and are stored here. If you're looking for a specific build and it's not here, check the <a href="https://github.com/plexionstudios/plexionstudios.github.io/commits/master">Github archives</a> - it's probably there.</p>
+        <br>
+        <br>
+        <br>
+        <strong class="desc0">Accessibility notice</strong>
+        <p class="desc2">Due to this page itself and all archived pages being from the past, they will not support any of the accessibility features present on the current page layout. It is recommended to use the up-to-date pages available at <a href="/">plexion.dev</a>'s home page.</p>
     </div>
     <div class="section">
         <h1>PLEXION.DEV IN 2021</h1>
@@ -340,9 +346,9 @@
                 <a role="button" class="button important" title="View this website archive" href="Nov27-2020/">View</a>
             </div>
         </span>
-        <span class="info-tile main-background" onclick="location.href='/v1/';">
+        <!--<span class="info-tile main-background" onclick="location.href='/v1/';">
             <div class="tile-image tile-smallimage">
-                <img src="/v1/cover.png" alt="Cover image" onerror="this.src='../error.png'">
+                <img src="/v1/cover.png" alt="Cover image" onerror="this.src='old/error.png'">
             </div>
             <div class="card-padding card-info">
                 <label class="overline last-updated">22/11/2020</label>
@@ -351,7 +357,7 @@
             <div class="card-options card-nobg">
                 <a role="button" class="button important" title="View this website archive" href="/v1/">View</a>
             </div>
-        </span>
+        </span>-->
         <span class="info-tile main-background" onclick="location.href='Nov11-2020/';">
             <div class="tile-image tile-smallimage">
                 <img src="Nov11-2020/cover.png" alt="Cover image" onerror="this.src='../error.png'">
@@ -426,7 +432,7 @@
         </span>
         <span class="info-tile main-background" onclick="location.href='https://github.com/plexionstudios/plexionstudios.github.io/tree/master/versions/backups/';">
             <div class="tile-image tile-smallimage">
-                <img src="/extras.png" alt="Cover image" onerror="this.src='../error.png'">
+                <img src="/extras.png" alt="Cover image" onerror="this.src='old/error.png'">
             </div>
             <div class="card-padding card-info">
                 <h2 class="h9">Extra items</h2>
@@ -505,27 +511,19 @@
     <div class="page-full"></div>
     <footer>
         <span class="desc0">Home</span><i class="material-icons navnext">navigate_next</i><strong class="desc0">The Archives</strong>
-        <p class="desc2">Last modified on 27/05/2021</p>
+        <p class="desc2">Last modified on 29/06/2021</p>
         <br>
         <div class="footer-extras">
             <div class="footer-links">
                 <span class="footer-link">
                     <h4>Explore</h4>
                     <ul class="quick-links">
-                        <li><a target="_blank" href="/" class="quick-link small-link icon-all"><i class="material-icons">grid_view</i>Projects</a></li>
+                        <li><a target="_blank" href="/" class="quick-link small-link icon-all"><i class="material-icons">home</i>Home</a></li>
                         <li><a target="_blank" href="/events" class="quick-link small-link icon-events"><i class="material-icons">emoji_events</i>Events</a></li>
-                        <li><a target="_blank" href="/videos" class="quick-link small-link icon-content"><i class="material-icons">play_circle</i>Content</a></li>
-                        <li><a target="_blank" href="/accounts" class="quick-link small-link icon-accounts"><i class="material-icons">switch_account</i>Accounts</a></li>
-                        <li><a target="_blank" href="/brand" class="quick-link small-link"><i class="material-icons col-brand">verified</i>My Brand</a></li>
-                        <li><a target="_blank" href="/medium" class="quick-link small-link icon-medium"><i class="material-icons">article</i>Medium</a></li>
-                        <li><a target="_blank" href="/support" class="quick-link small-link icon-support"><i class="material-icons">help_outline</i>Support</a></li>
-                        <li><a target="_blank" href="/about" class="quick-link small-link icon-support"><i class="material-icons">info_outline</i>About Me</a></li>
-                    </ul>
-                    <br>
-                    <ul class="quick-links">
-                        <li><a target="_blank" href="/datapacks" class="quick-link small-link icon-datapack"><i class="material-icons">code</i>Datapacks</a></li>
-                        <li><a target="_blank" href="/resourcepacks" class="quick-link small-link icon-resourcepack"><i class="material-icons">invert_colors</i>Resourcepacks</a></li>
-                        <li><a target="_blank" href="/maps" class="quick-link small-link icon-map"><i class="material-icons">public</i>Maps</a></li>
+                        <li><a target="_blank" href="/library" class="quick-link small-link icon-content"><i class="material-icons">bookmarks</i>Library</a></li>
+                        <li><a target="_blank" href="/medium" class="quick-link small-link icon-support"><i class="material-icons">code</i>Events Bot</a></li>
+                        <li><a target="_blank" href="/brand" class="quick-link small-link"><i class="material-icons col-brand">verified</i>Branding</a></li>
+                        <li><a target="_blank" href="/accounts" class="quick-link small-link icon-accounts"><i class="material-icons">switch_account</i>Socials</a></li>
                     </ul>
                 </span>
                 <span class="footer-link">
@@ -560,7 +558,6 @@
                         <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/issues" class="quick-link small-link">Report an Issue</a></li>
                         <li><a href="/versions/" class="quick-link small-link">View old versions</a></li>
                         <li><a target="_blank" href="https://github.com/plexionstudios/plexionstudios.github.io/commits/master" class="quick-link small-link">View github archives</a></li>
-                        <li><a href="/beta/" class="quick-link small-link">Test new features</a></li>
                     </ul>
                 </span>
             </div>
@@ -568,7 +565,8 @@
             <div class="channel-divider"></div>
             <br>
             <span class="footer-end">
-                <p class="secondary-text desc2">Build 2105.27</p>
+                <p class="secondary-text desc2">Build OLD.2106.29</p>
+                <p class="secondary-text desc2">Page links modified to fit new version</p>
                 <a href="mailto:plexionbusiness@gmail.com" class="desc2 secondary-text">Send an email</a>                
             </span>
             <div class="debug-info">
