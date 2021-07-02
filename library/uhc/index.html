@@ -42,16 +42,14 @@
         <span class="text no-flex big can-full">
             <h1 class="heavy-font text-72">UHC</h1>
             <p class="text-20">A recreation of the original classic in the latest versions of Minecraft.</p>
-            <a role="button" class="button big focus left icon outline dow" href="UHC3.zip">Download 1.0.3</a>
-            <a role="button" class="button big focus left icon outline dow" href="UHC4.zip">Download 1.0.4</a>
+            <a role="button" class="button big focus left icon outline dow" href="UHC.zip">Download latest</a>
             <a role="button" target="_blank" class="button big accent focus left icon outline ext" href="https://planetminecraft.com/data-pack/simple-uhc/">View on PMC</a>
-            <p class="text-14">The 2 downloads correspond to the <a href="https://youtu.be/QJv0bA3i0gM">5v5 UHC</a> and the <a href="https://youtu.be/5HILNKwRwzs">3v3v3 UHC</a> shown on my channel for reference.</p>
         </span>
         <span class="bg-filter"></span>
     </section>
-    <section class="left header no-sep no-align">
+    <section class="left header no-sep no-align" id="overview">
         <h4>Overview</h4>
-        <p class="text-16">A simple, lightweight and easy-to-use UHC datapack designed for 1.16.5 (may backport to older versions). Featuring popular UHC standard additions like Cut Clean and Speed UHC, this is the easiest and simplest way to hold a UHC in the latest version on platforms like Minecraft Realms.</p>
+        <p class="text-16">A simple, lightweight and easy-to-use UHC datapack designed for 1.17 (for older versions, use <a href="v1.1">these downloads</a>). Featuring popular UHC standard additions like Cut Clean and Speed UHC, this is the easiest and simplest way to hold a UHC in the latest version on platforms like Minecraft Realms.</p>
         <div class="info-wrap">
             <span class="desc">
                 <p class="col-alt">Size</p>
@@ -59,7 +57,7 @@
             </span>
             <span class="desc">
                 <p class="col-alt">Supports</p>
-                <p data-tooltip="As tested">1.16</p>
+                <p data-tooltip="As tested">1.17</p>
             </span>
             <span class="desc">
                 <p class="col-alt">Updated</p>
@@ -71,14 +69,20 @@
             </span>
         </div>
     </section>
-    <section class="left header sep no-align">
+    <section class="left header sep no-align" id="gallery">
         <h4>Gallery</h4>
         <div class="gallery">
             <span class="img">
                 <div class="video">
+                    <iframe src="https://www.youtube-nocookie.com/embed/QJv0bA3i0gM?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>
+                </div>
+                <p class="text-14 cap">Featured video from my channel, 5v5</p>
+            </span>
+            <span class="img">
+                <div class="video">
                     <iframe src="https://www.youtube-nocookie.com/embed/5HILNKwRwzs?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>
                 </div>
-                <p class="text-14 cap">Featured video from my channel</p>
+                <p class="text-14 cap">Featured video from my channel, 3v3v3</p>
             </span>
             <span class="img">
                 <img src="gal0.png">
@@ -102,7 +106,7 @@
             </span>
         </div>
     </section>
-    <section class="left header sep no-align">
+    <section class="left header sep no-align" id="featuring">
         <h4>Featuring</h4>
         <div class="supports">
             <span class="desc">
@@ -149,9 +153,20 @@
                     <p>Teams can easily be assigned to players to give a more competitive edge.</p>
                 </span>
             </span>
+            <span class="desc">
+                <span class="icon">
+                    <div class="headline-icon min">
+                        <i class="material-icons">edit</i>
+                    </div>
+                </span>
+                <span class="text">
+                    <h5>Simplified setup</h5>
+                    <p>A simple setup flow will help you with your event upon adding the datapack.</p>
+                </span>
+            </span>
         </div>
     </section>
-    <section class="left header sep no-align">
+    <section class="left header sep no-align" id="installation">
         <h4>Installation & Setup</h4>
         <p class="text-16">As with any other datapack, there is an incredibly simple installation process:</p>
         <ol>
@@ -165,9 +180,31 @@
         <ol>
             <li>Either host the server or load up the world on Minecraft Realms</li>
             <li>If you want to enable teams, run <code>/scoreboard players set enable_teams global 1</code></li>
-            <li>Teams can then be assigned with <code>/team join [name] team1/team2 (red/blue)</code></li>
+            <li>Teams can then be assigned with <code>/team join [name] red/blue/green (green only available with 3 teams)</code></li>
             <li>Once you're ready, run <code>/function uhc:start</code> and let the games begin!</li>
         </ol>
+    </section>
+    <section class="left header sep no-align" id="whats-new">
+        <h4>What's New</h4>
+        <div class="update" id="v1.1">
+            <div class="header">
+                <h5>Version 1.1</h5><span class="text-16">Released 02/07/2021</span>
+            </div>
+            <div class="details">
+                <p class="text-16">Quality of life and other cool updates:</p>
+                <ul>
+                    <li>The two UHC versions are now unified into one, with each's characteristics replaced with options</li>
+                    <li>The setup flow from the Lava Rising has made it's way into the UHC, making setting up the datapack easier than ever</li>
+                    <li>Cut Clean now uses raw ores instead of x ores from 1.16 - the datapack now only supports 1.17</li>
+                    <li>Teams can now be selected from 3 teams and 2 teams (default is 2)</li>
+                    <li>Natural regeneration is now an option you can customise (default is off)</li>
+                </ul>
+                <br>
+                <h5>The datapack now only supports 1.17; if you're using 1.16, you will unfortunately have to use the older versions, which are out of support:</h5>
+                <a class="button focus left" href="UHC3.zip">1.0.3</a>
+                <a class="button focus" href="UHC4.zip">1.0.4</a>
+            </div>
+        </div>
     </section>
     <footer class="dark">
         <div class="flex">

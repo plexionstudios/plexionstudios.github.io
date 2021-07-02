@@ -836,9 +836,9 @@ section .bg-filter {
     z-index: 1;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
-    -webkit-backdrop-filter: saturate(110%) blur(10px);
-    backdrop-filter: saturate(110%) blur(10px);
+    background: rgba(0,0,0,0.35);
+    -webkit-backdrop-filter: saturate(110%) blur(7px);
+    backdrop-filter: saturate(110%) blur(7px);
 }
 section .bg {
     position: absolute;
@@ -946,6 +946,24 @@ section.img .img img {
 }
 section.img .img {
     flex: 1;
+}
+
+/* Library project updates */
+.update {
+    margin: 10px 0;
+}
+.update .header * {
+    display: inline-flex;
+}
+.update .header .text-16:before {
+    content: "—";
+    margin-right: 10px;
+}
+.update .header .text-16 {
+    margin: 0 10px;
+}
+.update .details {
+    padding: 0 20px;
 }
 
 /* Section steps */
@@ -1070,6 +1088,12 @@ section .steps {
 }
 .gallery .img .video iframe {
     border-radius: 10px;
+}
+.img.small img {
+    min-width: 350px;
+    max-width: 600px;
+    border-radius: 5px;
+    display: block;
 }
 
 /* Library (ex. project) pages */
@@ -1486,6 +1510,10 @@ footer .socials .social-icon {
     footer .links {
         display: block;
     }
+    .img.small img {
+        width: 100%;
+        max-width: auto;
+    }
 }
 @media (max-width: 650px) {
     .text-72:not(.dont-shrink) {
@@ -1504,6 +1532,9 @@ footer .socials .social-icon {
     }
 }
 @media (max-width: 500px) {
+    .update .details {
+        padding: 0;
+    }
     .text-72.dont-shrink {
         font-size: 58px;
         line-height: 62px;
@@ -1543,6 +1574,8 @@ footer .socials .social-icon {
     }
     .button {
         display: block;
+    }
+    .button.big {
         padding: 14px 16px;
     }
     footer .links li {
