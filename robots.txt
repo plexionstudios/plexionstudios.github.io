@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /versions/
+
+User-agent: *
+Allow: /
+
+Sitemap: http://www.example.com/sitemap.xml
