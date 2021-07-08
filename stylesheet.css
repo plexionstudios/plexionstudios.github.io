@@ -1339,7 +1339,7 @@ footer .socials .social-icon {
 }
 
 /* Material icons */
-.material-icons {
+.material-icons, .material-icons-outlined, .material-icons-round, .material-icons-sharp {
     display: inline;
     vertical-align: middle;
 }
@@ -1566,7 +1566,7 @@ footer .socials .social-icon {
     header, header.join {
         bottom: 0;
         top: auto;
-        margin: 10px 5px;
+        margin: 25px 5px;
         border-radius: 10px;
     }
     .header-gap {
@@ -1608,7 +1608,7 @@ footer .socials .social-icon {
         display: flex;
     }
     header .links a.focus {
-        border-bottom: none;
+        border-bottom: 0 solid transparent;
         color: var(--text-head);
     }
     footer {
@@ -1630,6 +1630,12 @@ footer .socials .social-icon {
     .setting .option {
         margin: 0 10px;
     }
+    footer {
+        padding: 60px 20px;
+    }
+    footer .brand {
+        text-align: center;
+    }
 }
 @media (max-width: 430px) {
     .images {
@@ -1640,7 +1646,10 @@ footer .socials .social-icon {
     }
     .cards {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        padding: 15px 0;
+        padding: 15px 5px;
+    }
+    .card .info {
+        padding: 0 15px 15px 15px;
     }
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1648,11 +1657,6 @@ footer .socials .social-icon {
     .socials.info-wrap {
         grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
         grid-gap: 10px;
-    }
-    .card {
-        border-radius: 0;
-        border-left: none;
-        border-right: none;
     }
     .card .info {
         height: auto;
