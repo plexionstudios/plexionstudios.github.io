@@ -46,4 +46,4 @@ Translating content is very big in countries that don't have a primary language 
 
 I think these rules are fair for both parties and should help let you know what you can and can-not do with my content. If you have any questions or inquiries then you can email me either through [plexionbusiness@gmail.com](mailto:plexionbusiness@gmail.com) or [plexionfans@gmail.com](mailto:plexionfans@gmail.com), depending on what it is.
 
-By the way, don't try and find loopholes and abuse them in here, it's unfair and just unnecessary to deal with. That's all for now though, thanks for reading till the end I guess LMAO.
+By the way, don't try and find loopholes and abuse them in here, it's unfair and just unnecessary to deal with. It should also be noted that all projects hosted under plexion.dev are now protected under the [GNU GPL v3](https://github.com/plexiondev/plexiondev.github.io/blob/master/LICENSE). That's all for now though, thanks for reading till the end I guess LMAO.
