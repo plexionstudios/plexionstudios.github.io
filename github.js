@@ -2,7 +2,7 @@
 const xhr = new XMLHttpRequest();
 
 // GitHub endpoint, dynamically passing in specified username
-const url = `https://api.github.com/users/plexionstudios/repos`;
+const url = `https://api.github.com/users/plexiondev/repos`;
 
 // Open a new connection, using a GET request via URL endpoint
 // Providing 3 arguments (GET/POST, The URL, Async True/False)
