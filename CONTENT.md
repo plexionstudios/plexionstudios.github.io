@@ -2,7 +2,7 @@
 
 Hello and welcome to the official Content Guidelines/Terms and Conditions document for all my content. This applies to all my channels on every platform, including the **plexion** YouTube channel, the **plexionGOLD** and **plexionVODS** YouTube channel and the **plexionLIVE** Twitch channel (and the rest that I cannot be bothered to include)
 
-Last modified: 08/07/2021 14:36 BST - Check the Github history for older archives
+Last modified: 08/07/2021 19:15 BST - Check the Github history for older archives
 
 ## Overview
 
