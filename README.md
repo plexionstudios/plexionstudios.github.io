@@ -11,4 +11,4 @@ This was mainly made to learn HTML and CSS by myself. Like I alluded to, I've ba
 
 ## Any terms?
 
-I have a document for [Content Guidelines + Terms](https://plexion.dev/terms) that outlines what you can and cannot do with my content. With the website itself, there really isn't any guidelines although I may introduce a license for all my projects at some point in the future.
+I have a document for [Content Guidelines + Terms](https://plexion.dev/terms) that outlines what you can and cannot do with my content. All projects hosted under plexion.dev are also covered with the [GNU GPL v3](https://github.com/plexiondev/plexiondev.github.io/blob/master/LICENSE) license.
