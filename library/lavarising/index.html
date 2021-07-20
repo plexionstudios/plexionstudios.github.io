@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <!-- Meta info -->
-    <title>Lava Rising — PLEXION</title>
+    <title>Lava Rising — plexion</title>
     <meta name="title" content="Lava Rising Datapack for Minecraft 1.16">
     <meta name="description" content="The easiest way to host a Lava Rising event in the latest versions of Minecraft.">
     <meta property="og:type" content="website">
@@ -22,11 +22,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Load JS -->
     <script src="/scroll.js"></script>
+    <script src="info.js"></script>
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark">
     <header class="join dark">
         <span class="brand">
             <h1 translate="no">plexion</h1>
@@ -37,36 +38,50 @@
             <a href="/library" class="focus" aria-label="Library"><i class="icon material-icons-round" translate="no">auto_stories</i><i class="text">Library</i></a>
             <a href="/socials" aria-label="Socials"><i class="icon material-icons" translate="no">account_circle</i><i class="text">Socials</i></a>
         </span>
+        <span class="grad" style="--grad: var(--library);"></span>
     </header>
     <section class="alt left med bg dark header" style="background-image: url(cover.png);">
         <span class="text no-flex big can-full">
             <h1 class="heavy-font text-72">Lava Rising</h1>
             <p class="text-20">The easiest way to host a Lava Rising event in the latest versions of Minecraft.</p>
-            <a role="button" class="button big focus left icon outline dow" href="Lava Rising.zip">Download latest</a>
+            <a role="button" class="button big focus left icon outline dow" href="https://github.com/plexiondev/lava-rising/releases/latest/download/Lava.Rising.zip">Download latest</a>
             <a role="button" target="_blank" class="button big accent focus icon outline ext" href="https://planetminecraft.com/data-pack/lava-rising/">View on PMC</a>
         </span>
         <span class="bg-filter"></span>
     </section>
-    <section class="left header no-sep no-align" id="overview">
-        <h4>Overview</h4>
-        <p class="text-16">A lightweight and easy-to-use datapack that makes the lava rise from the bottom of the world to the top, forcing players to build up and attack, or get engulfed by the lava. You have one life, once you die, you're out and left to spectate the game. The last player remaining wins!</p>
-        <div class="info-wrap">
-            <span class="desc">
-                <p class="col-alt">Size</p>
-                <p>15.9KB</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Supports</p>
-                <p data-tooltip="As tested">1.16-1.17</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Updated</p>
-                <p>01/07/2021</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Released</p>
-                <p>15/04/2021</p>
-            </span>
+    <div class="grad-wrap" style="background: linear-gradient(180deg, #ffcf680c 0%, var(--body) 100%);">
+        <section class="left header no-sep no-align" id="overview">
+            <h4>Overview</h4>
+            <p class="text-16">A lightweight and easy-to-use datapack that makes the lava rise from the bottom of the world to the top, forcing players to build up and attack, or get engulfed by the lava. You have one life, once you die, you're out and left to spectate the game. The last player remaining wins!</p>
+            <div class="info-wrap">
+                <span class="desc">
+                    <p class="col-alt">Size</p>
+                    <p>15.9KB</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Supports</p>
+                    <p data-tooltip="As tested">1.16-1.17</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Updated</p>
+                    <p id="updated"></p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Released</p>
+                    <p>15/04/2021</p>
+                </span>
+            </div>
+        </section>
+    </div>
+    <section class="left header sep no-align" id="whats-new">
+        <h4>What's New</h4>
+        <div class="update">
+            <div class="header">
+                <h5 id="release-name"></h5><span class="text-16" id="release-date"></span>
+            </div>
+            <div class="details">
+                <p class="text-16" id="release-description"></p>
+            </div>
         </div>
     </section>
     <section class="left header sep no-align" id="gallery">
@@ -191,25 +206,7 @@
         </ol>
         <p class="text-16">Upon adding the datapack, a simple setup flow will help you get the event up and running.</p>
     </section>
-    <section class="left header sep no-align" id="whats-new">
-        <h4>What's New</h4>
-        <div class="update" id="v1.1">
-            <div class="header">
-                <h5>Version 1.1</h5><span class="text-16">Released 01/07/2021</span>
-            </div>
-            <div class="details">
-                <p class="text-16">To make the datapack easier to use, a simple feature has been added:</p>
-                <ul>
-                    <li>With this update, a setup flow is shown upon adding the datapack which allows you to enable/disable teams and start the game with clickable text buttons in chat.
-                        <span class="img small">
-                            <img src="/img/setup-flow.png">
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <footer class="dark">
+    <footer class="dark buttons" style="background-image: url('/banner.png');">
         <div class="flex">
             <span class="brand">
                 <div class="main">

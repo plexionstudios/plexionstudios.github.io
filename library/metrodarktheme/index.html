@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <!-- Meta info -->
-    <title>Metro Dark Theme — PLEXION</title>
+    <title>Metro Dark Theme — plexion</title>
     <meta name="title" content="Metro Dark Theme Resourcepack for Minecraft 1.16">
     <meta name="description" content="A GUI re-skin that helps your eyes late at night. Predecessor to Simple Dark.">
     <meta property="og:type" content="website">
@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark">
     <header class="join dark">
         <span class="brand">
             <h1 translate="no">plexion</h1>
@@ -37,6 +37,7 @@
             <a href="/library" class="focus" aria-label="Library"><i class="icon material-icons-round" translate="no">auto_stories</i><i class="text">Library</i></a>
             <a href="/socials" aria-label="Socials"><i class="icon material-icons" translate="no">account_circle</i><i class="text">Socials</i></a>
         </span>
+        <span class="grad" style="--grad: var(--library);"></span>
     </header>
     <section class="alt left med bg dark header" style="background-image: url(cover.png);">
         <span class="text no-flex big can-full">
@@ -48,28 +49,30 @@
         </span>
         <span class="bg-filter"></span>
     </section>
-    <section class="left header no-sep no-align" id="overview">
-        <h4>Overview</h4>
-        <p class="text-16">Metro Dark Theme is a texture pack for Minecraft that is based on the "Metro" style of Windows 10. It comes in two versions, Dark Grey and Pitch Black. Each offers a fresh new experience in all the GUIs putting your eyes at rest when you're up late at night.</p>
-        <div class="info-wrap">
-            <span class="desc">
-                <p class="col-alt">Size</p>
-                <p>35.6KB, 35KB</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Supports</p>
-                <p data-tooltip="As tested">1.16</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Updated</p>
-                <p>19/08/2020</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Released</p>
-                <p>27/04/2019</p>
-            </span>
-        </div>
-    </section>
+    <div class="grad-wrap" style="background: linear-gradient(180deg, #ffcf680c 0%, var(--body) 100%);">
+        <section class="left header no-sep no-align" id="overview">
+            <h4>Overview</h4>
+            <p class="text-16">Metro Dark Theme is a texture pack for Minecraft that is based on the "Metro" style of Windows 10. It comes in two versions, Dark Grey and Pitch Black. Each offers a fresh new experience in all the GUIs putting your eyes at rest when you're up late at night.</p>
+            <div class="info-wrap">
+                <span class="desc">
+                    <p class="col-alt">Size</p>
+                    <p>35.6KB, 35KB</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Supports</p>
+                    <p data-tooltip="As tested">1.16</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Updated</p>
+                    <p>19/08/2020</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Released</p>
+                    <p>27/04/2019</p>
+                </span>
+            </div>
+        </section>
+    </div>
     <section class="left header sep no-align" id="gallery">
         <h4>Gallery</h4>
         <div class="gallery">
@@ -105,7 +108,7 @@
             <li>Then click the <code>></code> arrow to enable the pack and hit <code>Done</code></li>
         </ol>
     </section>
-    <footer class="dark">
+    <footer class="dark buttons" style="background-image: url('/banner.png');">
         <div class="flex">
             <span class="brand">
                 <div class="main">

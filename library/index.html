@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <!-- Meta info -->
-    <title>Welcome to the home of Event Datapacks — PLEXION</title>
+    <title>Welcome to the home of Event Datapacks — plexion</title>
     <meta name="title" content="Welcome to the home of Event Datapacks">
     <meta name="description" content="plexion.dev allows you to browse through a library of minecraft event datapacks and lets you choose one that interests you.">
     <meta property="og:type" content="website">
@@ -22,11 +22,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Load JS -->
     <script src="/scroll.js"></script>
+    <script src="/github.js"></script>
+    <!--<script src="/scratch.js"></script>-->
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark">
     <header class="join dark">
         <span class="brand">
             <h1 translate="no">plexion</h1>
@@ -37,39 +39,27 @@
             <a href="/library" class="focus" aria-label="Library"><i class="icon material-icons-round" translate="no">auto_stories</i><i class="text">Library</i></a>
             <a href="/socials" aria-label="Socials"><i class="icon material-icons" translate="no">account_circle</i><i class="text">Socials</i></a>
         </span>
+        <span class="grad" style="--grad: var(--library);"></span>
     </header>
-    <section class="alt left big bg dark header" style="background-image: url(../wall/library.png);">
-        <span class="text no-flex big can-full">
-            <h1 class="heavy-font text-64">The home for event datapacks</h1>
-            <p class="text-20">Browse through the library of projects and choose what interests you.</p>
+    <section class="alt left img big bg dark header" style="background-image: url(uhc/cover.png);">
+        <span class="text big no-flex can-full">
+            <h1 class="heavy text-72">THE PROJECT LIBRARY</h1>
+            <p class="text-20">Have a look through the selection.</p>
         </span>
         <span class="bg-filter"></span>
     </section>
-    <section class="center">
-        <h1 class="heavy-font">The full library</h1>
-        <p class="text-20">Click on a card to view more information and download.</p>
+    <!--<section class="center">
+        <h1 class="heavy-font">Scratch</h1>
     </section>
+    <div class="cards" id="scratchProjects"></div>
+    <section class="center" id="reposHeader">
+        <h1 class="heavy-font">The full library</h1>
+    </section>-->
+    <section class="center" id="reposHeader">
+        <h1 class="heavy-font">The full library</h1>
+    </section>
+    <div class="cards" id="userRepos"></div>
     <div class="cards">
-        <a class="card hover" href="uhc/">
-            <div class="cover">
-                <img src="uhc/cover.png" alt="Cover image" onerror="this.src='error.png'">
-            </div>
-            <div class="info">
-                <h3 class="text-28">UHC</h3>
-                <p>A simple UHC Datapack featuring many standards from the genre as a whole.</p>
-                <p class="col-alt">Last updated: 02/07/2021</p>
-            </div>
-        </a>
-        <a class="card hover" href="lavarising/">
-            <div class="cover">
-                <img src="lavarising/cover.png" alt="Cover image" onerror="this.src='error.png'">
-            </div>
-            <div class="info">
-                <h3 class="text-28">Lava Rising</h3>
-                <p>A lightweight and easy-to-use datapack that makes the lava rise.</p>
-                <p class="col-alt">Last updated: 01/07/2021</p>
-            </div>
-        </a>
         <a class="card hover" href="opendyslexic/">
             <div class="cover">
                 <img src="opendyslexic/cover.png" alt="Cover image" onerror="this.src='error.png'">
@@ -80,16 +70,6 @@
                 <p class="col-alt">Last updated: 20/06/2021</p>
             </div>
         </a>
-        <a class="card hover" href="simpledark/">
-            <div class="cover">
-                <img src="simpledark/cover.png" alt="Cover image" onerror="this.src='error.png'">
-            </div>
-            <div class="info">
-                <h3 class="text-28">Simple Dark</h3>
-                <p>A sleek and modern dark-themed GUI resource pack for Minecraft.</p>
-                <p class="col-alt">Last updated: 11/06/2021</p>
-            </div>
-        </a>
         <a class="card hover" href="racetotheend/">
             <div class="cover">
                 <img src="racetotheend/cover.png" alt="Cover image" onerror="this.src='error.png'">
@@ -98,16 +78,6 @@
                 <h3 class="text-28">Race To The End</h3>
                 <p>A simple, yet challenging datapack that tasks teams of 3 to beat Minecraft.</p>
                 <p class="col-alt">Last updated: 28/03/2021</p>
-            </div>
-        </a>
-        <a class="card hover" href="voidrising/">
-            <div class="cover">
-                <img src="voidrising/cover.png" alt="Cover image" onerror="this.src='error.png'">
-            </div>
-            <div class="info">
-                <h3 class="text-28">Void Rising</h3>
-                <p>A datapack makes the void rise from y=0 to y=245, upping the challenge.</p>
-                <p class="col-alt">Last updated: 18/01/2021</p>
             </div>
         </a>
         <a class="card hover" href="metrodarktheme/">
@@ -135,7 +105,7 @@
         <h1 class="heavy-font">Have a suggestion?</h1>
         <p class="text-20">Comment any feedback or requests on my PMC profile or one of my YouTube comments.</p>
     </section>
-    <footer class="dark">
+    <footer class="dark buttons" style="background-image: url('/banner.png');">
         <div class="flex">
             <span class="brand">
                 <div class="main">

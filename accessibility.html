@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <!-- Meta info -->
-    <title>Accessibility Page Settings — PLEXION</title>
+    <title>Accessibility Page Settings — plexion</title>
     <meta name="title" content="Welcome to the home of Event Datapacks">
     <meta name="description" content="plexion.dev allows you to browse through a library of minecraft event datapacks and lets you choose one that interests you.">
     <meta property="og:type" content="website">
@@ -26,86 +26,90 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark">
     <header class="dark join">
         <span class="brand">
             <h1 translate="no">plexion</h1>
         </span>
         <span class="links">
-            <a href="/" aria-label="Home"><i class="icon material-icons-round" translate="no">home</i><i class="text">Home</i></a>
-            <a href="/content" aria-label="Content"><i class="icon material-icons" translate="no">play_circle</i><i class="text">Content</i></a>
+            <a href="/" class="focus" aria-label="Home"><i class="icon material-icons-round" translate="no">home</i><i class="text">Home</i></a>
             <a href="/events" aria-label="Events"><i class="icon material-icons" translate="no">emoji_events</i><i class="text">Events</i></a>
+            <a href="/library" aria-label="Library"><i class="icon material-icons-round" translate="no">auto_stories</i><i class="text">Library</i></a>
             <a href="/socials" aria-label="Socials"><i class="icon material-icons" translate="no">account_circle</i><i class="text">Socials</i></a>
         </span>
+        <span class="grad" style="--grad: var(--home);"></span>
     </header>
-    <section class="center big dark alt">
-        <h1 class="heavy-font text-72">Accessibility is key</h1>
+    <section class="left big dark alt bg buttons" style="background-image: url('/banner.png');">
+        <h1 class="text-48">Accessibility options</h1>
         <p class="text-20">The web should be accessible by everyone, that's why plexion.dev offers various options that can allow people to use the page in a way that's comfortable for them.</p>
-        <a class="button focus big" href="https://github.com/plexiondev/plexiondev.github.io/issues">Give feedback</a>
-        <p class="text-14">Feedback is greatly appreciated and will only help to make this page better!</p>
+        <a class="button focus left" href="https://github.com/plexiondev/plexiondev.github.io/issues">Give feedback</a>
     </section>
     <section class="left settings">
-        <h2 class="heavy-font">Fonts</h2>
-        <div class="setting" id="dyslexic-font">
-            <span class="text">
-                <h4 class="dyslexic">Dyslexic font</h4>
-                <p class="text-18">Toggles an alternativate font designed by <a target="_blank" href="https://opendyslexic.org/">OpenDyslexic</a>.</p>
-            </span>
-            <span class="option">
-                <a role="toggle" onclick="toggleDyslexicFont()" class="toggle toggleDyslexicFont" href="javascript:void(0);">
-                    <i class="material-icons">check</i>
-                </a>
-            </span>
-        </div>
-        <div class="setting" id="heavy-alternative">
-            <span class="text">
-                <h4 class="heavy-font">Tone down the heavy fonts</h4>
-                <p class="text-18">Swaps out the heavy-bolded font for a less intense alternative.</p>
-            </span>
-            <span class="option">
-                <a role="toggle" onclick="toggleHeavyAlternative()" class="toggle toggleHeavyAlternative" href="javascript:void(0);">
-                    <i class="material-icons">check</i>
-                </a>
-            </span>
-        </div>
-        <div class="setting" id="serif">
-            <span class="text">
-                <h4 class="serif">Prefer serif fonts</h4>
-                <p class="text-18">Swaps out all sans-serif fonts with serif alternatives.</p>
-            </span>
-            <span class="option">
-                <a role="toggle" onclick="toggleSerifFonts()" class="toggle toggleSerifFonts" href="javascript:void(0);">
-                    <i class="material-icons">check</i>
-                </a>
-            </span>
-        </div>
-        <h2 class="heavy-font">Theming</h2>
-        <div class="setting" id="reduced-motion">
-            <span class="text">
-                <h4>Reduced motion</h4>
-                <p class="text-18">Disables all hover effects, transitions and animated backgrounds.</p>
-            </span>
-            <span class="option">
-                <a role="toggle" onclick="toggleReducedMotion()" class="toggle toggleReducedMotion" href="javascript:void(0);">
-                    <i class="material-icons">check</i>
-                </a>
-            </span>
-        </div>
-        <div class="setting" id="reduced-saturation">
-            <span class="text">
-                <h4>Reduced saturation</h4>
-                <p class="text-18">Decreases the saturation of all accent colours.</p>
-                <a class="button focus left" href="javascript:void(0);">Default</a>
-                <a class="button focus left reduced-saturation" href="javascript:void(0);">Reduced</a>
-            </span>
-            <span class="option">
-                <a role="toggle" onclick="toggleReducedSaturation()" class="toggle toggleReducedSaturation" href="javascript:void(0);">
-                    <i class="material-icons">check</i>
-                </a>
-            </span>
+        <div class="inner">
+            <div class="head">
+                <h4>Fonts</h4>
+            </div>
+            <div class="setting" id="dyslexic-font" onclick="toggleDyslexicFont()">
+                <span class="text">
+                    <h5 class="text-18">Dyslexic font</h5>
+                    <p class="text-16">Toggles an alternativate font designed by <a target="_blank" href="https://opendyslexic.org/">OpenDyslexic</a>.</p>
+                </span>
+                <span class="option">
+                    <a role="toggle" onclick="toggleDyslexicFont()" class="toggle toggleDyslexicFont" href="javascript:void(0);">
+                        <i class="material-icons">check</i>
+                    </a>
+                </span>
+            </div>
+            <!--<div class="setting" id="heavy-alternative">
+                <span class="text">
+                    <h5 class="heavy-font text-18">Tone down the heavy fonts</h5>
+                    <p class="text-16">Swaps out the heavy-bolded font for a less intense alternative.</p>
+                </span>
+                <span class="option">
+                    <a role="toggle" onclick="toggleHeavyAlternative()" class="toggle toggleHeavyAlternative" href="javascript:void(0);">
+                        <i class="material-icons">check</i>
+                    </a>
+                </span>
+            </div>-->
+            <div class="setting last" id="serif" onclick="toggleSerifFonts()">
+                <span class="text">
+                    <h5 class="text-18">Prefer serif fonts</h5>
+                    <p class="text-16">Swaps out all sans-serif fonts with serif alternatives.</p>
+                </span>
+                <span class="option">
+                    <a role="toggle" onclick="toggleSerifFonts()" class="toggle toggleSerifFonts" href="javascript:void(0);">
+                        <i class="material-icons">check</i>
+                    </a>
+                </span>
+            </div>
+            <div class="head">
+                <h4>Theming</h4>
+            </div>
+            <div class="setting" id="reduced-motion" onclick="toggleReducedMotion()">
+                <span class="text">
+                    <h5 class="text-18">Reduced motion</h5>
+                    <p class="text-16">Disables all hover effects, transitions and animated backgrounds.</p>
+                </span>
+                <span class="option">
+                    <a role="toggle" onclick="toggleReducedMotion()" class="toggle toggleReducedMotion" href="javascript:void(0);">
+                        <i class="material-icons">check</i>
+                    </a>
+                </span>
+            </div>
+            <div class="setting last" id="reduced-saturation" onclick="toggleReducedSaturation()">
+                <span class="text">
+                    <h5 class="text-18">Reduced saturation</h5>
+                    <p class="text-16">Decreases the saturation of all accent colours.</p>
+                </span>
+                <span class="option">
+                    <a role="toggle" onclick="toggleReducedSaturation()" class="toggle toggleReducedSaturation" href="javascript:void(0);">
+                        <i class="material-icons">check</i>
+                    </a>
+                </span>
+            </div>
         </div>
     </section>
-    <footer class="dark">
+    <footer class="dark buttons" style="background-image: url('/banner.png');">
         <div class="flex">
             <span class="brand">
                 <div class="main">

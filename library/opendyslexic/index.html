@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <!-- Meta info -->
-    <title>OpenDyslexic Font — PLEXION</title>
+    <title>OpenDyslexic Font — plexion</title>
     <meta name="title" content="OpenDyslexic Font Pack for Minecraft 1.17">
     <meta name="description" content="A simple font-swap to aid people who struggle with dyslexia.">
     <meta property="og:type" content="website">
@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark">
     <header class="join dark">
         <span class="brand">
             <h1 translate="no">plexion</h1>
@@ -37,6 +37,7 @@
             <a href="/library" class="focus" aria-label="Library"><i class="icon material-icons-round" translate="no">auto_stories</i><i class="text">Library</i></a>
             <a href="/socials" aria-label="Socials"><i class="icon material-icons" translate="no">account_circle</i><i class="text">Socials</i></a>
         </span>
+        <span class="grad" style="--grad: var(--library);"></span>
     </header>
     <section class="alt left med bg dark header" style="background-image: url(cover.png);">
         <span class="text no-flex big can-full">
@@ -47,24 +48,26 @@
         </span>
         <span class="bg-filter"></span>
     </section>
-    <section class="left header no-sep no-align" id="overview">
-        <h4>Overview</h4>
-        <p class="text-16">A simple resourcepack that replaces the default Minecraft font with a dyslexic font provided by OpenDyslexic that is said to help people with dyslexia. While i'm not dyslexic myself, making this resourcepack may still help people and allow them to play the game in a way that's comfortable for them.</p>
-        <div class="info-wrap">
-            <span class="desc">
-                <p class="col-alt">Size</p>
-                <p>32.9KB</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Supports</p>
-                <p data-tooltip="As tested">1.17</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Released</p>
-                <p>20/06/2021</p>
-            </span>
-        </div>
-    </section>
+    <div class="grad-wrap" style="background: linear-gradient(180deg, #ffcf680c 0%, var(--body) 100%);">
+        <section class="left header no-sep no-align" id="overview">
+            <h4>Overview</h4>
+            <p class="text-16">A simple resourcepack that replaces the default Minecraft font with a dyslexic font provided by OpenDyslexic that is said to help people with dyslexia. While i'm not dyslexic myself, making this resourcepack may still help people and allow them to play the game in a way that's comfortable for them.</p>
+            <div class="info-wrap">
+                <span class="desc">
+                    <p class="col-alt">Size</p>
+                    <p>32.9KB</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Supports</p>
+                    <p data-tooltip="As tested">1.17</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Released</p>
+                    <p>20/06/2021</p>
+                </span>
+            </div>
+        </section>
+    </div>
     <section class="left header sep no-align" id="gallery">
         <h4>Gallery</h4>
         <div class="gallery">
@@ -119,7 +122,7 @@
             <li>Then click the <code>></code> arrow to enable the pack and hit <code>Done</code></li>
         </ol>
     </section>
-    <footer class="dark">
+    <footer class="dark buttons" style="background-image: url('/banner.png');">
         <div class="flex">
             <span class="brand">
                 <div class="main">

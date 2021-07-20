@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <!-- Meta info -->
-    <title>Simple Dark — PLEXION</title>
+    <title>Simple Dark — plexion</title>
     <meta name="title" content="Simple Dark Resourcepack for Minecraft 1.16">
     <meta name="description" content="A sleek and modern dark-themed GUI resource pack for Minecraft.">
     <meta property="og:type" content="website">
@@ -22,11 +22,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Load JS -->
     <script src="/scroll.js"></script>
+    <script src="info.js"></script>
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark">
     <header class="join dark">
         <span class="brand">
             <h1 translate="no">plexion</h1>
@@ -37,38 +38,52 @@
             <a href="/library" class="focus" aria-label="Library"><i class="icon material-icons-round" translate="no">auto_stories</i><i class="text">Library</i></a>
             <a href="/socials" aria-label="Socials"><i class="icon material-icons" translate="no">account_circle</i><i class="text">Socials</i></a>
         </span>
+        <span class="grad" style="--grad: var(--library);"></span>
     </header>
     <section class="alt left med bg dark header" style="background-image: url(cover.png);">
         <span class="text no-flex big can-full">
             <h1 class="heavy-font text-72">Simple Dark</h1>
             <p class="text-20">A sleek and modern dark-themed GUI resource pack for Minecraft.</p>
-            <a role="button" class="button big focus left icon outline dow" href="Simple Dark.zip">Download latest</a>
-            <a role="button" class="button big focus icon outline dow" href="Simple Dark Contrasted.zip">Download Contrasted</a>
-            <a role="button" target="_blank" class="button big icon outline ext" href="https://planetminecraft.com/data-pack/simple-dark/">View on PMC</a>
+            <a role="button" class="button big focus left icon outline dow" href="https://github.com/plexiondev/simple-dark/releases/latest/download/Simple.Dark.zip">Download latest</a>
+            <a role="button" class="button big focus icon outline dow" href="https://github.com/plexiondev/simple-dark/releases/latest/download/Simple.Dark.Contrasted.zip">Download Contrasted</a>
+            <a role="button" target="_blank" class="button big focus accent icon outline ext" href="https://planetminecraft.com/data-pack/simple-dark/">View on PMC</a>
             <p class="text-14">The Contrasted version of Simple Dark features more emphasised borders between backgrounds on buttons and windows.</p>
         </span>
         <span class="bg-filter"></span>
     </section>
-    <section class="left header no-sep no-align" id="overview">
-        <h4>Overview</h4>
-        <p class="text-16">Simple Dark is the successor to my previous dark-themed resource pack, Metro Dark Theme. This pack is built from the ground up with a sleek and modern design whilst keeping the dark aesthetic. Every GUI in the base game is themed along with most of the Realms GUIs making the experience seamless. There are also some additional fabric mods that have been themed with the pack, a full list detailed below.</p>
-        <div class="info-wrap">
-            <span class="desc">
-                <p class="col-alt">Size</p>
-                <p>98.3KB, 92.5KB</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Supports</p>
-                <p data-tooltip="As tested">1.16-1.17</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Updated</p>
-                <p>11/06/2021</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Released</p>
-                <p>09/03/2021</p>
-            </span>
+    <div class="grad-wrap" style="background: linear-gradient(180deg, #ffcf680c 0%, var(--body) 100%);">
+        <section class="left header no-sep no-align" id="overview">
+            <h4>Overview</h4>
+            <p class="text-16">Simple Dark is the successor to my previous dark-themed resource pack, Metro Dark Theme. This pack is built from the ground up with a sleek and modern design whilst keeping the dark aesthetic. Every GUI in the base game is themed along with most of the Realms GUIs making the experience seamless. There are also some additional fabric mods that have been themed with the pack, a full list detailed below.</p>
+            <div class="info-wrap">
+                <span class="desc">
+                    <p class="col-alt">Size</p>
+                    <p>98.3KB, 92.5KB</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Supports</p>
+                    <p data-tooltip="As tested">1.16-1.17</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Updated</p>
+                    <p id="updated"></p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Released</p>
+                    <p>09/03/2021</p>
+                </span>
+            </div>
+        </section>
+    </div>
+    <section class="left header sep no-align" id="whats-new">
+        <h4>What's New</h4>
+        <div class="update">
+            <div class="header">
+                <h5 id="release-name"></h5><span class="text-16" id="release-date"></span>
+            </div>
+            <div class="details">
+                <p class="text-16" id="release-description"></p>
+            </div>
         </div>
     </section>
     <section class="left header sep no-align" id="gallery">
@@ -159,7 +174,7 @@
             <li>Then click the <code>></code> arrow to enable the pack and hit <code>Done</code></li>
         </ol>
     </section>
-    <footer class="dark">
+    <footer class="dark buttons" style="background-image: url('/banner.png');">
         <div class="flex">
             <span class="brand">
                 <div class="main">

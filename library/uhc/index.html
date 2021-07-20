@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <!-- Meta info -->
-    <title>UHC — PLEXION</title>
+    <title>UHC — plexion</title>
     <meta name="title" content="UHC Datapack for Minecraft 1.16">
     <meta name="description" content="A recreation of the original classic in the latest versions of Minecraft.">
     <meta property="og:type" content="website">
@@ -22,11 +22,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Load JS -->
     <script src="/scroll.js"></script>
+    <script src="info.js"></script>
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark">
     <header class="join dark">
         <span class="brand">
             <h1 translate="no">plexion</h1>
@@ -37,36 +38,50 @@
             <a href="/library" class="focus" aria-label="Library"><i class="icon material-icons-round" translate="no">auto_stories</i><i class="text">Library</i></a>
             <a href="/socials" aria-label="Socials"><i class="icon material-icons" translate="no">account_circle</i><i class="text">Socials</i></a>
         </span>
+        <span class="grad" style="--grad: var(--library);"></span>
     </header>
     <section class="alt left med bg dark header" style="background-image: url(cover.png);">
         <span class="text no-flex big can-full">
             <h1 class="heavy-font text-72">UHC</h1>
             <p class="text-20">A recreation of the original classic in the latest versions of Minecraft.</p>
-            <a role="button" class="button big focus left icon outline dow" href="UHC.zip">Download latest</a>
+            <a role="button" class="button big focus left icon outline dow" href="https://github.com/plexiondev/uhc/releases/latest/download/UHC.zip">Download latest</a>
             <a role="button" target="_blank" class="button big accent focus icon outline ext" href="https://planetminecraft.com/data-pack/simple-uhc/">View on PMC</a>
         </span>
         <span class="bg-filter"></span>
     </section>
-    <section class="left header no-sep no-align" id="overview">
-        <h4>Overview</h4>
-        <p class="text-16">A simple, lightweight and easy-to-use UHC datapack designed for 1.17 (for older versions, use <a href="#v1.1">these downloads</a>). Featuring popular UHC standard additions like Cut Clean and Speed UHC, this is the easiest and simplest way to hold a UHC in the latest version on platforms like Minecraft Realms.</p>
-        <div class="info-wrap">
-            <span class="desc">
-                <p class="col-alt">Size</p>
-                <p>44.3KB</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Supports</p>
-                <p data-tooltip="As tested">1.17</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Updated</p>
-                <p>02/07/2021</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Released</p>
-                <p>14/02/2021</p>
-            </span>
+    <div class="grad-wrap" style="background: linear-gradient(180deg, #ffcf680c 0%, var(--body) 100%);">
+        <section class="left header no-sep no-align" id="overview">
+            <h4>Overview</h4>
+            <p class="text-16">A simple, lightweight and easy-to-use UHC datapack designed for 1.17 (for older versions, use <a href="#v1.1">these downloads</a>). Featuring popular UHC standard additions like Cut Clean and Speed UHC, this is the easiest and simplest way to hold a UHC in the latest version on platforms like Minecraft Realms.</p>
+            <div class="info-wrap">
+                <span class="desc">
+                    <p class="col-alt">Size</p>
+                    <p>44.3KB</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Supports</p>
+                    <p data-tooltip="As tested">1.17</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Updated</p>
+                    <p id="updated"></p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Released</p>
+                    <p>14/02/2021</p>
+                </span>
+            </div>
+        </section>
+    </div>
+    <section class="left header sep no-align" id="whats-new">
+        <h4>What's New</h4>
+        <div class="update">
+            <div class="header">
+                <h5 id="release-name"></h5><span class="text-16" id="release-date"></span>
+            </div>
+            <div class="details">
+                <p class="text-16" id="release-description"></p>
+            </div>
         </div>
     </section>
     <section class="left header sep no-align" id="gallery">
@@ -185,28 +200,15 @@
         </ol>
     </section>
     <section class="left header sep no-align" id="whats-new">
-        <h4>What's New</h4>
-        <div class="update" id="v1.1">
-            <div class="header">
-                <h5>Version 1.1</h5><span class="text-16">Released 02/07/2021</span>
-            </div>
-            <div class="details">
-                <p class="text-16">Quality of life and other cool updates:</p>
-                <ul>
-                    <li>The two UHC versions are now unified into one, with each's characteristics replaced with options</li>
-                    <li>The setup flow from the Lava Rising has made it's way into the UHC, making setting up the datapack easier than ever</li>
-                    <li>Cut Clean now uses raw ores instead of x ores from 1.16 - the datapack now only supports 1.17</li>
-                    <li>Teams can now be selected from 3 teams and 2 teams (default is 2)</li>
-                    <li>Natural regeneration is now an option you can customise (default is off)</li>
-                </ul>
-                <br>
+        <h4>Notice</h4>
+        <div class="update">
                 <h5>The datapack now only supports 1.17; if you're using 1.16, you will unfortunately have to use the older versions, which are out of support:</h5>
                 <a class="button focus left" href="UHC3.zip">1.0.3</a>
                 <a class="button focus" href="UHC4.zip">1.0.4</a>
             </div>
         </div>
     </section>
-    <footer class="dark">
+    <footer class="dark buttons" style="background-image: url('/banner.png');">
         <div class="flex">
             <span class="brand">
                 <div class="main">

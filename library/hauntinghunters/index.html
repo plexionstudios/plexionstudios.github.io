@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <!-- Meta info -->
-    <title>Haunting Hunters — PLEXION</title>
+    <title>Haunting Hunters — plexion</title>
     <meta name="title" content="Haunting Hunters Map for Minecraft 1.15">
     <meta name="description" content="A classic game of hide and seek set inside a haunted mansion with cool powerups purchasable.">
     <meta property="og:type" content="website">
@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark">
     <header class="join dark">
         <span class="brand">
             <h1 translate="no">plexion</h1>
@@ -37,6 +37,7 @@
             <a href="/library" class="focus" aria-label="Library"><i class="icon material-icons-round" translate="no">auto_stories</i><i class="text">Library</i></a>
             <a href="/socials" aria-label="Socials"><i class="icon material-icons" translate="no">account_circle</i><i class="text">Socials</i></a>
         </span>
+        <span class="grad" style="--grad: var(--library);"></span>
     </header>
     <section class="alt left med bg dark header" style="background-image: url(cover.png);">
         <span class="text no-flex big can-full">
@@ -47,28 +48,30 @@
         </span>
         <span class="bg-filter"></span>
     </section>
-    <section class="left header no-sep no-align" id="overview">
-        <h4>Overview</h4>
-        <p class="text-16">The Grand Scheme of Things Hide & Seek is a unique take on a classic, featuring unique powerups! You spawn outside a mansion and, as a seeker, have to find your way to victory, killing all the hiders.</p>
-        <div class="info-wrap">
-            <span class="desc">
-                <p class="col-alt">Size</p>
-                <p>18.1MB</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Supports</p>
-                <p data-tooltip="As tested">1.15</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Released</p>
-                <p>10/06/2020</p>
-            </span>
-            <span class="desc">
-                <p class="col-alt">Created by</p>
-                <a href="https://old.plexion.dev/gsot">GSOT</a>
-            </span>
-        </div>
-    </section>
+    <div class="grad-wrap" style="background: linear-gradient(180deg, #ffcf680c 0%, var(--body) 100%);">
+        <section class="left header no-sep no-align" id="overview">
+            <h4>Overview</h4>
+            <p class="text-16">The Grand Scheme of Things Hide & Seek is a unique take on a classic, featuring unique powerups! You spawn outside a mansion and, as a seeker, have to find your way to victory, killing all the hiders.</p>
+            <div class="info-wrap">
+                <span class="desc">
+                    <p class="col-alt">Size</p>
+                    <p>18.1MB</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Supports</p>
+                    <p data-tooltip="As tested">1.15</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Released</p>
+                    <p>10/06/2020</p>
+                </span>
+                <span class="desc">
+                    <p class="col-alt">Created by</p>
+                    <a href="https://old.plexion.dev/gsot">GSOT</a>
+                </span>
+            </div>
+        </section>
+    </div>
     <section class="left header sep no-align" id="gallery">
         <h4>Gallery</h4>
         <div class="gallery">
@@ -157,7 +160,7 @@
             <li>Once finished, invite your friends to the realm and have some fun!</li>
         </ol>
     </section>
-    <footer class="dark">
+    <footer class="dark buttons" style="background-image: url('/banner.png');">
         <div class="flex">
             <span class="brand">
                 <div class="main">
