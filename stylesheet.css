@@ -1449,6 +1449,9 @@ h2.brand-font {
 .brand-full *, .brand-font, .dyslexic .brand-font, .brand h1 {
     font-family: 'Poppins', var(--font-head) !important;
 }
+.brand {
+    text-decoration: none;
+}
 .brand-full .sub {
     font-size: 40px;
     font-weight: 600;
