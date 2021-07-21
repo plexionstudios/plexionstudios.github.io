@@ -25,6 +25,7 @@
     /*    Footer    */ --ext: #d4d4d4; --dark-ext: #0b0b0f;
     --raise-hover: rgba(212,212,212,0.7);
     --raise-focus: rgba(212,212,212,1);
+    --raise-bg: #e7e7e7;
     --border: rgba(212,212,212,0.55);
     --border-alt: var(--ext);
     /* Global site padding */
@@ -37,12 +38,13 @@
     --text-head: rgba(0,0,0,1); --light-text-head: rgba(0,0,0,1);
     --text-main: rgba(0,0,0,0.8); --light-text-main: rgba(0,0,0,0.8);
     --text-alt: rgba(0,0,0,0.6);
+    --text-link: #284fec;
     --text-bg: #ffffff;
-    --font-head: Poppins, Inter, Roboto, "Segoe UI", Arial, Helvetica, sans-serif;
-    --font-main: Inter, Roboto, "Segoe UI", Arial, Helvetica, sans-serif;
-    --font-code: "Roboto Mono", consolas, sans-serif;
-    --font-dyslexic: "opendyslexicregular";
-    --font-serif: Georgia, "Times New Roman", Times, serif;
+    --font-head: Poppins, var(--font-main);
+    --font-main: -apple-system, BlinkMacSystemFont, Inter, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-code: "Roboto Mono", consolas, var(--font-main);
+    --font-dyslexic: "opendyslexicregular", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-serif: Georgia, "Times New Roman", Times, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     /* Accent colours */
     --accent: #3D5FF1;
     --accent-raise: #5c7cfd;
@@ -111,6 +113,7 @@
     /*    Footer    */ --ext: #040408;
     --raise-hover: rgba(41, 44, 71, 0.7);
     --raise-focus: rgba(41, 44, 71, 1);
+    --raise-bg: rgba(78, 78, 116, 0.25);
     --border: rgba(55,55,78,0.5);
     --border-alt: rgba(55,55,78,0.8);
     /* Text + icons */
@@ -118,6 +121,7 @@
     --text-head: rgba(255,255,255,1);
     --text-main: rgba(234, 233, 252, 0.75);
     --text-alt: rgba(207, 205, 255, 0.5);
+    --text-link: #9eb8ff;
     /* Accent colours */
     --accent: #3D5FF1;
     --accent-raise: #5c7cfd;
@@ -218,7 +222,7 @@ h5 {
     outline: 2px solid var(--target);
 }
 a {
-    color: var(--text-main);
+    color: var(--text-link);
     text-decoration: underline;
     transition: 0.2s;
 }
@@ -255,7 +259,7 @@ i.i {
 /* Code element */
 code {
     font-family: var(--font-code);
-    background: var(--alt);
+    background: var(--raise-bg);
     padding: 0 5px;
     border-radius: 5px;
     display: inline-block;
@@ -313,6 +317,7 @@ img.pfp.small {
     text-align: center;
     transition: 0.15s;
     transform: scale(0.9);
+    letter-spacing: initial;
 }
 [data-tooltip]:hover:before {
     opacity: 1;
@@ -334,14 +339,16 @@ img.pfp.small {
     border-radius: 5px;
     transition: 0.2s;
     text-align: center;
-    text-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+}
+.mobile .button, .mobile .button.big {
+    padding: 16px 48px;
 }
 /* Button styling (upon hover) */
 .button:hover {
     box-shadow: inset 0px 0px 0px 2px var(--border-alt);
     color: var(--text-head);
     background-position: 0 -10px;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 .reduced-motion .button:hover {
     letter-spacing: initial;
@@ -355,6 +362,7 @@ img.pfp.small {
     background-color: var(--accent);
     color: var(--text-bg);
     box-shadow: inset 0px 0px 0px 2px var(--accent-raise);
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.2);
 }
 .button.focus:hover {
     background-color: var(--accent-raise);
@@ -498,7 +506,7 @@ header.scrolled .grad {
 }
 header.scrolled .brand h1, header.scrolled .brand.raise h1 {
     /* Swap the colour (if previously raised etc.) */
-    --col: var(--accent);
+    --col: #003BFF;
     /* Moves in the shadow */
     text-shadow: -3.5px 3.5px 0px var(--col);
     padding: 5px 0;
@@ -515,7 +523,7 @@ header.scrolled .brand h1, header.scrolled .brand.raise h1 {
 /* When joined */
 header.join .links a {
     color: var(--text-main);
-    text-shadow: 0px 2px 2px rgba(0,0,0,0.6);
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.6);
 }
 header.scrolled .links a {
     text-shadow: none;
@@ -828,13 +836,13 @@ nav.store {
     align-items: center;
     justify-content: center;
     padding: 7px;
-    background: var(--alt);
+    background: var(--raise-bg);
     border-radius: 50%;
     width: 54px;
     height: 54px;
 }
 .headline-icon i {
-    font-size: 40px;
+    font-size: 36px;
 }
 /* Small variant */
 .headline-icon.small {
@@ -843,7 +851,7 @@ nav.store {
     height: 42px;
 }
 .headline-icon.small i {
-    font-size: 32px;
+    font-size: 28px;
 }
 /* Minimum variant */
 .headline-icon.min {
@@ -872,7 +880,14 @@ nav.store {
 }
 .sub-tiles .tile {
     text-align: left;
-    margin: 20px 0;
+    margin: 10px 0;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.1s;
+    border-radius: 10px;
+}
+.sub-tiles .tile:hover, .sub-tiles .tile:focus {
+    background: var(--highlight);
 }
 .sub-tiles .tile .headline-icon {
     margin-bottom: 5px;
@@ -961,7 +976,7 @@ section {
     overflow: hidden;
 }
 section.bg.header {
-    text-shadow: 0px 3px 3px rgba(0,0,0,0.6);
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.3);
 }
 /* Centered sections */
 section.center {

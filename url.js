@@ -1,1 +1,0 @@
-document.getElementsById("url").value = window.location.host + window.location.pathname;

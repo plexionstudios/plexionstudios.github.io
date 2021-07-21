@@ -4,7 +4,13 @@
     <title>Minecraft Events — plexion</title>
     <meta name="title" content="Minecraft Events on PLEXION">
     <meta name="description" content="Download the datapack you choose and host the most amazing Minecraft event of all time.">
+    <meta property="og:site_name" content="plexion">
     <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@plexionlive">
+    <meta property="twitter:site:id" content="@plexionlive">
+    <meta property="twitter:creator" content="@plexionlive">
+    <meta property="twitter:creator:id" content="@plexionlive">
     <meta property="og:url" content="https://plexion.dev/events">
     <meta property="og:title" content="Minecraft Events on PLEXION">
     <meta property="og:description" content="Download the datapack you choose and host the most amazing Minecraft event of all time.">
@@ -21,7 +27,7 @@
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Load JS -->
-    <script src="scroll.js"></script>
+    <script src="js/scroll.js"></script>
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
@@ -39,15 +45,11 @@
         </span>
         <span class="grad" style="--grad: var(--events);"></span>
     </header>
-    <section class="left big accent dark header bg" style="background-color: #386195; background: linear-gradient(180deg, rgba(38,58,90,1) 0%, rgba(64,105,157,1) 100%);">
+    <section class="left big accent dark header bg" style="background-image: url('img/events-py.png');">
         <span class="text no-flex big can-full">
             <h1 class="heavy text-72">MINECRAFT EVENTS</h1>
             <p class="text-20">Click on a card to view more info and download for your event.</p>
         </span>
-        <span class="bg">
-            <video src="img/bg.mp4" autoplay loop></video>
-        </span>
-        <span class="bg-filter"></span>
     </section>
     <section class="center">
         <h1 class="heavy-font text-52">All Events</h1>
@@ -125,22 +127,22 @@
         <span class="img">
             <div class="sub-tiles-wrapper">
                 <div class="sub-tiles">
-                    <span class="tile">
+                    <a class="tile" href="https://www.planetminecraft.com/data-pack/void-rising-datapack/" target="_blank">
                         <p class="text-18">wow plexion thats so cool and awesome!</p>
                         <i class="i">- Equton</i>
-                    </span>
-                    <span class="tile">
-                        <p class="text-18">huh, yea i guess thats neat :)</p>
-                        <i class="i">- A_Bread_Boii</i>
-                    </span>
-                    <span class="tile">
-                        <p class="text-18">I'm suprised battle royales haven't thought of something like this, great job by the way</p>
-                        <i class="i">- Herobrine2014 Studios</i>
-                    </span>
-                    <span class="tile">
+                    </a>
+                    <a class="tile" href="https://www.planetminecraft.com/data-pack/lava-rising/" target="_blank">
+                        <p class="text-18">what's the url of this?<br><code class="text-16">Title of Expandable Spoiler</code></p>
+                        <i class="i">- snoowBorgMC</i>
+                    </a>
+                    <a class="tile" href="https://www.planetminecraft.com/texture-pack/simple-dark/" target="_blank">
+                        <p class="text-18">:3</p>
+                        <i class="i">- TheRobikYT</i>
+                    </a>
+                    <a class="tile" href="https://www.planetminecraft.com/texture-pack/minecraft-4k-in-minecraft-1-15/" target="_blank">
                         <p class="text-18">xD</p>
                         <i class="i">- FiMiS</i>
-                    </span>
+                    </a>
                 </div>
             </div>
         </span>
@@ -149,11 +151,11 @@
         <h1 class="heavy-font text-48">Looking for more?</h1>
         <p class="text-20">If you have a suggestion for any datapacks you're looking for, drop me an email and we can talk!</p>
     </section>
-    <footer class="dark buttons" style="background-image: url('/banner.png');">
+    <footer class="dark">
         <div class="flex">
             <span class="brand">
                 <div class="main">
-                    <h1 class="brand-font">plexion</h1>
+                    <h1 class="brand-font plexion">plexion</h1>
                     <p>Powered by #PLEXION2021</p>
                     <a role="button" onclick="toggleDyslexicFont()" href="javascript:void(0);" class="button left">Toggle Dyslexic Font</a>
                 </div>

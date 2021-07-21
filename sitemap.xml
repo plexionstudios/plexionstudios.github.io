@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>https://plexion.dev</loc>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
@@ -14,30 +14,6 @@
       <loc>https://plexion.dev/library</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://plexion.dev/library/opendyslexic</loc>
-   </url>
-   <url>
-      <loc>https://plexion.dev/library/simpledark</loc>
-   </url>
-   <url>
-      <loc>https://plexion.dev/library/lavarising</loc>
-   </url>
-   <url>
-      <loc>https://plexion.dev/library/racetotheend</loc>
-   </url>
-   <url>
-      <loc>https://plexion.dev/library/uhc</loc>
-   </url>
-   <url>
-      <loc>https://plexion.dev/library/voidrising</loc>
-   </url>
-   <url>
-      <loc>https://plexion.dev/library/metrodarktheme</loc>
-   </url>
-   <url>
-      <loc>https://plexion.dev/library/hauntinghunters</loc>
    </url>
    <url>
       <loc>https://plexion.dev/socials</loc>

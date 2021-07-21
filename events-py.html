@@ -4,7 +4,13 @@
     <title>Hosting an Event Discord — plexion</title>
     <meta name="title" content="Hosting an Events Discord server">
     <meta name="description" content="Using the custom-made bot for events, you can get a discord server running in minutes for you and your friends.">
+    <meta property="og:site_name" content="plexion">
     <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@plexionlive">
+    <meta property="twitter:site:id" content="@plexionlive">
+    <meta property="twitter:creator" content="@plexionlive">
+    <meta property="twitter:creator:id" content="@plexionlive">
     <meta property="og:url" content="https://plexion.dev/events-py">
     <meta property="og:title" content="Hosting an Events Discord server">
     <meta property="og:description" content="Using the custom-made bot for events, you can get a discord server running in minutes for you and your friends.">
@@ -21,7 +27,7 @@
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Load JS -->
-    <script src="scroll.js"></script>
+    <script src="js/scroll.js"></script>
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
@@ -39,10 +45,10 @@
         </span>
         <span class="grad" style="--grad: var(--events);"></span>
     </header>
-    <section class="accent left img big dark bg header" style="background-color: #386195; background: linear-gradient(180deg, rgba(38,58,90,1) 0%, rgba(64,105,157,1) 100%);">
+    <section class="accent left img big dark bg header" style="background-image: url('img/events-py.png');">
         <span class="text no-flex big can-full">
             <h1 class="heavy text-72">GET YOUR EVENTS UP AND RUNNING</h1>
-            <p class="text-20">Add the custom-made Events bot to your Discord to easily manage and announce events for all your players.</p>
+            <p class="text-20">A custom-made Discord bot centered around event managing, announcing and hosting.</p>
             <a role="button" class="button focus big left icon outline dow" href="https://github.com/plexiondev/events-bot/releases/latest/download/events.zip">Download and Host</a>
             <a role="button" class="button focus accent big" href="https://github.com/plexiondev/events-bot/blob/main/README.md">Installation Guide</a>
         </span>
@@ -51,38 +57,35 @@
                 <img src="ico/EventsTransparent.png" alt="Trophy symbol representing the Events Bot profile picture" class="pfp">
             </span>
         </span>
-        <span class="bg">
-            <video src="img/bg.mp4" autoplay loop></video>
-        </span>
-        <span class="bg-filter"></span>
     </section>
-    <section class="center">
+    <section class="left big">
         <h1 class="heavy-font text-52">One bot that does it all</h1>
-        <div class="sub-tiles-wrapper">
+        <p class="text-20">Get started in a matter of minutes and get right into the action.</p>
+        <div class="sub-tiles-wrapper left fill">
             <div class="sub-tiles">
                 <span class="tile">
-                    <div class="headline-icon small" aria-label="Supporting icon">
+                    <div class="headline-icon" aria-label="Supporting icon">
                         <i class="material-icons">add_circle</i>
                     </div>
                     <h3>Easily manage your events</h3>
                     <p>Send out nicely-formatted event markers to let your players know what the next event is. Built-in reactions allow you to get a sense of who's joining.</p>
                 </span>
                 <span class="tile">
-                    <div class="headline-icon small" aria-label="Supporting icon">
+                    <div class="headline-icon" aria-label="Supporting icon">
                         <i class="material-icons">vertical_split</i>
                     </div>
                     <h3>Your server, your design</h3>
                     <p>With some simple customisation, the bot will adapt to how your server is layed out and function accordingly.</p>
                 </span>
                 <span class="tile">
-                    <div class="headline-icon small" aria-label="Supporting icon">
+                    <div class="headline-icon" aria-label="Supporting icon">
                         <i class="material-icons">message</i>
                     </div>
-                    <h3>Built on the latest technology</h3>
-                    <p>To make your experience even easier, the bot makes use of /slash commands, giving hints just by typing / into the message bar.</p>
+                    <h3>Built on the cool things</h3>
+                    <p>To make your experience even easier, the bot makes use of <code>/slash</code> commands, giving hints just by typing <code>/</code> into the message bar.</p>
                 </span>
                 <span class="tile">
-                    <div class="headline-icon small" aria-label="Supporting icon">
+                    <div class="headline-icon" aria-label="Supporting icon">
                         <i class="material-icons">lock</i>
                     </div>
                     <h3>All under control</h3>
@@ -94,8 +97,7 @@
     <section class="left img alt big">
         <span class="text">
             <h1 class="heavy-font">Need a head start?</h1>
-            <p class="text-20">To get your server a head start, try using the custom-made event server template to kick your server up with the essentials.</p>
-            <a role="button" class="button focus left" target="_blank" href="https://discord.new/2CP6QgK4Kqxr">Use server template</a>
+            <p class="text-20">To get your server a head start, try using the <a href="https://discord.new/2CP6QgK4Kqxr">custom-made event server template</a> to kick your server up with the essentials.</p>
         </span>
         <span class="img">
             <img src="img/community.png" alt="Screenshot of Discord showing the community server template">
@@ -108,11 +110,11 @@
         <a role="button" class="button big" href="https://github.com/plexiondev/events-bot/blob/main/README.md">Installation Guide</a>
         <p class="text-14">I highly advise you to read through the Installation Guide, you'll probably get lost otherwise.</p>
     </section>
-    <footer class="dark buttons" style="background-image: url('/banner.png');">
+    <footer class="dark">
         <div class="flex">
             <span class="brand">
                 <div class="main">
-                    <h1 class="brand-font">plexion</h1>
+                    <h1 class="brand-font plexion">plexion</h1>
                     <p>Powered by #PLEXION2021</p>
                     <a role="button" onclick="toggleDyslexicFont()" href="javascript:void(0);" class="button left">Toggle Dyslexic Font</a>
                 </div>
@@ -149,16 +151,16 @@
         </div>
         <div class="padding">
             <div class="socials">
-                <a class="social-icon" target="_blank" href="https://youtube.com/plexion" title="plexion on YouTube">
+                <a class="social-icon" target="_blank" href="https://youtube.com/plexion" data-tooltip="YouTube">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a class="social-icon" target="_blank" href="https://twitch.tv/plexionLIVE" title="@plexionLIVE on Twitch">
+                <a class="social-icon" target="_blank" href="https://twitch.tv/plexionLIVE" data-tooltip="Twitch">
                     <i class="fab fa-twitch"></i>
                 </a>
-                <a class="social-icon" target="_blank" href="https://twitter.com/plexionlive" title="@plexionlive on Twitter">
+                <a class="social-icon" target="_blank" href="https://twitter.com/plexionlive" data-tooltip="Twitter">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a class="social-icon" target="_blank" href="https://open.spotify.com/user/musicalpika?si=c86c6e10b72b4d4c" title="@cobainn on Spotify">
+                <a class="social-icon" target="_blank" href="https://open.spotify.com/user/musicalpika?si=c86c6e10b72b4d4c" data-tooltip="Spotify">
                     <i class="fab fa-spotify"></i>
                 </a>
             </div>
